@@ -1,0 +1,90 @@
+book:
+  slug: prediction-markets
+  title: Prediction Markets
+  subtitle: "The Smart Money's Guide to Betting on the Future"
+  genre: nonfiction
+  goal: self-publish
+  strategy: Launch on KDP targeting finance and crypto audiences. Cross-promote with prediction market platforms.
+  positioning: The definitive practical guide to prediction markets for investors, traders, and information-seekers.
+  tone: sharp, practical, data-driven with accessible explanations
+  audience:
+    - retail and institutional investors
+    - crypto and DeFi participants
+    - political analysts and journalists
+    - data scientists and quantitative thinkers
+    - anyone who wants to understand probabilistic forecasting
+  thesis:
+    primary: Prediction markets are the most accurate publicly available forecasting mechanism, and learning to read, use, and trade them gives you an information edge in every domain.
+    boundary: This book does not promise guaranteed profits. It teaches how prediction markets aggregate information and how to use that information intelligently.
+  differentiation:
+    - covers both centralized (Kalshi, Polymarket) and decentralized markets
+    - includes practical trading strategies, not just theory
+    - explains how to read markets for decision-making even if you never trade
+    - addresses regulatory landscape across US, EU, and crypto jurisdictions
+  chapters:
+    - title: "The Wisdom of Crowds, Priced In"
+      premise: "Markets where people bet real money on outcomes consistently outperform polls, pundits, and models."
+      sections:
+        - history from Iowa Electronic Markets to Polymarket
+        - accuracy studies and track records
+        - why skin in the game improves forecasts
+    - title: "How Prediction Markets Actually Work"
+      premise: "Understanding order books, binary contracts, and market mechanics is essential before you trade or interpret prices."
+      sections:
+        - binary outcome contracts
+        - order book mechanics
+        - liquidity and market making
+    - title: "The Platform Landscape"
+      premise: "From regulated US exchanges to decentralized crypto markets, each platform has different rules, risks, and opportunities."
+      sections:
+        - Kalshi and regulated exchanges
+        - Polymarket and blockchain-based markets
+        - Metaculus and non-monetary platforms
+        - comparison matrix
+    - title: "Reading Markets: Information Without Trading"
+      premise: "You don't need to trade to benefit. Prediction market prices are the best publicly available probability estimates."
+      sections:
+        - interpreting market prices as probabilities
+        - calibration and edge detection
+        - using markets for business and personal decisions
+    - title: "Trading Strategies for Prediction Markets"
+      premise: "Practical strategies for finding edge, managing risk, and building a prediction market portfolio."
+      sections:
+        - identifying mispriced contracts
+        - portfolio construction and correlation
+        - risk management and position sizing
+        - arbitrage across platforms
+    - title: "The Political Prediction Market"
+      premise: "Election markets are the gateway drug. They're also the most liquid, most studied, and most controversial."
+      sections:
+        - election market history and accuracy
+        - manipulation attempts and market resilience
+        - using election markets for strategic planning
+    - title: "Regulation, Legality, and the Future"
+      premise: "The regulatory landscape is evolving fast. Understanding it determines whether you can participate and how."
+      sections:
+        - US regulatory framework (CFTC)
+        - international approaches
+        - crypto jurisdictional arbitrage
+        - the path to mainstream adoption
+    - title: "Building Your Forecasting Edge"
+      premise: "The skills that make you good at prediction markets—calibration, base rates, updating—make you better at everything."
+      sections:
+        - personal calibration training
+        - base rate reasoning
+        - Bayesian updating in practice
+        - building a forecasting track record
+
+author:
+  name: AnteMass Publishing
+  tagline: data-driven finance for independent thinkers
+  credentials:
+    - quantitative finance and market analysis
+    - prediction market research and trading
+  platforms:
+    - antemass.com
+    - predictionmarketguide.com
+
+publisher:
+  name: AnteMass Publishing
+  imprint: AnteMass Books

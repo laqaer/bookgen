@@ -1,0 +1,99 @@
+book:
+  slug: shadows-and-structures
+  title: Shadows and Structures
+  subtitle: State Secrecy, Bureaucratic Power, and the Limits of Public Knowledge
+  genre: nonfiction
+  goal: hybrid
+  strategy: Self-publish + audience build first, then use traction for traditional leverage.
+  positioning: Institutional power + epistemic limits, written for serious general readers.
+  tone: sober, analytical, non-sensational
+  audience:
+    - policy thinkers
+    - civil libertarians
+    - intellectually skeptical readers
+    - journalists and researchers
+    - civically engaged professionals
+  thesis:
+    primary: Institutional secrecy and bureaucratic durability create structural information asymmetry that shapes what the public can know.
+    boundary: The argument does not claim a centralized omnipotent cabal; it examines documented institutional structures, incentives, and constraints.
+  differentiation:
+    - avoids conspiratorial certainty framing
+    - focuses on systems, incentives, and procedures instead of villains
+    - uses evidence-aware language and explicit uncertainty boundaries
+    - includes practical reform pathways and implementation limits
+  chapters:
+    - title: "Introduction: The Cave, the Ledger, and the Public Record"
+      premise: "This book distinguishes sensational claims about hidden rulers from a structural account of how secrecy, administrative discretion, and information bottlenecks shape what citizens can realistically know."
+      sections:
+        - conceptual definitions
+        - institutional incentives
+        - evidentiary standards
+        - democratic oversight
+    - title: "The Cave Revisited"
+      premise: "Plato's cave remains useful when interpreted as an epistemic warning, not a prophecy."
+      sections:
+        - epistemic framing
+        - institutional language
+        - perception under uncertainty
+    - title: "Architecture of Secrecy"
+      premise: "Secrecy in modern states is less a single wall than an architecture of classification authorities, legal carve-outs, and review bottlenecks."
+      sections:
+        - classification workflow
+        - legal authority
+        - resource asymmetry
+    - title: "Bureaucracy as Power"
+      premise: "Bureaucratic institutions are not neutral pipelines. They prioritize, sequence, and interpret political directives."
+      sections:
+        - institutional memory
+        - procedural inertia
+        - timeline control
+    - title: "Media Incentives and Manufactured Clarity"
+      premise: "Media ecosystems mediate state secrecy for mass audiences, but incentive structures reward speed, conflict, and simplified causality."
+      sections:
+        - incentive design
+        - source asymmetry
+        - narrative compression
+    - title: "Information Asymmetry and the State"
+      premise: "State institutions operate through asymmetries: officials access classified context, while publics receive filtered outputs."
+      sections:
+        - briefing asymmetry
+        - data monopolies
+        - technical opacity
+    - title: "Why Conspiracy Narratives Persist"
+      premise: "Conspiracy narratives persist because they offer coherence, agency, and moral clarity under uncertainty."
+      sections:
+        - cognitive load
+        - trust erosion
+        - platform amplification
+    - title: "Escaping the Cave"
+      premise: "Escaping informational darkness is a collective engineering task requiring stronger records law and better oversight."
+      sections:
+        - institutional redesign
+        - method transparency
+        - civic capacity
+    - title: "Reform, Transparency, and Their Limits"
+      premise: "Transparency is necessary but not self-executing. Reform succeeds when disclosure is paired with interpretation capacity."
+      sections:
+        - reform design
+        - implementation limits
+        - enforcement reality
+    - title: "A Sober Conclusion"
+      premise: "The conclusion synthesizes the book's institutional argument about secrecy, bureaucratic power, and practical reform."
+      sections:
+        - synthesis
+        - civic method
+        - future research agenda
+
+author:
+  name: AnteMass Publishing
+  tagline: rigorous analysis for the informed public
+  credentials:
+    - institutional analysis and governance research
+    - policy writing and public accountability
+  platforms:
+    - antemass.com
+    - substack.com/antemass
+
+publisher:
+  name: AnteMass Publishing
+  imprint: AnteMass Books

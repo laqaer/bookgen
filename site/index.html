@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookGen — Generate, Publish, and Sell Books with AI</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--surface:#12121a;--border:#1e1e2e;--text:#e0e0e8;--muted:#8888a0;--accent:#6366f1;--accent2:#8b5cf6;--green:#22c55e}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.4rem;font-weight:700;letter-spacing:-0.5px}
+.logo span{color:var(--accent)}
+nav a.btn-sm{background:var(--accent);color:#fff;padding:8px 20px;border-radius:8px;font-size:0.9rem;font-weight:600}
+
+/* Hero */
+.hero{padding:100px 0 80px;text-align:center}
+.hero h1{font-size:3.5rem;font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:20px}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.25rem;color:var(--muted);max-width:600px;margin:0 auto 40px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;display:inline-block;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+
+/* Pipeline */
+.pipeline{padding:60px 0;text-align:center}
+.pipeline-steps{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:24px}
+.pipeline-steps .step{background:var(--surface);border:1px solid var(--border);padding:12px 20px;border-radius:8px;font-size:0.95rem;font-weight:500}
+.pipeline-steps .arrow{color:var(--accent);font-size:1.2rem;display:flex;align-items:center}
+
+/* Features */
+.features{padding:80px 0}
+.features h2{text-align:center;font-size:2rem;margin-bottom:48px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.feature{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px}
+.feature .icon{font-size:2rem;margin-bottom:12px}
+.feature h3{font-size:1.1rem;margin-bottom:8px}
+.feature p{color:var(--muted);font-size:0.95rem}
+
+/* Code */
+.code-section{padding:60px 0}
+.code-section h2{text-align:center;font-size:2rem;margin-bottom:32px}
+.code-block{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;max-width:700px;margin:0 auto;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:0.9rem;overflow-x:auto;line-height:1.8}
+.code-block .comment{color:#6b7280}
+.code-block .cmd{color:var(--green)}
+
+/* Pricing */
+.pricing{padding:80px 0}
+.pricing h2{text-align:center;font-size:2rem;margin-bottom:16px}
+.pricing .sub{text-align:center;color:var(--muted);margin-bottom:48px}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:960px;margin:0 auto}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:36px;text-align:center}
+.price-card.featured{border-color:var(--accent);position:relative}
+.price-card.featured::before{content:"POPULAR";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 16px;border-radius:20px;font-size:0.75rem;font-weight:700;letter-spacing:1px}
+.price-card h3{font-size:1.2rem;margin-bottom:8px}
+.price-card .price{font-size:2.5rem;font-weight:800;margin:16px 0 8px}
+.price-card .price span{font-size:1rem;color:var(--muted);font-weight:400}
+.price-card ul{list-style:none;text-align:left;margin:24px 0}
+.price-card li{padding:8px 0;color:var(--muted);font-size:0.9rem}
+.price-card li::before{content:"✓ ";color:var(--green);font-weight:700}
+.price-card .btn{width:100%;text-align:center;margin-top:8px}
+
+/* CTA */
+.cta{padding:80px 0;text-align:center}
+.cta h2{font-size:2rem;margin-bottom:16px}
+.cta p{color:var(--muted);margin-bottom:32px}
+.email-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto}
+.email-form input{flex:1;min-width:240px;padding:14px 20px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:1rem}
+.email-form input::placeholder{color:var(--muted)}
+.email-form .btn{white-space:nowrap}
+
+/* Footer */
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.85rem}
+
+@media(max-width:640px){
+  .hero h1{font-size:2.2rem}
+  .pipeline-steps .arrow{display:none}
+  .pipeline-steps{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+  <div class="logo">Book<span>Gen</span></div>
+  <a href="https://github.com/laqaer/bookgen" class="btn-sm">GitHub →</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+  <h1>Generate, publish, and sell<br>books <span>with AI</span></h1>
+  <p>From idea to Amazon listing in one command. Define your book in YAML, generate a full manuscript, and get everything you need to publish and market it.</p>
+  <div class="hero-cta">
+    <a href="https://github.com/laqaer/bookgen" class="btn btn-primary">Get Started Free</a>
+    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+  </div>
+</div>
+</section>
+
+<section class="pipeline">
+<div class="container">
+  <div class="pipeline-steps">
+    <div class="step">💡 Idea</div><div class="arrow">→</div>
+    <div class="step">📋 Outline</div><div class="arrow">→</div>
+    <div class="step">📝 Manuscript</div><div class="arrow">→</div>
+    <div class="step">📖 Formatted</div><div class="arrow">→</div>
+    <div class="step">🚀 Published</div><div class="arrow">→</div>
+    <div class="step">📣 Marketed</div>
+  </div>
+</div>
+</section>
+
+<section class="features">
+<div class="container">
+  <h2>Everything you need to publish</h2>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="icon">📄</div>
+      <h3>YAML-Driven Profiles</h3>
+      <p>Define your book once — title, chapters, audience, thesis — and generate everything from a single source of truth.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🤖</div>
+      <h3>AI + Template Modes</h3>
+      <p>Use deterministic templates for instant offline generation, or plug in any LLM via OpenRouter for AI-written chapters.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">📚</div>
+      <h3>Multi-Genre Support</h3>
+      <p>Nonfiction, thriller, sci-fi, romance, fantasy, mystery — genre-adapted phrase banks and LLM prompts for each.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">📦</div>
+      <h3>Publishing Pipeline</h3>
+      <p>KDP listings, metadata, cover design prompts, pricing strategy — everything Amazon needs, auto-generated.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">📣</div>
+      <h3>Marketing Suite</h3>
+      <p>Email launch sequences, social media posts, podcast pitch templates — ready to copy-paste on launch day.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">💰</div>
+      <h3>Monetization Strategy</h3>
+      <p>Revenue models, pricing tiers, upsell funnels — from book sales to courses to consulting.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="code-section">
+<div class="container">
+  <h2>Dead simple to use</h2>
+  <div class="code-block">
+    <span class="comment"># Install</span><br>
+    <span class="cmd">git clone https://github.com/laqaer/bookgen.git</span><br>
+    <span class="cmd">cd bookgen</span><br><br>
+    <span class="comment"># Generate a complete book</span><br>
+    <span class="cmd">python3 bookgen.py books/agent_economics.yaml</span><br><br>
+    <span class="comment"># Or use AI for higher quality</span><br>
+    <span class="cmd">python3 bookgen.py books/agent_economics.yaml --llm</span><br><br>
+    <span class="comment"># Full pipeline: manuscript + marketing + everything</span><br>
+    <span class="cmd">python3 bookops.py generate-all books/agent_economics.yaml</span>
+  </div>
+</div>
+</section>
+
+<section class="pricing" id="pricing">
+<div class="container">
+  <h2>Simple pricing</h2>
+  <p class="sub">Start free. Scale when you're ready.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Free CLI</h3>
+      <div class="price">$0<span>/forever</span></div>
+      <ul>
+        <li>Unlimited template generation</li>
+        <li>All genres supported</li>
+        <li>LLM mode (BYO API key)</li>
+        <li>Full publishing pipeline</li>
+        <li>Marketing copy generator</li>
+        <li>Community support</li>
+      </ul>
+      <a href="https://github.com/laqaer/bookgen" class="btn btn-secondary">Get Started</a>
+    </div>
+    <div class="price-card featured">
+      <h3>Pro</h3>
+      <div class="price">$49<span>/mo</span></div>
+      <ul>
+        <li>Everything in Free</li>
+        <li>LLM credits included</li>
+        <li>Auto EPUB + PDF formatting</li>
+        <li>KDP auto-publish</li>
+        <li>10 books per month</li>
+        <li>Email support</li>
+      </ul>
+      <a href="#signup" class="btn btn-primary">Start Pro Trial</a>
+    </div>
+    <div class="price-card">
+      <h3>Agency</h3>
+      <div class="price">$199<span>/mo</span></div>
+      <ul>
+        <li>Everything in Pro</li>
+        <li>Unlimited books</li>
+        <li>Print-ready formatting</li>
+        <li>Full marketing automation</li>
+        <li>White-label option</li>
+        <li>Priority Slack support</li>
+      </ul>
+      <a href="#signup" class="btn btn-secondary">Contact Sales</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="cta" id="signup">
+<div class="container">
+  <h2>Start publishing smarter</h2>
+  <p>Join the waitlist for BookGen Pro. Get early access and launch pricing.</p>
+  <form class="email-form" action="#" method="post">
+    <input type="email" placeholder="you@email.com" required>
+    <button type="submit" class="btn btn-primary">Join Waitlist</button>
+  </form>
+</div>
+</section>
+
+<footer>
+<div class="container">
+  <p>© 2026 AnteMass Publishing. Built with BookGen.</p>
+</div>
+</footer>
+
+</body>
+</html>

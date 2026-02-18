@@ -1,0 +1,88 @@
+book:
+  slug: agent-economics
+  title: Agent Economics
+  subtitle: How AI Agents Will Reshape Every Industry by 2030
+  genre: nonfiction
+  goal: hybrid
+  strategy: Self-publish for speed, use traction to pitch traditional publishers for expanded edition.
+  positioning: First serious economic analysis of autonomous AI agents as market participants, not just tools.
+  tone: analytical, forward-looking, grounded in current evidence
+  audience:
+    - technology executives and CTOs
+    - venture capitalists and investors
+    - policy makers and regulators
+    - business strategists
+    - AI/ML practitioners thinking about deployment
+  thesis:
+    primary: AI agents that autonomously negotiate, transact, and allocate resources will create a parallel economy that fundamentally changes labor markets, pricing, and competitive dynamics by 2030.
+    boundary: This is not science fiction speculation. Every capability discussed either exists in production or has clear engineering paths from current systems.
+  differentiation:
+    - treats agents as economic actors, not just software features
+    - industry-by-industry impact analysis with specific timelines
+    - includes regulatory frameworks and governance proposals
+    - written for decision-makers, not researchers
+  chapters:
+    - title: "From Tools to Actors: The Agent Paradigm Shift"
+      premise: "Software crossed a threshold when it stopped waiting for instructions and started pursuing objectives autonomously."
+      sections:
+        - definition of economic agency
+        - capability trajectory 2024-2030
+        - the autonomy spectrum
+    - title: "Agent Labor Economics: When Software Competes for Jobs"
+      premise: "Agents don't replace workers the way automation did. They compete in the same markets, accept the same contracts, and bid on the same tasks."
+      sections:
+        - task-level displacement analysis
+        - wage dynamics and price compression
+        - human-agent collaboration models
+    - title: "Agent Commerce: Autonomous Buying, Selling, and Negotiating"
+      premise: "When agents handle procurement, pricing, and deal-making, markets move faster but also become less transparent to humans."
+      sections:
+        - automated procurement systems
+        - dynamic pricing at agent speed
+        - trust and verification in agent-to-agent markets
+    - title: "Industry Disruption Maps"
+      premise: "A sector-by-sector analysis of where agents will hit first, hardest, and create the most value."
+      sections:
+        - financial services and trading
+        - healthcare and diagnostics
+        - legal and compliance
+        - software development and DevOps
+        - marketing and sales
+    - title: "The Agent Infrastructure Stack"
+      premise: "A new technology stack is emerging to support agent economies: identity, payments, memory, and coordination."
+      sections:
+        - agent identity and reputation
+        - micropayment rails
+        - shared memory and context protocols
+    - title: "Governing Agent Economies"
+      premise: "Existing regulations assume human decision-makers. Agent economies need new frameworks for liability, taxation, and oversight."
+      sections:
+        - liability when agents cause harm
+        - taxing agent-generated value
+        - international coordination challenges
+    - title: "Winners, Losers, and the Transition"
+      premise: "Some companies and workers will thrive in agent economies. Others will be displaced. The difference is preparation."
+      sections:
+        - company positioning strategies
+        - workforce adaptation paths
+        - investment thesis for agent infrastructure
+    - title: "2030: Three Scenarios"
+      premise: "Optimistic, realistic, and pessimistic scenarios for how agent economies develop over the next five years."
+      sections:
+        - acceleration scenario
+        - gradual integration scenario
+        - fragmentation and backlash scenario
+
+author:
+  name: AnteMass Publishing
+  tagline: technology economics for decision-makers
+  credentials:
+    - AI systems analysis and market research
+    - technology investment and strategy consulting
+  platforms:
+    - antemass.com
+    - agenteconomics.com
+
+publisher:
+  name: AnteMass Publishing
+  imprint: AnteMass Books

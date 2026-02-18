@@ -1,0 +1,86 @@
+book:
+  slug: the-4am-protocol
+  title: The 4AM Protocol
+  subtitle: How Early Risers Are Outperforming Everyone
+  genre: nonfiction
+  goal: self-publish
+  strategy: Launch on KDP with aggressive social media and podcast circuit. Build email list via free morning routine PDF.
+  positioning: Actionable productivity book backed by sleep science and real performer case studies.
+  tone: energetic, practical, no-nonsense
+  audience:
+    - ambitious professionals aged 25-45
+    - entrepreneurs and founders
+    - productivity enthusiasts
+    - self-improvement readers
+    - fitness-minded high performers
+  thesis:
+    primary: A structured pre-dawn routine combining sleep optimization, focused deep work, and physical activation creates a compounding performance advantage.
+    boundary: This is not about sleep deprivation. The protocol requires going to bed early and optimizing sleep quality, not just waking up earlier.
+  differentiation:
+    - science-backed with citations to chronobiology research
+    - includes 30-day implementation protocol with daily checklists
+    - profiles 12 real high performers across industries
+    - addresses failure modes and when 4AM is wrong for you
+  chapters:
+    - title: "Why 4AM? The Science of Temporal Advantage"
+      premise: "The hours before the world wakes up offer a neurochemical window for focus that most people waste."
+      sections:
+        - cortisol awakening response
+        - prefrontal cortex morning advantage
+        - willpower depletion research
+    - title: "The Sleep Foundation: You Can't Hack What You Don't Protect"
+      premise: "The 4AM protocol starts at 9PM. Sleep architecture determines whether early rising is a superpower or self-sabotage."
+      sections:
+        - sleep cycles and chronotypes
+        - evening wind-down protocol
+        - sleep environment optimization
+    - title: "The First 90 Minutes: Deep Work Before Distraction"
+      premise: "The most valuable output of your day should happen before anyone can email you."
+      sections:
+        - deep work methodology
+        - distraction elimination
+        - cognitive priming techniques
+    - title: "Physical Activation: The Movement Protocol"
+      premise: "Exercise before 6AM creates a metabolic and psychological momentum that carries through the day."
+      sections:
+        - morning exercise science
+        - minimal effective dose routines
+        - cold exposure and hormesis
+    - title: "The Compound Effect: 90 Days of 4AM"
+      premise: "Small daily advantages compound into career-defining edges over quarters and years."
+      sections:
+        - habit stacking mechanics
+        - tracking and accountability
+        - compounding productivity math
+    - title: "12 Performers Who Live the Protocol"
+      premise: "Case studies from CEOs, athletes, artists, and scientists who structure their days around early mornings."
+      sections:
+        - tech founder profiles
+        - creative professional profiles
+        - athlete and military profiles
+    - title: "When 4AM Is Wrong: Chronotypes, Life Stages, and Flexibility"
+      premise: "Not everyone should wake at 4AM. The protocol adapts to night owls, parents, and shift workers."
+      sections:
+        - chronotype assessment
+        - adaptation strategies
+        - the core principle vs the specific hour
+    - title: "The 30-Day Launch Protocol"
+      premise: "A day-by-day implementation guide to transition from your current schedule to the 4AM protocol."
+      sections:
+        - week 1 gradual shift
+        - week 2-3 habit lock
+        - week 4 optimization and personalization
+
+author:
+  name: AnteMass Publishing
+  tagline: performance systems for ambitious professionals
+  credentials:
+    - behavioral science and productivity research
+    - high-performance coaching methodology
+  platforms:
+    - antemass.com
+    - the4amprotocol.com
+
+publisher:
+  name: AnteMass Publishing
+  imprint: AnteMass Books
