@@ -1,0 +1,29 @@
+{
+  "title": "The AI Productivity Playbook",
+  "subtitle": "50 Ways to Save 10 Hours a Week Using Free AI Tools",
+  "author": "A. Zhou",
+  "language": "English",
+  "word_count": 4500,
+  "target_word_count": 25000,
+  "pages_estimate": 120,
+  "categories": [
+    "Business & Money > Skills > Time Management",
+    "Computers & Technology > Computer Science > AI & Machine Learning"
+  ],
+  "keywords": [
+    "AI productivity",
+    "ChatGPT for work",
+    "AI tools for business",
+    "save time with AI",
+    "artificial intelligence productivity",
+    "AI for professionals",
+    "work smarter with AI"
+  ],
+  "price": {
+    "ebook": 4.99,
+    "paperback": 12.99
+  },
+  "description": "Stop wasting 10 hours a week on tasks AI can handle in minutes.\n\nThe AI Productivity Playbook gives you 50 copy-paste techniques to immediately save time on emails, meetings, research, content creation, and operations — using free AI tools you already have access to.\n\nNo theory. No hype. Just practical techniques with real prompts you can use TODAY.\n\n✅ Draft emails in 10 seconds instead of 10 minutes\n✅ Summarize 40-page reports in 5 bullet points\n✅ Create a week of social media content in 30 minutes\n✅ Automate repetitive workflows without coding\n✅ Make better decisions with AI-powered analysis\n\nEach technique includes the exact prompt to use, which free tool to use, and how much time you'll save per week.\n\nWhether you're a professional, freelancer, or business owner — this book pays for itself in the first hour of reading.",
+  "status": "DRAFT_IN_PROGRESS",
+  "notes": "Need to expand from 4,500 to 25,000 words. Core structure and 25/50 hacks are fully written. Remaining sections need fleshing out with more examples, case studies, and expanded prompt templates."
+}

@@ -1,0 +1,86 @@
+title: "The AI Productivity Playbook"
+subtitle: "50 Ways to Save 10 Hours a Week Using Free AI Tools"
+author: "A. Zhou"
+genre: nonfiction
+category: productivity/technology
+target_length: 25000
+tone: practical, conversational, no-bullshit
+audience: "Professionals, freelancers, small business owners who know AI exists but haven't integrated it into daily work"
+
+structure:
+  - chapter: "Introduction: Why Most People Use AI Wrong"
+    points:
+      - AI isn't magic, it's leverage
+      - The 80/20 of AI productivity
+      - Who this book is for
+
+  - chapter: "Part 1: Communication (Save 3 Hours/Week)"
+    sections:
+      - "Email Triage: Let AI sort what matters"
+      - "Meeting Summaries: Never take notes again"
+      - "Message Drafting: First drafts in seconds"
+      - "Translation and Tone Adjustment"
+      - "Cold Outreach That Actually Works"
+
+  - chapter: "Part 2: Research & Analysis (Save 2 Hours/Week)"
+    sections:
+      - "Deep Research in 10 Minutes"
+      - "Competitive Analysis on Autopilot"
+      - "Data Summarization: PDFs, Reports, Spreadsheets"
+      - "Market Research Without Expensive Tools"
+      - "Legal and Contract Review (First Pass)"
+
+  - chapter: "Part 3: Content Creation (Save 2 Hours/Week)"
+    sections:
+      - "Blog Posts and Articles: From Outline to Draft"
+      - "Social Media Content Calendars"
+      - "Presentation Decks in Minutes"
+      - "Video Scripts and Storyboards"
+      - "SEO-Optimized Content That Ranks"
+
+  - chapter: "Part 4: Operations & Workflow (Save 2 Hours/Week)"
+    sections:
+      - "Automating Repetitive Tasks with AI"
+      - "Project Planning and Task Breakdown"
+      - "Customer Service Templates"
+      - "Invoice and Financial Document Processing"
+      - "Hiring: Resume Screening and Job Posts"
+
+  - chapter: "Part 5: Learning & Decision Making (Save 1 Hour/Week)"
+    sections:
+      - "Learning Any Topic in 30 Minutes"
+      - "Decision Frameworks with AI"
+      - "Brainstorming and Ideation"
+      - "Personal Knowledge Management"
+      - "Staying Current Without Doom-Scrolling"
+
+  - chapter: "The Meta-Skill: Prompting"
+    sections:
+      - "Why your prompts suck (and how to fix them)"
+      - "The CRAFT framework for effective prompts"
+      - "10 prompt templates you'll use daily"
+      - "When NOT to use AI"
+
+  - chapter: "Quick Reference: 50 AI Productivity Hacks"
+    format: "numbered list, each hack = tool + technique + time saved"
+
+  - chapter: "Conclusion: The New Normal"
+    points:
+      - "This isn't about replacing yourself"
+      - "The compounding effect of small time savings"
+      - "What to do next"
+
+kdp:
+  price_ebook: 4.99
+  price_paperback: 12.99
+  keywords:
+    - AI productivity
+    - ChatGPT for work
+    - AI tools for business
+    - save time with AI
+    - artificial intelligence productivity
+    - AI for professionals
+    - work smarter with AI
+  categories:
+    - "Business & Money > Skills > Time Management"
+    - "Computers & Technology > Computer Science > AI & Machine Learning"
