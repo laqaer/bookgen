@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2560" viewBox="0 0 1600 2560">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="100%" stop-color="#1a0a2a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#334488"/>
+      <stop offset="100%" stop-color="#553388"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1600" height="2560" fill="url(#bg)"/>
+  
+  <!-- Subtle geometric pattern - representing institutional structure -->
+  <g opacity="0.08">
+    <rect x="100" y="400" width="200" height="200" fill="none" stroke="#6688cc" stroke-width="1"/>
+    <rect x="150" y="450" width="200" height="200" fill="none" stroke="#6688cc" stroke-width="1"/>
+    <rect x="200" y="500" width="200" height="200" fill="none" stroke="#6688cc" stroke-width="1"/>
+    <rect x="1100" y="600" width="300" height="300" fill="none" stroke="#6688cc" stroke-width="1"/>
+    <rect x="1150" y="650" width="300" height="300" fill="none" stroke="#6688cc" stroke-width="1"/>
+    <rect x="300" y="1800" width="150" height="150" fill="none" stroke="#6688cc" stroke-width="1"/>
+    <rect x="350" y="1850" width="150" height="150" fill="none" stroke="#6688cc" stroke-width="1"/>
+    <rect x="1200" y="1700" width="200" height="200" fill="none" stroke="#6688cc" stroke-width="1"/>
+  </g>
+  
+  <!-- Horizontal accent line -->
+  <rect x="200" y="900" width="1200" height="2" fill="url(#accent)" opacity="0.6"/>
+  <rect x="200" y="1550" width="1200" height="1" fill="url(#accent)" opacity="0.3"/>
+  
+  <!-- Title -->
+  <text x="800" y="1100" text-anchor="middle" font-family="Georgia, serif" font-size="120" font-weight="bold" fill="#ffffff" letter-spacing="3">SHADOWS</text>
+  <text x="800" y="1240" text-anchor="middle" font-family="Georgia, serif" font-size="80" fill="#8899bb" letter-spacing="8">AND</text>
+  <text x="800" y="1380" text-anchor="middle" font-family="Georgia, serif" font-size="120" font-weight="bold" fill="#ffffff" letter-spacing="3">STRUCTURES</text>
+  
+  <!-- Subtitle -->
+  <text x="800" y="1620" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#7788aa" letter-spacing="2">STATE SECRECY, BUREAUCRATIC POWER,</text>
+  <text x="800" y="1670" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#7788aa" letter-spacing="2">AND THE LIMITS OF PUBLIC KNOWLEDGE</text>
+  
+  <!-- Author -->
+  <text x="800" y="2200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="48" fill="#aabbcc" letter-spacing="6">A. ZHOU</text>
+  
+  <!-- Bottom accent -->
+  <rect x="600" y="2300" width="400" height="2" fill="url(#accent)" opacity="0.4"/>
+</svg>
