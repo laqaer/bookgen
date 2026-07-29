@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2560" viewBox="0 0 1600 2560" role="img" aria-labelledby="title desc">
+  <title id="title">The AI Productivity Playbook Cover</title>
+  <desc id="desc">Modern warm orange and white book cover with geometric accents and author Kira Tannen</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF7ED"/>
+      <stop offset="55%" stop-color="#FFE8CC"/>
+      <stop offset="100%" stop-color="#FFD3A1"/>
+    </linearGradient>
+    <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#9A3412" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="2560" fill="url(#bg)"/>
+
+  <!-- Background geometry -->
+  <circle cx="1320" cy="320" r="320" fill="#FDBA74" opacity="0.35"/>
+  <circle cx="1320" cy="320" r="220" fill="#FED7AA" opacity="0.55"/>
+  <path d="M0 1940 C360 1820, 760 2120, 1600 1840 L1600 2560 L0 2560 Z" fill="#FFEDD5"/>
+
+  <!-- Main card -->
+  <rect x="136" y="170" width="1328" height="2220" rx="54" fill="#FFFFFF" filter="url(#shadow)"/>
+
+  <!-- Top accent bar -->
+  <rect x="136" y="170" width="1328" height="28" rx="14" fill="url(#sunset)"/>
+
+  <!-- Decorative chips -->
+  <g transform="translate(236 286)">
+    <rect x="0" y="0" width="138" height="42" rx="21" fill="#FFEDD5"/>
+    <rect x="156" y="0" width="102" height="42" rx="21" fill="#FED7AA"/>
+    <rect x="274" y="0" width="182" height="42" rx="21" fill="#FDBA74"/>
+  </g>
+
+  <!-- Title block -->
+  <text x="236" y="470" fill="#7C2D12" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="1.2">
+    THE AI
+  </text>
+  <text x="236" y="560" fill="#7C2D12" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="1.2">
+    PRODUCTIVITY
+  </text>
+  <text x="236" y="650" fill="#7C2D12" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="70" font-weight="700" letter-spacing="1.2">
+    PLAYBOOK
+  </text>
+
+  <rect x="236" y="712" width="250" height="6" fill="#EA580C"/>
+
+  <text x="236" y="810" fill="#9A3412" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="44" font-weight="500">
+    50 Ways to Save 10 Hours a Week
+  </text>
+  <text x="236" y="870" fill="#9A3412" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="44" font-weight="500">
+    Using Free AI Tools
+  </text>
+
+  <!-- Center illustration -->
+  <g transform="translate(236 1010)">
+    <rect x="0" y="0" width="1128" height="780" rx="34" fill="#FFF7ED"/>
+    <rect x="74" y="76" width="980" height="118" rx="18" fill="#FFFFFF" stroke="#FDBA74" stroke-width="3"/>
+    <rect x="74" y="238" width="980" height="88" rx="16" fill="#FFFFFF" stroke="#FED7AA" stroke-width="3"/>
+    <rect x="74" y="370" width="980" height="88" rx="16" fill="#FFFFFF" stroke="#FED7AA" stroke-width="3"/>
+    <rect x="74" y="502" width="700" height="88" rx="16" fill="#FFFFFF" stroke="#FED7AA" stroke-width="3"/>
+
+    <circle cx="130" cy="135" r="14" fill="#FDBA74"/>
+    <circle cx="170" cy="135" r="14" fill="#FB923C"/>
+    <circle cx="210" cy="135" r="14" fill="#EA580C"/>
+
+    <rect x="860" y="528" width="194" height="62" rx="31" fill="url(#sunset)"/>
+    <text x="956" y="569" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="30" font-weight="700">SAVE TIME</text>
+  </g>
+
+  <!-- Author block -->
+  <rect x="236" y="1960" width="1128" height="190" rx="28" fill="url(#accent)"/>
+  <text x="800" y="2052" text-anchor="middle" fill="#FFEDD5" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="36" font-weight="500" letter-spacing="2.2">
+    BY
+  </text>
+  <text x="800" y="2128" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="74" font-weight="800" letter-spacing="1.6">
+    KIRA TANNEN
+  </text>
+
+  <text x="800" y="2298" text-anchor="middle" fill="#C2410C" font-family="Avenir Next, Montserrat, Poppins, Arial, sans-serif" font-size="30" font-weight="600" letter-spacing="1.6">
+    PRACTICAL SYSTEMS FOR MODERN WORK
+  </text>
+</svg>

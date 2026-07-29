@@ -40,7 +40,7 @@
   <text x="800" y="1670" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#7788aa" letter-spacing="2">AND THE LIMITS OF PUBLIC KNOWLEDGE</text>
   
   <!-- Author -->
-  <text x="800" y="2200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="48" fill="#aabbcc" letter-spacing="6">A. ZHOU</text>
+  <text x="800" y="2200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="48" fill="#aabbcc" letter-spacing="6">MARCUS VAEL</text>
   
   <!-- Bottom accent -->
   <rect x="600" y="2300" width="400" height="2" fill="url(#accent)" opacity="0.4"/>

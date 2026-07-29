@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="2560" viewBox="0 0 1600 2560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for background -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for accent elements -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="2560" fill="url(#backgroundGradient)"/>
+  
+  <!-- Top decorative element -->
+  <rect x="0" y="0" width="1600" height="120" fill="url(#blueGradient)"/>
+  
+  <!-- Main title -->
+  <text x="800" y="280" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="88" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#1e293b"
+        style="line-height: 1.1">
+    <tspan x="800" dy="0">THE REMOTE WORK</tspan>
+    <tspan x="800" dy="110">SURVIVAL GUIDE</tspan>
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="800" y="520" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="56" 
+        font-weight="600" 
+        text-anchor="middle" 
+        fill="url(#blueGradient)">
+    75 Battle-Tested Tips
+  </text>
+  
+  <text x="800" y="590" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="48" 
+        font-weight="400" 
+        text-anchor="middle" 
+        fill="#64748b">
+    for Working From Home
+  </text>
+  
+  <text x="800" y="660" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="48" 
+        font-weight="400" 
+        text-anchor="middle" 
+        fill="#64748b">
+    Without Losing Your Mind
+  </text>
+
+  <!-- Central graphic element - laptop with wifi signal -->
+  <g transform="translate(800, 950)" filter="url(#dropshadow)">
+    <!-- Laptop base -->
+    <rect x="-200" y="50" width="400" height="20" rx="10" fill="#e2e8f0"/>
+    <!-- Laptop screen -->
+    <rect x="-180" y="-100" width="360" height="240" rx="12" fill="#1e293b"/>
+    <!-- Screen content -->
+    <rect x="-160" y="-80" width="320" height="180" rx="6" fill="#ffffff"/>
+    <!-- Screen lines (representing content) -->
+    <rect x="-140" y="-60" width="280" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="-140" y="-40" width="240" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="-140" y="-20" width="260" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="-140" y="0" width="200" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="-140" y="20" width="280" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="-140" y="40" width="220" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="-140" y="60" width="260" height="8" rx="4" fill="#e2e8f0"/>
+    
+    <!-- WiFi signals -->
+    <g transform="translate(120, -60)">
+      <path d="M 0,0 A 30,30 0 0 1 60,0" stroke="url(#blueGradient)" stroke-width="6" fill="none" opacity="0.3"/>
+      <path d="M 5,0 A 25,25 0 0 1 55,0" stroke="url(#blueGradient)" stroke-width="6" fill="none" opacity="0.6"/>
+      <path d="M 10,0 A 20,20 0 0 1 50,0" stroke="url(#blueGradient)" stroke-width="6" fill="none" opacity="1"/>
+      <circle cx="30" cy="5" r="4" fill="url(#blueGradient)"/>
+    </g>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="200" cy="800" r="8" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="1400" cy="1200" r="12" fill="#1d4ed8" opacity="0.2"/>
+  <circle cx="150" cy="1800" r="6" fill="#3b82f6" opacity="0.4"/>
+  <circle cx="1450" cy="1600" r="10" fill="#1d4ed8" opacity="0.3"/>
+
+  <!-- Key benefits section -->
+  <g transform="translate(800, 1400)">
+    <!-- Checkmarks -->
+    <g fill="url(#blueGradient)">
+      <path d="M-280,0 L-270,-8 L-260,5 L-280,0 Z" transform="translate(0,-5)"/>
+      <path d="M-280,60 L-270,52 L-260,65 L-280,60 Z" transform="translate(0,-5)"/>
+      <path d="M-280,120 L-270,112 L-260,125 L-280,120 Z" transform="translate(0,-5)"/>
+      <path d="M-280,180 L-270,172 L-260,185 L-280,180 Z" transform="translate(0,-5)"/>
+    </g>
+    
+    <text x="-200" y="0" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-size="36" 
+          font-weight="600" 
+          text-anchor="start" 
+          fill="#1e293b">
+      Set Up Your Perfect Workspace
+    </text>
+    <text x="-200" y="60" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-size="36" 
+          font-weight="600" 
+          text-anchor="start" 
+          fill="#1e293b">
+      Master Time Management
+    </text>
+    <text x="-200" y="120" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-size="36" 
+          font-weight="600" 
+          text-anchor="start" 
+          fill="#1e293b">
+      Stay Healthy &amp; Productive
+    </text>
+    <text x="-200" y="180" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-size="36" 
+          font-weight="600" 
+          text-anchor="start" 
+          fill="#1e293b">
+      Advance Your Career
+    </text>
+  </g>
+
+  <!-- Author name -->
+  <text x="800" y="2200" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="64" 
+        font-weight="600" 
+        text-anchor="middle" 
+        fill="#1e293b">
+    JAKE MERCER
+  </text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="2440" width="1600" height="120" fill="url(#blueGradient)"/>
+  
+  <!-- Tagline at bottom -->
+  <text x="800" y="2380" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="32" 
+        font-weight="400" 
+        text-anchor="middle" 
+        fill="#64748b"
+        style="font-style: italic">
+    From a friend who's been remote for 5 years
+  </text>
+</svg>
