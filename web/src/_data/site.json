@@ -1,0 +1,25 @@
+{
+  "name": "Gildroot",
+  "tagline": "Your roots, gilded.",
+  "description": "Heirloom family-tree charts from any family tree file. Made privately in your browser, ready to print today.",
+  "url": "https://gildroot.com",
+  "domain": "",
+  "email": { "hello": "hello@gildroot.com", "support": "support@gildroot.com" },
+  "checkout": {
+    "_comment": "Owner fills these after creating the Lemon Squeezy store. Until then buy buttons show a 'checkout opens soon' notice and the waitlist form.",
+    "enabled": false,
+    "store": "gildroot",
+    "storeId": "",
+    "productIds": [],
+    "heirloom": "",
+    "historian": "",
+    "familyPack": "",
+    "professional": "",
+    "upgrade": "",
+    "giftHeirloom": "",
+    "giftHistorian": ""
+  },
+  "prices": { "heirloom": 29, "historian": 59, "familyPack": 79, "professional": 149, "upgrade": 30, "founding": 49 },
+  "newsletter": { "provider": "buttondown", "username": "" },
+  "analytics": { "plausibleDomain": "" }
+}

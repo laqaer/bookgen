@@ -1,0 +1,112 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'CG'; src: url(CG-400.ttf); font-weight: 400; }
+@font-face { font-family: 'CG'; src: url(CG-600.ttf); font-weight: 600; }
+@font-face { font-family: 'CSC'; src: url(CSC-500.ttf); }
+body { margin: 0; background: #ddd; }
+</style>
+<script src="node_modules/jspdf/dist/jspdf.umd.js"></script>
+<script src="node_modules/svg2pdf.js/dist/svg2pdf.umd.js"></script>
+<script src="node_modules/pdfkit/js/pdfkit.standalone.js"></script>
+<script src="node_modules/svg-to-pdfkit/source.js"></script>
+
+</head><body>
+<div id="host"></div>
+<script>
+const W = 1728, H = 2592; // 24x36 in, in pt
+const GENS = +(new URLSearchParams(location.search).get('gens') || 8);
+const FILTER = new URLSearchParams(location.search).get('filter') === '1';
+const first = ['Johann','Maria','Jóhanna','Przemysł','Þórður','Nguyễn Thị','Bartholomew','Wilhelmina','Seán','Ælfgifu','Zdeňka','François','Anneliese','Wojciech','Margarethe','Ødegård','王','שרה','Κωνσταντίνος','Ekaterina'];
+const last = ['Weber','Wąsowska','Dvořák','Guðmundsson','Hoa','Fitzwilliam-Montgomery','Ó Briain','Müller','Łukasiewicz','Brønnum','秀英','כהן','Παπαδόπουλος','Schwarzenberg','Kowalczyk'];
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const pick = a => a[Math.floor(rnd() * a.length)];
+const NS = 'http://www.w3.org/2000/svg';
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const svg = el('svg', { xmlns: NS, width: W, height: H, viewBox: `0 0 ${W} ${H}` }, document.getElementById('host'));
+const defs = el('defs', {}, svg);
+const lg = el('linearGradient', { id: 'gold', x1: 0, y1: 0, x2: 1, y2: 1 }, defs);
+el('stop', { offset: 0, 'stop-color': '#d9b45a' }, lg); el('stop', { offset: 1, 'stop-color': '#8a6a24' }, lg);
+if (FILTER) { const f = el('filter', { id: 'wc' }, defs); el('feTurbulence', { type: 'fractalNoise', baseFrequency: 0.02, numOctaves: 3 }, f); el('feDisplacementMap', { in: 'SourceGraphic', scale: 12 }, f); }
+el('rect', { x: 0, y: 0, width: W, height: H, fill: '#101a2e' }, svg);
+const cx = W / 2, cy = 1150, R0 = 90, ring = (760 - R0) / (GENS - 1);
+const ctx = document.createElement('canvas').getContext('2d');
+function fit(text, maxW, maxPt, minPt, weight = 400) {
+  for (let s = maxPt; s >= minPt; s -= 0.25) { ctx.font = `${weight} ${s}px CG`; if (ctx.measureText(text).width <= maxW) return s; }
+  return null;
+}
+let overflow = 0, abbreviated = 0, total = 0;
+const g = el('g', FILTER ? { filter: 'url(#wc)' } : {}, svg);
+el('circle', { cx, cy, r: R0, fill: 'url(#gold)' }, g);
+const t0 = el('text', { x: cx, y: cy + 8, 'text-anchor': 'middle', 'font-family': 'CG', 'font-weight': 600, 'font-size': 26, fill: '#101a2e' }, svg);
+t0.textContent = 'Johann Weber';
+for (let gen = 1; gen < GENS; gen++) {
+  const n = 2 ** gen, r1 = R0 + (gen - 1) * ring, r2 = r1 + ring;
+  for (let i = 0; i < n; i++) {
+    const a1 = (i / n) * 2 * Math.PI - Math.PI / 2, a2 = ((i + 1) / n) * 2 * Math.PI - Math.PI / 2;
+    const P = (r, a) => [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+    const [x1, y1] = P(r1, a1), [x2, y2] = P(r2, a1), [x3, y3] = P(r2, a2), [x4, y4] = P(r1, a2);
+    const large = a2 - a1 > Math.PI ? 1 : 0;
+    el('path', { d: `M${x1},${y1}L${x2},${y2}A${r2},${r2} 0 ${large} 1 ${x3},${y3}L${x4},${y4}A${r1},${r1} 0 ${large} 0 ${x1},${y1}Z`, fill: i % 2 ? '#1c2b4a' : '#243759', stroke: 'url(#gold)', 'stroke-width': 0.8 }, g);
+    const name = pick(first) + ' ' + pick(last), dates = `${1900 - gen * 28 + Math.floor(rnd() * 10)}–${1960 - gen * 28 + Math.floor(rnd() * 20)}`;
+    total++;
+    const arcLen = (a2 - a1) * (r1 + r2) / 2;
+    if (gen <= 3) { // curved text on arc
+      const rm = (r1 + r2) / 2, id = `p${gen}_${i}`;
+      const [sx, sy] = P(rm, a1 + 0.04), [ex, ey] = P(rm, a2 - 0.04);
+      el('path', { id, d: `M${sx},${sy}A${rm},${rm} 0 0 1 ${ex},${ey}`, fill: 'none' }, defs);
+      let s = fit(name, arcLen * 0.9, 22, 9, 600); if (!s) overflow++;
+      const t = el('text', { 'font-family': 'CG', 'font-weight': 600, 'font-size': s || 9, fill: '#e8d9a8' }, g);
+      const tp = el('textPath', { href: '#' + id, 'xlink:href': '#' + id, startOffset: '50%', 'text-anchor': 'middle' }, t); tp.textContent = name;
+      const t2 = el('text', { 'font-family': 'CSC', 'font-size': 12, fill: '#b8913a', 'letter-spacing': 1.5 }, g);
+      const id2 = id + 'b'; const rb = rm - 20; const [bx, by] = P(rb, a1 + 0.05), [cx2, cy2] = P(rb, a2 - 0.05);
+      el('path', { id: id2, d: `M${bx},${by}A${rb},${rb} 0 0 1 ${cx2},${cy2}`, fill: 'none' }, defs);
+      const tp2 = el('textPath', { href: '#' + id2, 'xlink:href': '#' + id2, startOffset: '50%', 'text-anchor': 'middle' }, t2); tp2.textContent = dates;
+    } else { // radial text
+      const am = (a1 + a2) / 2, deg = am * 180 / Math.PI, flip = Math.cos(am) < 0;
+      const avail = ring - 12, thick = arcLen * 0.8;
+      let s = Math.min(fit(name, avail, 16, 5) || 0, thick * 0.55);
+      let txt = name;
+      if (!s || s < 5) { txt = name.split(' ')[0][0] + '. ' + name.split(' ').slice(1).join(' '); s = Math.min(fit(txt, avail, 16, 4) || 4, thick * 0.55); abbreviated++; }
+      ctx.font = `400 ${s}px CG`; if (ctx.measureText(txt).width > avail) overflow++;
+      const [tx, ty] = P((r1 + r2) / 2, am);
+      const t = el('text', { x: tx, y: ty, 'font-family': 'CG', 'font-size': s.toFixed(2), fill: '#e8d9a8', 'text-anchor': 'middle', 'dominant-baseline': 'central', transform: `rotate(${flip ? deg + 180 : deg} ${tx} ${ty})` }, g);
+      t.textContent = txt;
+    }
+  }
+}
+const title = el('text', { x: cx, y: 2200, 'text-anchor': 'middle', 'font-family': 'CSC', 'font-size': 64, fill: 'url(#gold)', 'letter-spacing': 6 }, svg);
+title.textContent = 'The Ancestors of Johann Weber';
+window.stats = { total, overflow, abbreviated };
+
+async function b64(url) { const b = await (await fetch(url)).arrayBuffer(); let s = ''; const u = new Uint8Array(b); for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s); }
+window.makePdf = async () => {
+  await document.fonts.ready;
+  const { jsPDF } = window.jspdf;
+  const t = performance.now();
+  const pdf = new jsPDF({ unit: 'pt', format: [W, H], orientation: 'portrait' });
+  for (const [f, n, st, wt] of [['CG-400.ttf', 'CG', 'normal'], ['CG-600.ttf', 'CG', 'normal', 600], ['CSC-500.ttf', 'CSC', 'normal']]) {
+    pdf.addFileToVFS(f, await b64(f)); pdf.addFont(f, n, st, wt || 400);
+  }
+  // svg2pdf maps font-weight 600 -> needs 'bold' style name mapping
+  await pdf.svg(svg, { x: 0, y: 0, width: W, height: H });
+  const out = pdf.output('datauristring');
+  return { ms: Math.round(performance.now() - t), b64: out.split(',')[1], stats: window.stats };
+};
+
+window.makePdf = async () => {
+  await document.fonts.ready;
+  const t = performance.now();
+  const doc = new PDFDocument({ size: [W, H], margin: 0 });
+  const fonts = {};
+  for (const [f, key] of [['CG-400.ttf','CG-400'],['CG-600.ttf','CG-600'],['CSC-500.ttf','CSC']]) { doc.registerFont(key, await (await fetch(f)).arrayBuffer()); }
+  const chunks = []; doc.on('data', c => chunks.push(c)); const done = new Promise(r => doc.on('end', r));
+  SVGtoPDF(doc, svg.outerHTML, 0, 0, { width: W, height: H, preserveAspectRatio: 'none',
+    fontCallback: (family, bold, italic, opts) => { const fam = family.replace(/['"]/g,''); if (fam.startsWith('CSC')) return 'CSC'; return bold ? 'CG-600' : 'CG-400'; },
+    warningCallback: w => console.log('warn', w) });
+  doc.end();
+  await done; const blob = new Blob(chunks);
+  const b = new Uint8Array(await blob.arrayBuffer()); let s = ''; for (let i = 0; i < b.length; i += 0x8000) s += String.fromCharCode.apply(null, b.subarray(i, i + 0x8000));
+  return { ms: Math.round(performance.now() - t), b64: btoa(s), stats: window.stats };
+};
+</script></body></html>

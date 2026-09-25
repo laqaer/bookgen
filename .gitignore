@@ -1,11 +1,7 @@
 __pycache__/
 *.pyc
 .DS_Store
-books/*/manuscript/
-books/*/book.md
-books/*/ideation/
-books/*/design/
-books/*/publishing/
-books/*/marketing/
-books/*/monetization/
-manuscript_*/
+node_modules/
+web/dist/
+.harness/out/
+*.log

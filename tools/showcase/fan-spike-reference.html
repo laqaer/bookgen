@@ -1,0 +1,82 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:"Cormorant";src:url(CormorantGaramond.ttf)} body{margin:0;background:#0b1026}</style>
+<script src="jspdf.umd.min.js"></script><script src="svg2pdf.umd.min.js"></script>
+</head><body><div id="out"></div><script>
+function parseGedcom(text){
+  const recs={}, lines=text.split(/\r?\n/); let cur=null, stack=[];
+  for(const raw of lines){ const m=raw.match(/^\s*(\d+)\s+(@[^@]+@\s+)?(\w+)(?:\s(.*))?$/); if(!m) continue;
+    const lvl=+m[1], xref=m[2]&&m[2].trim(), tag=m[3], val=m[4]||'';
+    const node={tag,val,kids:[]};
+    if(lvl===0){ cur=xref?(recs[xref]={id:xref,tag,val,kids:[]}):null; stack=[cur]; continue; }
+    if(!cur) continue; stack.length=lvl; (stack[lvl-1]||cur).kids.push(node); stack[lvl]=node; }
+  const get=(n,t)=>n.kids.find(k=>k.tag===t), all=(n,t)=>n.kids.filter(k=>k.tag===t);
+  const people={}, fams={};
+  for(const r of Object.values(recs)){
+    if(r.tag==='INDI'){ const nm=(get(r,'NAME')?.val||'Unknown').replace(/\//g,'').trim();
+      const ev=t=>{const e=get(r,t); return e?{date:get(e,'DATE')?.val||'',place:get(e,'PLAC')?.val||''}:null};
+      people[r.id]={id:r.id,name:nm,sex:get(r,'SEX')?.val||'U',birt:ev('BIRT'),deat:ev('DEAT'),famc:get(r,'FAMC')?.val,fams:all(r,'FAMS').map(x=>x.val)}; }
+    if(r.tag==='FAM') fams[r.id]={husb:get(r,'HUSB')?.val,wife:get(r,'WIFE')?.val,chil:all(r,'CHIL').map(x=>x.val)};
+  }
+  return {people,fams};
+}
+const year=d=>{const m=(d||'').match(/(\d{3,4})\s*$/); return m?m[1]:''};
+function ahnen(db,root,gens){ const slots={1:db.people[root]};
+  for(let n=1;n<2**(gens-1);n++){ const p=slots[n]; if(!p||!p.famc) continue; const f=db.fams[p.famc]; if(!f) continue;
+    if(f.husb) slots[2*n]=db.people[f.husb]; if(f.wife) slots[2*n+1]=db.people[f.wife]; }
+  return slots; }
+const ctx=document.createElement('canvas').getContext('2d');
+function arcText(txt,r,a0,a1,size,fill,weight){ // per-glyph placement along arc centered between a0..a1 (radians, 0=up, clockwise)
+  ctx.font=`${weight||500} ${size}px Cormorant`; const w=[...txt].map(c=>ctx.measureText(c).width), tot=w.reduce((a,b)=>a+b,0);
+  let span=tot/r; const mid=(a0+a1)/2; if(span>Math.abs(a1-a0)*0.92) return null;
+  const flip = Math.cos(mid) < -0.2; // bottom half: flip so text reads left-to-right
+  let a = flip ? mid + span/2 : mid - span/2; let out='';
+  [...txt].forEach((c,i)=>{ const da=w[i]/r; const ac= flip ? a - da/2 : a + da/2;
+    const x=r*Math.sin(ac), y=-r*Math.cos(ac), rot=ac*180/Math.PI + (flip?180:0);
+    out+=`<text x="0" y="0" transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${rot.toFixed(2)})" font-family="Cormorant" font-size="${size}" font-weight="${weight||500}" fill="${fill}" text-anchor="middle" dominant-baseline="middle">${c.replace('&','&amp;').replace('<','&lt;')}</text>`;
+    a += flip ? -da : da; });
+  return out; }
+function radialText(lines,r0,r1,ang,size,fill){ // text running outward along the radius
+  const mid=(r0+r1)/2, x=mid*Math.sin(ang), y=-mid*Math.cos(ang); let rot=ang*180/Math.PI-90; if(Math.sin(ang)<0) rot+=180;
+  return lines.map((l,i)=>`<text transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${rot.toFixed(2)})" y="${((i-(lines.length-1)/2)*size*1.15).toFixed(2)}" font-family="Cormorant" font-size="${(i?size*0.8:size).toFixed(2)}" fill="${fill}" text-anchor="middle" dominant-baseline="middle">${l.replace('&','&amp;')}</text>`).join(''); }
+function fan(db,root,gens){
+  const S=slots=ahnen(db,root,gens), W=2400, R0=150, ring=[0,150,300,440,570,690,800,905,1000,1090];
+  const sweep=Math.PI*1.5, start=-sweep/2; let g='';
+  const gold='#d9b56c', ink='#0b1026', faint='rgba(217,181,108,.35)';
+  for(let gen=1; gen<gens; gen++){ const n=2**gen, r0=ring[gen], r1=ring[gen+1];
+    for(let k=0;k<n;k++){ const num=n+k, p=S[num]; const a0=start+sweep*k/n, a1=start+sweep*(k+1)/n;
+      const arc=(r,a)=>`${(r*Math.sin(a)).toFixed(2)} ${(-r*Math.cos(a)).toFixed(2)}`;
+      const big=(a1-a0)>Math.PI?1:0;
+      const fill = p ? (num%2? 'rgba(217,181,108,.07)':'rgba(120,150,220,.07)') : 'none';
+      g+=`<path d="M${arc(r0,a0)} A${r0} ${r0} 0 ${big} 1 ${arc(r0,a1)} L${arc(r1,a1)} A${r1} ${r1} 0 ${big} 0 ${arc(r1,a0)} Z" fill="${fill}" stroke="${faint}" stroke-width="1.2"/>`;
+      if(!p) continue;
+      const nm=p.name, yrs=[year(p.birt?.date),year(p.deat?.date)].filter(Boolean).join('–');
+      if(gen<=3){ const t1=arcText(nm, r0+(r1-r0)*0.58, a0,a1, gen===1?38:gen===2?30:24, gold,600) || arcText(nm.split(' ').slice(0,2).join(' '), r0+(r1-r0)*0.58, a0,a1, 22, gold,600);
+        const t2=arcText(yrs, r0+(r1-r0)*0.3, a0,a1, gen===1?24:18, '#b8c3e8',500); g+=(t1||'')+(t2||''); }
+      else { const words=nm.split(' '); const short = words.length>3 ? words.slice(0,3).join(' ') : nm;
+        const size=Math.max(9, Math.min(20, (r1-r0)/Math.max(short.length*0.52,1)));
+        const arcw=(a1-a0)*(r0+r1)/2; const s2=Math.min(size, arcw*0.42);
+        g+=radialText([short, yrs], r0, r1, (a0+a1)/2, s2, gold); }
+    }
+  }
+  const p=S[1]; const nm=p.name;
+  g+=`<circle r="${R0}" fill="none" stroke="${gold}" stroke-width="2"/>`;
+  g+=`<text y="-10" font-family="Cormorant" font-size="54" font-weight="600" fill="${gold}" text-anchor="middle">${nm}</text><text y="40" font-family="Cormorant" font-size="28" fill="#b8c3e8" text-anchor="middle">${year(p.birt?.date)} – ${year(p.deat?.date)}</text>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${W*0.82}" viewBox="${-W/2} ${-W*0.5} ${W} ${W*0.82}"><rect x="${-W/2}" y="${-W*0.5}" width="${W}" height="${W*0.82}" fill="${ink}"/>${g}
+  <text y="${W*0.24}" font-family="Cormorant" font-size="64" letter-spacing="12" fill="${gold}" text-anchor="middle">THE ANCESTORS OF QUEEN VICTORIA</text>
+  <text y="${W*0.24+50}" font-family="Cormorant" font-size="26" letter-spacing="6" fill="#b8c3e8" text-anchor="middle">NINE GENERATIONS · 1819 – ${'MDCCCXIX'}</text></svg>`;
+}
+window.run=async()=>{
+  await document.fonts.load('600 20px Cormorant');
+  const db=parseGedcom(await (await fetch('victoria.ged')).text());
+  const root=Object.values(db.people).find(p=>p.name==='Victoria').id;
+  const svg=fan(db,root,9); document.getElementById('out').innerHTML=svg;
+  const t0=performance.now();
+  const { jsPDF } = window.jspdf; const el=document.querySelector('svg');
+  const w=+el.getAttribute('width'), h=+el.getAttribute('height');
+  const pdf=new jsPDF({orientation:'landscape',unit:'pt',format:[w,h]});
+  const ttf=new Uint8Array(await (await fetch('CormorantGaramond.ttf')).arrayBuffer()); let bin=''; for(let i=0;i<ttf.length;i+=8192) bin+=String.fromCharCode.apply(null,ttf.subarray(i,i+8192));
+  pdf.addFileToVFS('C.ttf',btoa(bin)); pdf.addFont('C.ttf','Cormorant','normal'); pdf.addFont('C.ttf','Cormorant','bold');
+  await pdf.svg(el,{x:0,y:0,width:w,height:h});
+  const out=pdf.output('datauristring'); return {ms:Math.round(performance.now()-t0), people:Object.keys(db.people).length, b64:out.split(',')[1]};
+};
+</script></body></html>
