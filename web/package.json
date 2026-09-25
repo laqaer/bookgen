@@ -1,0 +1,14 @@
+{
+  "name": "gildroot-web",
+  "private": true,
+  "type": "module",
+  "description": "Gildroot site and studio. No build step for the app; dev dependencies are for tests only.",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node build.mjs --serve",
+    "test:charts": "node test/charts/scene-smoke.mjs"
+  },
+  "devDependencies": {
+    "pdfkit": "0.20.2"
+  }
+}
