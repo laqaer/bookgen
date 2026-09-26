@@ -40,14 +40,22 @@ Sell the existing ebook package at <https://www.bookgen.dev/>.
 - New discretionary spend: $0. Do not buy a domain, ads, Plausible, or model credits for a second product.
 - Inherited bookgen.dev hosting and generation costs stay on that existing project. This session did not call `/api/outline` or `/api/preview-first-chapter`.
 
+## Watchdog
+
+Deployed Worker `bookgen-watchdog` on the Laqaer Products Cloudflare account. D1 database `bookgen-watchdog`.
+
+- Manually tested: `GET /health` returned `{"ok":true}` on 2026-09-26.
+- Unattended-tested: cron runs wrote checks at `2026-09-26T04:58:13.439Z` and `2026-09-26T04:59:11.943Z`. Both saw homepage HTTP 200 and checkout validation HTTP 400. Neither created a Stripe session.
+- Steady schedule, attached on the upload after those runs: `17 * * * *` (once an hour). That hourly fire has not been observed yet. The minute cadence that was observed is no longer the schedule.
+- Public status: <https://bookgen-watchdog.laqaer-products.workers.dev/>
+- Stop: set Worker secret `PAUSED` to `1`, or disable the cron in the Cloudflare dashboard. `PAUSED` was not exercised in production.
+
+This is not a 24/7 sales operation. It checks that the site and the checkout validator respond. It does not fulfill orders.
+
 ## Next action
 
 When Vercel team `laqaers-projects` is readable: open the project for `bookgen.dev`, correct the absolute success and cancel URLs (`https://www.bookgen.dev/success` and `https://www.bookgen.dev/cancel`), remove any trailing carriage return from URL and price env values, redeploy, and confirm `POST /api/checkout` returns a `checkout.stripe.com` URL. Do not pay. Then confirm the webhook and a sandbox fulfillment path.
 
-Stop the watchdog by setting Worker secret `PAUSED` to `1`, or by disabling its cron in Cloudflare.
-
 ## Handoff
 
-Status page (after deploy): <https://bookgen-watchdog.laqaer-products.workers.dev/>
-
-Profit numbers are in `ops/LEDGER.md`. The held experiment is in `ops/EXPERIMENT.md`.
+Profit numbers are in `ops/LEDGER.md`. The held experiment is in `ops/EXPERIMENT.md`. The live worker source matches `ops/watchdog/worker.js`. `ops/watchdog/interpret.js` is the tested decision table and is not imported by the deployed script.
