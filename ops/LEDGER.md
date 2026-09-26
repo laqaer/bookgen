@@ -14,4 +14,4 @@ Window: mandate start 2026-09-26 through this revision. Figures are provisional.
 
 Paying customers, retention, and refunds: no customer record was accessible.
 
-Test probes and owner-funded purchases: none completed. Four unpaid checkout requests returned HTTP 500 and did not create a charge.
+Test probes and owner-funded purchases: none completed. Unpaid checkout requests on 2026-09-26, including the unattended probe at `2026-09-26T05:17:07Z`, returned HTTP 500 `Not a valid URL` and did not create a charge. Extra fields on the same request did not open a Stripe URL.

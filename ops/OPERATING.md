@@ -46,7 +46,10 @@ Deployed Worker `bookgen-watchdog` on the Laqaer Products Cloudflare account. D1
 
 - Manually tested: `GET /health` returned `{"ok":true}` on 2026-09-26.
 - Unattended-tested: cron runs wrote checks at `2026-09-26T04:58:13.439Z`, `2026-09-26T04:59:11.943Z`, and `2026-09-26T05:00:11.931Z`. Each saw homepage HTTP 200 and checkout validation HTTP 400. None created a Stripe session. The 05:00 run may still be the previous every-minute trigger, because the hourly schedule was uploaded just before that minute.
-- Steady schedule, attached on the upload after those runs: `17 * * * *` (once an hour). That hourly fire has not been observed yet. The minute cadence that was observed is no longer the schedule.
+- Steady schedule: `17 * * * *` (once an hour). It was attached at `2026-09-26T04:59:31Z`. Checks continued about once a minute through `2026-09-26T05:03:11Z`, which matches Cloudflare's note that cron changes can take up to 15 minutes to propagate. No further check was written between then and the hourly fire.
+- Unattended-tested after the paid-probe upload: the `2026-09-26T05:17:07Z` cron wrote check id 7 and paid probe id 1. Homepage HTTP 200, checkout validation HTTP 400, paid checkout HTTP 500 `Not a valid URL`, `buyer_ready` 0. The stored error is the text `Not a valid URL`. No Stripe URL was stored. No card was charged.
+- While checkout stays broken, the worker sends that unpaid order-shaped probe at most every 50 minutes. It uses `watchdog-noreply@bookgen.dev` and does not follow a Stripe URL. After a probe returns `checkout.stripe.com`, later runs skip that request. The skip-after-open rule is covered by unit tests. It has not been observed in production, because checkout has not returned a Stripe URL.
+- The live script is one module: `interpret.js` followed by `worker.js` with the import line removed. The repository keeps the import so the tests can load the decision table directly.
 - Public status: <https://bookgen-watchdog.laqaer-products.workers.dev/>
 - Stop: set Worker secret `PAUSED` to `1`, or disable the cron in the Cloudflare dashboard. `PAUSED` was not exercised in production.
 
@@ -58,4 +61,4 @@ When Vercel team `laqaers-projects` is readable: open the project for `bookgen.d
 
 ## Handoff
 
-Profit numbers are in `ops/LEDGER.md`. The held experiment is in `ops/EXPERIMENT.md`. The live worker source matches `ops/watchdog/worker.js`. `ops/watchdog/interpret.js` is the tested decision table and is not imported by the deployed script.
+Profit numbers are in `ops/LEDGER.md`. The held experiment is in `ops/EXPERIMENT.md`. `ops/watchdog/worker.js` imports `ops/watchdog/interpret.js`. The copy running in production is those two files bundled into one module, as of the `2026-09-26T05:17:07Z` cron.
