@@ -1,0 +1,15 @@
+/* Self-hosted, static, subset to Latin, Latin Extended, Greek, Cyrillic and Vietnamese. All SIL OFL. */
+@font-face { font-family: 'Cormorant Garamond'; src: url(../fonts/CormorantGaramond-500.woff2) format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Cormorant Garamond'; src: url(../fonts/CormorantGaramond-500i.woff2) format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Cormorant Garamond'; src: url(../fonts/CormorantGaramond-600.woff2) format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url(../fonts/EBGaramond-400.woff2) format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url(../fonts/EBGaramond-400i.woff2) format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url(../fonts/EBGaramond-600.woff2) format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Cormorant SC'; src: url(../fonts/CormorantSC-500.woff2) format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Cormorant SC'; src: url(../fonts/CormorantSC-600.woff2) format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Alegreya Sans'; src: url(../fonts/AlegreyaSans-400.woff2) format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Alegreya Sans'; src: url(../fonts/AlegreyaSans-400i.woff2) format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Alegreya Sans'; src: url(../fonts/AlegreyaSans-500.woff2) format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Alegreya Sans'; src: url(../fonts/AlegreyaSans-700.woff2) format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url(../fonts/Inter-400.woff2) format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url(../fonts/Inter-600.woff2) format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }

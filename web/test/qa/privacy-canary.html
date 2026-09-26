@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; script-src 'self' 'unsafe-inline' https://cdn.example.com">
+<title>Privacy canary (QA self-test)</title>
+</head>
+<body>
+<p>QA self-test page. The privacy gate must flag every request below; it never reaches the network.</p>
+<script>
+// 1. a third-party script host
+fetch('https://cdn.example.com/lib.js').catch(() => {});
+// 2. an allowed host, but carrying a name from the loaded tree
+fetch('https://plausible.io/api/event', { method: 'POST', body: JSON.stringify({ n: 'pageview', props: { root: 'Margaret Rose Almeida-Novak' } }) }).catch(() => {});
+// 3. data sent to our own static host
+fetch('/api/upload', { method: 'POST', body: 'x' }).catch(() => {});
+// 4. a tracking pixel
+new Image().src = 'https://tracker.example.net/p.gif';
+setTimeout(() => { window.__canaryDone = true; }, 300);
+</script>
+</body>
+</html>

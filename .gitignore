@@ -1,7 +1,10 @@
-__pycache__/
+*.log
 *.pyc
 .DS_Store
+.harness/out/
+__pycache__/
+design/directions/*/build/cache/
+design/directions/*/build/node_modules/
 node_modules/
 web/dist/
-.harness/out/
-*.log
+web/test/out/

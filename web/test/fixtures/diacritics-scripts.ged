@@ -1,0 +1,241 @@
+0 HEAD
+1 SOUR GILDROOT_FIXTURES
+2 NAME Gildroot scripts fixture
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 _HOME @S1@
+1 NOTE Fictional test data: Latin Extended, Greek, Cyrillic and Vietnamese names for glyph and
+2 CONC  extraction checks. None of these people are real.
+0 @S1@ INDI
+1 NAME Maria /Papadakis/
+1 SEX F
+1 BIRT
+2 DATE 9 JUN 1990
+2 PLAC Αθήνα, Ελλάδα
+1 FAMC @SF1@
+0 @S2@ INDI
+1 NAME Nikos /Papadakis/
+1 SEX M
+1 BIRT
+2 DATE 1960
+2 PLAC Heraklion, Crete, Greece
+1 FAMS @SF1@
+1 FAMC @SF2@
+0 @S3@ INDI
+1 NAME Ирина /Петрова/
+2 ROMN Irina /Petrova/
+1 SEX F
+1 BIRT
+2 DATE 1962
+2 PLAC Москва, Россия
+1 FAMS @SF1@
+1 FAMC @SF3@
+0 @S4@ INDI
+1 NAME Γεώργιος /Παπαδάκης/
+2 ROMN Georgios /Papadakis/
+1 SEX M
+1 BIRT
+2 DATE 1930
+2 PLAC Χανιά, Κρήτη
+1 DEAT
+2 DATE 2004
+1 FAMS @SF2@
+1 FAMC @SF4@
+0 @S5@ INDI
+1 NAME Ελένη /Καλογεράκη/
+2 ROMN Eleni /Kalogeraki/
+1 SEX F
+1 BIRT
+2 DATE 1934
+2 PLAC Ρέθυμνο, Κρήτη
+1 DEAT
+2 DATE 2019
+1 FAMS @SF2@
+1 FAMC @SF5@
+0 @S6@ INDI
+1 NAME Иван /Петров/
+1 SEX M
+1 BIRT
+2 DATE 1935
+2 PLAC Тверь, СССР
+1 DEAT
+2 DATE 2001
+1 FAMS @SF3@
+1 FAMC @SF6@
+0 @S7@ INDI
+1 NAME /Trần/ Thị Lan
+1 SEX F
+1 BIRT
+2 DATE 1938
+2 PLAC Huế, Việt Nam
+1 DEAT
+2 DATE 2015
+2 PLAC Москва, Россия
+1 FAMS @SF3@
+1 FAMC @SF7@
+0 @S8@ INDI
+1 NAME Μανώλης /Παπαδάκης/
+1 SEX M
+1 BIRT
+2 DATE ABT 1900
+1 DEAT
+2 DATE 1971
+1 FAMS @SF4@
+0 @S9@ INDI
+1 NAME Αικατερίνη /Μαρκάκη/
+1 SEX F
+1 BIRT
+2 DATE ABT 1905
+1 DEAT
+2 DATE 1980
+1 FAMS @SF4@
+0 @S10@ INDI
+1 NAME Δημήτριος /Καλογεράκης/
+1 SEX M
+1 BIRT
+2 DATE 1901
+1 FAMS @SF5@
+0 @S11@ INDI
+1 NAME Σοφία /Βλαχάκη/
+1 SEX F
+1 BIRT
+2 DATE 1908
+1 FAMS @SF5@
+0 @S12@ INDI
+1 NAME Пётр /Петров/
+1 SEX M
+1 BIRT
+2 DATE 1907
+2 PLAC Тверь, Российская империя
+1 FAMS @SF6@
+0 @S13@ INDI
+1 NAME Ольга /Смирнова/
+1 SEX F
+1 BIRT
+2 DATE 1910
+1 FAMS @SF6@
+0 @S14@ INDI
+1 NAME /Trần/ Văn Minh
+1 SEX M
+1 BIRT
+2 DATE 1910
+2 PLAC Huế, Annam
+1 FAMS @SF7@
+0 @S15@ INDI
+1 NAME /Lê/ Thị Hồng
+1 SEX F
+1 BIRT
+2 DATE 1914
+2 PLAC Đà Nẵng, Annam
+1 FAMS @SF7@
+0 @SF1@ FAM
+1 HUSB @S2@
+1 WIFE @S3@
+1 CHIL @S1@
+0 @SF2@ FAM
+1 HUSB @S4@
+1 WIFE @S5@
+1 CHIL @S2@
+0 @SF3@ FAM
+1 HUSB @S6@
+1 WIFE @S7@
+1 CHIL @S3@
+0 @SF4@ FAM
+1 HUSB @S8@
+1 WIFE @S9@
+1 CHIL @S4@
+0 @SF5@ FAM
+1 HUSB @S10@
+1 WIFE @S11@
+1 CHIL @S5@
+0 @SF6@ FAM
+1 HUSB @S12@
+1 WIFE @S13@
+1 CHIL @S6@
+0 @SF7@ FAM
+1 HUSB @S14@
+1 WIFE @S15@
+1 CHIL @S7@
+0 @L1@ INDI
+1 NAME Þórður /Guðmundsson/
+1 SEX M
+1 BIRT
+2 DATE 1948
+2 PLAC Reykjavík, Ísland
+1 FAMS @LF1@
+0 @L2@ INDI
+1 NAME Siobhán /Ní Bhriain/
+1 SEX F
+1 BIRT
+2 DATE 1950
+2 PLAC Gaillimh, Éire
+1 FAMS @LF1@
+0 @L3@ INDI
+1 NAME Łukasz /Wiśniewski/
+1 SEX M
+1 BIRT
+2 DATE 1975
+2 PLAC Łódź, Polska
+1 FAMS @LF2@
+0 @L4@ INDI
+1 NAME Ásdís /Þórðardóttir/
+1 SEX F
+1 BIRT
+2 DATE 1977
+2 PLAC Akureyri, Ísland
+1 FAMC @LF1@
+1 FAMS @LF2@
+0 @L5@ INDI
+1 NAME Zoë Małgorzata /Wiśniewska/
+1 SEX F
+1 BIRT
+2 DATE 2006
+2 PLAC Kraków, Polska
+1 FAMC @LF2@
+0 @L6@ INDI
+1 NAME Jiří /Dvořák/
+1 SEX M
+1 BIRT
+2 DATE 1921
+2 PLAC Brno, Československo
+0 @L7@ INDI
+1 NAME Ayşe /Yılmaz/
+1 SEX F
+1 BIRT
+2 DATE 1940
+2 PLAC İzmir, Türkiye
+0 @L8@ INDI
+1 NAME Ștefan /Rădulescu/
+1 SEX M
+1 BIRT
+2 DATE 1933
+2 PLAC București, România
+0 @L9@ INDI
+1 NAME Jürgen /Groß/
+1 SEX M
+1 BIRT
+2 DATE 1944
+2 PLAC Düsseldorf, Deutschland
+0 @L10@ INDI
+1 NAME Erzsébet /Szőke/
+1 SEX F
+1 BIRT
+2 DATE 1929
+2 PLAC Szeged, Magyarország
+0 @L11@ INDI
+1 NAME José María /Muñoz Ibáñez/
+1 SEX M
+1 BIRT
+2 DATE 1912
+2 PLAC Sevilla, España
+0 @LF1@ FAM
+1 HUSB @L1@
+1 WIFE @L2@
+1 CHIL @L4@
+0 @LF2@ FAM
+1 HUSB @L3@
+1 WIFE @L4@
+1 CHIL @L5@
+0 TRLR

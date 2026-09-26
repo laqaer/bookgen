@@ -1,0 +1,96 @@
+0 HEAD
+1 GEDC
+2 VERS 7.0
+1 SCHMA
+2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID
+2 TAG _MEMBER http://example.org/member
+1 SOUR GILDROOT_FIXTURES
+2 VERS 1.0
+2 NAME Gildroot GEDCOM 7 fixture
+1 DATE 25 SEP 2026
+1 LANG en
+1 NOTE Fictional test data in GEDCOM 7.0: no CHAR line, @VOID@ pointers, PHRASE,
+2 CONT calendar keywords, SNOTE records, TRAN names and adoption.
+0 @I1@ INDI
+1 NAME Élodie /Martin/
+2 GIVN Élodie
+2 SURN Martin
+1 SEX F
+1 BIRT
+2 DATE 7 JUL 1991
+2 PLAC Lyon, Rhône, France
+1 FAMC @F1@
+2 PEDI BIRTH
+1 EXID 12345
+2 TYPE http://example.org/ids
+1 UID 0d2e0a3c-5b1e-4c4a-9c1e-0b9f3c0e7a11
+1 _SKYPEID elodie.martin
+0 @I2@ INDI
+1 NAME Henri /Martin/
+1 SEX M
+1 BIRT
+2 DATE ABT 1960
+2 PLAC Marseille, Bouches-du-Rhône, France
+1 DEAT Y
+1 FAMS @F1@
+1 FAMC @F2@
+0 @I3@ INDI
+1 NAME Aiko /Tanaka/
+2 TRAN 田中 /愛子/
+3 LANG ja
+1 SEX F
+1 BIRT
+2 DATE 3 MAR 1963
+2 PLAC Kyoto, Japan
+1 FAMS @F1@
+0 @I4@ INDI
+1 NAME Marguerite /Martin/
+1 SEX F
+1 BIRT
+2 DATE BET 1930 AND 1935
+3 PHRASE In the early 1930s
+2 PLAC Paris, France
+1 DEAT
+2 DATE FROM 1990 TO 1991
+1 FAMS @F2@
+0 @I5@ INDI
+1 NAME Jean-Baptiste /Martin/
+1 SEX X
+1 BIRT
+2 DATE FRENCH_R 12 VEND 11
+2 PLAC Avignon, Vaucluse, France
+1 DEAT
+2 DATE JULIAN 1 MAR 1870
+1 SNOTE @N1@
+0 @I6@ INDI
+1 NAME Noah /Martin/
+1 SEX M
+1 BIRT
+2 DATE 2 OCT 2015
+2 PLAC Lyon, Rhône, France
+1 FAMC @F3@
+2 PEDI ADOPTED
+3 PHRASE Adopted as an infant
+1 ADOP
+2 DATE 2016
+2 FAMC @F3@
+3 ADOP BOTH
+0 @F1@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 CHIL @I1@
+1 MARR
+2 DATE 14 FEB 1989
+2 PLAC Lyon, Rhône, France
+0 @F2@ FAM
+1 HUSB @VOID@
+2 PHRASE Father unknown
+1 WIFE @I4@
+1 CHIL @I2@
+0 @F3@ FAM
+1 HUSB @VOID@
+1 WIFE @I1@
+1 CHIL @I6@
+0 @N1@ SNOTE Jean-Baptiste appears in the parish register of Avignon.
+1 CONT The date is recorded in the republican calendar.
+0 TRLR

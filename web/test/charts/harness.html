@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chart renderer harness</title>
+<style>
+  body { margin: 0; padding: 16px; background: #e9e6df; color: #222; font: 14px/1.4 system-ui, sans-serif; }
+  canvas { display: block; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25); max-width: 100%; height: auto; }
+  pre { white-space: pre-wrap; font-size: 12px; }
+</style>
+</head>
+<body>
+<p id="status">Rendering…</p>
+<canvas id="preview"></canvas>
+<pre id="log"></pre>
+<script type="module">
+// Renders the synthetic scene with every renderer and exposes the results on
+// window.__smoke for web/test/charts/scene-smoke.mjs. Open it directly to look.
+import { loadFonts, fonts, measure, fontFaceName, FONT_KEYS } from '../../src/app/charts/fonts.js';
+import { setTextBackend } from '../../src/app/charts/text.js';
+import { drawScene, hitTest, preloadImages } from '../../src/app/charts/render-canvas.js';
+import { sceneToPdf } from '../../src/app/charts/render-pdf.js';
+import { sceneToTiles, planTiles } from '../../src/app/charts/tiles.js';
+import { sceneToJpeg, shareImage, planRaster } from '../../src/app/charts/raster.js';
+import { exportFilename, exportPdf, slugify } from '../../src/app/charts/export.js';
+import { BLEED_PT } from '../../src/app/charts/sizes.js';
+import { buildSyntheticScene, buildBenchScene, SYNTHETIC_NAMES } from './synthetic-scene.js';
+
+const log = (...a) => { document.getElementById('log').textContent += a.join(' ') + '\n'; };
+const b64 = u8 => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); };
+const blobB64 = async blob => b64(new Uint8Array(await blob.arrayBuffer()));
+const params = new URLSearchParams(location.search);
+const DPI = Number(params.get('dpi') || 144);
+
+function grainDataUrl() {
+  // a small paper-grain texture (deterministic noise), JPEG
+  const c = document.createElement('canvas');
+  c.width = c.height = 128;
+  const x = c.getContext('2d');
+  const img = x.createImageData(128, 128);
+  let seed = 7;
+  for (let i = 0; i < img.data.length; i += 4) {
+    seed = (seed * 16807) % 2147483647;
+    const v = 226 + (seed % 22);
+    img.data[i] = v; img.data[i + 1] = v - 4; img.data[i + 2] = v - 14; img.data[i + 3] = 255;
+  }
+  x.putImageData(img, 0, 0);
+  return c.toDataURL('image/jpeg', 0.9);
+}
+
+async function run() {
+  const out = { done: false, errors: [], checks: {} };
+  const check = (name, ok, detail) => { out.checks[name] = { ok: !!ok, detail }; if (!ok) out.errors.push(`${name}: ${JSON.stringify(detail)}`); };
+  try {
+    const t0 = performance.now();
+    await loadFonts();
+    out.fontLoadMs = Math.round(performance.now() - t0);
+    setTextBackend(fonts);
+
+    // every FontFace is registered and usable by canvas
+    for (const key of FONT_KEYS) check(`fontface:${key}`, document.fonts.check(`12px "${fontFaceName(key)}"`), fontFaceName(key));
+
+    const grainSrc = grainDataUrl();
+    out.grainSrc = grainSrc;
+    const scene = buildSyntheticScene({ grainSrc });
+    out.scene = { wPt: scene.wPt, hPt: scene.hPt, items: scene.items.length, hits: scene.hits.length };
+    out.names = SYNTHETIC_NAMES;
+
+    // --- canvas (preview-style, at DPI)
+    await preloadImages(scene);
+    const canvas = document.getElementById('preview');
+    const scale = DPI / 72;
+    canvas.width = Math.round(scene.wPt * scale);
+    canvas.height = Math.round(scene.hPt * scale);
+    canvas.style.width = Math.round(scene.wPt) + 'px';
+    const ctx = canvas.getContext('2d');
+    const r1 = drawScene(ctx, scene, { scale, dpr: 1 });
+    // redraw timing (warm)
+    const t1 = performance.now();
+    drawScene(ctx, scene, { scale, dpr: 1 });
+    ctx.getImageData(0, 0, 1, 1);
+    out.canvasMs = Math.round((performance.now() - t1) * 10) / 10;
+    out.canvasStats = r1;
+    check('canvas:no-missing-images', r1.missingImages.length === 0, r1.missingImages);
+    out.canvasPng = canvas.toDataURL('image/png').split(',')[1];
+    out.canvasSize = [canvas.width, canvas.height];
+
+    // highlight overlay draws without error
+    const hc = document.createElement('canvas');
+    hc.width = 400; hc.height = Math.round(400 * scene.hPt / scene.wPt);
+    drawScene(hc.getContext('2d'), scene, { scale: 400 / scene.wPt, dpr: 1, highlightPersonIds: ['I2', 'I11'] });
+    out.highlightPng = hc.toDataURL('image/png').split(',')[1];
+
+    // --- hit testing: centre of every sector hit maps back to its person
+    let hitFails = [];
+    for (const h of scene.hits.filter(h => h.shape === 'sector' && h.a1 - h.a0 < 360)) {
+      const a = ((h.a0 + h.a1) / 2) * Math.PI / 180, r = (h.r0 + h.r1) / 2;
+      const got = hitTest(scene, h.cx + r * Math.sin(a), h.cy - r * Math.cos(a));
+      if (!got || got.personId !== h.personId) hitFails.push([h.personId, got && got.personId]);
+    }
+    const c0 = scene.hits.find(h => h.personId === 'I1' && h.shape === 'sector');
+    const centreHit = hitTest(scene, c0.cx + 3, c0.cy + 3);
+    const titleHit = scene.hits.find(h => h.shape === 'rect');
+    const rectHit = hitTest(scene, titleHit.x + 5, titleHit.y + 5);
+    const outside = hitTest(scene, 2, 2);
+    check('hitTest', !hitFails.length && centreHit?.personId === 'I1' && rectHit?.shape === 'rect' && outside === null, { hitFails, centre: centreHit?.personId, rect: rectHit?.shape, outside });
+
+    // --- canvas text width == fontkit width (the screen/paper match)
+    const widthRows = [];
+    let maxRel = 0;
+    const samples = [...SYNTHETIC_NAMES, '1731/32–1790', 'c. 1740–1801', 'Wolff Griffith', 'AVAWAY Tolkien', 'The Ancestors of Queen Victoria'];
+    for (const key of ['ebg-400', 'ebg-400i', 'ebg-600', 'cg-500', 'cg-500i', 'cg-600']) {
+      ctx.save();
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.font = `100px "${fontFaceName(key)}"`;
+      ctx.fontKerning = 'normal';
+      if ('textRendering' in ctx) ctx.textRendering = 'geometricPrecision';
+      for (const s of samples) {
+        if (!fonts.hasGlyphs(key, s).ok) continue;
+        const cw = ctx.measureText(s).width, fw = measure(key, 100, s);
+        const rel = Math.abs(cw - fw) / fw;
+        maxRel = Math.max(maxRel, rel);
+        widthRows.push([key, s, Math.round(cw * 100) / 100, Math.round(fw * 100) / 100]);
+      }
+      ctx.restore();
+    }
+    out.widths = widthRows;
+    out.maxWidthRel = maxRel;
+    check('canvas-vs-fontkit-width', maxRel < 0.002, { maxRel });
+    // measurements the Node registry must reproduce exactly
+    out.measures = samples.map(s => [s, measure('ebg-400', 12, s)]);
+
+    // ligatures off and old-style figures on, in the canvas too
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.font = `100px "${fontFaceName('ebg-400')}"`;
+    ctx.fontKerning = 'normal';
+    if ('textRendering' in ctx) ctx.textRendering = 'geometricPrecision';
+    const fiCanvas = ctx.measureText('fi').width;
+    const digits = ctx.measureText('1').width, digits0 = ctx.measureText('0').width;
+    ctx.restore();
+    // the f_i ligature in EB Garamond is 0.518 em wide; f + kern + i is 0.633 em
+    check('canvas:no-fi-ligature', Math.abs(fiCanvas - measure('ebg-400', 100, 'fi')) < 0.3 && Math.abs(fiCanvas - 51.8) > 5, { fiCanvas, fontkit: measure('ebg-400', 100, 'fi') });
+    // EB Garamond's lining figures are tabular (4.8 em/10); the baked old-style ones are proportional
+    const one = measure('ebg-400', 100, '1'), zero = measure('ebg-400', 100, '0');
+    check('canvas:oldstyle-figures', Math.abs(digits - one) < 0.3 && Math.abs(digits0 - zero) < 0.3 && Math.abs(one - 48) > 5, { canvasOne: digits, canvasZero: digits0, fontkitOne: one, fontkitZero: zero });
+
+    // --- PDF (trim size), PDF with bleed + crop marks, tiles
+    let t2 = performance.now();
+    const pdf = await sceneToPdf(scene);
+    out.pdfMs = Math.round(performance.now() - t2);
+    out.pdfStats = sceneToPdf.lastStats;
+    out.pdf = b64(pdf);
+    check('pdf:header', String.fromCharCode(...pdf.subarray(0, 5)) === '%PDF-', null);
+    const bleedPdf = await sceneToPdf(scene, { bleedPt: BLEED_PT, cropMarks: true });
+    out.bleedPdf = b64(bleedPdf);
+    t2 = performance.now();
+    const tiles = await sceneToTiles(scene, { sheet: 'letter', overlapIn: 0.25 });
+    out.tilesMs = Math.round(performance.now() - t2);
+    out.tiles = b64(tiles);
+    out.tilePlan = planTiles(scene.wPt, scene.hPt, { sheet: 'letter' });
+    const bigPlan = planTiles(1728, 2592, { sheet: 'letter' });
+    out.bigPlan = { cols: bigPlan.cols, rows: bigPlan.rows, orientation: bigPlan.orientation, labels: bigPlan.tiles.slice(0, 6).map(t => t.label) };
+
+    // --- raster exports
+    const jpg = await sceneToJpeg(scene, { dpi: 100 });
+    out.jpeg = { dpi: jpg.dpi, width: jpg.width, height: jpg.height, capped: jpg.capped, size: jpg.blob.size, type: jpg.blob.type };
+    const jb = new Uint8Array(await jpg.blob.arrayBuffer());
+    check('jpeg:jfif-dpi', jb[13] === 1 && ((jb[14] << 8) | jb[15]) === 100, Array.from(jb.subarray(0, 20)));
+    out.jpegB64 = await blobB64(jpg.blob);
+    const capped = planRaster({ wPt: 1728, hPt: 2592 }, { maxMegapixels: 16.7 });
+    out.iosPlan = capped;
+    check('jpeg:ios-cap', capped.capped && capped.dpi === 139 && capped.width * capped.height <= 16.7e6, capped);
+    check('jpeg:desktop-dpi', planRaster({ wPt: 1296, hPt: 1728 }, { maxMegapixels: Infinity }).dpi === 200 && planRaster({ wPt: 1728, hPt: 2592 }, { maxMegapixels: Infinity }).dpi === 150, null);
+    const share = await shareImage(scene, { mark: true });
+    const bmp = await createImageBitmap(share);
+    check('share:1080x1350', bmp.width === 1080 && bmp.height === 1350 && share.type === 'image/png', [bmp.width, bmp.height, share.type]);
+    out.shareB64 = await blobB64(share);
+
+    // --- export naming + download
+    out.filenames = {
+      pdf: exportFilename(scene, 'pdf', { size: '11x14' }),
+      tiles: exportFilename(scene, 'tiles', { sheet: 'a4' }),
+      jpeg: exportFilename(scene, 'jpeg', { dpi: 200 }),
+      share: exportFilename(scene, 'share'),
+      slug: slugify('Dvořák Ødegård Þórður Nguyễn Łukasiewicz'),
+      margaret: exportFilename({ wPt: 1728, hPt: 2592, meta: { title: 'The Ancestors of Margaret Kowalski' } }, 'pdf'),
+    };
+    check('export:filename', out.filenames.margaret === 'gildroot-ancestors-of-margaret-kowalski-24x36.pdf' && out.filenames.slug === 'dvorak-odegard-thordur-nguyen-lukasiewicz', out.filenames);
+    window.__triggerDownload = async () => (await exportPdf(scene, { size: '11x14' })).filename;
+
+    // --- performance: 8-generation 24×36 fan (BRIEF §4.6 budgets: preview < 150 ms, PDF < 2 s)
+    let tb = performance.now();
+    const bench = buildBenchScene(8);
+    out.bench = { layoutMs: Math.round(performance.now() - tb), items: bench.items.length };
+    const bc = document.createElement('canvas');
+    const bs = 1000 / bench.hPt;
+    bc.width = Math.round(bench.wPt * bs * 2); bc.height = Math.round(bench.hPt * bs * 2);
+    const bctx = bc.getContext('2d');
+    drawScene(bctx, bench, { scale: bs, dpr: 2 }); // warm-up
+    const runs = [];
+    // getImageData forces the deferred canvas to rasterise, so the timing is honest
+    for (let i = 0; i < 5; i++) { tb = performance.now(); drawScene(bctx, bench, { scale: bs, dpr: 2 }); bctx.getImageData(0, 0, 1, 1); runs.push(performance.now() - tb); }
+    out.bench.canvasMs = Math.round(Math.min(...runs) * 10) / 10;
+    out.bench.canvasMedianMs = Math.round(runs.sort((a, b) => a - b)[2] * 10) / 10;
+    tb = performance.now();
+    const benchPdf = await sceneToPdf(bench);
+    out.bench.pdfMs = Math.round(performance.now() - tb);
+    out.bench.pdfBytes = benchPdf.length;
+    check('perf:8gen-canvas<150ms', out.bench.canvasMedianMs < 150, out.bench);
+    check('perf:8gen-pdf<2s', out.bench.pdfMs < 2000, out.bench);
+
+    document.getElementById('status').textContent = out.errors.length ? `Done with ${out.errors.length} problem(s)` : 'Done';
+  } catch (e) {
+    out.errors.push(`exception: ${e && e.stack || e}`);
+    document.getElementById('status').textContent = 'Failed: ' + e;
+  }
+  log(JSON.stringify({ errors: out.errors, fontLoadMs: out.fontLoadMs, canvasMs: out.canvasMs, pdfMs: out.pdfMs, maxWidthRel: out.maxWidthRel }, null, 2));
+  out.done = true;
+  window.__smoke = out;
+}
+run();
+</script>
+</body>
+</html>

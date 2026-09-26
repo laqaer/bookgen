@@ -1,0 +1,34 @@
+0 HEAD
+1 SOUR GILDROOT_FIXTURES
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR ANSI
+1 NOTE Fictional charset fixture.
+0 @I1@ INDI
+1 NAME Seán /Ó Briain/
+1 SEX M
+1 BIRT
+2 DATE 3 MAR 1901
+2 PLAC Castlebar, County Mayo, Ireland
+1 FAMS @F1@
+0 @I2@ INDI
+1 NAME Björn /Åström/
+1 SEX F
+1 BIRT
+2 DATE ABT 1904
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME José /Muñoz/
+1 SEX F
+1 FAMC @F1@
+0 @I4@ INDI
+1 NAME François /Müller/
+1 SEX M
+1 FAMC @F1@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 CHIL @I4@
+0 TRLR

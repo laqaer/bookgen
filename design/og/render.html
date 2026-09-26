@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gildroot render workshop</title>
+<!-- Served from the repo root: python3 -m http.server PORT (see render.mjs). -->
+<style>
+  @font-face { font-family: 'EB Garamond'; font-weight: 400; src: url(/web/src/assets/fonts/EBGaramond-400.ttf); }
+  @font-face { font-family: 'EB Garamond'; font-weight: 400; font-style: italic; src: url(/web/src/assets/fonts/EBGaramond-400i.ttf); }
+  @font-face { font-family: 'EB Garamond'; font-weight: 600; src: url(/web/src/assets/fonts/EBGaramond-600.ttf); }
+  @font-face { font-family: 'Cormorant Garamond'; font-weight: 500; src: url(/web/src/assets/fonts/CormorantGaramond-500.ttf); }
+  @font-face { font-family: 'Cormorant Garamond'; font-weight: 500; font-style: italic; src: url(/web/src/assets/fonts/CormorantGaramond-500i.ttf); }
+  @font-face { font-family: 'Cormorant Garamond'; font-weight: 600; src: url(/web/src/assets/fonts/CormorantGaramond-600.ttf); }
+  @font-face { font-family: 'Gildroot Sans'; font-weight: 400; src: url(/web/src/assets/fonts/Sans-400.ttf); }
+  @font-face { font-family: 'Gildroot Sans'; font-weight: 600; src: url(/web/src/assets/fonts/Sans-600.ttf); }
+  html, body { margin: 0; background: #fff; }
+  #stage { display: inline-block; line-height: 0; }
+  #stage svg { display: block; }
+  text { font-kerning: normal; font-variant-ligatures: no-common-ligatures; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script type="module">
+  import { FONTS } from './lib/charts.js';
+  import * as A from './lib/arts.js';
+  const art = new URLSearchParams(location.search).get('art') || 'hero';
+  const fontsReady = Promise.all(Object.values(FONTS).map(f =>
+    document.fonts.load(`${f.style || 'normal'} ${f.weight} 20px "${f.family}"`, 'Aa1ßéΩЖ')));
+  const [vic, sample] = await Promise.all([
+    fetch('/web/src/samples/victoria.ged').then(r => r.text()),
+    fetch('/web/src/samples/almeida-novak.ged').then(r => r.text()),
+    fontsReady,
+  ]);
+  const model = A.parseGedcom(vic);
+  const stage = document.getElementById('stage');
+  const scale = +(new URLSearchParams(location.search).get('w') || 0);
+  let meta = {};
+  if (art === 'hero') {
+    const h = A.heroArt(model);
+    stage.innerHTML = h.svg;
+    meta = { geometry: A.HERO, data: h.data, stats: h.stats };
+  } else {
+    const ahn = A.ahnentafel(model, '@I1@', 7);
+    const fn = { ivory: A.artIvory, bowtie: A.artMidnightBowtie, botanical: A.artBotanical, letterpress: A.artLetterpress, nordic: A.artNordic, carto: A.artCarto }[art];
+    const out = art === 'card' ? A.artCard(A.parseGedcom(sample)) : fn(ahn);
+    stage.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${out.w} ${out.h}" width="${out.w}" height="${out.h}">${out.svg}</svg>`;
+    meta = { w: out.w, h: out.h };
+  }
+  const svg = stage.querySelector('svg');
+  if (scale) { const vb = svg.viewBox.baseVal; svg.setAttribute('width', scale); svg.setAttribute('height', Math.round(scale * vb.height / vb.width)); }
+  window.__meta = meta;
+  window.__ready = true;
+</script>
+</body>
+</html>

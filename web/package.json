@@ -6,9 +6,13 @@
   "scripts": {
     "build": "node build.mjs",
     "serve": "node build.mjs --serve",
-    "test:charts": "node test/charts/scene-smoke.mjs"
+    "test:charts": "node test/charts/scene-smoke.mjs",
+    "test": "node test/run-all.mjs",
+    "test:engine": "node --test test/engine/",
+    "test:matrix": "node test/charts/run.mjs"
   },
   "devDependencies": {
-    "pdfkit": "0.20.2"
+    "pdfkit": "0.20.2",
+    "playwright": "1.56.1"
   }
 }

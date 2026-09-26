@@ -1,0 +1,33 @@
+0 HEAD
+1 SOUR GILDROOT_FIXTURES
+2 NAME Gildroot sparse fixture
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 NOTE Fictional test data: a three-generation tree with most slots empty.
+0 @P1@ INDI
+1 NAME Hannah /Price/
+1 SEX F
+1 BIRT
+2 DATE 1994
+1 FAMC @PF1@
+0 @P2@ INDI
+1 NAME Janet /Price/
+1 SEX F
+1 FAMS @PF1@
+1 FAMC @PF2@
+0 @P3@ INDI
+1 NAME Dorothy /Hale/
+1 SEX F
+1 BIRT
+2 DATE ABT 1940
+2 PLAC Cardiff, Wales
+1 FAMS @PF2@
+0 @PF1@ FAM
+1 WIFE @P2@
+1 CHIL @P1@
+0 @PF2@ FAM
+1 WIFE @P3@
+1 CHIL @P2@
+0 TRLR

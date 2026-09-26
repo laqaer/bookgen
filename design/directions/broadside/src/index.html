@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gildroot: the beautiful way to print your family tree</title>
+<meta name="description" content="Turn your family tree file into a fan, bowtie or pedigree chart typeset to frame. Made privately in your browser. $29 once.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/NotoSerifDisplay-XCn-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/SourceSerif4-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/broadside.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the main content</a>
+
+<header class="mast">
+  <div class="mast-strip wrap">
+    <p>Heirloom family-tree charts from any family tree file. Made privately in your browser, ready to print today.</p>
+    <p class="mast-price">$29 once. No subscription.</p>
+  </div>
+  <div class="mast-main wrap">
+    <a class="brand" href="./" aria-label="Gildroot, home">
+      <!--@mark-sm-->
+      <span class="wordmark">Gildroot</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#styles">Chart styles</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#gifts">Gifts</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#questions">Questions</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-line mast-cta" href="#drop">Make a chart</a>
+    <details class="menu">
+      <summary>Menu</summary>
+      <ul>
+        <li><a href="#styles">Chart styles</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#gifts">Gifts</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#questions">Questions</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="oxford wrap" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="drop" aria-labelledby="hero-h">
+  <p class="kicker hero-kicker">For trees kept on Ancestry, MyHeritage, FamilySearch, RootsMagic and more</p>
+  <h1 id="hero-h" class="display hero-h">The beautiful way to <em>print</em> your family&nbsp;tree.</h1>
+
+  <div class="hero-copy">
+    <p class="lede">Drop in the family tree file you exported. In about a minute you have a fan, bowtie or pedigree chart, set in real type and sized to frame. Up to 8&nbsp;generations on a 24&times;36 poster.</p>
+
+    <div class="dropzone" id="dropzone">
+      <div class="dz-inner">
+        <svg class="dz-file" viewBox="0 0 48 60" aria-hidden="true" focusable="false"><path class="dz-sheet" d="M3 3h30l12 12v42H3z"/><path class="dz-fold" d="M33 3v12h12"/><text x="24" y="44" text-anchor="middle">.ged</text></svg>
+        <div class="dz-text">
+          <p class="dz-title">Drop your family tree file here</p>
+          <p class="dz-sub">A .ged, .zip or .gdz file. It is read on this computer and never uploaded.</p>
+        </div>
+      </div>
+      <input class="sr-only" type="file" id="file" accept=".ged,.zip,.gdz,.GED">
+      <label class="btn btn-verm dz-btn" for="file">Choose a file</label>
+      <p class="dz-status" id="dz-status" role="status" aria-live="polite"></p>
+    </div>
+
+    <ul class="alt-ctas">
+      <li><a class="link-arrow" href="../../../make/?start=builder">No file? Build it in 3&nbsp;minutes</a></li>
+      <li><a class="link-quiet" href="../../../make/?sample=almeida-novak">Try a sample family</a></li>
+    </ul>
+  </div>
+
+  <figure class="hero-spec" id="specimen">
+    <div class="spec-sheet">
+      <!--@hero-fan-->
+    </div>
+    <figcaption class="spec-cap"><strong>Specimen:</strong> Queen Victoria&rsquo;s ancestors, 7 generations, in the Letterpress style. Data from Wikidata, CC0.</figcaption>
+  </figure>
+
+  <aside class="reading" aria-labelledby="reading-h">
+    <h2 id="reading-h" class="reading-h">How to read a fan chart</h2>
+    <dl>
+      <div><dt><span class="chip-ah">1&thinsp;2&thinsp;3</span></dt><dd><b>Ahnentafel numbers.</b> Victoria is 1. A father is always double his child&rsquo;s number, a mother double plus one.</dd></div>
+      <div><dt><span class="chip-gen">II&ndash;VII</span></dt><dd><b>Generations.</b> Each ring holds twice the one inside it: 2 parents, 4 grandparents, up to 64.</dd></div>
+      <div><dt><span class="pc-dot">3</span></dt><dd><b>Pedigree collapse.</b> The dot counts how often someone appears. <!--@collapse-name--> appears <!--@collapse-count--> times.</dd></div>
+    </dl>
+    <p class="hover-hint">Point at any name on the chart to trace the line back to Victoria.</p>
+  </aside>
+</section>
+
+<!-- ============ STYLES ============ -->
+<section class="sec styles" id="styles" aria-labelledby="styles-h">
+  <div class="wrap">
+    <div class="running"><span>Chart styles</span><span class="running-r">6 styles &times; 3 charts &times; 3 colour modes</span></div>
+    <div class="sec-head split">
+      <h2 id="styles-h" class="display h2">Six styles, one&nbsp;family.</h2>
+      <p class="sec-lede">Every style works for the fan, the bowtie and the pedigree, from Letter to 24&times;36. Switch between them as often as you like before you print. The free Letter PDF uses Ivory.</p>
+    </div>
+    <ul class="proofs">
+      <li class="proof-card">
+        <!--@proof-ivory-->
+        <h3>Ivory</h3>
+        <p>Bone paper, sepia ink and an engraved double rule. The free style.</p>
+      </li>
+      <li class="proof-card">
+        <!--@proof-midnight-->
+        <h3>Midnight Gilt</h3>
+        <p>Gold names on midnight. Best on photo or matte poster paper.</p>
+      </li>
+      <li class="proof-card">
+        <!--@proof-botanical-->
+        <h3>Botanical</h3>
+        <p>Warm white with olive, ochre and rose, over an engraved laurel.</p>
+      </li>
+      <li class="proof-card">
+        <!--@proof-letterpress-->
+        <h3>Letterpress</h3>
+        <p>Black and vermilion on bright white, with a heavy display title.</p>
+      </li>
+      <li class="proof-card">
+        <!--@proof-nordic-->
+        <h3>Nordic</h3>
+        <p>White, charcoal and pale blue-grey, set in a clean sans.</p>
+      </li>
+      <li class="proof-card">
+        <!--@proof-cartographer-->
+        <h3>Cartographer</h3>
+        <p>Map blue, a faint graticule and a compass rose. Pairs with birthplace colours.</p>
+      </li>
+    </ul>
+    <p class="fineprint">Shown: the ancestors of Queen Victoria, 5 generations. Data from Wikidata, CC0.</p>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec how" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="running"><span>How it works</span><span class="running-r">About a minute from file to chart</span></div>
+    <h2 id="how-h" class="display h2 how-h">From your tree to the wall, <em>today.</em></h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-n" aria-hidden="true">1</span>
+        <h3>Export your tree</h3>
+        <p>Every family tree site can save your tree as one file ending in <b>.ged</b>. It holds names, dates and places, nothing else.</p>
+        <dl class="paths">
+          <div><dt>Ancestry</dt><dd>Trees <i aria-hidden="true">&rsaquo;</i> Tree settings <i aria-hidden="true">&rsaquo;</i> Export tree</dd></div>
+          <div><dt>MyHeritage</dt><dd>Family tree <i aria-hidden="true">&rsaquo;</i> Manage trees <i aria-hidden="true">&rsaquo;</i> Export to GEDCOM</dd></div>
+          <div><dt>FamilySearch</dt><dd>Save it through a program such as RootsMagic</dd></div>
+        </dl>
+        <a class="link-arrow" href="../../../export/">Export guides with every click</a>
+      </li>
+      <li class="step">
+        <span class="step-n" aria-hidden="true">2</span>
+        <h3>Pick a chart and a style</h3>
+        <p>A fan of your ancestors, a bowtie for two families joined by a marriage, or a classic pedigree. Click any name to fix a spelling or a date. Your file is never changed.</p>
+        <!--@chart-types-->
+      </li>
+      <li class="step">
+        <span class="step-n" aria-hidden="true">3</span>
+        <h3>Print it today</h3>
+        <p>Download a print-ready PDF, JPEGs for a photo counter, or pages to tile on your home printer. A local print shop can have it ready this afternoon.</p>
+        <figure class="sizes">
+          <!--@sizes-->
+          <figcaption>Poster sizes drawn to scale, with the most generations each fan holds. A4, A2 and A1 work the same way.</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="sec plate-black privacy" id="privacy" aria-labelledby="privacy-h">
+  <div class="wrap">
+    <div class="running running-inv"><span>Privacy</span><span class="running-r">Checked by our own test on every release</span></div>
+    <div class="privacy-grid">
+      <div class="privacy-main">
+        <h2 id="privacy-h" class="display h2 privacy-h"><em>Nothing</em> is uploaded.</h2>
+        <p class="privacy-lede">Your file is read on this computer. Nothing is uploaded. Try it with wifi off.</p>
+        <ol class="wifi">
+          <li>Open the chart studio once.</li>
+          <li>Turn off your wifi.</li>
+          <li>Drop in your file. Your chart still appears.</li>
+        </ol>
+        <ul class="facts">
+          <li><b>No account.</b> You don&rsquo;t sign up to make a chart.</li>
+          <li><b>Saved on this computer.</b> Your work stays in this browser until you delete it.</li>
+          <li><b>Counted, not watched.</b> We count page visits with Plausible. We never see a name from your tree.</li>
+        </ul>
+      </div>
+      <figure class="galley">
+        <div class="galley-sheet" aria-hidden="true">
+<pre><span class="g-l">0</span> @I1@ INDI
+<span class="g-l">1</span> NAME <b>Victoria</b>
+<span class="g-l">1</span> SEX F
+<span class="g-l">1</span> BIRT
+<span class="g-l">2</span> DATE <b>24 MAY 1819</b>
+<span class="g-l">2</span> PLAC Kensington Palace
+<span class="g-l">1</span> DEAT
+<span class="g-l">2</span> DATE 22 JAN 1901
+<span class="g-l">1</span> FAMC @F1@
+<span class="g-l">0</span> @F1@ FAM
+<span class="g-l">1</span> HUSB @I2@
+<span class="g-l">1</span> WIFE @I3@
+<span class="g-l">1</span> CHIL @I1@</pre>
+        </div>
+        <figcaption>The inside of a GEDCOM file: Victoria, born 24 May 1819, and her parents&rsquo; family. Gildroot reads lines like these inside your browser tab and keeps them there.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GIFTS ============ -->
+<section class="sec gifts" id="gifts" aria-labelledby="gifts-h">
+  <div class="wrap">
+    <div class="running"><span>Gifts</span><span class="running-r">Print it tomorrow, frame it this week</span></div>
+    <div class="gift-grid">
+      <div class="gift-plate">
+        <h2 id="gifts-h" class="display h2 gift-h">A gift you can finish tonight.</h2>
+        <p class="gift-lede">No file? Type in what you know, up to 15&nbsp;people: parents, grandparents, great-grandparents. Then send an aunt a link to fill in the gaps. The tree travels inside the link, not through our server.</p>
+      </div>
+      <div class="gift-card-wrap" aria-hidden="true">
+        <div class="gcard">
+          <div class="gcard-front">
+            <!--@card-fan-->
+            <p class="gc-for">For Mom</p>
+            <p class="gc-when">Christmas 2026</p>
+            <p class="gc-t">The ancestors of Margaret Rose Kowalski</p>
+          </div>
+          <div class="gcard-inside">
+            <p class="gc-k">To Mom, from Anna</p>
+            <p class="gc-m">Your family tree, ready to print at any size. Open the link and it&rsquo;s yours to keep.</p>
+            <p class="gc-r">gildroot.com/redeem</p>
+          </div>
+        </div>
+        <p class="gcard-cap">The printable 5&times;7 card that comes with a gift key.</p>
+      </div>
+      <ul class="gift-paths">
+        <li><h3>Make it for them</h3><p>Build the chart yourself, buy Heirloom for $29, and print it tomorrow.</p></li>
+        <li><h3>Give a key</h3><p>Gift Heirloom $29 or Gift Family Historian $59, with a card to print or an e-card link.</p></li>
+        <li><h3>Family Pack</h3><p>$79 covers up to 3 households, so each brother and sister gets their own.</p></li>
+      </ul>
+      <p class="gift-more"><a class="link-arrow" href="../../../gift/">See the gift options</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="sec pricing" id="pricing" aria-labelledby="pricing-h">
+  <div class="wrap">
+    <div class="running"><span>Pricing</span><span class="running-r">One-time prices, US dollars</span></div>
+    <div class="pricing-grid">
+      <div class="pricing-head">
+        <h2 id="pricing-h" class="display h2">Pay once. Re&#8209;export <em>forever.</em></h2>
+        <ul class="terms">
+          <li><b>Free to start.</b> A Letter or A4 PDF with 5 generations in Ivory. No account, no card.</li>
+          <li><b>30 days to decide.</b> If it isn&rsquo;t right, we refund you. No questions.</li>
+          <li><b>No subscription.</b> Nothing renews.</li>
+        </ul>
+      </div>
+      <ol class="tariff">
+        <li>
+          <p class="t-row"><span class="t-name">Heirloom</span><span class="t-lead" aria-hidden="true"></span><span class="t-price">$29</span></p>
+          <p class="t-desc">One family: one person or one couple at the centre. Every chart, style and size. Re&#8209;export forever. Use it on 3&nbsp;devices.</p>
+        </li>
+        <li>
+          <p class="t-row"><span class="t-name">Family Historian</span><span class="t-lead" aria-hidden="true"></span><span class="t-price">$59</span></p>
+          <p class="t-desc">Every tree you have, starting from anyone in it. All styles and chart types, including ones we add later. 5&nbsp;devices.</p>
+        </li>
+        <li>
+          <p class="t-row"><span class="t-name">Family Pack</span><span class="t-lead" aria-hidden="true"></span><span class="t-price">$79</span></p>
+          <p class="t-desc">Family Historian for up to 3 households, so your brother and sister get their own copy. 9&nbsp;devices.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq" id="questions" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="running"><span>Questions</span><span class="running-r">More answers on the help page</span></div>
+    <div class="faq-grid">
+      <h2 id="faq-h" class="display h2">Before you start.</h2>
+      <div class="qa">
+        <details open>
+          <summary>Where do I get a family tree file?</summary>
+          <p>From the site or program where you keep your tree. On Ancestry, open your tree, choose Tree settings, then Export tree. On MyHeritage, choose Family tree, Manage trees, then Export to GEDCOM. You get one file that ends in .ged. Our export guides show every click for 8&nbsp;sites and programs.</p>
+        </details>
+        <details>
+          <summary>Is my family tree uploaded anywhere?</summary>
+          <p>No. Your own browser reads the file, on your own computer. Nothing is uploaded. You can check it yourself: open the studio, turn off wifi, and drop in your file. It still works.</p>
+        </details>
+        <details>
+          <summary>Is this a subscription?</summary>
+          <p>No. You pay once, from $29, and you can re-export your chart in any size and style for as long as you like. If it isn&rsquo;t right for you, we refund you within 30&nbsp;days, no questions asked.</p>
+        </details>
+        <details>
+          <summary>Will names with accents or other alphabets print?</summary>
+          <p>Accents, Greek and Cyrillic print as written: Se&aacute;n, Dvo&#345;&aacute;k, &Oslash;deg&aring;rd, Nguy&#7877;n, &Epsilon;&lambda;&#941;&nu;&eta;, &#1040;&#1085;&#1085;&#1072;. Names in Chinese, Japanese, Korean, Hebrew or Arabic script can&rsquo;t be printed yet. We show you which ones before you buy, so you can type a romanized form.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="display foot-sign" aria-hidden="true">Your roots, <em>gilded.</em></p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="./" aria-label="Gildroot, home"><!--@mark-sm--><span class="wordmark">Gildroot</span></a>
+        <p>Heirloom family-tree charts from any family tree file. Made privately in your browser, ready to print today.</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <div><h2>Make</h2><ul><li><a href="../../../make/">Start a chart</a></li><li><a href="../../../samples/">Sample prints</a></li><li><a href="../../../print/">Print planner</a></li></ul></div>
+        <div><h2>Charts</h2><ul><li><a href="../../../charts/fan-chart/">Fan chart</a></li><li><a href="../../../charts/bowtie-chart/">Bowtie chart</a></li><li><a href="../../../charts/pedigree-chart/">Pedigree chart</a></li><li><a href="../../../charts/atlas-birthplace-map/">Birthplace colours</a></li></ul></div>
+        <div><h2>Help</h2><ul><li><a href="../../../export/">Export guides</a></li><li><a href="../../../help/">Help</a></li><li><a href="../../../privacy/">Privacy</a></li><li><a href="../../../legal/refunds/">Refunds</a></li></ul></div>
+        <div><h2>Gildroot</h2><ul><li><a href="../../../about/">About</a></li><li><a href="../../../gift/">Gifts</a></li><li><a href="../../../changelog/">Changelog</a></li><li><a href="../../../affiliates/">Partners</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="foot-legal">
+      <p>Gildroot is independent and not affiliated with Ancestry.com.</p>
+      <p>Sample chart data: Wikidata, CC0.</p>
+      <p>&copy; 2026 Gildroot</p>
+    </div>
+    <p class="colophon">Colophon: set in Noto Serif Display, Source Serif 4, Source Sans 3 and EB Garamond. Printed in two inks, black and vermilion, on bright white.</p>
+  </div>
+</footer>
+
+<script src="js/broadside.js" defer></script>
+</body>
+</html>

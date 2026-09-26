@@ -1,0 +1,3989 @@
+0 HEAD
+1 SOUR STEMMA
+2 NAME Stemma showcase (Wikidata CC0)
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 NOTE Ancestors of Queen Victoria. Source: Wikidata (CC0).
+0 @I1@ INDI
+1 NAME Victoria
+1 SEX F
+1 BIRT
+2 DATE 24 MAY 1819
+2 PLAC Kensington Palace, United Kingdom
+1 DEAT
+2 DATE 22 JAN 1901
+2 PLAC Osborne House
+1 NOTE Wikidata Q9439
+1 FAMC @F1@
+0 @I2@ INDI
+1 NAME Prince Edward, Duke of Kent and Strathearn
+1 SEX M
+1 BIRT
+2 DATE 2 NOV 1767
+2 PLAC Buckingham Palace, United Kingdom
+1 DEAT
+2 DATE 23 JAN 1820
+2 PLAC Sidmouth
+1 NOTE Wikidata Q157009
+1 FAMS @F1@
+1 FAMC @F2@
+0 @I3@ INDI
+1 NAME Princess Victoria of Saxe-Coburg-Saalfeld
+1 SEX F
+1 BIRT
+2 DATE 17 AUG 1786
+2 PLAC Coburg, Germany
+1 DEAT
+2 DATE 16 MAR 1861
+2 PLAC Frogmore House
+1 NOTE Wikidata Q58067
+1 FAMS @F1@
+1 FAMC @F3@
+0 @I4@ INDI
+1 NAME George III of Great Britain
+1 SEX M
+1 BIRT
+2 DATE 24 MAY 1738
+2 PLAC Norfolk House, United Kingdom
+1 DEAT
+2 DATE 29 JAN 1820
+2 PLAC Windsor Castle
+1 NOTE Wikidata Q127318
+1 FAMS @F2@
+1 FAMC @F4@
+0 @I5@ INDI
+1 NAME Charlotte of Mecklenburg-Strelitz
+1 SEX F
+1 BIRT
+2 DATE 19 MAY 1744
+2 PLAC Mirow, Germany
+1 DEAT
+2 DATE 17 NOV 1818
+2 PLAC Kew
+1 NOTE Wikidata Q161159
+1 FAMS @F2@
+1 FAMC @F5@
+0 @I6@ INDI
+1 NAME Francis, Duke of Saxe-Coburg-Saalfeld
+1 SEX M
+1 BIRT
+2 DATE 15 JUL 1750
+2 PLAC Coburg, Germany
+1 DEAT
+2 DATE 9 DEC 1806
+2 PLAC Coburg
+1 NOTE Wikidata Q455554
+1 FAMS @F3@
+1 FAMC @F6@
+0 @I7@ INDI
+1 NAME Countess Augusta Reuss of Ebersdorf
+1 SEX F
+1 BIRT
+2 DATE 19 JAN 1757
+2 PLAC Saalburg-Ebersdorf, Germany
+1 DEAT
+2 DATE 16 NOV 1831
+2 PLAC Coburg
+1 NOTE Wikidata Q61489
+1 FAMS @F3@
+1 FAMC @F7@
+0 @I8@ INDI
+1 NAME Frederick, Prince of Wales
+1 SEX M
+1 BIRT
+2 DATE 31 JAN 1707
+2 PLAC Hanover, Germany
+1 DEAT
+2 DATE 20 MAR 1751
+2 PLAC Leicester House
+1 NOTE Wikidata Q165349
+1 FAMS @F4@
+1 FAMC @F8@
+0 @I9@ INDI
+1 NAME Princess Augusta of Saxe-Gotha
+1 SEX F
+1 BIRT
+2 DATE 30 NOV 1719
+2 PLAC Gotha, Germany
+1 DEAT
+2 DATE 8 FEB 1772
+2 PLAC London
+1 NOTE Wikidata Q76967
+1 FAMS @F4@
+1 FAMC @F9@
+0 @I10@ INDI
+1 NAME Duke Charles Louis Frederick of Mecklenburg
+1 SEX M
+1 BIRT
+2 DATE 23 FEB 1708
+2 PLAC Neustrelitz, Germany
+1 DEAT
+2 DATE 4 JUN 1752
+2 PLAC Mirow
+1 NOTE Wikidata Q699743
+1 FAMS @F5@
+1 FAMC @F10@
+0 @I11@ INDI
+1 NAME Princess Elizabeth Albertine of Saxe-Hildburghausen
+1 SEX F
+1 BIRT
+2 DATE 4 AUG 1713
+2 PLAC Hildburghausen, Germany
+1 DEAT
+2 DATE 1761
+2 PLAC Ahlden
+1 NOTE Wikidata Q389473
+1 FAMS @F5@
+1 FAMC @F11@
+0 @I12@ INDI
+1 NAME Ernest Frederick of Saxe-Coburg-Saalfeld
+1 SEX M
+1 BIRT
+2 DATE 8 MAR 1724
+2 PLAC Saalfeld, Germany
+1 DEAT
+2 DATE 8 SEP 1800
+2 PLAC Coburg
+1 NOTE Wikidata Q61431
+1 FAMS @F6@
+1 FAMC @F12@
+0 @I13@ INDI
+1 NAME Sophie Antoinette of Brunswick-Wolfenbüttel
+1 SEX F
+1 BIRT
+2 DATE 13 JAN 1724
+2 PLAC Wolfenbüttel, Germany
+1 DEAT
+2 DATE 17 MAY 1802
+2 PLAC Coburg
+1 NOTE Wikidata Q370107
+1 FAMS @F6@
+1 FAMC @F13@
+0 @I14@ INDI
+1 NAME Henry XXIV, Count of Reuss-Ebersdorf
+1 SEX M
+1 BIRT
+2 DATE 22 JAN 1724
+2 PLAC Saalburg-Ebersdorf, Germany
+1 DEAT
+2 DATE 13 MAY 1779
+2 PLAC Saalburg-Ebersdorf
+1 NOTE Wikidata Q571460
+1 FAMS @F7@
+1 FAMC @F14@
+0 @I15@ INDI
+1 NAME Countess Karoline Ernestine of Erbach-Schönberg
+1 SEX F
+1 BIRT
+2 DATE 20 AUG 1727
+2 PLAC Gedern, Germany
+1 DEAT
+2 DATE 22 APR 1796
+2 PLAC Saalburg-Ebersdorf
+1 NOTE Wikidata Q2291709
+1 FAMS @F7@
+1 FAMC @F15@
+0 @I16@ INDI
+1 NAME George II of Great Britain
+1 SEX M
+1 BIRT
+2 DATE 30 OCT 1683
+2 PLAC Hanover, Germany
+1 DEAT
+2 DATE 25 OCT 1760
+2 PLAC London
+1 NOTE Wikidata Q131981
+1 FAMS @F8@
+1 FAMC @F16@
+0 @I17@ INDI
+1 NAME Caroline of Ansbach
+1 SEX F
+1 BIRT
+2 DATE 1 MAR 1683
+2 PLAC Residenz Ansbach, Germany
+1 DEAT
+2 DATE 20 NOV 1737
+2 PLAC St James's Palace
+1 NOTE Wikidata Q76961
+1 FAMS @F8@
+1 FAMC @F17@
+0 @I18@ INDI
+1 NAME Frederick II, Duke of Saxe-Gotha-Altenburg
+1 SEX M
+1 BIRT
+2 DATE 28 JUL 1676
+2 PLAC Gotha, Germany
+1 DEAT
+2 DATE 23 MAR 1732
+2 PLAC Altenburg
+1 NOTE Wikidata Q61447
+1 FAMS @F9@
+1 FAMC @F18@
+0 @I19@ INDI
+1 NAME Princess Magdalena Augusta of Anhalt-Zerbst
+1 SEX F
+1 BIRT
+2 DATE 13 OCT 1679
+2 PLAC Zerbst, Germany
+1 DEAT
+2 DATE 11 OCT 1740
+2 PLAC Altenburg
+1 NOTE Wikidata Q64207
+1 FAMS @F9@
+1 FAMC @F19@
+0 @I20@ INDI
+1 NAME Duke Adolf Friedrich II, Duke of Mecklenburg-Strelitz
+1 SEX M
+1 BIRT
+2 DATE 19 OCT 1658
+2 PLAC Grabow, Germany
+1 DEAT
+2 DATE 12 MAY 1708
+2 PLAC Neustrelitz
+1 NOTE Wikidata Q361684
+1 FAMS @F10@
+1 FAMC @F20@
+0 @I21@ INDI
+1 NAME Christiane Emilie of Schwarzburg-Sondershausen
+1 SEX F
+1 BIRT
+2 DATE 9 APR 1681
+2 PLAC Sondershausen, Germany
+1 DEAT
+2 DATE 1 NOV 1751
+2 PLAC Mirow
+1 NOTE Wikidata Q4241281
+1 FAMS @F10@
+1 FAMC @F21@
+0 @I22@ INDI
+1 NAME Ernest Frederick I, Duke of Saxe-Hildburghausen
+1 SEX M
+1 BIRT
+2 DATE 21 AUG 1681
+2 PLAC Bad Arolsen, Germany
+1 DEAT
+2 DATE 26 NOV 1740
+2 PLAC Hildburghausen
+1 NOTE Wikidata Q169080
+1 FAMS @F11@
+1 FAMC @F22@
+0 @I23@ INDI
+1 NAME Countess Sophia Albertine of Erbach-Erbach
+1 SEX F
+1 BIRT
+2 DATE 30 JUL 1683
+2 PLAC Ahlden, Germany
+1 DEAT
+2 DATE 4 SEP 1742
+2 PLAC Dresden
+1 NOTE Wikidata Q463339
+1 FAMS @F11@
+1 FAMC @F23@
+0 @I24@ INDI
+1 NAME Francis Josias, Duke of Saxe-Coburg-Saalfeld
+1 SEX M
+1 BIRT
+2 DATE 25 SEP 1697
+2 PLAC Saalfeld, Germany
+1 DEAT
+2 DATE 16 SEP 1764
+2 PLAC Bad Rodach
+1 NOTE Wikidata Q62273
+1 FAMS @F12@
+1 FAMC @F24@
+0 @I25@ INDI
+1 NAME Princess Anna Sophie of Schwarzburg-Rudolstadt
+1 SEX F
+1 BIRT
+2 DATE 9 SEP 1700
+2 PLAC Rudolstadt, Germany
+1 DEAT
+2 DATE 11 DEC 1780
+2 PLAC Römhild
+1 NOTE Wikidata Q1090562
+1 FAMS @F12@
+1 FAMC @F25@
+0 @I26@ INDI
+1 NAME Ferdinand Albert II, Duke of Brunswick-Wolfenbüttel
+1 SEX M
+1 BIRT
+2 DATE 19 MAY 1680
+2 PLAC Bevern, Germany
+1 DEAT
+2 DATE 13 SEP 1735
+2 PLAC Salzdahlum
+1 NOTE Wikidata Q551123
+1 FAMS @F13@
+1 FAMC @F26@
+0 @I27@ INDI
+1 NAME Princess Antoinette of Brunswick-Wolfenbüttel
+1 SEX F
+1 BIRT
+2 DATE 14 APR 1696
+2 PLAC Wolfenbüttel, Germany
+1 DEAT
+2 DATE 6 MAR 1762
+2 PLAC Brunswick
+1 NOTE Wikidata Q259725
+1 FAMS @F13@
+1 FAMC @F27@
+0 @I28@ INDI
+1 NAME Heinrich XXIX, Count of Reuss-Ebersdorf
+1 SEX M
+1 BIRT
+2 DATE 21 JUL 1699
+2 PLAC Saalburg-Ebersdorf, Germany
+1 DEAT
+2 DATE 22 MAY 1747
+2 PLAC Herrnhaag
+1 NOTE Wikidata Q323057
+1 FAMS @F14@
+1 FAMC @F28@
+0 @I29@ INDI
+1 NAME Sofia Teodora of Castell-Remlingen
+1 SEX F
+1 BIRT
+2 DATE 12 MAY 1703
+2 PLAC Castell, Germany
+1 DEAT
+2 DATE 8 JAN 1777
+2 PLAC Herrnhut
+1 NOTE Wikidata Q11950038
+1 FAMS @F14@
+1 FAMC @F29@
+0 @I30@ INDI
+1 NAME Georg August zu Erbach-Schönberg
+1 SEX M
+1 BIRT
+2 DATE 17 JUN 1691
+2 PLAC Waldenburg, Switzerland
+1 DEAT
+2 DATE 29 MAR 1758
+2 PLAC Bad König
+1 NOTE Wikidata Q11928274
+1 FAMS @F15@
+1 FAMC @F30@
+0 @I31@ INDI
+1 NAME Countess Ferdinande Henriette of Stolberg-Gedern
+1 SEX F
+1 BIRT
+2 DATE 2 OCT 1699
+2 PLAC Gedern, Germany
+1 DEAT
+2 DATE 31 JAN 1750
+2 PLAC Bad König
+1 NOTE Wikidata Q1032756
+1 FAMS @F15@
+1 FAMC @F31@
+0 @I32@ INDI
+1 NAME George I of Great Britain
+1 SEX M
+1 BIRT
+2 DATE 7 JUN 1660
+2 PLAC Hanover, Germany
+1 DEAT
+2 DATE 22 JUN 1727
+2 PLAC Osnabrück
+1 NOTE Wikidata Q130805
+1 FAMS @F16@
+1 FAMC @F32@
+0 @I33@ INDI
+1 NAME Sophia Dorothea of Celle
+1 SEX F
+1 BIRT
+2 DATE 15 SEP 1666
+2 PLAC Celle Castle, Germany
+1 DEAT
+2 DATE 13 NOV 1726
+2 PLAC Ahlden House
+1 NOTE Wikidata Q231876
+1 FAMS @F16@
+1 FAMC @F33@
+0 @I34@ INDI
+1 NAME John Frederick, Margrave of Brandenburg-Ansbach
+1 SEX M
+1 BIRT
+2 DATE 18 OCT 1654
+2 PLAC Ansbach, Germany
+1 DEAT
+2 DATE 22 MAR 1686
+2 PLAC Ansbach
+1 NOTE Wikidata Q819667
+1 FAMS @F17@
+1 FAMC @F34@
+0 @I35@ INDI
+1 NAME Princess Eleonore Erdmuthe of Saxe-Eisenach
+1 SEX F
+1 BIRT
+2 DATE 13 APR 1662
+2 PLAC Friedewald, Germany
+1 DEAT
+2 DATE 9 SEP 1696
+2 PLAC Pretzsch castle
+1 NOTE Wikidata Q445211
+1 FAMS @F17@
+1 FAMC @F35@
+0 @I36@ INDI
+1 NAME Frederick I of Saxe-Gotha-Altenburg
+1 SEX M
+1 BIRT
+2 DATE 15 JUN 1646
+2 PLAC Gotha, Germany
+1 DEAT
+2 DATE 2 AUG 1691
+2 PLAC Friedrichswerth
+1 NOTE Wikidata Q63770
+1 FAMS @F18@
+1 FAMC @F36@
+0 @I37@ INDI
+1 NAME Magdalena Sibylle of Saxe-Weissenfels
+1 SEX F
+1 BIRT
+2 DATE 2 SEP 1648
+2 PLAC Halle (Saale), Germany
+1 DEAT
+2 DATE 7 JAN 1681
+2 PLAC Gotha
+1 NOTE Wikidata Q67187
+1 FAMS @F18@
+1 FAMC @F37@
+0 @I38@ INDI
+1 NAME Karl, Prince of Anhalt-Zerbst
+1 SEX M
+1 BIRT
+2 DATE 16 OCT 1652
+2 PLAC Zerbst, Germany
+1 DEAT
+2 DATE 3 NOV 1718
+2 PLAC Zerbst
+1 NOTE Wikidata Q65243
+1 FAMS @F19@
+1 FAMC @F38@
+0 @I39@ INDI
+1 NAME Sophia of Saxe-Weissenfels
+1 SEX F
+1 BIRT
+2 DATE 23 JUN 1654
+2 PLAC Halle (Saale), Germany
+1 DEAT
+2 DATE 31 MAR 1724
+2 PLAC Zerbst
+1 NOTE Wikidata Q454115
+1 FAMS @F19@
+1 FAMC @F37@
+0 @I40@ INDI
+1 NAME Duke Adolf Friedrich I, Duke of Mecklenburg-Schwerin
+1 SEX M
+1 BIRT
+2 DATE 15 DEC 1588
+2 PLAC Schwerin, Germany
+1 DEAT
+2 DATE 27 FEB 1658
+2 PLAC Schwerin
+1 NOTE Wikidata Q361663
+1 FAMS @F20@
+1 FAMC @F39@
+1 FAMS @F69@
+0 @I41@ INDI
+1 NAME Marie Katharina of Brunswick-Dannenberg
+1 SEX F
+1 BIRT
+2 DATE 10 JUN 1616
+1 DEAT
+2 DATE 1 JUL 1665
+2 PLAC Grabow
+1 NOTE Wikidata Q6199593
+1 FAMS @F20@
+1 FAMC @F40@
+0 @I42@ INDI
+1 NAME Christian William I, Prince of Schwarzburg-Sondershausen
+1 SEX M
+1 BIRT
+2 DATE 6 JAN 1647
+2 PLAC Sondershausen, Germany
+1 DEAT
+2 DATE 10 MAY 1721
+2 PLAC Sondershausen
+1 NOTE Wikidata Q71987
+1 FAMS @F21@
+1 FAMC @F41@
+0 @I43@ INDI
+1 NAME Antonie Sybille of Barby-Mühlingen
+1 SEX F
+1 BIRT
+2 DATE 7 APR 1641
+2 PLAC Groß Rosenburg, Germany
+1 DEAT
+2 DATE 2 MAY 1684
+2 PLAC Sondershausen
+1 NOTE Wikidata Q6207955
+1 FAMS @F21@
+1 FAMC @F42@
+0 @I44@ INDI
+1 NAME Ernest, Duke of Saxe-Hildburghausen
+1 SEX M
+1 BIRT
+2 DATE 12 JUL 1655
+2 PLAC Gotha, Germany
+1 DEAT
+2 DATE 17 OCT 1715
+2 PLAC Hildburghausen
+1 NOTE Wikidata Q657591
+1 FAMS @F22@
+1 FAMC @F36@
+0 @I45@ INDI
+1 NAME Sophie Henriette of Waldeck-Eisenberg
+1 SEX F
+1 BIRT
+2 DATE 3 AUG 1662
+2 PLAC Bad Arolsen, Germany
+1 DEAT
+2 DATE 15 OCT 1702
+2 PLAC Erbach
+1 NOTE Wikidata Q453818
+1 FAMS @F22@
+1 FAMC @F43@
+0 @I46@ INDI
+1 NAME Georg Ludwig I von Erbach-Erbach
+1 SEX M
+1 BIRT
+2 DATE 8 MAY 1643
+2 PLAC Michelstadt, Germany
+1 DEAT
+2 DATE 5 APR 1693
+2 PLAC Bad Arolsen
+1 NOTE Wikidata Q10308162
+1 FAMS @F23@
+1 FAMC @F44@
+0 @I47@ INDI
+1 NAME Amalia Catherine of Waldeck-Eistenburg
+1 SEX F
+1 BIRT
+2 DATE 8 AUG 1640
+2 PLAC Culemborg, Netherlands
+1 DEAT
+2 DATE 4 JAN 1697
+2 PLAC Culemborg
+1 NOTE Wikidata Q4739394
+1 FAMS @F23@
+1 FAMC @F45@
+0 @I48@ INDI
+1 NAME John Ernest IV, Duke of Saxe-Coburg-Saalfeld
+1 SEX M
+1 BIRT
+2 DATE 22 AUG 1658
+2 PLAC Gotha, Germany
+1 DEAT
+2 DATE 17 FEB 1729
+2 PLAC Saalfeld
+1 NOTE Wikidata Q63769
+1 FAMS @F24@
+1 FAMC @F36@
+0 @I49@ INDI
+1 NAME Countess Charlotte Johanna of Waldeck-Wildungen
+1 SEX F
+1 BIRT
+2 DATE 13 DEC 1664
+2 PLAC Bad Arolsen, Germany
+1 DEAT
+2 DATE 1 FEB 1699
+2 PLAC Hildburghausen
+1 NOTE Wikidata Q86673
+1 FAMS @F24@
+1 FAMC @F46@
+0 @I50@ INDI
+1 NAME Louis Frederick I, Prince of Schwarzburg-Rudolstadt
+1 SEX M
+1 BIRT
+2 DATE 15 OCT 1667
+2 PLAC Rudolstadt, Germany
+1 DEAT
+2 DATE 24 JUN 1718
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q66847
+1 FAMS @F25@
+1 FAMC @F47@
+0 @I51@ INDI
+1 NAME Anna Sophie of Saxe-Gotha-Altenburg
+1 SEX F
+1 BIRT
+2 DATE 22 DEC 1670
+2 PLAC Gotha, Germany
+1 DEAT
+2 DATE 28 DEC 1728
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q443078
+1 FAMC @F18@
+1 FAMS @F25@
+0 @I52@ INDI
+1 NAME Ferdinand Albert I, Duke of Brunswick-Lüneburg
+1 SEX M
+1 BIRT
+2 DATE 22 MAY 1636
+2 PLAC Brunswick, Germany
+1 DEAT
+2 DATE 25 APR 1687
+2 PLAC Bevern
+1 NOTE Wikidata Q697249
+1 FAMS @F26@
+1 FAMC @F48@
+0 @I53@ INDI
+1 NAME Christine of Hesse-Eschwege
+1 SEX F
+1 BIRT
+2 DATE 30 OCT 1649
+2 PLAC Kassel, Germany
+1 DEAT
+2 DATE 18 MAR 1702
+2 PLAC Bevern
+1 NOTE Wikidata Q3821483
+1 FAMS @F26@
+1 FAMC @F49@
+0 @I54@ INDI
+1 NAME Louis Rudolph, Duke of Brunswick-Lüneburg
+1 SEX M
+1 BIRT
+2 DATE 22 JUL 1671
+2 PLAC Wolfenbüttel, Germany
+1 DEAT
+2 DATE 1 MAR 1735
+2 PLAC Brunswick
+1 NOTE Wikidata Q61512
+1 FAMS @F27@
+1 FAMC @F50@
+0 @I55@ INDI
+1 NAME Princess Christine Louise of Oettingen-Oettingen
+1 SEX F
+1 BIRT
+2 DATE 20 MAR 1671
+2 PLAC Oettingen in Bayern, Germany
+1 DEAT
+2 DATE 3 SEP 1747
+2 PLAC Blankenburg
+1 NOTE Wikidata Q61264
+1 FAMS @F27@
+1 FAMC @F51@
+0 @I56@ INDI
+1 NAME Heinrich X, Count of Reuss-Ebersdorf
+1 SEX M
+1 BIRT
+2 DATE 29 NOV 1662
+2 PLAC Bad Lobenstein, Germany
+1 DEAT
+2 DATE 10 JUN 1711
+2 PLAC Saalburg-Ebersdorf
+1 NOTE Wikidata Q323050
+1 FAMS @F28@
+1 FAMC @F52@
+0 @I57@ INDI
+1 NAME Erdmute Benigna Gräfin zu Solms-Laubach
+1 SEX F
+1 BIRT
+2 DATE 13 APR 1670
+2 PLAC Wildenfels, Germany
+1 DEAT
+2 DATE 14 SEP 1732
+2 PLAC Ebersdorf
+1 NOTE Wikidata Q11918032
+1 FAMS @F28@
+1 FAMC @F53@
+0 @I58@ INDI
+1 NAME Wolfgang Dietrich zu Castell-Remlingen
+1 SEX M
+1 BIRT
+2 DATE 6 JAN 1641
+2 PLAC Remlingen, Germany
+1 DEAT
+2 DATE 8 APR 1709
+2 PLAC Castell
+1 NOTE Wikidata Q19959164
+1 FAMS @F29@
+1 FAMC @F54@
+0 @I59@ INDI
+1 NAME Dorothea Renata, Gräfin von Zinzendorf und Pottendorf
+1 SEX F
+1 BIRT
+2 DATE 23 SEP 1669
+2 PLAC Sopron, Hungary
+1 DEAT
+2 DATE 22 FEB 1743
+2 PLAC Castell
+1 NOTE Wikidata Q99689948
+1 FAMS @F29@
+1 FAMC @F55@
+0 @I60@ INDI
+1 NAME George Albert II of Erbach-Fürstenau
+1 SEX M
+1 BIRT
+2 DATE 26 FEB 1648
+2 PLAC Michelstadt, Germany
+1 DEAT
+2 DATE 23 MAR 1717
+2 PLAC Michelstadt
+1 NOTE Wikidata Q11928269
+1 FAMS @F30@
+1 FAMC @F44@
+0 @I61@ INDI
+1 NAME Anna Dorotea de Hohenlohe-Waldenburg
+1 SEX F
+1 BIRT
+2 DATE 22 FEB 1656
+2 PLAC Waldenburg, Germany
+1 DEAT
+2 DATE 28 OCT 1724
+2 PLAC Bensheim
+1 NOTE Wikidata Q11905644
+1 FAMS @F30@
+1 FAMC @F56@
+0 @I62@ INDI
+1 NAME Louis Christian, Count of Stolberg-Gedern
+1 SEX M
+1 BIRT
+2 DATE 8 SEP 1652
+2 PLAC Ilsenburg, Germany
+1 DEAT
+2 DATE 27 AUG 1710
+2 PLAC Gedern
+1 NOTE Wikidata Q20108379
+1 FAMS @F31@
+1 FAMC @F57@
+0 @I63@ INDI
+1 NAME Christine of Mecklenburg-Güstrow
+1 SEX F
+1 BIRT
+2 DATE 14 AUG 1663
+2 PLAC Güstrow, Germany
+1 DEAT
+2 DATE 3 AUG 1749
+2 PLAC Gedern
+1 NOTE Wikidata Q6205725
+1 FAMS @F31@
+1 FAMC @F58@
+0 @I64@ INDI
+1 NAME Ernest Augustus, Elector of Brunswick-Lüneburg
+1 SEX M
+1 BIRT
+2 DATE 20 NOV 1629
+2 PLAC Herzberg am Harz, Germany
+1 DEAT
+2 DATE 23 JAN 1698
+2 PLAC Hanover
+1 NOTE Wikidata Q372190
+1 FAMS @F32@
+1 FAMC @F59@
+0 @I65@ INDI
+1 NAME Sophia of Hanover
+1 SEX F
+1 BIRT
+2 DATE 14 OCT 1630
+2 PLAC The Hague, Netherlands
+1 DEAT
+2 DATE 8 JUN 1714
+2 PLAC Hanover
+1 NOTE Wikidata Q57224
+1 FAMS @F32@
+1 FAMC @F60@
+0 @I66@ INDI
+1 NAME George William of Brunswick-Lüneburg-Celle
+1 SEX M
+1 BIRT
+2 DATE 26 JAN 1624
+2 PLAC Herzberg am Harz, Germany
+1 DEAT
+2 DATE 28 AUG 1705
+2 PLAC Wienhausen
+1 NOTE Wikidata Q61574
+1 FAMS @F33@
+1 FAMC @F59@
+0 @I67@ INDI
+1 NAME Éléonore Desmier d'Olbreuse
+1 SEX F
+1 BIRT
+2 DATE 3 FEB 1639
+2 PLAC Niort, France
+1 DEAT
+2 DATE 5 FEB 1722
+2 PLAC Celle
+1 NOTE Wikidata Q65304
+1 FAMS @F33@
+1 FAMC @F61@
+0 @I68@ INDI
+1 NAME Albert II, Margrave of Brandenburg-Ansbach
+1 SEX M
+1 BIRT
+2 DATE 18 SEP 1620
+2 PLAC Ansbach, Germany
+1 DEAT
+2 DATE 1 NOV 1667
+2 PLAC Ansbach
+1 NOTE Wikidata Q657578
+1 FAMS @F34@
+1 FAMC @F62@
+0 @I69@ INDI
+1 NAME Sophie Margarete of Oettingen-Oettingen
+1 SEX F
+1 BIRT
+2 DATE 9 DEC 1634
+2 PLAC Ulm, Germany
+1 DEAT
+2 DATE 26 JUL 1664
+2 PLAC Ansbach
+1 NOTE Wikidata Q6411815
+1 FAMS @F34@
+1 FAMC @F63@
+0 @I70@ INDI
+1 NAME John George I, Duke of Saxe-Eisenach
+1 SEX M
+1 BIRT
+2 DATE 12 JUL 1634
+2 PLAC Weimar, Germany
+1 DEAT
+2 DATE 19 SEP 1686
+2 PLAC Schloss Wilhelmsthal
+1 NOTE Wikidata Q698672
+1 FAMS @F35@
+1 FAMC @F64@
+0 @I71@ INDI
+1 NAME Johannetta of Sayn-Wittgenstein
+1 SEX F
+1 BIRT
+2 DATE 27 AUG 1632
+2 PLAC Bad Laasphe, Germany
+1 DEAT
+2 DATE 28 SEP 1701
+2 PLAC Jena
+1 NOTE Wikidata Q6332311
+1 FAMS @F35@
+1 FAMC @F65@
+0 @I72@ INDI
+1 NAME Ernest I, Duke of Saxe-Gotha
+1 SEX M
+1 BIRT
+2 DATE 25 DEC 1601
+2 PLAC Altenburg, Germany
+1 DEAT
+2 DATE 26 MAR 1675
+2 PLAC Gotha
+1 NOTE Wikidata Q62282
+1 FAMS @F36@
+1 FAMC @F66@
+0 @I73@ INDI
+1 NAME Princess Elisabeth Sophie of Saxe-Altenburg
+1 SEX F
+1 BIRT
+2 DATE 10 OCT 1619
+2 PLAC Bavarian, Austria
+1 DEAT
+2 DATE 20 DEC 1680
+2 PLAC Gotha
+1 NOTE Wikidata Q67777
+1 FAMS @F36@
+1 FAMC @F67@
+0 @I74@ INDI
+1 NAME Augustus, Duke of Saxe-Weissenfels
+1 SEX M
+1 BIRT
+2 DATE 13 AUG 1614
+2 PLAC Dresden, Germany
+1 DEAT
+2 DATE 4 JUN 1680
+2 PLAC Halle (Saale)
+1 NOTE Wikidata Q680131
+1 FAMS @F37@
+1 FAMC @F68@
+0 @I75@ INDI
+1 NAME Anna Maria of Mecklenburg-Schwerin
+1 SEX F
+1 BIRT
+2 DATE 1 JUL 1627
+2 PLAC Schwerin, Germany
+1 DEAT
+2 DATE 11 DEC 1669
+2 PLAC Halle (Saale)
+1 NOTE Wikidata Q468567
+1 FAMS @F37@
+1 FAMC @F69@
+0 @I76@ INDI
+1 NAME John VI of Anhalt-Zerbst
+1 SEX M
+1 BIRT
+2 DATE 24 MAR 1621
+2 PLAC Zerbst, Germany
+1 DEAT
+2 DATE 4 JUL 1667
+2 PLAC Zerbst
+1 NOTE Wikidata Q65878
+1 FAMS @F38@
+1 FAMC @F70@
+0 @I77@ INDI
+1 NAME Sophie Augusta of Holstein-Gottorp
+1 SEX F
+1 BIRT
+2 DATE 5 DEC 1630
+2 PLAC Gottorf Castle, Germany
+1 DEAT
+2 DATE 12 DEC 1680
+2 PLAC Coswig
+1 NOTE Wikidata Q2325434
+1 FAMS @F38@
+1 FAMC @F71@
+0 @I78@ INDI
+1 NAME Johann VII, Duke of Mecklenburg
+1 SEX M
+1 BIRT
+2 DATE 7 MAR 1558
+2 PLAC Güstrow, Germany
+1 DEAT
+2 DATE 22 MAR 1592
+2 PLAC Burg Stargard
+1 NOTE Wikidata Q571387
+1 FAMS @F39@
+1 FAMC @F72@
+0 @I79@ INDI
+1 NAME Sophia of Holstein-Gottorp
+1 SEX F
+1 BIRT
+2 DATE 1 JUN 1569
+2 PLAC Gottorf Castle, Germany
+1 DEAT
+2 DATE 14 NOV 1634
+2 PLAC Schwerin
+1 NOTE Wikidata Q67764
+1 FAMS @F39@
+1 FAMC @F73@
+0 @I80@ INDI
+1 NAME Julius Ernst, Duke of Brunswick-Dannenberg
+1 SEX M
+1 BIRT
+2 DATE 11 MAR 1571
+2 PLAC Lüchow-Dannenberg District, Germany
+1 DEAT
+2 DATE 26 OCT 1636
+1 NOTE Wikidata Q553000
+1 FAMS @F40@
+1 FAMC @F74@
+0 @I81@ INDI
+1 NAME Maria of Ostfriesland
+1 SEX F
+1 BIRT
+2 DATE 1582
+2 PLAC Hage, Germany
+1 DEAT
+2 DATE 9 JUL 1616
+1 NOTE Wikidata Q6199920
+1 FAMS @F40@
+1 FAMC @F75@
+0 @I82@ INDI
+1 NAME Anton Günther I, Count of Schwarzburg-Sondershausen
+1 SEX M
+1 BIRT
+2 DATE 9 JAN 1620
+2 PLAC Ebeleben, Germany
+1 DEAT
+2 DATE 19 AUG 1666
+2 PLAC Sondershausen
+1 NOTE Wikidata Q329222
+1 FAMS @F41@
+1 FAMC @F76@
+0 @I83@ INDI
+1 NAME Maria Magdalena de Birkenfeld
+1 SEX F
+1 BIRT
+2 DATE 29 JUN 1622
+2 PLAC Birkenfeld, Germany
+1 DEAT
+2 DATE 28 OCT 1689
+2 PLAC Heringen
+1 NOTE Wikidata Q20108428
+1 FAMS @F41@
+1 FAMC @F77@
+0 @I84@ INDI
+1 NAME Albert Frederick, Count of Barby-Muhlingen
+1 SEX M
+1 BIRT
+2 DATE 28 FEB 1597
+2 PLAC Groß Rosenburg, Germany
+1 DEAT
+2 DATE 7 DEC 1641
+2 PLAC Groß Rosenburg
+1 NOTE Wikidata Q125969
+1 FAMS @F42@
+1 FAMC @F78@
+0 @I85@ INDI
+1 NAME Sophia Ursula of Oldenburg
+1 SEX F
+1 BIRT
+2 DATE 10 DEC 1601
+1 DEAT
+2 DATE 5 APR 1642
+1 NOTE Wikidata Q11950040
+1 FAMS @F42@
+1 FAMC @F79@
+0 @I86@ INDI
+1 NAME George Frederick of Waldeck-Eisenberg
+1 SEX M
+1 BIRT
+2 DATE 31 JAN 1620
+2 PLAC Bad Arolsen, Germany
+1 DEAT
+2 DATE 9 NOV 1692
+2 PLAC Bad Arolsen
+1 NOTE Wikidata Q62507
+1 FAMS @F43@
+1 FAMC @F80@
+0 @I87@ INDI
+1 NAME Elizabeth Charlotte of Nassau-Siegen
+1 SEX F
+1 BIRT
+2 DATE 11 MAR 1628
+2 PLAC Emmerich am Rhein, Germany
+1 DEAT
+2 DATE 16 NOV 1694
+2 PLAC Culemborg
+1 NOTE Wikidata Q20107971
+1 FAMS @F43@
+1 FAMC @F81@
+0 @I88@ INDI
+1 NAME George Albert I of Erbach-Erbach
+1 SEX M
+1 BIRT
+2 DATE 16 DEC 1597
+2 PLAC Erbach, Germany
+1 DEAT
+2 DATE 25 NOV 1647
+2 PLAC Erbach
+1 NOTE Wikidata Q11928267
+1 FAMS @F44@
+1 FAMC @F82@
+0 @I89@ INDI
+1 NAME Elisabeth Dorothea von Hohenlohe-Waldenburg-Schillingsfürst
+1 SEX F
+1 BIRT
+2 DATE 27 AUG 1617
+2 PLAC Schillingsfürst, Germany
+1 DEAT
+2 DATE 12 NOV 1655
+2 PLAC Fürstenau
+1 NOTE Wikidata Q20107973
+1 FAMS @F44@
+1 FAMC @F83@
+0 @I90@ INDI
+1 NAME Philip Dietrich, Count of Waldeck
+1 SEX M
+1 BIRT
+2 DATE 2 NOV 1614
+2 PLAC Bad Arolsen, Germany
+1 DEAT
+2 DATE 7 DEC 1645
+2 PLAC Korbach
+1 NOTE Wikidata Q118286
+1 FAMS @F45@
+1 FAMC @F80@
+0 @I91@ INDI
+1 NAME Mary Magdalene of Nassau-Siegen
+1 SEX F
+1 BIRT
+2 DATE 21 OCT 1623
+2 PLAC Oberes Schloss, Germany
+1 DEAT
+2 DATE 30 AUG 1647
+2 PLAC Spa
+1 NOTE Wikidata Q20108429
+1 FAMS @F45@
+1 FAMC @F81@
+0 @I92@ INDI
+1 NAME Josias II, Count of Waldeck-Wildungen
+1 SEX M
+1 BIRT
+2 DATE 31 JUL 1636
+2 PLAC Bad Wildungen, Germany
+1 DEAT
+2 DATE 8 AUG 1669
+2 PLAC Heraklion
+1 NOTE Wikidata Q97043
+1 FAMS @F46@
+1 FAMC @F84@
+0 @I93@ INDI
+1 NAME Wilhelmine Christine of Nassau-Siegen
+1 SEX F
+1 BIRT
+2 DATE 1629
+1 DEAT
+2 DATE 22 JAN 1700
+2 PLAC Hildburghausen
+1 NOTE Wikidata Q11924947
+1 FAMS @F46@
+1 FAMC @F81@
+0 @I94@ INDI
+1 NAME Albert Anton, Prince of Schwarzburg-Rudolstadt
+1 SEX M
+1 BIRT
+2 DATE 14 NOV 1641
+2 PLAC Rudolstadt, Germany
+1 DEAT
+2 DATE 15 DEC 1710
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q69960
+1 FAMS @F47@
+1 FAMC @F85@
+0 @I95@ INDI
+1 NAME Countess Emilie Juliane of Barby-Mühlingen
+1 SEX F
+1 BIRT
+2 DATE 19 AUG 1637
+2 PLAC Heidecksburg, Germany
+1 DEAT
+2 DATE 3 DEC 1706
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q71944
+1 FAMC @F42@
+1 FAMS @F47@
+0 @I96@ INDI
+1 NAME Augustus the Younger, Duke of Brunswick-Lüneburg
+1 SEX M
+1 BIRT
+2 DATE 10 APR 1579
+1 DEAT
+2 DATE 17 SEP 1666
+2 PLAC Wolfenbüttel
+1 NOTE Wikidata Q61963
+1 FAMS @F48@
+1 FAMC @F74@
+1 FAMS @F89@
+0 @I97@ INDI
+1 NAME Duchess Elisabeth Sophie of Mecklenburg
+1 SEX F
+1 BIRT
+2 DATE 20 AUG 1613
+2 PLAC Güstrow, Germany
+1 DEAT
+2 DATE 12 JUL 1680
+2 PLAC Lüneburg
+1 NOTE Wikidata Q448131
+1 FAMS @F48@
+1 FAMC @F86@
+0 @I98@ INDI
+1 NAME Frederick, Landgrave of Hesse-Eschwege
+1 SEX M
+1 BIRT
+2 DATE 9 MAY 1617
+2 PLAC Kassel, Germany
+1 DEAT
+2 DATE 24 SEP 1655
+2 PLAC Kościan
+1 NOTE Wikidata Q551726
+1 FAMS @F49@
+1 FAMC @F87@
+0 @I99@ INDI
+1 NAME Countess Palatine Eleonora Catherine of Zweibrücken
+1 SEX F
+1 BIRT
+2 DATE 17 MAY 1626
+2 PLAC Stegeborg Castle, Sweden
+1 DEAT
+2 DATE 3 MAR 1692
+2 PLAC Osterholz-Scharmbeck
+1 NOTE Wikidata Q74673
+1 FAMS @F49@
+1 FAMC @F88@
+0 @I100@ INDI
+1 NAME Anthony Ulrich, Duke of Brunswick-Wolfenbüttel
+1 SEX M
+1 BIRT
+2 DATE 4 OCT 1633
+2 PLAC Hitzacker, Germany
+1 DEAT
+2 DATE 27 MAR 1714
+2 PLAC Salzdahlum
+1 NOTE Wikidata Q61213
+1 FAMS @F50@
+1 FAMC @F89@
+0 @I101@ INDI
+1 NAME Elizabeth Juliana of Schleswig-Holstein-Sønderburg-Nordborg
+1 SEX F
+1 BIRT
+2 DATE 24 MAY 1634
+2 PLAC Nordborg, Denmark
+1 DEAT
+2 DATE 4 FEB 1704
+2 PLAC Wolfenbüttel
+1 NOTE Wikidata Q10303799
+1 FAMS @F50@
+1 FAMC @F90@
+0 @I102@ INDI
+1 NAME Albert Ernest I of Oettingen-Oettingen
+1 SEX M
+1 BIRT
+2 DATE 14 MAY 1642
+2 PLAC Oettingen in Bayern, Germany
+1 DEAT
+2 DATE 8 FEB 1701
+2 PLAC Schrattenhofen
+1 NOTE Wikidata Q9144277
+1 FAMS @F51@
+1 FAMC @F91@
+0 @I103@ INDI
+1 NAME Christine Friederike of Württemberg-Winnental
+1 SEX F
+1 BIRT
+2 DATE 28 FEB 1644
+2 PLAC Stuttgart, Germany
+1 DEAT
+2 DATE 9 NOV 1724
+2 PLAC Stuttgart
+1 NOTE Wikidata Q3697531
+1 FAMS @F51@
+1 FAMC @F92@
+0 @I104@ INDI
+1 NAME Henry X, Count of Reuss-Lobenstein
+1 SEX M
+1 BIRT
+2 DATE 1621
+2 PLAC Gera, Germany
+1 DEAT
+2 DATE 1671
+2 PLAC Bad Lobenstein
+1 NOTE Wikidata Q97030
+1 FAMS @F52@
+1 FAMC @F93@
+0 @I105@ INDI
+1 NAME Maria Sibylla Reuss of Upper Greiz
+1 SEX F
+1 BIRT
+2 DATE 4 AUG 1625
+2 PLAC Greiz, Germany
+1 DEAT
+2 DATE 17 MAY 1675
+2 PLAC Bad Lobenstein
+1 NOTE Wikidata Q20108432
+1 FAMS @F52@
+1 FAMC @F94@
+0 @I106@ INDI
+1 NAME Johann Friedrich zu Solms-Laubach
+1 SEX M
+1 BIRT
+2 DATE 1 MAR 1625
+2 PLAC Sonnewalde, Germany
+1 DEAT
+2 DATE 10 DEC 1696
+2 PLAC Laubach
+1 NOTE Wikidata Q26206163
+1 FAMS @F53@
+1 FAMC @F95@
+0 @I107@ INDI
+1 NAME Benigna zu Solms-Laubach
+1 SEX F
+1 BIRT
+2 DATE 1648
+2 PLAC Żary, Poland
+1 DEAT
+2 DATE 1702
+1 NOTE Wikidata Q94777993
+1 FAMS @F53@
+1 FAMC @F96@
+0 @I108@ INDI
+1 NAME Wolfgang Georg I. zu Castell-Remlingen
+1 SEX M
+1 BIRT
+2 DATE 27 JAN 1610
+2 PLAC Remlingen, Germany
+1 DEAT
+2 DATE 4 MAY 1668
+2 PLAC Remlingen
+1 NOTE Wikidata Q19959165
+1 FAMS @F54@
+1 FAMC @F97@
+0 @I109@ INDI
+1 NAME Sophie Juliane of Hohenlohe-Pfedelbach
+1 SEX F
+1 BIRT
+2 DATE 5 OCT 1620
+1 DEAT
+2 DATE 11 JAN 1682
+1 NOTE Wikidata Q99689916
+1 FAMS @F54@
+1 FAMC @F98@
+0 @I110@ INDI
+1 NAME Maximilian Erasmus, Graf von Zinzendorf und Pottendorf
+1 SEX M
+1 BIRT
+2 DATE 29 JUN 1633
+2 PLAC Vienna, Austria
+1 DEAT
+2 DATE 21 JUL 1672
+2 PLAC Nuremberg
+1 NOTE Wikidata Q65224297
+1 FAMS @F55@
+1 FAMC @F99@
+0 @I111@ INDI
+1 NAME Anna Amalie, Freiin von Dietrichstein-Hollenburg
+1 SEX F
+1 BIRT
+2 DATE 29 OCT 1638
+1 DEAT
+2 DATE 25 AUG 1696
+1 NOTE Wikidata Q99689992
+1 FAMS @F55@
+1 FAMC @F100@
+0 @I112@ INDI
+1 NAME Philipp Gottfried von Hohenlohe-Waldenburg
+1 SEX M
+1 BIRT
+2 DATE 6 JUN 1618
+2 PLAC Waldenburg, Germany
+1 DEAT
+2 DATE 14 DEC 1679
+2 PLAC Waldenburg
+1 NOTE Wikidata Q28058834
+1 FAMS @F56@
+1 FAMC @F101@
+0 @I113@ INDI
+1 NAME Anna Christine Gräfin zu Limpurg-Sontheim
+1 SEX F
+1 BIRT
+2 DATE 15 DEC 1615
+1 DEAT
+2 DATE 28 MAY 1685
+1 NOTE Wikidata Q75581894
+1 FAMS @F56@
+1 FAMC @F102@
+0 @I114@ INDI
+1 NAME Henry Ernest, Count of Stolberg
+1 SEX M
+1 BIRT
+2 DATE 20 JUL 1593
+2 PLAC Schwarza, Germany
+1 DEAT
+2 DATE 4 APR 1672
+2 PLAC Ilsenburg
+1 NOTE Wikidata Q835557
+1 FAMS @F57@
+1 FAMC @F103@
+0 @I115@ INDI
+1 NAME Anna Elisabeth of Stolberg-Ortenberg
+1 SEX F
+1 BIRT
+2 DATE 6 AUG 1624
+2 PLAC Ortenburg, Germany
+1 DEAT
+2 DATE 17 OCT 1668
+2 PLAC Ilsenburg
+1 NOTE Wikidata Q54857394
+1 FAMS @F57@
+1 FAMC @F104@
+0 @I116@ INDI
+1 NAME Gustav Adolph, Duke of Mecklenburg-Güstrow
+1 SEX M
+1 BIRT
+2 DATE 26 FEB 1633
+2 PLAC Güstrow, Germany
+1 DEAT
+2 DATE 26 OCT 1695
+2 PLAC Güstrow
+1 NOTE Wikidata Q570596
+1 FAMS @F58@
+1 FAMC @F105@
+0 @I117@ INDI
+1 NAME Magdalene Sibylle of Holstein-Gottorp
+1 SEX F
+1 BIRT
+2 DATE 14 NOV 1631
+2 PLAC Gottorf Castle, Germany
+1 DEAT
+2 DATE 22 SEP 1719
+2 PLAC Güstrow
+1 NOTE Wikidata Q67767
+1 FAMS @F58@
+1 FAMC @F71@
+0 @I118@ INDI
+1 NAME George, Duke of Brunswick-Lüneburg
+1 SEX M
+1 BIRT
+2 DATE 17 FEB 1582
+2 PLAC Celle, Germany
+1 DEAT
+2 DATE 2 APR 1641
+2 PLAC Hildesheim
+1 NOTE Wikidata Q61829
+1 FAMS @F59@
+0 @I119@ INDI
+1 NAME Anne Eleonore of Hesse-Darmstadt
+1 SEX F
+1 BIRT
+2 DATE 30 JUL 1601
+2 PLAC Darmstadt, Germany
+1 DEAT
+2 DATE 6 MAY 1659
+2 PLAC Herzberg Castle
+1 NOTE Wikidata Q270110
+1 FAMS @F59@
+0 @I120@ INDI
+1 NAME Frederick V of the Palatinate
+1 SEX M
+1 BIRT
+2 DATE 26 AUG 1596
+2 PLAC Deinschwang, Germany
+1 DEAT
+2 DATE 29 NOV 1632
+2 PLAC Mainz
+1 NOTE Wikidata Q57195
+1 FAMS @F60@
+0 @I121@ INDI
+1 NAME Elizabeth Stuart, Queen of Bohemia
+1 SEX F
+1 BIRT
+2 DATE 19 AUG 1596
+2 PLAC Fife, United Kingdom
+1 DEAT
+2 DATE 13 FEB 1662
+2 PLAC London
+1 NOTE Wikidata Q158252
+1 FAMS @F60@
+0 @I122@ INDI
+1 NAME Alexandre Desmier d'Olbreuse
+1 SEX M
+1 BIRT
+2 DATE 1619
+1 NOTE Wikidata Q61866195
+1 FAMS @F61@
+0 @I123@ INDI
+1 NAME Jacquette Poussard du Bas-Vandré et de Saint-Marc
+1 SEX F
+1 DEAT
+2 DATE 22 AUG 1648
+1 NOTE Wikidata Q61866199
+1 FAMS @F61@
+0 @I124@ INDI
+1 NAME Joachim Ernst, Margrave of Brandenburg-Ansbach
+1 SEX M
+1 BIRT
+2 DATE 22 JUN 1583
+2 PLAC Cölln, Germany
+1 DEAT
+2 DATE 7 MAR 1625
+2 PLAC Ansbach
+1 NOTE Wikidata Q182779
+1 FAMS @F62@
+0 @I125@ INDI
+1 NAME Sophie of Solms-Laubach
+1 SEX F
+1 BIRT
+2 DATE 15 MAY 1594
+2 PLAC Laubach, Germany
+1 DEAT
+2 DATE 16 MAY 1651
+2 PLAC Plötzkau
+1 NOTE Wikidata Q469741
+1 FAMS @F62@
+0 @I126@ INDI
+1 NAME Joaquim Ernest d’Oettingen-Oettingen
+1 SEX M
+1 BIRT
+2 DATE 31 MAR 1612
+2 PLAC Oettingen in Bayern, Germany
+1 DEAT
+2 DATE 8 AUG 1658
+2 PLAC Harburg Castle
+1 NOTE Wikidata Q11928089
+1 FAMS @F63@
+1 FAMS @F91@
+0 @I127@ INDI
+1 NAME Anne Sybille de Solms-Sonnenwalde
+1 SEX F
+1 BIRT
+2 DATE 1615
+1 DEAT
+2 DATE 19 SEP 1635
+2 PLAC Nuremberg
+1 NOTE Wikidata Q54864014
+1 FAMS @F63@
+0 @I128@ INDI
+1 NAME William, Duke of Saxe-Weimar
+1 SEX M
+1 BIRT
+2 DATE 11 APR 1598
+2 PLAC Altenburg, Germany
+1 DEAT
+2 DATE 17 MAY 1662
+2 PLAC Weimar
+1 NOTE Wikidata Q65133
+1 FAMS @F64@
+1 FAMC @F66@
+0 @I129@ INDI
+1 NAME Eleonore Dorothea of Anhalt-Dessau
+1 SEX F
+1 BIRT
+2 DATE 6 FEB 1602
+2 PLAC Dessau, Germany
+1 DEAT
+2 DATE 26 DEC 1664
+2 PLAC Weimar
+1 NOTE Wikidata Q456864
+1 FAMS @F64@
+0 @I130@ INDI
+1 NAME Ernest of Sayn-Wittgenstein
+1 SEX M
+1 BIRT
+2 DATE 26 AUG 1594
+1 DEAT
+2 DATE 22 MAY 1632
+1 NOTE Wikidata Q26878187
+1 FAMS @F65@
+0 @I131@ INDI
+1 NAME Louise Juliane of Erbach
+1 SEX F
+1 BIRT
+2 DATE 18 JUN 1603
+2 PLAC Michelstadt, Germany
+1 DEAT
+2 DATE 28 SEP 1670
+2 PLAC Friedewald
+1 NOTE Wikidata Q1872168
+1 FAMS @F65@
+1 FAMC @F82@
+0 @I132@ INDI
+1 NAME John, Duke of Saxe-Weimar
+1 SEX M
+1 BIRT
+2 DATE 22 MAY 1570
+2 PLAC Weimar, Germany
+1 DEAT
+2 DATE 31 OCT 1605
+2 PLAC Weimar
+1 NOTE Wikidata Q68238
+1 FAMS @F66@
+0 @I133@ INDI
+1 NAME Dorothea Maria of Anhalt
+1 SEX F
+1 BIRT
+2 DATE 2 JUL 1574
+2 PLAC Dessau, Germany
+1 DEAT
+2 DATE 18 JUL 1617
+2 PLAC Weimar
+1 NOTE Wikidata Q274007
+1 FAMS @F66@
+0 @I134@ INDI
+1 NAME Duke Johann Philipp I, Duke of Saxe-Altenburg
+1 SEX M
+1 BIRT
+2 DATE 25 JAN 1597
+2 PLAC Torgau, Germany
+1 DEAT
+2 DATE 1 APR 1639
+2 PLAC Altenburg
+1 NOTE Wikidata Q569335
+1 FAMS @F67@
+0 @I135@ INDI
+1 NAME Elisabeth of Brunswick-Wolfenbüttel, Duchess of Saxe-Altenburg
+1 SEX F
+1 BIRT
+2 DATE 23 JUN 1593
+2 PLAC Wolfenbüttel, Germany
+1 DEAT
+2 DATE 25 MAR 1650
+2 PLAC Altenburg
+1 NOTE Wikidata Q91542
+1 FAMS @F67@
+0 @I136@ INDI
+1 NAME Johann Georg I, Elector of Saxony
+1 SEX M
+1 BIRT
+2 DATE 5 MAR 1585
+2 PLAC Dresden, Germany
+1 DEAT
+2 DATE 8 OCT 1656
+2 PLAC Dresden
+1 NOTE Wikidata Q366652
+1 FAMS @F68@
+0 @I137@ INDI
+1 NAME Duchess Magdalene Sibylle of Prussia
+1 SEX F
+1 BIRT
+2 DATE 31 DEC 1586
+2 PLAC Königsberg, Kingdom of Prussia
+1 DEAT
+2 DATE 12 FEB 1659
+2 PLAC Dresden
+1 NOTE Wikidata Q261901
+1 FAMS @F68@
+0 @I138@ INDI
+1 NAME Anna Maria of Ostfriesland
+1 SEX F
+1 BIRT
+2 DATE 23 JUN 1601
+2 PLAC Aurich, Germany
+1 DEAT
+2 DATE 15 FEB 1634
+2 PLAC Schwerin
+1 NOTE Wikidata Q3817463
+1 FAMS @F69@
+0 @I139@ INDI
+1 NAME Rudolph, Prince of Anhalt-Zerbst
+1 SEX M
+1 BIRT
+2 DATE 28 OCT 1576
+2 PLAC Harzgerode, Germany
+1 DEAT
+2 DATE 20 AUG 1621
+2 PLAC Zerbst
+1 NOTE Wikidata Q519491
+1 FAMS @F70@
+1 FAMS @F129@
+0 @I140@ INDI
+1 NAME Magdalene of Oldenburg
+1 SEX F
+1 BIRT
+2 DATE 6 OCT 1585
+2 PLAC Oldenburg, Germany
+1 DEAT
+2 DATE 14 APR 1657
+2 PLAC Coswig
+1 NOTE Wikidata Q20498575
+1 FAMS @F70@
+0 @I141@ INDI
+1 NAME Frederick III, Duke of Schleswig-Holstein-Gottorp
+1 SEX M
+1 BIRT
+2 DATE 22 DEC 1597
+2 PLAC Gottorf Castle, Germany
+1 DEAT
+2 DATE 10 AUG 1659
+2 PLAC Tönning
+1 NOTE Wikidata Q61360
+1 FAMS @F71@
+0 @I142@ INDI
+1 NAME Marie Elisabeth of Saxony
+1 SEX F
+1 BIRT
+2 DATE 22 NOV 1610
+2 PLAC Dresden, Germany
+1 DEAT
+2 DATE 24 OCT 1684
+2 PLAC Husum
+1 NOTE Wikidata Q265712
+1 FAMC @F68@
+1 FAMS @F71@
+0 @I143@ INDI
+1 NAME John Albert I, Duke of Mecklenburg
+1 SEX M
+1 BIRT
+2 DATE 23 DEC 1525
+2 PLAC Güstrow, Germany
+1 DEAT
+2 DATE 12 FEB 1576
+2 PLAC Schwerin
+1 NOTE Wikidata Q668049
+1 FAMS @F72@
+0 @I144@ INDI
+1 NAME Anna Sophie of Prussia
+1 SEX F
+1 BIRT
+2 DATE 11 JUN 1527
+2 PLAC Königsberg, Kingdom of Prussia
+1 DEAT
+2 DATE 6 FEB 1591
+2 PLAC Lübz
+1 NOTE Wikidata Q70786
+1 FAMS @F72@
+0 @I145@ INDI
+1 NAME Adolf I, Duke of Schleswig-Holstein-Gottorp
+1 SEX M
+1 BIRT
+2 DATE 25 JAN 1526
+2 PLAC Duborg Castle, Germany
+1 DEAT
+2 DATE 1 OCT 1586
+2 PLAC Gottorf Castle
+1 NOTE Wikidata Q60211
+1 FAMS @F73@
+0 @I146@ INDI
+1 NAME Christine of Hesse
+1 SEX F
+1 BIRT
+2 DATE 29 JUN 1543
+2 PLAC Kassel, Germany
+1 DEAT
+2 DATE 13 MAY 1604
+2 PLAC Kiel
+1 NOTE Wikidata Q264709
+1 FAMS @F73@
+0 @I147@ INDI
+1 NAME Henry, Duke of Brunswick-Dannenberg
+1 SEX M
+1 BIRT
+2 DATE 4 JUN 1533
+2 PLAC Lüchow-Dannenberg District, Germany
+1 DEAT
+2 DATE 19 JAN 1598
+1 NOTE Wikidata Q65819
+1 FAMS @F74@
+1 FAMC @F106@
+0 @I148@ INDI
+1 NAME Ursula of Saxe-Lauenburg
+1 SEX F
+1 BIRT
+2 DATE 1552
+1 DEAT
+2 DATE 12 OCT 1620
+2 PLAC Scharnebeck
+1 NOTE Wikidata Q2501962
+1 FAMS @F74@
+1 FAMC @F107@
+0 @I149@ INDI
+1 NAME Edzard II, Count of East Frisia
+1 SEX M
+1 BIRT
+2 DATE 24 JUN 1532
+2 PLAC Greetsiel, Germany
+1 DEAT
+2 DATE 1 MAR 1599
+2 PLAC Aurich
+1 NOTE Wikidata Q688429
+1 FAMS @F75@
+1 FAMC @F108@
+0 @I150@ INDI
+1 NAME Catherine Vasa of Sweden
+1 SEX F
+1 BIRT
+2 DATE 6 JAN 1539
+2 PLAC Stockholm, Sweden
+1 DEAT
+2 DATE 21 DEC 1610
+2 PLAC Berum
+1 NOTE Wikidata Q2211749
+1 FAMS @F75@
+1 FAMC @F109@
+0 @I151@ INDI
+1 NAME Christian Günther I, Count of Schwarzburg-Sondershausen
+1 SEX M
+1 BIRT
+2 DATE 11 MAY 1578
+2 PLAC Sondershausen, Germany
+1 DEAT
+2 DATE 25 NOV 1642
+2 PLAC Arnstadt
+1 NOTE Wikidata Q329225
+1 FAMS @F76@
+1 FAMC @F110@
+0 @I152@ INDI
+1 NAME Anna Sibylla of Schwarzburg-Rudolstadt
+1 SEX F
+1 BIRT
+2 DATE 14 MAR 1584
+2 PLAC Rudolstadt, Germany
+1 DEAT
+2 DATE 22 AUG 1623
+2 PLAC Ebeleben
+1 NOTE Wikidata Q20107695
+1 FAMS @F76@
+1 FAMC @F111@
+0 @I153@ INDI
+1 NAME George William, Count Palatine of Zweibrücken-Birkenfeld
+1 SEX M
+1 BIRT
+2 DATE 6 AUG 1591
+2 PLAC Ansbach, Germany
+1 DEAT
+2 DATE 25 DEC 1669
+2 PLAC Birkenfeld
+1 NOTE Wikidata Q70189
+1 FAMS @F77@
+1 FAMC @F112@
+0 @I154@ INDI
+1 NAME Dorotea de Solms-Sonnenwalde
+1 SEX F
+1 BIRT
+2 DATE 1 DEC 1586
+2 PLAC Sonnewalde, Germany
+1 DEAT
+2 DATE 5 SEP 1625
+1 NOTE Wikidata Q11917706
+1 FAMS @F77@
+1 FAMC @F113@
+0 @I155@ INDI
+1 NAME Jost von Barby
+1 SEX M
+1 BIRT
+2 DATE 8 MAY 1544
+1 DEAT
+2 DATE 9 AUG 1609
+1 NOTE Wikidata Q55909990
+1 FAMS @F78@
+1 FAMC @F114@
+0 @I156@ INDI
+1 NAME Sophia of Schwarzburg-Rudolstadt
+1 SEX F
+1 BIRT
+2 DATE 1 MAR 1579
+2 PLAC Rudolstadt, Germany
+1 DEAT
+2 DATE 24 AUG 1630
+2 PLAC Mühlingen
+1 NOTE Wikidata Q101519816
+1 FAMS @F78@
+1 FAMC @F111@
+0 @I157@ INDI
+1 NAME Anton II of Oldenburg-Delmenhorst
+1 SEX M
+1 BIRT
+2 DATE 8 SEP 1550
+2 PLAC Oldenburg, Germany
+1 DEAT
+2 DATE 25 OCT 1619
+2 PLAC Delmenhorst
+1 NOTE Wikidata Q17485822
+1 FAMS @F79@
+1 FAMC @F115@
+0 @I158@ INDI
+1 NAME Sibylle Elisabeth of Braunschweig-Dannenberg
+1 SEX F
+1 BIRT
+2 DATE 4 JUN 1576
+1 DEAT
+2 DATE 9 JUL 1630
+2 PLAC Delmenhorst
+1 NOTE Wikidata Q24662869
+1 FAMC @F74@
+1 FAMS @F79@
+0 @I159@ INDI
+1 NAME Wolrad IV of Waldeck-Eisenberg
+1 SEX M
+1 BIRT
+2 DATE 7 JUL 1588
+2 PLAC Korbach, Germany
+1 DEAT
+2 DATE 6 OCT 1640
+2 PLAC Bad Arolsen
+1 NOTE Wikidata Q828979
+1 FAMS @F80@
+1 FAMC @F116@
+0 @I160@ INDI
+1 NAME Anne Mary of Baden-Durlach
+1 SEX F
+1 BIRT
+2 DATE 13 JUN 1587
+1 DEAT
+2 DATE 11 MAR 1649
+1 NOTE Wikidata Q11905656
+1 FAMS @F80@
+1 FAMC @F117@
+0 @I161@ INDI
+1 NAME William of Nassau-Siegen
+1 SEX M
+1 BIRT
+2 DATE 13 AUG 1592
+2 PLAC Dillenburg, Germany
+1 DEAT
+2 DATE 17 JUL 1642
+2 PLAC Orsoy
+1 NOTE Wikidata Q324829
+1 FAMS @F81@
+1 FAMC @F118@
+0 @I162@ INDI
+1 NAME Christiane of Erbach
+1 SEX F
+1 BIRT
+2 DATE 5 JUN 1596
+1 DEAT
+2 DATE 6 JUL 1646
+2 PLAC Culemborg
+1 NOTE Wikidata Q11916128
+1 FAMS @F81@
+1 FAMC @F82@
+0 @I163@ INDI
+1 NAME George III, Count of Erbach-Breuberg
+1 SEX M
+1 BIRT
+2 DATE 15 JUL 1548
+2 PLAC Erbach, Germany
+1 DEAT
+2 DATE 26 FEB 1605
+2 PLAC Erbach
+1 NOTE Wikidata Q325081
+1 FAMS @F82@
+1 FAMC @F119@
+1 FAMS @F147@
+0 @I164@ INDI
+1 NAME Mary of Barby and Mühlingen
+1 SEX F
+1 BIRT
+2 DATE 8 APR 1563
+2 PLAC Magdeburg, Germany
+1 DEAT
+2 DATE 1 DEC 1619
+2 PLAC Waldeck Castle
+1 NOTE Wikidata Q11935499
+1 FAMS @F82@
+1 FAMS @F116@
+1 FAMC @F120@
+0 @I165@ INDI
+1 NAME Georg Friedrich II Graf zu Hohenlohe-Schillingsfürst
+1 SEX M
+1 BIRT
+2 DATE 1595
+2 PLAC Waldenburg, Germany
+1 DEAT
+2 DATE 1635
+2 PLAC Frankfurt
+1 NOTE Wikidata Q75240896
+1 FAMS @F83@
+1 FAMC @F121@
+0 @I166@ INDI
+1 NAME Dorothée Sophie de Solms-Hohensolms
+1 SEX F
+1 BIRT
+2 DATE 17 OCT 1595
+2 PLAC Butzbach, Germany
+1 DEAT
+2 DATE 8 JAN 1660
+2 PLAC Schillingsfürst
+1 NOTE Wikidata Q31192270
+1 FAMS @F83@
+1 FAMC @F122@
+0 @I167@ INDI
+1 NAME Philip VII, Count of Waldeck
+1 SEX M
+1 BIRT
+2 DATE 25 NOV 1613
+2 PLAC Bad Wildungen, Germany
+1 DEAT
+2 DATE 24 FEB 1645
+2 PLAC Tábor
+1 NOTE Wikidata Q86695
+1 FAMS @F84@
+1 FAMC @F123@
+0 @I168@ INDI
+1 NAME Anna Catherine von Sayn-Wittgenstein
+1 SEX F
+1 BIRT
+2 DATE 27 JUL 1610
+2 PLAC Simmern/Hunsrück, Germany
+1 DEAT
+2 DATE 1 DEC 1690
+2 PLAC Bad Wildungen
+1 NOTE Wikidata Q11905640
+1 FAMS @F84@
+1 FAMC @F124@
+0 @I169@ INDI
+1 NAME Louis-Günther I, Count of Schwarzburg-Rudolstadt
+1 SEX M
+1 BIRT
+2 DATE 27 JUN 1581
+2 PLAC Rudolstadt, Germany
+1 DEAT
+2 DATE 4 NOV 1646
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q86677
+1 FAMS @F85@
+1 FAMC @F111@
+0 @I170@ INDI
+1 NAME Emilie of Oldenburg-Delmenhorst
+1 SEX F
+1 BIRT
+2 DATE 15 JUN 1614
+2 PLAC Delmenhorst, Germany
+1 DEAT
+2 DATE 4 DEC 1670
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q86729
+1 FAMC @F79@
+1 FAMS @F85@
+0 @I171@ INDI
+1 NAME John Albert II, Duke of Mecklenburg
+1 SEX M
+1 BIRT
+2 DATE 5 MAY 1590
+2 PLAC Waren, Germany
+1 DEAT
+2 DATE 23 APR 1636
+2 PLAC Güstrow
+1 NOTE Wikidata Q571404
+1 FAMC @F39@
+1 FAMS @F86@
+1 FAMS @F105@
+0 @I172@ INDI
+1 NAME Margaret Elizabeth of Mecklenburg
+1 SEX F
+1 BIRT
+2 DATE 11 JUL 1584
+2 PLAC Schönberg, Germany
+1 DEAT
+2 DATE 16 NOV 1616
+2 PLAC Güstrow
+1 NOTE Wikidata Q6204546
+1 FAMS @F86@
+1 FAMC @F125@
+0 @I173@ INDI
+1 NAME Maurice, Landgrave of Hesse-Kassel
+1 SEX M
+1 BIRT
+2 DATE 25 MAY 1572
+2 PLAC Kassel, Germany
+1 DEAT
+2 DATE 15 MAR 1632
+2 PLAC Eschwege
+1 NOTE Wikidata Q551420
+1 FAMS @F87@
+1 FAMC @F126@
+0 @I174@ INDI
+1 NAME Countess Juliane of Nassau-Siegen
+1 SEX F
+1 BIRT
+2 DATE 3 SEP 1587
+2 PLAC Dillenburger Schloss, Germany
+1 DEAT
+2 DATE 15 FEB 1643
+2 PLAC Eschwege
+1 NOTE Wikidata Q448124
+1 FAMS @F87@
+1 FAMC @F118@
+0 @I175@ INDI
+1 NAME John Casimir, Count Palatine of Kleeburg
+1 SEX M
+1 BIRT
+2 DATE 20 MAY 1589
+2 PLAC Zweibrücken, Germany
+1 DEAT
+2 DATE 18 JUN 1652
+2 PLAC Stegeborg Castle
+1 NOTE Wikidata Q62247
+1 FAMS @F88@
+1 FAMC @F127@
+0 @I176@ INDI
+1 NAME Catherine of Sweden, Countess Palatine of Kleeburg
+1 SEX F
+1 BIRT
+2 DATE 10 NOV 1584
+2 PLAC Nyköping Castle, Sweden
+1 DEAT
+2 DATE 13 DEC 1638
+2 PLAC Västerås Town
+1 NOTE Wikidata Q2073728
+1 FAMS @F88@
+1 FAMC @F128@
+0 @I177@ INDI
+1 NAME Dorothea of Anhalt-Zerbst
+1 SEX F
+1 BIRT
+2 DATE 25 SEP 1607
+2 PLAC Zerbst, Germany
+1 DEAT
+2 DATE 26 SEP 1634
+2 PLAC Hitzacker
+1 NOTE Wikidata Q66823
+1 FAMS @F89@
+1 FAMC @F129@
+0 @I178@ INDI
+1 NAME Frederick, Duke of Schleswig-Holstein-Sønderburg-Norburg
+1 SEX M
+1 BIRT
+2 DATE 26 NOV 1581
+2 PLAC Sønderborg, Denmark
+1 DEAT
+2 DATE 22 JUL 1658
+2 PLAC Nordborg
+1 NOTE Wikidata Q325092
+1 FAMS @F90@
+1 FAMC @F130@
+0 @I179@ INDI
+1 NAME Eleanor of Anhalt-Zerbst
+1 SEX F
+1 BIRT
+2 DATE 10 NOV 1608
+2 PLAC Zerbst, Germany
+1 DEAT
+2 DATE 2 NOV 1681
+2 PLAC Sønderborg
+1 NOTE Wikidata Q78238
+1 FAMS @F90@
+1 FAMC @F129@
+0 @I180@ INDI
+1 NAME Anna Dorotea de Hohenlohe-Neuenstein
+1 SEX F
+1 BIRT
+2 DATE 26 JAN 1621
+1 DEAT
+2 DATE 16 SEP 1643
+1 NOTE Wikidata Q16166966
+1 FAMS @F91@
+1 FAMC @F131@
+0 @I181@ INDI
+1 NAME Eberhard III, Duke of Württemberg
+1 SEX M
+1 BIRT
+2 DATE 16 DEC 1614
+2 PLAC Stuttgart, Germany
+1 DEAT
+2 DATE 2 JUL 1674
+2 PLAC Stuttgart
+1 NOTE Wikidata Q61362
+1 FAMS @F92@
+1 FAMC @F132@
+0 @I182@ INDI
+1 NAME Anna Katharina Dorothea of Salm-Kyrburg
+1 SEX F
+1 BIRT
+2 DATE 27 JAN 1614
+2 PLAC Fénétrange, France
+1 DEAT
+2 DATE 27 JUN 1655
+2 PLAC Stuttgart
+1 NOTE Wikidata Q6066434
+1 FAMS @F92@
+1 FAMC @F133@
+0 @I183@ INDI
+1 NAME Henry II, Count of Reuss-Gera
+1 SEX M
+1 BIRT
+2 DATE 10 JUN 1572
+2 PLAC Gera, Germany
+1 DEAT
+2 DATE 3 DEC 1635
+2 PLAC Gera
+1 NOTE Wikidata Q97035
+1 FAMS @F93@
+1 FAMC @F134@
+0 @I184@ INDI
+1 NAME Magdalena of Schwarzburg-Rudolstadt
+1 SEX F
+1 BIRT
+2 DATE 12 APR 1580
+2 PLAC Rudolstadt, Germany
+1 DEAT
+2 DATE 22 APR 1652
+2 PLAC Gera
+1 NOTE Wikidata Q20108400
+1 FAMS @F93@
+1 FAMC @F111@
+0 @I185@ INDI
+1 NAME Henry IV of Reuss-Obergreiz
+1 SEX M
+1 BIRT
+2 DATE 11 MAR 1597
+1 DEAT
+2 DATE 25 AUG 1629
+2 PLAC Greiz
+1 NOTE Wikidata Q80792806
+1 FAMS @F94@
+1 FAMC @F135@
+0 @I186@ INDI
+1 NAME Juliana Elisabeth zu Salm-Neuviller
+1 SEX F
+1 BIRT
+2 DATE 1602
+1 DEAT
+2 DATE 14 MAY 1653
+2 PLAC Schleiz
+1 NOTE Wikidata Q75454533
+1 FAMS @F94@
+1 FAMC @F136@
+0 @I187@ INDI
+1 NAME Johann Georg II, Count of Solms-Baruth
+1 SEX M
+1 BIRT
+2 DATE 19 NOV 1591
+2 PLAC Laubach, Germany
+1 DEAT
+2 DATE 4 FEB 1632
+2 PLAC Prague
+1 NOTE Wikidata Q25484366
+1 FAMS @F95@
+0 @I188@ INDI
+1 NAME Anna Maria, Gräfin zu Erbach-Fürstenau
+1 SEX F
+1 BIRT
+2 DATE 5 JUL 1603
+2 PLAC Michelstadt, Germany
+1 DEAT
+2 DATE 5 MAR 1663
+2 PLAC Wildenfels
+1 NOTE Wikidata Q54861937
+1 FAMS @F95@
+1 FAMC @F137@
+0 @I189@ INDI
+1 NAME Sigismund Siegfried, Count of Promnitz in Pless
+1 SEX M
+1 BIRT
+2 DATE 1595
+2 PLAC Żary, Poland
+1 DEAT
+2 DATE 1654
+1 NOTE Wikidata Q75243911
+1 FAMS @F96@
+1 FAMC @F138@
+0 @I190@ INDI
+1 NAME Katharina Elisabeth von Schönburg-Lichtenstein
+1 SEX F
+1 BIRT
+2 DATE 1625
+1 DEAT
+2 DATE 1650
+1 NOTE Wikidata Q99689867
+1 FAMS @F96@
+1 FAMC @F139@
+0 @I191@ INDI
+1 NAME Wolfgang II. zu Castell-Remlingen
+1 SEX M
+1 BIRT
+2 DATE 20 JUL 1558
+2 PLAC Rüdenhausen, Germany
+1 DEAT
+2 DATE 30 APR 1631
+2 PLAC Remlingen
+1 NOTE Wikidata Q19959167
+1 FAMS @F97@
+1 FAMC @F140@
+0 @I192@ INDI
+1 NAME Juliana, Gräfin zu Hohenlohe-Neuenstein
+1 SEX F
+1 BIRT
+2 DATE 23 JUL 1571
+1 DEAT
+2 DATE 8 MAR 1634
+1 NOTE Wikidata Q99689906
+1 FAMS @F97@
+1 FAMC @F141@
+0 @I193@ INDI
+1 NAME Louis Eberhard of Hohenlohe-Waldenburg-Pfedelbach
+1 SEX M
+1 BIRT
+2 DATE 19 JAN 1590
+2 PLAC Waldenburg, Germany
+1 DEAT
+2 DATE 3 NOV 1650
+2 PLAC Pfedelbach
+1 NOTE Wikidata Q31191294
+1 FAMS @F98@
+1 FAMC @F121@
+0 @I194@ INDI
+1 NAME Dorothea of Erbach
+1 SEX F
+1 NOTE Wikidata Q55075949
+1 FAMC @F82@
+1 FAMS @F98@
+0 @I195@ INDI
+1 NAME Otto Heinrich, Herr von Zinzendorf und Pottendorf
+1 SEX M
+1 DEAT
+2 DATE 28 MAR 1655
+1 NOTE Wikidata Q99689951
+1 FAMS @F99@
+1 FAMC @F142@
+0 @I196@ INDI
+1 NAME Anna Apollonia, Baroness of Zelking, Mistress of Dürnstein and Thal Wachau
+1 SEX F
+1 BIRT
+2 DATE 1603
+1 DEAT
+2 DATE 1646
+1 NOTE Wikidata Q99689972
+1 FAMS @F99@
+1 FAMC @F143@
+0 @I197@ INDI
+1 NAME Christian von Dietrichstein
+1 SEX M
+1 BIRT
+2 DATE 29 JAN 1610
+1 DEAT
+2 DATE 31 AUG 1681
+1 NOTE Wikidata Q55886052
+1 FAMS @F100@
+1 FAMC @F144@
+0 @I198@ INDI
+1 NAME Maria Elisabeth Khevenhüller, Baroness of Aichelberg
+1 SEX F
+1 BIRT
+2 DATE 1608
+1 DEAT
+2 DATE 1676
+1 NOTE Wikidata Q99690010
+1 FAMS @F100@
+1 FAMC @F145@
+0 @I199@ INDI
+1 NAME Philipp Heinrich von Hohenlohe-Waldenburg
+1 SEX M
+1 BIRT
+2 DATE 3 JUN 1591
+2 PLAC Waldenburg, Germany
+1 DEAT
+2 DATE 25 MAR 1644
+2 PLAC Waldenburg
+1 NOTE Wikidata Q28058830
+1 FAMS @F101@
+1 FAMC @F121@
+0 @I200@ INDI
+1 NAME Dorothea Walburga zu Hohenlohe-Neuenstein
+1 SEX F
+1 BIRT
+2 DATE 20 SEP 1590
+2 PLAC Weikersheim, Germany
+1 DEAT
+2 DATE 20 DEC 1656
+1 NOTE Wikidata Q31191703
+1 FAMS @F101@
+1 FAMC @F141@
+0 @I201@ INDI
+1 NAME Heinrich Schenk von Limpurg
+1 SEX M
+1 BIRT
+2 DATE 23 JAN 1573
+2 PLAC Obersontheim, Germany
+1 DEAT
+2 DATE 13 MAY 1637
+2 PLAC Obersontheim
+1 NOTE Wikidata Q55238243
+1 FAMS @F102@
+1 FAMC @F146@
+0 @I202@ INDI
+1 NAME Elisabeth, Gräfin zu Erbach
+1 SEX F
+1 BIRT
+2 DATE 30 JUL 1578
+1 DEAT
+2 DATE 15 MAR 1645
+2 PLAC Obersontheim
+1 NOTE Wikidata Q101519918
+1 FAMS @F102@
+1 FAMC @F147@
+0 @I203@ INDI
+1 NAME Christopher II of Stolberg-Wernigerode
+1 SEX M
+1 BIRT
+2 DATE 1 DEC 1567
+2 PLAC Hohnstein Castle, Germany
+1 DEAT
+2 DATE 21 NOV 1638
+2 PLAC Stolberg (Harz)
+1 NOTE Wikidata Q31192084
+1 FAMS @F103@
+1 FAMC @F148@
+0 @I204@ INDI
+1 NAME Hedwig zu Stolberg-Wernigerode
+1 SEX F
+1 BIRT
+2 DATE 20 JAN 1572
+2 PLAC Blankenburg, Germany
+1 DEAT
+2 DATE 20 NOV 1634
+2 PLAC Stolberg (Harz)
+1 NOTE Wikidata Q94742688
+1 FAMS @F103@
+1 FAMC @F149@
+0 @I205@ INDI
+1 NAME Henry Volrad of Stolberg-Wernigerode
+1 SEX M
+1 BIRT
+2 DATE 13 JUL 1590
+2 PLAC Wernigerode Castle, Germany
+1 DEAT
+2 DATE 4 OCT 1641
+2 PLAC Frankfurt
+1 NOTE Wikidata Q26959062
+1 FAMS @F104@
+1 FAMC @F150@
+0 @I206@ INDI
+1 NAME Margarethe zu Solms-Laubach
+1 SEX F
+1 BIRT
+2 DATE 16 OCT 1604
+2 PLAC Laubach, Germany
+1 DEAT
+2 DATE 6 NOV 1648
+2 PLAC Darmstadt
+1 NOTE Wikidata Q25426037
+1 FAMS @F104@
+1 FAMC @F151@
+0 @I207@ INDI
+1 NAME Eleonore Marie of Anhalt-Bernburg
+1 SEX F
+1 BIRT
+2 DATE 7 AUG 1600
+2 PLAC Amberg, Germany
+1 DEAT
+2 DATE 17 JUL 1657
+2 PLAC Neustrelitz
+1 NOTE Wikidata Q91712
+1 FAMS @F105@
+1 FAMC @F152@
+0 @I208@ INDI
+1 NAME Ernest I, Duke of Brunswick-Lüneburg
+1 SEX M
+1 BIRT
+2 DATE 27 JUN 1497
+2 PLAC Uelzen, Germany
+1 DEAT
+2 DATE 11 JAN 1546
+2 PLAC Celle
+1 NOTE Wikidata Q700441
+1 FAMS @F106@
+0 @I209@ INDI
+1 NAME Sophie of Mecklenburg-Schwerin
+1 SEX F
+1 BIRT
+2 DATE 14 APR 1508
+2 PLAC Schwerin, Germany
+1 DEAT
+2 DATE 17 JUN 1541
+2 PLAC Celle
+1 NOTE Wikidata Q6198423
+1 FAMS @F106@
+0 @I210@ INDI
+1 NAME Francis I, Duke of Saxe-Lauenburg
+1 SEX M
+1 BIRT
+2 DATE 1510
+1 DEAT
+2 DATE 19 MAR 1581
+2 PLAC Buxtehude
+1 NOTE Wikidata Q553550
+1 FAMS @F107@
+0 @I211@ INDI
+1 NAME Sibylle of Saxony
+1 SEX F
+1 BIRT
+2 DATE 2 MAY 1515
+2 PLAC Freiberg, Germany
+1 DEAT
+2 DATE 18 JUL 1592
+2 PLAC Buxtehude
+1 NOTE Wikidata Q465382
+1 FAMS @F107@
+0 @I212@ INDI
+1 NAME Enno II, Count of East Frisia
+1 SEX M
+1 BIRT
+2 DATE 1505
+1 DEAT
+2 DATE 24 SEP 1540
+2 PLAC Emden
+1 NOTE Wikidata Q559422
+1 FAMS @F108@
+0 @I213@ INDI
+1 NAME Anna of Oldenburg
+1 SEX F
+1 BIRT
+2 DATE 14 NOV 1501
+2 PLAC Oldenburg, Germany
+1 DEAT
+2 DATE 24 SEP 1575
+2 PLAC Emden
+1 NOTE Wikidata Q467837
+1 FAMS @F108@
+0 @I214@ INDI
+1 NAME Gustav I of Sweden
+1 SEX M
+1 BIRT
+2 DATE 12 MAY 1496
+2 PLAC Rydboholm Castle, Sweden
+1 DEAT
+2 DATE 29 SEP 1560
+2 PLAC Stockholm
+1 NOTE Wikidata Q52947
+1 FAMS @F109@
+0 @I215@ INDI
+1 NAME Margaret Leijonhufvud
+1 SEX F
+1 BIRT
+2 DATE 1516
+2 PLAC Gräfsnäs, Sweden
+1 DEAT
+2 DATE 26 AUG 1551
+2 PLAC Överselö församling
+1 NOTE Wikidata Q239443
+1 FAMS @F109@
+0 @I216@ INDI
+1 NAME John Günther I, Count of Schwarzburg-Sondershausen
+1 SEX M
+1 BIRT
+2 DATE 20 DEC 1532
+2 PLAC Sondershausen, Germany
+1 DEAT
+2 DATE 28 OCT 1586
+2 PLAC Arnstadt
+1 NOTE Wikidata Q828710
+1 FAMS @F110@
+0 @I217@ INDI
+1 NAME Anne von Oldenburg
+1 SEX F
+1 BIRT
+2 DATE 3 APR 1539
+1 DEAT
+2 DATE 25 AUG 1579
+1 NOTE Wikidata Q26877285
+1 FAMS @F110@
+1 FAMC @F115@
+0 @I218@ INDI
+1 NAME Albert VII, Count of Schwarzburg-Rudolstadt
+1 SEX M
+1 BIRT
+2 DATE 16 JAN 1537
+2 PLAC Sondershausen, Germany
+1 DEAT
+2 DATE 10 APR 1605
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q317621
+1 FAMS @F111@
+0 @I219@ INDI
+1 NAME Juliana of Nassau-Dillenburg
+1 SEX F
+1 BIRT
+2 DATE 10 AUG 1546
+2 PLAC Dillenburg, Germany
+1 DEAT
+2 DATE 31 AUG 1588
+2 PLAC Rudolstadt
+1 NOTE Wikidata Q2318556
+1 FAMS @F111@
+0 @I220@ INDI
+1 NAME Charles I, Count Palatine of Zweibrücken-Birkenfeld
+1 SEX M
+1 BIRT
+2 DATE 4 SEP 1560
+2 PLAC Neuburg an der Donau, Germany
+1 DEAT
+2 DATE 16 DEC 1600
+2 PLAC Birkenfeld
+1 NOTE Wikidata Q66645
+1 FAMS @F112@
+0 @I221@ INDI
+1 NAME Dorothea of Brunswick-Lüneburg
+1 SEX F
+1 BIRT
+2 DATE 1570
+2 PLAC Celle, Germany
+1 DEAT
+2 DATE 15 AUG 1649
+2 PLAC Birkenfeld
+1 NOTE Wikidata Q2069952
+1 FAMS @F112@
+0 @I222@ INDI
+1 NAME Otto of Solms-Laubach
+1 SEX M
+1 BIRT
+2 DATE 25 JUN 1550
+2 PLAC Sonnewalde, Germany
+1 DEAT
+2 DATE 29 JAN 1612
+2 PLAC Sonnewalde
+1 NOTE Wikidata Q25487370
+1 FAMS @F113@
+0 @I223@ INDI
+1 NAME Anne Amelie of Nassau-Weilburg
+1 SEX F
+1 BIRT
+2 DATE 12 OCT 1560
+2 PLAC Weilburg, Germany
+1 DEAT
+2 DATE 6 JAN 1635
+2 PLAC Strasbourg
+1 NOTE Wikidata Q24662809
+1 FAMS @F113@
+0 @I224@ INDI
+1 NAME Wolfgang I, Count of Barby-Mühlingen
+1 SEX M
+1 BIRT
+2 DATE 1502
+1 DEAT
+2 DATE 24 JAN 1565
+2 PLAC Barby
+1 NOTE Wikidata Q55155115
+1 FAMS @F114@
+0 @I225@ INDI
+1 NAME Agnes of Mansfeld
+1 SEX F
+1 BIRT
+2 DATE 1511
+1 DEAT
+2 DATE 1558
+1 NOTE Wikidata Q61723635
+1 FAMS @F114@
+0 @I226@ INDI
+1 NAME Anthony I, Count of Oldenburg
+1 SEX M
+1 BIRT
+2 DATE 11 MAY 1505
+2 PLAC Oldenburg, Germany
+1 DEAT
+2 DATE 22 JAN 1573
+2 PLAC Oldenburg
+1 NOTE Wikidata Q103962
+1 FAMS @F115@
+0 @I227@ INDI
+1 NAME Sophie of Saxe-Lauenburg
+1 SEX F
+1 BIRT
+2 DATE 1521
+1 DEAT
+2 DATE 13 MAY 1571
+2 PLAC Hamburg
+1 NOTE Wikidata Q21504976
+1 FAMS @F115@
+0 @I228@ INDI
+1 NAME Josias I, Count of Waldeck-Eisenberg
+1 SEX M
+1 BIRT
+2 DATE 18 MAR 1554
+2 PLAC Eisenberg castle ruins, Germany
+1 DEAT
+2 DATE 6 AUG 1588
+2 PLAC Eisenberg castle ruins
+1 NOTE Wikidata Q829673
+1 FAMS @F116@
+0 @I229@ INDI
+1 NAME James III, Margrave of Baden-Hachberg
+1 SEX M
+1 BIRT
+2 DATE 26 MAY 1562
+2 PLAC Pforzheim, German Reich
+1 DEAT
+2 DATE 17 AUG 1590
+2 PLAC Emmendingen
+1 NOTE Wikidata Q95637
+1 FAMS @F117@
+0 @I230@ INDI
+1 NAME Elisabeth von Pallandt-Culemborg
+1 SEX F
+1 DEAT
+2 DATE 8 MAY 1620
+1 NOTE Wikidata Q76076737
+1 FAMS @F117@
+0 @I231@ INDI
+1 NAME John VII, Count of Nassau-Siegen
+1 SEX M
+1 BIRT
+2 DATE 7 JUN 1561
+2 PLAC Oberes Schloss, Germany
+1 DEAT
+2 DATE 27 SEP 1623
+2 PLAC Oberes Schloss
+1 NOTE Wikidata Q819521
+1 FAMS @F118@
+0 @I232@ INDI
+1 NAME Magdalena of Waldeck-Wildungen
+1 SEX F
+1 BIRT
+2 DATE 1558
+1 DEAT
+2 DATE 9 SEP 1599
+2 PLAC Idstein Castle
+1 NOTE Wikidata Q532062
+1 FAMS @F118@
+0 @I233@ INDI
+1 NAME Eberhard XII Count of Erbach
+1 SEX M
+1 BIRT
+2 DATE 19 JAN 1511
+2 PLAC Fürstenau, Germany
+1 DEAT
+2 DATE 12 JUL 1564
+2 PLAC Erbach
+1 NOTE Wikidata Q31191222
+1 FAMS @F119@
+0 @I234@ INDI
+1 NAME Margaretha of Salm-Dhaun
+1 SEX F
+1 BIRT
+2 DATE 25 SEP 1521
+2 PLAC Hochstetten-Dhaun, Germany
+1 DEAT
+2 DATE 5 APR 1576
+2 PLAC Erbach
+1 NOTE Wikidata Q61139868
+1 FAMS @F119@
+0 @I235@ INDI
+1 NAME Albrecht X of Barby and Mühlingen
+1 SEX M
+1 BIRT
+2 DATE 15 FEB 1534
+1 DEAT
+2 DATE 28 MAY 1588
+1 NOTE Wikidata Q55168568
+1 FAMC @F114@
+1 FAMS @F120@
+0 @I236@ INDI
+1 NAME Mary of Anhalt-Zerbst
+1 SEX F
+1 BIRT
+2 DATE 1 DEC 1538
+1 DEAT
+2 DATE 25 APR 1563
+2 PLAC Roßlau (Elbe)
+1 NOTE Wikidata Q27539394
+1 FAMS @F120@
+0 @I237@ INDI
+1 NAME Graf Georg Friedrich I. von Hohenlohe-Waldenburg
+1 SEX M
+1 BIRT
+2 DATE 30 APR 1562
+2 PLAC Waldenburg, Germany
+1 DEAT
+2 DATE 22 OCT 1600
+2 PLAC Waldenburg
+1 NOTE Wikidata Q31191214
+1 FAMS @F121@
+0 @I238@ INDI
+1 NAME Dorothea von Reuß-Plauen
+1 SEX F
+1 BIRT
+2 DATE 28 OCT 1570
+2 PLAC Gera, Germany
+1 DEAT
+2 DATE 2 DEC 1631
+2 PLAC Obersontheim
+1 NOTE Wikidata Q15906189
+1 FAMS @F121@
+1 FAMC @F134@
+0 @I239@ INDI
+1 NAME Hermann Adolphe de Solms-Hohensolms
+1 SEX M
+1 BIRT
+2 DATE 28 SEP 1545
+2 PLAC Lich, Germany
+1 DEAT
+2 DATE 19 JAN 1613
+2 PLAC Butzbach
+1 NOTE Wikidata Q25484224
+1 FAMS @F122@
+0 @I240@ INDI
+1 NAME Anna Sophia von Mansfeld-Hinterort
+1 SEX F
+1 BIRT
+2 DATE 13 DEC 1562
+2 PLAC Eisleben, Germany
+1 DEAT
+2 DATE 7 APR 1601
+2 PLAC Hohensolms
+1 NOTE Wikidata Q61140386
+1 FAMS @F122@
+0 @I241@ INDI
+1 NAME Christian, Count of Waldeck-Wildungen
+1 SEX M
+1 BIRT
+2 DATE 1 DEC 1585
+2 PLAC Eisenberg castle ruins, Germany
+1 DEAT
+2 DATE 31 DEC 1637
+2 PLAC Schloss Waldeck
+1 NOTE Wikidata Q323104
+1 FAMC @F116@
+1 FAMS @F123@
+0 @I242@ INDI
+1 NAME Elizabeth of Nassau-Siegen
+1 SEX F
+1 BIRT
+2 DATE 8 NOV 1584
+2 PLAC Dillenburger Schloss, Germany
+1 DEAT
+2 DATE 26 JUL 1661
+2 PLAC Landau
+1 NOTE Wikidata Q20107972
+1 FAMC @F118@
+1 FAMS @F123@
+0 @I243@ INDI
+1 NAME Louis II de Sayn-Wittgenstein
+1 SEX M
+1 BIRT
+2 DATE 15 MAR 1571
+2 PLAC Wittgenstein Castle, Germany
+1 DEAT
+2 DATE 14 SEP 1634
+1 NOTE Wikidata Q31191145
+1 FAMS @F124@
+0 @I244@ INDI
+1 NAME Elisabeth Juliana of Solms-Braunfels
+1 SEX F
+1 BIRT
+2 DATE 7 MAY 1578
+2 PLAC Braunfels, Germany
+1 DEAT
+2 DATE 16 APR 1630
+1 NOTE Wikidata Q24661981
+1 FAMS @F124@
+0 @I245@ INDI
+1 NAME Christopher, Duke of Mecklenburg
+1 SEX M
+1 BIRT
+2 DATE 30 JUL 1537
+2 PLAC Augsburg, Germany
+1 DEAT
+2 DATE 4 MAR 1592
+2 PLAC Monastery in Tempzin
+1 NOTE Wikidata Q477343
+1 FAMS @F125@
+0 @I246@ INDI
+1 NAME Princess Elizabeth of Sweden
+1 SEX F
+1 BIRT
+2 DATE 4 APR 1549
+2 PLAC Kungsör, Sweden
+1 DEAT
+2 DATE 12 NOV 1597
+2 PLAC Stockholm
+1 NOTE Wikidata Q654753
+1 FAMC @F109@
+1 FAMS @F125@
+0 @I247@ INDI
+1 NAME William IV, Landgrave of Hesse-Kassel
+1 SEX M
+1 BIRT
+2 DATE 24 JUN 1532
+2 PLAC Kassel, Germany
+1 DEAT
+2 DATE 25 AUG 1592
+2 PLAC Kassel
+1 NOTE Wikidata Q696040
+1 FAMS @F126@
+0 @I248@ INDI
+1 NAME Duchess Sabine of Württemberg
+1 SEX F
+1 BIRT
+2 DATE 2 JUL 1549
+2 PLAC Montbéliard, France
+1 DEAT
+2 DATE 17 AUG 1581
+2 PLAC Rotenburg an der Fulda
+1 NOTE Wikidata Q457942
+1 FAMS @F126@
+0 @I249@ INDI
+1 NAME John I, Count Palatine of Zweibrücken
+1 SEX M
+1 BIRT
+2 DATE 8 MAY 1550
+2 PLAC Meisenheim, Germany
+1 DEAT
+2 DATE 12 AUG 1604
+2 PLAC Germersheim
+1 NOTE Wikidata Q657636
+1 FAMS @F127@
+0 @I250@ INDI
+1 NAME Magdalene of Jülich-Cleves-Berg
+1 SEX F
+1 BIRT
+2 DATE 2 NOV 1553
+2 PLAC Kleve, Germany
+1 DEAT
+2 DATE 30 AUG 1633
+2 PLAC Meisenheim
+1 NOTE Wikidata Q138155
+1 FAMS @F127@
+0 @I251@ INDI
+1 NAME Charles IX of Sweden
+1 SEX M
+1 BIRT
+2 DATE 4 OCT 1550
+2 PLAC Tre Kronor Castle, Sweden
+1 DEAT
+2 DATE 30 OCT 1611
+2 PLAC Nyköping Castle
+1 NOTE Wikidata Q52939
+1 FAMC @F109@
+1 FAMS @F128@
+0 @I252@ INDI
+1 NAME Maria of the Palatinate-Simmern
+1 SEX F
+1 BIRT
+2 DATE 24 JUL 1561
+2 PLAC Heidelberg, Germany
+1 DEAT
+2 DATE 29 JUL 1589
+2 PLAC Eskilstuna
+1 NOTE Wikidata Q61475
+1 FAMS @F128@
+0 @I253@ INDI
+1 NAME Dorothea Hedwig of Brunswick-Wolfenbüttel
+1 SEX F
+1 BIRT
+2 DATE 3 FEB 1587
+2 PLAC Wolfenbüttel, Germany
+1 DEAT
+2 DATE 16 OCT 1609
+2 PLAC Zerbst
+1 NOTE Wikidata Q95695
+1 FAMS @F129@
+0 @I254@ INDI
+1 NAME John the Younger, Duke of Schleswig-Holstein-Sonderburg
+1 SEX M
+1 BIRT
+2 DATE 25 MAR 1545
+2 PLAC Koldinghus, Denmark
+1 DEAT
+2 DATE 9 OCT 1622
+2 PLAC Glücksburg Castle
+1 NOTE Wikidata Q708265
+1 FAMS @F130@
+0 @I255@ INDI
+1 NAME Elisabeth of Brunswick-Grubenhagen
+1 SEX F
+1 BIRT
+2 DATE 14 APR 1550
+2 PLAC Einbeck, Germany
+1 DEAT
+2 DATE 11 FEB 1586
+1 NOTE Wikidata Q7828080
+1 FAMS @F130@
+0 @I256@ INDI
+1 NAME Charles VII of Hohenlohe-Neuenstein
+1 SEX M
+1 BIRT
+2 DATE 14 NOV 1582
+2 PLAC Langenburg, Germany
+1 DEAT
+2 DATE 11 SEP 1641
+2 PLAC Regensburg
+1 NOTE Wikidata Q16187518
+1 FAMS @F131@
+1 FAMC @F141@
+0 @I257@ INDI
+1 NAME Countess Palatine Sophia of Zweibrücken-Birkenfeld
+1 SEX F
+1 BIRT
+2 DATE 29 MAR 1593
+2 PLAC Ansbach, Germany
+1 DEAT
+2 DATE 16 NOV 1676
+2 PLAC Neuenstein
+1 NOTE Wikidata Q20006611
+1 FAMC @F112@
+1 FAMS @F131@
+0 @I258@ INDI
+1 NAME John Frederick, Duke of Württemberg
+1 SEX M
+1 BIRT
+2 DATE 5 MAY 1582
+2 PLAC Montbéliard, France
+1 DEAT
+2 DATE 18 JUL 1628
+2 PLAC Heidenheim an der Brenz
+1 NOTE Wikidata Q302942
+1 FAMS @F132@
+0 @I259@ INDI
+1 NAME Barbara Sophie of Brandenburg
+1 SEX F
+1 BIRT
+2 DATE 16 NOV 1584
+2 PLAC Halle (Saale), Germany
+1 DEAT
+2 DATE 13 FEB 1636
+2 PLAC Strasbourg
+1 NOTE Wikidata Q65871
+1 FAMS @F132@
+0 @I260@ INDI
+1 NAME Johann Kasimir von Salm-Kyrburg
+1 SEX M
+1 BIRT
+2 DATE 6 JUL 1577
+2 PLAC Kirn, Germany
+1 DEAT
+2 DATE 4 FEB 1651
+2 PLAC Kirn
+1 NOTE Wikidata Q44191523
+1 FAMS @F133@
+0 @I261@ INDI
+1 NAME Dorothea of Solms-Laubach
+1 SEX F
+1 BIRT
+2 DATE 31 JAN 1579
+2 PLAC Laubach, Germany
+1 DEAT
+2 DATE 19 JUL 1631
+2 PLAC Fénétrange
+1 NOTE Wikidata Q55114521
+1 FAMS @F133@
+0 @I262@ INDI
+1 NAME Heinrich XVI Reuss zu Gera
+1 SEX M
+1 BIRT
+2 DATE 29 DEC 1530
+2 PLAC Greiz, Germany
+1 DEAT
+2 DATE 1572
+2 PLAC Schleiz
+1 NOTE Wikidata Q75391839
+1 FAMS @F134@
+0 @I263@ INDI
+1 NAME Dorothea zu Solms-Laubach
+1 SEX F
+1 BIRT
+2 DATE 26 NOV 1547
+2 PLAC Södel, Germany
+1 DEAT
+2 DATE 18 SEP 1595
+2 PLAC Gera
+1 NOTE Wikidata Q26882157
+1 FAMS @F134@
+0 @I264@ INDI
+1 NAME Heinrich V Reuss zu Greiz
+1 SEX M
+1 BIRT
+2 DATE 4 NOV 1549
+2 PLAC Zwickau, Germany
+1 DEAT
+2 DATE 1604
+2 PLAC Greiz
+1 NOTE Wikidata Q75391838
+1 FAMS @F135@
+0 @I265@ INDI
+1 NAME Marie von Schönburg-Waldenburg
+1 SEX F
+1 BIRT
+2 DATE 29 AUG 1565
+1 DEAT
+2 DATE 9 MAR 1628
+1 NOTE Wikidata Q75579314
+1 FAMS @F135@
+0 @I266@ INDI
+1 NAME Frederick I, Count of Salm-Neufville
+1 SEX M
+1 BIRT
+2 DATE 3 FEB 1547
+2 PLAC Daun, Germany
+1 DEAT
+2 DATE 26 OCT 1608
+1 NOTE Wikidata Q25480356
+1 FAMS @F136@
+0 @I267@ INDI
+1 NAME Sibylle Juliane von Isenburg-Büdingen
+1 SEX F
+1 BIRT
+2 DATE 29 JAN 1574
+1 DEAT
+2 DATE 2 MAY 1604
+1 NOTE Wikidata Q75579313
+1 FAMS @F136@
+0 @I268@ INDI
+1 NAME Frederick Magnus, Count of Erbach
+1 SEX M
+1 BIRT
+2 DATE 18 APR 1575
+2 PLAC Erbach, Germany
+1 DEAT
+2 DATE 26 MAR 1618
+2 PLAC Reichenberg
+1 NOTE Wikidata Q2600961
+1 FAMS @F137@
+1 FAMC @F147@
+0 @I269@ INDI
+1 NAME Johanna Henriette, Gräfin zu Oettingen-Oettingen
+1 SEX F
+1 BIRT
+2 DATE 28 AUG 1578
+1 DEAT
+2 DATE 18 MAR 1619
+1 NOTE Wikidata Q61140075
+1 FAMS @F137@
+0 @I270@ INDI
+1 NAME Unknown
+1 SEX M
+1 BIRT
+2 DATE 26 NOV 1564
+2 PLAC Żary, Poland
+1 DEAT
+2 DATE 14 MAR 1622
+2 PLAC Lübben (Spreewald)
+1 NOTE Wikidata Q1596573
+1 FAMS @F138@
+0 @I271@ INDI
+1 NAME Sophia von Kurzbach
+1 SEX F
+1 BIRT
+2 DATE 1570
+1 DEAT
+2 DATE 1605
+1 NOTE Wikidata Q18012187
+1 FAMS @F138@
+0 @I272@ INDI
+1 NAME Georg Ernst, Herr von Schönburg
+1 SEX M
+1 BIRT
+2 DATE 1601
+2 PLAC Lichtenstein, Germany
+1 DEAT
+2 DATE 1664
+2 PLAC Lichtenstein
+1 NOTE Wikidata Q21415918
+1 FAMS @F139@
+0 @I273@ INDI
+1 NAME Benigna z Sswamberka
+1 SEX F
+1 BIRT
+2 DATE 1599
+1 DEAT
+2 DATE 1648
+1 NOTE Wikidata Q99689876
+1 FAMS @F139@
+0 @I274@ INDI
+1 NAME Georg zu Castell
+1 SEX M
+1 BIRT
+2 DATE 16 NOV 1527
+2 PLAC Castell, Germany
+1 DEAT
+2 DATE 12 NOV 1597
+2 PLAC Rüdenhausen
+1 NOTE Wikidata Q19959146
+1 FAMS @F140@
+0 @I275@ INDI
+1 NAME Sophie zu Limpurg-Speckfeld
+1 SEX F
+1 DEAT
+2 DATE 1588
+1 NOTE Wikidata Q99689893
+1 FAMS @F140@
+0 @I276@ INDI
+1 NAME Wolfgang, Count of Hohenlohe-Weikersheim
+1 SEX M
+1 BIRT
+2 DATE 14 JUN 1546
+2 PLAC Waldenburg, Germany
+1 DEAT
+2 DATE 28 MAR 1610
+2 PLAC Weikersheim
+1 NOTE Wikidata Q2401530
+1 FAMS @F141@
+0 @I277@ INDI
+1 NAME Magdalena of Nassau-Dillenburg
+1 SEX F
+1 BIRT
+2 DATE 15 DEC 1547
+2 PLAC Dillenburger Schloss, Germany
+1 DEAT
+2 DATE 16 MAY 1633
+2 PLAC Öhringen
+1 NOTE Wikidata Q1868984
+1 FAMS @F141@
+0 @I278@ INDI
+1 NAME Johann Joachim, Herr von Zinzendorf und Pottendorf
+1 SEX M
+1 BIRT
+2 DATE 1570
+1 DEAT
+2 DATE 1626
+1 NOTE Wikidata Q99689952
+1 FAMS @F142@
+0 @I279@ INDI
+1 NAME Maria Judith von Liechtenstein in Feldsberg
+1 SEX F
+1 DEAT
+2 DATE 1621
+1 NOTE Wikidata Q99689962
+1 FAMS @F142@
+0 @I280@ INDI
+1 NAME Christoph Wilhelm, Herr von Zelking
+1 SEX M
+1 NOTE Wikidata Q99689974
+1 FAMS @F143@
+0 @I281@ INDI
+1 NAME Esther, Gräfin zu Hardegg auf Glatz und im Machlande
+1 SEX F
+1 DEAT
+2 DATE 1614
+1 NOTE Wikidata Q99689984
+1 FAMS @F143@
+0 @I282@ INDI
+1 NAME Bartlme Dietrichstein
+1 SEX M
+1 BIRT
+2 DATE 1579
+2 PLAC Carinthia, Austria
+1 DEAT
+2 DATE 1635
+1 NOTE Wikidata Q55238397
+1 FAMS @F144@
+0 @I283@ INDI
+1 NAME Elisabeth, Freiin Joel von Franking, Heiress von Riedau
+1 SEX F
+1 BIRT
+2 DATE 1580
+1 NOTE Wikidata Q99690000
+1 FAMS @F144@
+0 @I284@ INDI
+1 NAME Franz von Khevenhüller
+1 SEX M
+1 DEAT
+2 DATE 1607
+1 NOTE Wikidata Q75395691
+1 FAMS @F145@
+0 @I285@ INDI
+1 NAME Crescentia Herrin und Gräfin von Stubenberg
+1 SEX F
+1 BIRT
+2 DATE 12 MAY 1575
+1 NOTE Wikidata Q75395690
+1 FAMS @F145@
+0 @I286@ INDI
+1 NAME Friedrich VII, Reichserbschenk und Herr zu Limpurg
+1 SEX M
+1 BIRT
+2 DATE 6 AUG 1536
+1 DEAT
+2 DATE 29 JAN 1596
+1 NOTE Wikidata Q56071640
+1 FAMS @F146@
+0 @I287@ INDI
+1 NAME Schenkin Agnes von Limpurg-Gaildorf
+1 SEX F
+1 DEAT
+2 DATE 1606
+1 NOTE Wikidata Q110414651
+1 FAMS @F146@
+0 @I288@ INDI
+1 NAME Anna zu Solms-Laubach
+1 SEX F
+1 BIRT
+2 DATE 11 APR 1557
+2 PLAC Laubach, Germany
+1 DEAT
+2 DATE 8 DEC 1586
+2 PLAC Erbach
+1 NOTE Wikidata Q26486811
+1 FAMS @F147@
+0 @I289@ INDI
+1 NAME Henry XXI of Stolberg
+1 SEX M
+1 BIRT
+2 DATE 2 JAN 1509
+2 PLAC Stolberg (Harz), Germany
+1 DEAT
+2 DATE 12 NOV 1572
+2 PLAC Stolberg (Harz)
+1 NOTE Wikidata Q110849
+1 FAMS @F148@
+0 @I290@ INDI
+1 NAME Elisabeth von Gleichen-Remda
+1 SEX F
+1 BIRT
+2 DATE 1530
+1 NOTE Wikidata Q61139892
+1 FAMS @F148@
+0 @I291@ INDI
+1 NAME Ernst I. von Regenstein-Blankenburg
+1 SEX M
+1 BIRT
+2 DATE 7 NOV 1528
+2 PLAC Blankenburg, Germany
+1 DEAT
+2 DATE 17 FEB 1581
+2 PLAC Quedlinburg
+1 NOTE Wikidata Q31192234
+1 FAMS @F149@
+0 @I292@ INDI
+1 NAME Barbara, Gräfin von Honstein
+1 SEX F
+1 BIRT
+2 DATE 1525
+1 DEAT
+2 DATE 25 APR 1604
+2 PLAC Blankenburg
+1 NOTE Wikidata Q110414907
+1 FAMS @F149@
+0 @I293@ INDI
+1 NAME Louis George of Stolberg-Ortenberg
+1 SEX M
+1 BIRT
+2 DATE 8 OCT 1562
+1 DEAT
+2 DATE 7 NOV 1618
+2 PLAC Ortenberg
+1 NOTE Wikidata Q31191690
+1 FAMC @F148@
+1 FAMS @F150@
+0 @I294@ INDI
+1 NAME Sarah, Gräfin von Mansfeld
+1 SEX F
+1 NOTE Wikidata Q112327611
+1 FAMS @F150@
+0 @I295@ INDI
+1 NAME Albrecht-Otto of Solms-Laubach
+1 SEX M
+1 BIRT
+2 DATE 1556
+2 PLAC Laubach, Germany
+1 DEAT
+2 DATE 2 MAR 1610
+2 PLAC Breitenbend
+1 NOTE Wikidata Q18237184
+1 FAMS @F151@
+0 @I296@ INDI
+1 NAME Anne of Hesse-Darmstadt
+1 SEX F
+1 BIRT
+2 DATE 3 MAR 1583
+2 PLAC Darmstadt, Germany
+1 DEAT
+2 DATE 13 SEP 1631
+2 PLAC Laubach
+1 NOTE Wikidata Q9612699
+1 FAMS @F151@
+0 @I297@ INDI
+1 NAME Christian I, Prince of Anhalt-Bernburg
+1 SEX M
+1 BIRT
+2 DATE 11 MAY 1568
+2 PLAC Bernburg, Germany
+1 DEAT
+2 DATE 17 APR 1630
+2 PLAC Bernburg
+1 NOTE Wikidata Q63024
+1 FAMS @F152@
+0 @I298@ INDI
+1 NAME Princess Anna of Bentheim-Tecklenburg
+1 SEX F
+1 BIRT
+2 DATE 4 JAN 1579
+2 PLAC Tecklenburg, Germany
+1 DEAT
+2 DATE 9 DEC 1624
+2 PLAC Bernburg
+1 NOTE Wikidata Q25478374
+1 FAMS @F152@
+0 @F1@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 CHIL @I1@
+0 @F2@ FAM
+1 HUSB @I4@
+1 WIFE @I5@
+1 CHIL @I2@
+0 @F3@ FAM
+1 HUSB @I6@
+1 WIFE @I7@
+1 CHIL @I3@
+0 @F4@ FAM
+1 HUSB @I8@
+1 WIFE @I9@
+1 CHIL @I4@
+0 @F5@ FAM
+1 HUSB @I10@
+1 WIFE @I11@
+1 CHIL @I5@
+0 @F6@ FAM
+1 HUSB @I12@
+1 WIFE @I13@
+1 CHIL @I6@
+0 @F7@ FAM
+1 HUSB @I14@
+1 WIFE @I15@
+1 CHIL @I7@
+0 @F8@ FAM
+1 HUSB @I16@
+1 WIFE @I17@
+1 CHIL @I8@
+0 @F9@ FAM
+1 HUSB @I18@
+1 WIFE @I19@
+1 CHIL @I9@
+0 @F10@ FAM
+1 HUSB @I20@
+1 WIFE @I21@
+1 CHIL @I10@
+0 @F11@ FAM
+1 HUSB @I22@
+1 WIFE @I23@
+1 CHIL @I11@
+0 @F12@ FAM
+1 HUSB @I24@
+1 WIFE @I25@
+1 CHIL @I12@
+0 @F13@ FAM
+1 HUSB @I26@
+1 WIFE @I27@
+1 CHIL @I13@
+0 @F14@ FAM
+1 HUSB @I28@
+1 WIFE @I29@
+1 CHIL @I14@
+0 @F15@ FAM
+1 HUSB @I30@
+1 WIFE @I31@
+1 CHIL @I15@
+0 @F16@ FAM
+1 HUSB @I32@
+1 WIFE @I33@
+1 CHIL @I16@
+0 @F17@ FAM
+1 HUSB @I34@
+1 WIFE @I35@
+1 CHIL @I17@
+0 @F18@ FAM
+1 HUSB @I36@
+1 WIFE @I37@
+1 CHIL @I18@
+1 CHIL @I51@
+0 @F19@ FAM
+1 HUSB @I38@
+1 WIFE @I39@
+1 CHIL @I19@
+0 @F20@ FAM
+1 HUSB @I40@
+1 WIFE @I41@
+1 CHIL @I20@
+0 @F21@ FAM
+1 HUSB @I42@
+1 WIFE @I43@
+1 CHIL @I21@
+0 @F22@ FAM
+1 HUSB @I44@
+1 WIFE @I45@
+1 CHIL @I22@
+0 @F23@ FAM
+1 HUSB @I46@
+1 WIFE @I47@
+1 CHIL @I23@
+0 @F24@ FAM
+1 HUSB @I48@
+1 WIFE @I49@
+1 CHIL @I24@
+0 @F25@ FAM
+1 HUSB @I50@
+1 WIFE @I51@
+1 CHIL @I25@
+0 @F26@ FAM
+1 HUSB @I52@
+1 WIFE @I53@
+1 CHIL @I26@
+0 @F27@ FAM
+1 HUSB @I54@
+1 WIFE @I55@
+1 CHIL @I27@
+0 @F28@ FAM
+1 HUSB @I56@
+1 WIFE @I57@
+1 CHIL @I28@
+0 @F29@ FAM
+1 HUSB @I58@
+1 WIFE @I59@
+1 CHIL @I29@
+0 @F30@ FAM
+1 HUSB @I60@
+1 WIFE @I61@
+1 CHIL @I30@
+0 @F31@ FAM
+1 HUSB @I62@
+1 WIFE @I63@
+1 CHIL @I31@
+0 @F32@ FAM
+1 HUSB @I64@
+1 WIFE @I65@
+1 CHIL @I32@
+0 @F33@ FAM
+1 HUSB @I66@
+1 WIFE @I67@
+1 CHIL @I33@
+0 @F34@ FAM
+1 HUSB @I68@
+1 WIFE @I69@
+1 CHIL @I34@
+0 @F35@ FAM
+1 HUSB @I70@
+1 WIFE @I71@
+1 CHIL @I35@
+0 @F36@ FAM
+1 HUSB @I72@
+1 WIFE @I73@
+1 CHIL @I36@
+1 CHIL @I44@
+1 CHIL @I48@
+0 @F37@ FAM
+1 HUSB @I74@
+1 WIFE @I75@
+1 CHIL @I37@
+1 CHIL @I39@
+0 @F38@ FAM
+1 HUSB @I76@
+1 WIFE @I77@
+1 CHIL @I38@
+0 @F39@ FAM
+1 HUSB @I78@
+1 WIFE @I79@
+1 CHIL @I40@
+1 CHIL @I171@
+0 @F40@ FAM
+1 HUSB @I80@
+1 WIFE @I81@
+1 CHIL @I41@
+0 @F41@ FAM
+1 HUSB @I82@
+1 WIFE @I83@
+1 CHIL @I42@
+0 @F42@ FAM
+1 HUSB @I84@
+1 WIFE @I85@
+1 CHIL @I43@
+1 CHIL @I95@
+0 @F43@ FAM
+1 HUSB @I86@
+1 WIFE @I87@
+1 CHIL @I45@
+0 @F44@ FAM
+1 HUSB @I88@
+1 WIFE @I89@
+1 CHIL @I46@
+1 CHIL @I60@
+0 @F45@ FAM
+1 HUSB @I90@
+1 WIFE @I91@
+1 CHIL @I47@
+0 @F46@ FAM
+1 HUSB @I92@
+1 WIFE @I93@
+1 CHIL @I49@
+0 @F47@ FAM
+1 HUSB @I94@
+1 WIFE @I95@
+1 CHIL @I50@
+0 @F48@ FAM
+1 HUSB @I96@
+1 WIFE @I97@
+1 CHIL @I52@
+0 @F49@ FAM
+1 HUSB @I98@
+1 WIFE @I99@
+1 CHIL @I53@
+0 @F50@ FAM
+1 HUSB @I100@
+1 WIFE @I101@
+1 CHIL @I54@
+0 @F51@ FAM
+1 HUSB @I102@
+1 WIFE @I103@
+1 CHIL @I55@
+0 @F52@ FAM
+1 HUSB @I104@
+1 WIFE @I105@
+1 CHIL @I56@
+0 @F53@ FAM
+1 HUSB @I106@
+1 WIFE @I107@
+1 CHIL @I57@
+0 @F54@ FAM
+1 HUSB @I108@
+1 WIFE @I109@
+1 CHIL @I58@
+0 @F55@ FAM
+1 HUSB @I110@
+1 WIFE @I111@
+1 CHIL @I59@
+0 @F56@ FAM
+1 HUSB @I112@
+1 WIFE @I113@
+1 CHIL @I61@
+0 @F57@ FAM
+1 HUSB @I114@
+1 WIFE @I115@
+1 CHIL @I62@
+0 @F58@ FAM
+1 HUSB @I116@
+1 WIFE @I117@
+1 CHIL @I63@
+0 @F59@ FAM
+1 HUSB @I118@
+1 WIFE @I119@
+1 CHIL @I64@
+1 CHIL @I66@
+0 @F60@ FAM
+1 HUSB @I120@
+1 WIFE @I121@
+1 CHIL @I65@
+0 @F61@ FAM
+1 HUSB @I122@
+1 WIFE @I123@
+1 CHIL @I67@
+0 @F62@ FAM
+1 HUSB @I124@
+1 WIFE @I125@
+1 CHIL @I68@
+0 @F63@ FAM
+1 HUSB @I126@
+1 WIFE @I127@
+1 CHIL @I69@
+0 @F64@ FAM
+1 HUSB @I128@
+1 WIFE @I129@
+1 CHIL @I70@
+0 @F65@ FAM
+1 HUSB @I130@
+1 WIFE @I131@
+1 CHIL @I71@
+0 @F66@ FAM
+1 HUSB @I132@
+1 WIFE @I133@
+1 CHIL @I72@
+1 CHIL @I128@
+0 @F67@ FAM
+1 HUSB @I134@
+1 WIFE @I135@
+1 CHIL @I73@
+0 @F68@ FAM
+1 HUSB @I136@
+1 WIFE @I137@
+1 CHIL @I74@
+1 CHIL @I142@
+0 @F69@ FAM
+1 HUSB @I40@
+1 WIFE @I138@
+1 CHIL @I75@
+0 @F70@ FAM
+1 HUSB @I139@
+1 WIFE @I140@
+1 CHIL @I76@
+0 @F71@ FAM
+1 HUSB @I141@
+1 WIFE @I142@
+1 CHIL @I77@
+1 CHIL @I117@
+0 @F72@ FAM
+1 HUSB @I143@
+1 WIFE @I144@
+1 CHIL @I78@
+0 @F73@ FAM
+1 HUSB @I145@
+1 WIFE @I146@
+1 CHIL @I79@
+0 @F74@ FAM
+1 HUSB @I147@
+1 WIFE @I148@
+1 CHIL @I80@
+1 CHIL @I96@
+1 CHIL @I158@
+0 @F75@ FAM
+1 HUSB @I149@
+1 WIFE @I150@
+1 CHIL @I81@
+0 @F76@ FAM
+1 HUSB @I151@
+1 WIFE @I152@
+1 CHIL @I82@
+0 @F77@ FAM
+1 HUSB @I153@
+1 WIFE @I154@
+1 CHIL @I83@
+0 @F78@ FAM
+1 HUSB @I155@
+1 WIFE @I156@
+1 CHIL @I84@
+0 @F79@ FAM
+1 HUSB @I157@
+1 WIFE @I158@
+1 CHIL @I85@
+1 CHIL @I170@
+0 @F80@ FAM
+1 HUSB @I159@
+1 WIFE @I160@
+1 CHIL @I86@
+1 CHIL @I90@
+0 @F81@ FAM
+1 HUSB @I161@
+1 WIFE @I162@
+1 CHIL @I87@
+1 CHIL @I91@
+1 CHIL @I93@
+0 @F82@ FAM
+1 HUSB @I163@
+1 WIFE @I164@
+1 CHIL @I88@
+1 CHIL @I131@
+1 CHIL @I162@
+1 CHIL @I194@
+0 @F83@ FAM
+1 HUSB @I165@
+1 WIFE @I166@
+1 CHIL @I89@
+0 @F84@ FAM
+1 HUSB @I167@
+1 WIFE @I168@
+1 CHIL @I92@
+0 @F85@ FAM
+1 HUSB @I169@
+1 WIFE @I170@
+1 CHIL @I94@
+0 @F86@ FAM
+1 HUSB @I171@
+1 WIFE @I172@
+1 CHIL @I97@
+0 @F87@ FAM
+1 HUSB @I173@
+1 WIFE @I174@
+1 CHIL @I98@
+0 @F88@ FAM
+1 HUSB @I175@
+1 WIFE @I176@
+1 CHIL @I99@
+0 @F89@ FAM
+1 HUSB @I96@
+1 WIFE @I177@
+1 CHIL @I100@
+0 @F90@ FAM
+1 HUSB @I178@
+1 WIFE @I179@
+1 CHIL @I101@
+0 @F91@ FAM
+1 HUSB @I126@
+1 WIFE @I180@
+1 CHIL @I102@
+0 @F92@ FAM
+1 HUSB @I181@
+1 WIFE @I182@
+1 CHIL @I103@
+0 @F93@ FAM
+1 HUSB @I183@
+1 WIFE @I184@
+1 CHIL @I104@
+0 @F94@ FAM
+1 HUSB @I185@
+1 WIFE @I186@
+1 CHIL @I105@
+0 @F95@ FAM
+1 HUSB @I187@
+1 WIFE @I188@
+1 CHIL @I106@
+0 @F96@ FAM
+1 HUSB @I189@
+1 WIFE @I190@
+1 CHIL @I107@
+0 @F97@ FAM
+1 HUSB @I191@
+1 WIFE @I192@
+1 CHIL @I108@
+0 @F98@ FAM
+1 HUSB @I193@
+1 WIFE @I194@
+1 CHIL @I109@
+0 @F99@ FAM
+1 HUSB @I195@
+1 WIFE @I196@
+1 CHIL @I110@
+0 @F100@ FAM
+1 HUSB @I197@
+1 WIFE @I198@
+1 CHIL @I111@
+0 @F101@ FAM
+1 HUSB @I199@
+1 WIFE @I200@
+1 CHIL @I112@
+0 @F102@ FAM
+1 HUSB @I201@
+1 WIFE @I202@
+1 CHIL @I113@
+0 @F103@ FAM
+1 HUSB @I203@
+1 WIFE @I204@
+1 CHIL @I114@
+0 @F104@ FAM
+1 HUSB @I205@
+1 WIFE @I206@
+1 CHIL @I115@
+0 @F105@ FAM
+1 HUSB @I171@
+1 WIFE @I207@
+1 CHIL @I116@
+0 @F106@ FAM
+1 HUSB @I208@
+1 WIFE @I209@
+1 CHIL @I147@
+0 @F107@ FAM
+1 HUSB @I210@
+1 WIFE @I211@
+1 CHIL @I148@
+0 @F108@ FAM
+1 HUSB @I212@
+1 WIFE @I213@
+1 CHIL @I149@
+0 @F109@ FAM
+1 HUSB @I214@
+1 WIFE @I215@
+1 CHIL @I150@
+1 CHIL @I246@
+1 CHIL @I251@
+0 @F110@ FAM
+1 HUSB @I216@
+1 WIFE @I217@
+1 CHIL @I151@
+0 @F111@ FAM
+1 HUSB @I218@
+1 WIFE @I219@
+1 CHIL @I152@
+1 CHIL @I156@
+1 CHIL @I169@
+1 CHIL @I184@
+0 @F112@ FAM
+1 HUSB @I220@
+1 WIFE @I221@
+1 CHIL @I153@
+1 CHIL @I257@
+0 @F113@ FAM
+1 HUSB @I222@
+1 WIFE @I223@
+1 CHIL @I154@
+0 @F114@ FAM
+1 HUSB @I224@
+1 WIFE @I225@
+1 CHIL @I155@
+1 CHIL @I235@
+0 @F115@ FAM
+1 HUSB @I226@
+1 WIFE @I227@
+1 CHIL @I157@
+1 CHIL @I217@
+0 @F116@ FAM
+1 HUSB @I228@
+1 WIFE @I164@
+1 CHIL @I159@
+1 CHIL @I241@
+0 @F117@ FAM
+1 HUSB @I229@
+1 WIFE @I230@
+1 CHIL @I160@
+0 @F118@ FAM
+1 HUSB @I231@
+1 WIFE @I232@
+1 CHIL @I161@
+1 CHIL @I174@
+1 CHIL @I242@
+0 @F119@ FAM
+1 HUSB @I233@
+1 WIFE @I234@
+1 CHIL @I163@
+0 @F120@ FAM
+1 HUSB @I235@
+1 WIFE @I236@
+1 CHIL @I164@
+0 @F121@ FAM
+1 HUSB @I237@
+1 WIFE @I238@
+1 CHIL @I165@
+1 CHIL @I193@
+1 CHIL @I199@
+0 @F122@ FAM
+1 HUSB @I239@
+1 WIFE @I240@
+1 CHIL @I166@
+0 @F123@ FAM
+1 HUSB @I241@
+1 WIFE @I242@
+1 CHIL @I167@
+0 @F124@ FAM
+1 HUSB @I243@
+1 WIFE @I244@
+1 CHIL @I168@
+0 @F125@ FAM
+1 HUSB @I245@
+1 WIFE @I246@
+1 CHIL @I172@
+0 @F126@ FAM
+1 HUSB @I247@
+1 WIFE @I248@
+1 CHIL @I173@
+0 @F127@ FAM
+1 HUSB @I249@
+1 WIFE @I250@
+1 CHIL @I175@
+0 @F128@ FAM
+1 HUSB @I251@
+1 WIFE @I252@
+1 CHIL @I176@
+0 @F129@ FAM
+1 HUSB @I139@
+1 WIFE @I253@
+1 CHIL @I177@
+1 CHIL @I179@
+0 @F130@ FAM
+1 HUSB @I254@
+1 WIFE @I255@
+1 CHIL @I178@
+0 @F131@ FAM
+1 HUSB @I256@
+1 WIFE @I257@
+1 CHIL @I180@
+0 @F132@ FAM
+1 HUSB @I258@
+1 WIFE @I259@
+1 CHIL @I181@
+0 @F133@ FAM
+1 HUSB @I260@
+1 WIFE @I261@
+1 CHIL @I182@
+0 @F134@ FAM
+1 HUSB @I262@
+1 WIFE @I263@
+1 CHIL @I183@
+1 CHIL @I238@
+0 @F135@ FAM
+1 HUSB @I264@
+1 WIFE @I265@
+1 CHIL @I185@
+0 @F136@ FAM
+1 HUSB @I266@
+1 WIFE @I267@
+1 CHIL @I186@
+0 @F137@ FAM
+1 HUSB @I268@
+1 WIFE @I269@
+1 CHIL @I188@
+0 @F138@ FAM
+1 HUSB @I270@
+1 WIFE @I271@
+1 CHIL @I189@
+0 @F139@ FAM
+1 HUSB @I272@
+1 WIFE @I273@
+1 CHIL @I190@
+0 @F140@ FAM
+1 HUSB @I274@
+1 WIFE @I275@
+1 CHIL @I191@
+0 @F141@ FAM
+1 HUSB @I276@
+1 WIFE @I277@
+1 CHIL @I192@
+1 CHIL @I200@
+1 CHIL @I256@
+0 @F142@ FAM
+1 HUSB @I278@
+1 WIFE @I279@
+1 CHIL @I195@
+0 @F143@ FAM
+1 HUSB @I280@
+1 WIFE @I281@
+1 CHIL @I196@
+0 @F144@ FAM
+1 HUSB @I282@
+1 WIFE @I283@
+1 CHIL @I197@
+0 @F145@ FAM
+1 HUSB @I284@
+1 WIFE @I285@
+1 CHIL @I198@
+0 @F146@ FAM
+1 HUSB @I286@
+1 WIFE @I287@
+1 CHIL @I201@
+0 @F147@ FAM
+1 HUSB @I163@
+1 WIFE @I288@
+1 CHIL @I202@
+1 CHIL @I268@
+0 @F148@ FAM
+1 HUSB @I289@
+1 WIFE @I290@
+1 CHIL @I203@
+1 CHIL @I293@
+0 @F149@ FAM
+1 HUSB @I291@
+1 WIFE @I292@
+1 CHIL @I204@
+0 @F150@ FAM
+1 HUSB @I293@
+1 WIFE @I294@
+1 CHIL @I205@
+0 @F151@ FAM
+1 HUSB @I295@
+1 WIFE @I296@
+1 CHIL @I206@
+0 @F152@ FAM
+1 HUSB @I297@
+1 WIFE @I298@
+1 CHIL @I207@
+0 TRLR

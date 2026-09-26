@@ -1,0 +1,273 @@
+0 HEAD
+1 SOUR GILDROOT_FIXTURES
+2 NAME Gildroot edge-case fixture
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 NOTE Fictional test data for the parser: same-sex couple, adoption, multiple marriages,
+2 CONC  missing sex, pedigree collapse, CJK and Hebrew names, and malformed lines.
+
+0 @E1@ INDI
+1 NAME Leah /Brandt-Okafor/
+1 SEX F
+This line is junk and must be skipped without stopping the parse.
+   
+1 BIRT
+2 DATE 2 FEB 2001
+2 PLAC Minneapolis, Hennepin, Minnesota, USA
+1 FAMC @F10@
+0 @E20@ INDI
+1 NAME Ruth /Brandt/
+1 SEX F
+1 BIRT
+2 DATE 14 APR 1968
+2 PLAC Duluth, St. Louis, Minnesota, USA
+1 FAMS @F10@
+0 @E21@ INDI
+1 NAME Grace /Okafor/
+1 SEX F
+1 BIRT
+2 DATE 30 SEP 1970
+2 PLAC Lagos, Nigeria
+1 FAMS @F10@
+0 @F10@ FAM
+1 WIFE @E20@
+1 WIFE @E21@
+1 CHIL @E1@
+1 MARR
+2 DATE 12 JUN 1999
+2 PLAC Minneapolis, Hennepin, Minnesota, USA
+0 @E30@ INDI
+1 NAME Daniel /Reyes/
+1 SEX M
+1 BIRT
+2 DATE 5 MAR 1985
+2 PLAC Tucson, Pima, Arizona, USA
+1 FAMC @F31@
+2 PEDI birth
+1 FAMC @F32@
+2 PEDI adopted
+1 ADOP
+2 DATE 1986
+2 FAMC @F32@
+3 ADOP BOTH
+0 @E31@ INDI
+1 NAME Lucia /Moreno/
+1 SEX F
+1 BIRT
+2 DATE ABT 1966
+1 FAMS @F31@
+0 @E32@ INDI
+1 NAME Robert /Reyes/
+1 SEX M
+1 BIRT
+2 DATE 1950
+1 FAMS @F32@
+0 @E33@ INDI
+1 NAME Helen /Reyes/
+1 SEX F
+1 BIRT
+2 DATE 1952
+1 FAMS @F32@
+0 @F31@ FAM
+1 WIFE @E31@
+1 CHIL @E30@
+0 @F32@ FAM
+1 HUSB @E32@
+1 WIFE @E33@
+1 CHIL @E30@
+0 @E40@ INDI
+1 NAME Walter /Lindqvist/
+1 SEX M
+1 BIRT
+2 DATE 1901
+2 PLAC Göteborg, Sweden
+1 DEAT
+2 DATE 1979
+1 FAMS @F41@
+1 FAMS @F42@
+0 @E41@ INDI
+1 NAME Signe /Berg/
+1 SEX F
+1 BIRT
+2 DATE 1903
+1 DEAT
+2 DATE 1934
+1 FAMS @F41@
+0 @E42@ INDI
+1 NAME Maj /Holm/
+1 SEX F
+1 BIRT
+2 DATE 1910
+1 FAMS @F42@
+0 @E43@ INDI
+1 NAME Karl /Lindqvist/
+1 SEX M
+1 BIRT
+2 DATE 1928
+1 FAMC @F41@
+0 @E44@ INDI
+1 NAME Britt /Lindqvist/
+1 SEX F
+1 BIRT
+2 DATE 1938
+1 FAMC @F42@
+0 @F41@ FAM
+1 HUSB @E40@
+1 WIFE @E41@
+1 CHIL @E43@
+1 MARR
+2 DATE 1925
+0 @F42@ FAM
+1 HUSB @E40@
+1 WIFE @E42@
+1 CHIL @E44@
+1 MARR
+2 DATE 1936
+0 @E50@ INDI
+1 NAME Alex /Morgan/
+1 BIRT
+2 DATE 1975
+1 FAMC @F51@
+0 @E51@ INDI
+1 NAME Sam /Morgan/
+1 FAMS @F51@
+0 @F51@ FAM
+1 WIFE @E51@
+1 CHIL @E50@
+0 @E60@ INDI
+1 NAME Pieter /de Vries/
+1 SEX M
+1 BIRT
+2 DATE 1870
+2 PLAC Groningen, Netherlands
+1 FAMC @F63@
+1 FAMS @F60@
+0 @E61@ INDI
+1 NAME Grietje /Bakker/
+1 SEX F
+1 BIRT
+2 DATE 1872
+2 PLAC Groningen, Netherlands
+1 FAMC @F64@
+1 FAMS @F60@
+0 @E62@ INDI
+1 NAME Jan /de Vries/
+1 SEX M
+1 BIRT
+2 DATE 1898
+2 PLAC Groningen, Netherlands
+1 FAMC @F60@
+0 @E63@ INDI
+1 NAME Hendrik /de Vries/
+1 SEX M
+1 BIRT
+2 DATE 1840
+1 FAMC @F70@
+1 FAMS @F63@
+0 @E64@ INDI
+1 NAME Aaltje /Smit/
+1 SEX F
+1 BIRT
+2 DATE 1843
+1 FAMS @F63@
+0 @E65@ INDI
+1 NAME Klaas /Bakker/
+1 SEX M
+1 BIRT
+2 DATE 1841
+1 FAMS @F64@
+0 @E66@ INDI
+1 NAME Trijntje /de Vries/
+1 SEX F
+1 BIRT
+2 DATE 1845
+1 FAMC @F70@
+1 FAMS @F64@
+0 @E70@ INDI
+1 NAME Jacob /de Vries/
+1 SEX M
+1 BIRT
+2 DATE 1810
+1 FAMS @F70@
+0 @E71@ INDI
+1 NAME Geertje /Mulder/
+1 SEX F
+1 BIRT
+2 DATE 1813
+1 FAMS @F70@
+0 @F60@ FAM
+1 HUSB @E60@
+1 WIFE @E61@
+1 CHIL @E62@
+1 MARR
+2 DATE 1896
+1 NOTE Pieter and Grietje were first cousins.
+0 @F63@ FAM
+1 HUSB @E63@
+1 WIFE @E64@
+1 CHIL @E60@
+0 @F64@ FAM
+1 HUSB @E65@
+1 WIFE @E66@
+1 CHIL @E61@
+0 @F70@ FAM
+1 HUSB @E70@
+1 WIFE @E71@
+1 CHIL @E63@
+1 CHIL @E66@
+0 @E80@ INDI
+1 NAME /王/ 秀英
+2 ROMN Xiuying /Wang/
+3 TYPE pinyin
+1 SEX F
+1 BIRT
+2 DATE 1932
+2 PLAC 广州, 中国
+0 @E81@ INDI
+1 NAME שרה /לוי/
+2 ROMN Sarah /Levi/
+3 TYPE ISO 259
+1 SEX F
+1 BIRT
+2 DATE @#DHEBREW@ 15 NSN 5602
+2 PLAC Vilna, Russian Empire
+0 @E90@ INDI
+1 NAME Johann Georg Fried
+2 CONC rich /WEBER/
+1 SEX M
+1 BIRT
+3 DATE 11 FEB 1731/32
+2 PLAC Ansbach, Kingdom of Bavaria
+1 DEAT
+2 DATE @#DFRENCH R@ 12 VEND 11
+2 PLAC Strasbourg, Bas-Rhin, France
+1 _UID 3F2A1B0C9D8E7F60
+1 _UPD 3 JAN 2020 10:11:12 GMT -0500
+1 FAMC @F999@
+0 @E91@ INDI
+1 NAME _____ /Weber/
+1 SEX F
+1 BIRT
+2 DATE BET 1760 AND 1765
+2 PLAC Breslau, Silesia, Prussia (now Wrocław, Poland)
+0 @E92@ INDI
+1 NAME Unknown /Unknown/
+1 SEX U
+0 @E93@ INDI
+1 NAME Anna Maria /Keller/
+1 SEX F
+1 BIRT
+2 DATE 1850
+1 BURI
+2 DATE 1921
+2 PLAC Zürich, Switzerland
+1 NOTE A long note that runs over
+2 CONT several lines, with an @@ sign
+2 CONC  and a continuation.
+0 INDI
+1 NAME Nobody /Noid/
+1 SEX M
+0 @N1@ NOTE A level-0 note record
+0 TRLR

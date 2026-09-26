@@ -1,0 +1,182 @@
+0 HEAD
+1 SOUR Ancestry.com Family Trees
+2 NAME Ancestry.com Member Trees
+2 VERS 2025.08
+2 _TREE Kowalczyk Family Tree
+3 RIN 181234567
+3 _ENV prd
+2 CORP Ancestry.com
+3 PHON 801-705-7000
+3 WWW www.ancestry.com
+3 ADDR 1300 West Traverse Parkway
+4 CONT Lehi, UT  84043
+4 CONT USA
+1 DEST GED55
+1 DATE 14 Aug 2025
+2 TIME 18:02:11
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+0 @I282046532843@ INDI
+1 NAME Laura Anne /Kowalczyk/
+1 SEX F
+1 BIRT
+2 DATE 3 Feb 1984
+2 PLAC Toledo, Lucas, Ohio, USA
+1 FAMC @F12@
+0 @I282046532844@ INDI
+1 NAME Michael Stanley /Kowalczyk/
+1 SEX M
+1 BIRT
+2 DATE 19 Jun 1955
+2 PLAC Toledo, Lucas, Ohio, USA
+2 SOUR @S1234567890@
+3 PAGE Ohio Department of Health; Columbus, Ohio
+3 _APID 1,5763::1234567
+1 RESI
+2 DATE 1960
+2 PLAC Toledo, Lucas, Ohio, USA
+2 SOUR @S1234567891@
+3 PAGE Year: 1960
+3 _APID 1,9999::7654321
+1 FAMS @F12@
+1 FAMC @F13@
+1 OBJE @M1@
+0 @I282046532845@ INDI
+1 NAME Deborah Lynn /Murphy/
+1 SEX F
+1 BIRT
+2 DATE abt 1957
+2 PLAC Detroit, Wayne, Michigan, USA
+1 FAMS @F12@
+1 FAMC @F14@
+0 @I282046532846@ INDI
+1 NAME Stanisław /Kowalczyk/
+1 SEX M
+1 BIRT
+2 DATE 11 Nov 1921
+2 PLAC Kraków, Galicia, Austria-Hungary
+2 SOUR @S1234567892@
+3 PAGE Year: 1930; Census Place: Toledo, Lucas, Ohio; Page: 12B
+3 _APID 1,6224::88991122
+1 IMMI
+2 DATE 1938
+2 PLAC New York, New York, USA
+1 DEAT
+2 DATE 2 Mar 1999
+2 PLAC Toledo, Lucas, Ohio, USA
+1 _MILT
+2 DATE 1942
+2 PLAC United States
+1 FAMS @F13@
+1 FAMC @F15@
+0 @I282046532847@ INDI
+1 NAME Helen /Nowicki/
+1 SEX F
+1 BIRT
+2 DATE Bef. 1925
+2 PLAC Hamtramck, Wayne, Michigan, USA
+1 DEAT
+2 DATE 1988
+2 PLAC Toledo, Lucas, Ohio, USA
+1 FAMS @F13@
+0 @I282046532848@ INDI
+1 NAME Thomas /Murphy/
+1 SEX M
+1 BIRT
+2 DATE 1930
+2 PLAC Co. Cork, Ireland
+1 DEAT
+2 DATE 2004
+2 PLAC Detroit, Wayne, Michigan, USA
+1 FAMS @F14@
+0 @I282046532849@ INDI
+1 NAME Margaret /O'Sullivan/
+1 SEX F
+1 BIRT
+2 DATE 1932
+2 PLAC Detroit, Wayne, Michigan, USA
+1 DEAT
+2 DATE 2011
+1 FAMS @F14@
+0 @I282046532850@ INDI
+1 NAME Józef /Kowalczyk/
+1 SEX M
+1 BIRT
+2 DATE about 1890
+2 PLAC Tarnów, Galicia, Austria
+1 DEAT
+2 DATE 1960
+1 FAMS @F15@
+0 @I282046532851@ INDI
+1 NAME Zofia /Wójcik/
+1 SEX F
+1 BIRT
+2 DATE 1894
+2 PLAC Lemberg, Galicia
+1 DEAT
+2 DATE 1971
+1 FAMS @F15@
+0 @I282046532852@ INDI
+1 NAME Living /Kowalczyk/
+1 SEX M
+1 FAMC @F12@
+2 _FREL Adopted
+2 _MREL Adopted
+0 @F12@ FAM
+1 HUSB @I282046532844@
+1 WIFE @I282046532845@
+1 CHIL @I282046532843@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @I282046532852@
+2 _FREL Adopted
+2 _MREL Adopted
+1 MARR
+2 DATE 7 Sep 1980
+2 PLAC Toledo, Lucas, Ohio, USA
+0 @F13@ FAM
+1 HUSB @I282046532846@
+1 WIFE @I282046532847@
+1 CHIL @I282046532844@
+1 MARR
+2 DATE 1948
+2 PLAC Toledo, Lucas, Ohio, USA
+0 @F14@ FAM
+1 HUSB @I282046532848@
+1 WIFE @I282046532849@
+1 CHIL @I282046532845@
+0 @F15@ FAM
+1 HUSB @I282046532850@
+1 WIFE @I282046532851@
+1 CHIL @I282046532846@
+0 @S1234567890@ SOUR
+1 TITL Ohio, U.S., Birth Index, 1908-1998
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+1 _APID 1,5763::0
+1 REPO @R1@
+0 @S1234567891@ SOUR
+1 TITL 1960 City Directory
+1 _APID 1,9999::0
+0 @S1234567892@ SOUR
+1 TITL 1930 United States Federal Census
+1 AUTH Ancestry.com
+1 _APID 1,6224::0
+0 @R1@ REPO
+1 NAME Ancestry.com
+2 _MSER @M1@
+0 @M1@ OBJE
+1 FILE https://mediasvc.ancestry.com/v2/image/namespaces/1093/media/0a1b2c3d.jpg
+2 FORM jpg
+2 TITL Michael at Maumee Bay
+1 _MSER 0
+1 _PRIM Y
+1 _TYPE PHOTO
+1 _CROP
+2 _LEFT 10
+2 _TOP 10
+2 _WDTH 90
+2 _HGHT 90
+0 TRLR
