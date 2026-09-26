@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { interpretProbe } from "./interpret.js";
+import { interpretProbe, shouldProbePaid } from "./interpret.js";
 
 test("validation-only probe is up but not ready for buyers", () => {
   const result = interpretProbe({
@@ -37,6 +37,35 @@ test("stripe redirect means checkout is open", () => {
   });
   assert.equal(result.paidCheckout, "open");
   assert.equal(result.ok, true);
+});
+
+test("paid probe runs until checkout opens, then stops", () => {
+  const now = Date.parse("2026-09-26T12:00:00Z");
+  assert.equal(shouldProbePaid({ now }), true);
+  assert.equal(
+    shouldProbePaid({
+      lastState: "broken",
+      lastAt: "2026-09-26T11:30:00Z",
+      now,
+    }),
+    false,
+  );
+  assert.equal(
+    shouldProbePaid({
+      lastState: "broken",
+      lastAt: "2026-09-26T10:00:00Z",
+      now,
+    }),
+    true,
+  );
+  assert.equal(
+    shouldProbePaid({
+      lastState: "open",
+      lastAt: "2026-09-26T01:00:00Z",
+      now,
+    }),
+    false,
+  );
 });
 
 test("homepage outage fails uptime", () => {

@@ -16,4 +16,4 @@ clean:
 	rm -rf manuscript_*
 
 test:
-	node --test ops/watchdog/interpret.test.js 
+	node --test ops/watchdog/interpret.test.js ops/watchdog/worker.test.js 

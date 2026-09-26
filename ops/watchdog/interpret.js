@@ -4,6 +4,21 @@
  * creating Stripe sessions.
  */
 
+export const PAID_PROBE_INTERVAL_MS = 50 * 60 * 1000;
+
+export function shouldProbePaid({
+  lastState = null,
+  lastAt = null,
+  now,
+  minIntervalMs = PAID_PROBE_INTERVAL_MS,
+}) {
+  if (lastState === "open") return false;
+  if (!lastAt) return true;
+  const then = Date.parse(lastAt);
+  if (!Number.isFinite(then)) return true;
+  return now - then >= minIntervalMs;
+}
+
 export function interpretProbe({
   homepageStatus,
   checkoutStatus,

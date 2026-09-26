@@ -46,7 +46,8 @@ Deployed Worker `bookgen-watchdog` on the Laqaer Products Cloudflare account. D1
 
 - Manually tested: `GET /health` returned `{"ok":true}` on 2026-09-26.
 - Unattended-tested: cron runs wrote checks at `2026-09-26T04:58:13.439Z`, `2026-09-26T04:59:11.943Z`, and `2026-09-26T05:00:11.931Z`. Each saw homepage HTTP 200 and checkout validation HTTP 400. None created a Stripe session. The 05:00 run may still be the previous every-minute trigger, because the hourly schedule was uploaded just before that minute.
-- Steady schedule, attached on the upload after those runs: `17 * * * *` (once an hour). That hourly fire has not been observed yet. The minute cadence that was observed is no longer the schedule.
+- Steady schedule: `17 * * * *` (once an hour). It was attached at `2026-09-26T04:59:31Z`. Checks continued about once a minute through `2026-09-26T05:03:11Z`, which matches Cloudflare's note that cron changes can take up to 15 minutes to propagate. No further check was written by `2026-09-26T05:07:31Z`. The hourly fire has not been observed yet.
+- Source in this revision adds an unpaid order-shaped probe, at most every 50 minutes, while checkout is not open. It uses `watchdog-noreply@bookgen.dev`, does not follow a Stripe URL, and does not store one. After a probe returns `checkout.stripe.com`, later runs skip that request. This behavior is not live until this revision is uploaded.
 - Public status: <https://bookgen-watchdog.laqaer-products.workers.dev/>
 - Stop: set Worker secret `PAUSED` to `1`, or disable the cron in the Cloudflare dashboard. `PAUSED` was not exercised in production.
 
@@ -58,4 +59,4 @@ When Vercel team `laqaers-projects` is readable: open the project for `bookgen.d
 
 ## Handoff
 
-Profit numbers are in `ops/LEDGER.md`. The held experiment is in `ops/EXPERIMENT.md`. The live worker source matches `ops/watchdog/worker.js`. `ops/watchdog/interpret.js` is the tested decision table and is not imported by the deployed script.
+Profit numbers are in `ops/LEDGER.md`. The held experiment is in `ops/EXPERIMENT.md`. `ops/watchdog/worker.js` imports `ops/watchdog/interpret.js`. Upload this revision before treating that import as live.
