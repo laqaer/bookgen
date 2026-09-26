@@ -137,20 +137,11 @@ Supported models: Any model on [OpenRouter](https://openrouter.ai/models) — Cl
 
 Falls back to template mode automatically if the API is unavailable.
 
-## Pricing
+## What is for sale
 
-| | Free CLI | Pro ($49/mo) | Agency ($199/mo) |
-|---|----------|-------------|-------------------|
-| Template generation | ✅ | ✅ | ✅ |
-| LLM generation | BYO key | Included | Included |
-| YAML profiles | Unlimited | Unlimited | Unlimited |
-| Auto-formatting | — | EPUB + PDF | EPUB + PDF + Print |
-| KDP auto-publish | — | ✅ | ✅ |
-| Marketing automation | — | Basic | Full suite |
-| Books per month | Unlimited | 10 | Unlimited |
-| Support | GitHub Issues | Email | Priority + Slack |
+The paid product is the ebook generator at [bookgen.dev](https://www.bookgen.dev/): a free outline and first-chapter preview, then **$4.99** for a PDF, EPUB, and Word file. On 2026-09-26, paid checkout did not open. `POST /api/checkout` returned HTTP 500 `{"error":"Not a valid URL"}` before any card form. The free preview at [/create](https://www.bookgen.dev/create) still loads. This repository's CLI is free under MIT. There is no $49/month Pro plan and no $199/month Agency plan.
 
-**[Get Pro →](https://bookgen.dev)** (coming soon)
+Operating status, once the checker is deployed: [bookgen-watchdog status](https://bookgen-watchdog.laqaer-products.workers.dev/).
 
 ## Publisher
 

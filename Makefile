@@ -13,4 +13,7 @@ pipeline-assets:
 	python3 bookops.py books/shadows_and_structures.yaml --skip-manuscript --overwrite
 
 clean:
-	rm -rf manuscript_* 
+	rm -rf manuscript_*
+
+test:
+	node --test ops/watchdog/interpret.test.js 
