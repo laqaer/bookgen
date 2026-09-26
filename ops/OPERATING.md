@@ -45,7 +45,7 @@ Sell the existing ebook package at <https://www.bookgen.dev/>.
 Deployed Worker `bookgen-watchdog` on the Laqaer Products Cloudflare account. D1 database `bookgen-watchdog`.
 
 - Manually tested: `GET /health` returned `{"ok":true}` on 2026-09-26.
-- Unattended-tested: cron runs wrote checks at `2026-09-26T04:58:13.439Z` and `2026-09-26T04:59:11.943Z`. Both saw homepage HTTP 200 and checkout validation HTTP 400. Neither created a Stripe session.
+- Unattended-tested: cron runs wrote checks at `2026-09-26T04:58:13.439Z`, `2026-09-26T04:59:11.943Z`, and `2026-09-26T05:00:11.931Z`. Each saw homepage HTTP 200 and checkout validation HTTP 400. None created a Stripe session. The 05:00 run may still be the previous every-minute trigger, because the hourly schedule was uploaded just before that minute.
 - Steady schedule, attached on the upload after those runs: `17 * * * *` (once an hour). That hourly fire has not been observed yet. The minute cadence that was observed is no longer the schedule.
 - Public status: <https://bookgen-watchdog.laqaer-products.workers.dev/>
 - Stop: set Worker secret `PAUSED` to `1`, or disable the cron in the Cloudflare dashboard. `PAUSED` was not exercised in production.
