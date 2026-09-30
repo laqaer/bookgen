@@ -15,6 +15,10 @@
 export const MIN_TEXT_PT = 6;
 export const FLOOR_TEXT_PT = 5.5;
 export const FIT_SLACK = 0.04;
+/** Default lower-case shrink ratio used by smallCapsText (below). Callers that size text
+ * fed to smallCapsText must divide their own size floors by this ratio, since the actual
+ * rendered size of the lower-case runs is `size * SMALL_CAPS_RATIO`, not `size`. */
+export const SMALL_CAPS_RATIO = 0.78;
 
 let backend = null;
 
@@ -31,6 +35,26 @@ function be(opts) {
   const b = (opts && opts.fonts) || backend;
   if (!b) throw new Error('text.js: no font backend; call setTextBackend({ measure, metrics }) first');
   return b;
+}
+
+/**
+ * The font itself, or `fallback` when it lacks a glyph one of `str` needs (Cormorant
+ * Garamond has no Greek: falls back to EB Garamond). `str` may be a single string or
+ * a list — every one is checked, so a font shared by a title, a medallion or a whole
+ * ring of names never gets picked when any name it must draw would come out .notdef.
+ * Silent when no glyph backend is installed (`hasGlyphs` optional in setTextBackend).
+ * @param {string} font @param {string|string[]} str @param {string} fallback
+ * @param {{fonts?: object}} [opts]
+ * @returns {string}
+ */
+export function safeFont(font, str, fallback, opts) {
+  const b = (opts && opts.fonts) || backend;
+  if (!b || typeof b.hasGlyphs !== 'function') return font;
+  const list = Array.isArray(str) ? str : [str];
+  try {
+    for (const s of list) { if (s && !b.hasGlyphs(font, s).ok) return fallback; }
+    return font;
+  } catch { return font; }
 }
 
 const round3 = v => Math.round(v * 1000) / 1000;
@@ -362,7 +386,7 @@ export function radialText(lines, fontKey, size, cx, cy, radius, angleDeg, opts 
  * @returns {object[]}
  */
 export function smallCapsText(str, fontKey, size, x, y, opts = {}) {
-  const ratio = opts.ratio ?? 0.78;
+  const ratio = opts.ratio ?? SMALL_CAPS_RATIO;
   const tracking = opts.tracking ?? 0;
   const runs = [];
   for (const ch of graphemes(str)) {

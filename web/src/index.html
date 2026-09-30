@@ -1,0 +1,706 @@
+---
+title: Print your family tree as a chart worth framing
+description: Turn a GEDCOM file from Ancestry, FamilySearch or MyHeritage into a fan, bowtie or pedigree chart, typeset well enough to frame. Runs privately in your browser. Free to try; $29 once for a poster.
+---
+
+<section class="home-hero">
+  <div class="container">
+    <p class="eyebrow home-hero__kicker">Your roots, <em>gilded.</em></p>
+    <h1>The beautiful way to print your family tree.</h1>
+    <div class="home-hero__grid">
+      <div class="home-hero__copy">
+        <p class="lead">Drop a GEDCOM file and your own ancestors bloom into a fan, bowtie or pedigree chart. About a minute. It never leaves this computer.</p>
+
+        <div class="dropzone" id="dropzone">
+          <div class="dropzone__head">
+            <svg class="dropzone__icon" viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 14V6a2 2 0 0 1 2-2h10l4 5h14a2 2 0 0 1 2 2v6"/>
+              <path d="M4 14h32l-3 28H7Z"/>
+              <path d="M14 24v10M20 22v14M26 24v10"/>
+            </svg>
+            <div>
+              <p class="dropzone__title">Drop your family tree file</p>
+              <p class="dropzone__text">A .ged, .zip or .gdz file. Nothing is uploaded.</p>
+            </div>
+          </div>
+          <div class="cluster">
+            <label for="dropzone-file" class="btn btn--primary btn--block-phone" id="dropzone-choose" role="button" tabindex="0">Choose a file</label>
+            <input type="file" id="dropzone-file" class="visually-hidden" accept=".ged,.zip,.gdz" tabindex="-1">
+          </div>
+          <p class="dropzone__status" id="dropzone-status" aria-live="polite"></p>
+        </div>
+
+        <p class="home-hero__links">
+          <button type="button" class="link-arrow" id="link-quickbuilder">No file? Build it in 3 minutes</button>
+          <button type="button" class="link-arrow" id="link-sample">Try a sample family</button>
+        </p>
+      </div>
+
+      <div class="home-hero__specimen">
+        <figure class="specimen">
+          <div class="hero-chart" id="victoria-fan" tabindex="0" role="group" aria-label="An interactive fan chart of Queen Victoria's ancestors, seven generations, in gold on midnight. Point at any name, or focus the chart and use the arrow keys.">
+            <img src="/assets/img/hero-victoria.png" width="1600" height="1482" alt="A fan chart of Queen Victoria's ancestors, seven generations, in the Midnight Gilt style.">
+            <svg class="hero-chart__trace" id="victoria-trace" viewBox="-600 -572 1200 1112" aria-hidden="true"></svg>
+            <ul class="ladder" role="list" aria-hidden="true">
+              <li data-gen="1" style="--y:61.96%;--hw:6.89%"><span class="ladder__label">Parents</span><span class="ladder__dots"></span><span class="ladder__n nums">2&ndash;3</span></li>
+              <li data-gen="2" style="--y:67.99%;--hw:10.84%"><span class="ladder__label">Grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">4&ndash;7</span></li>
+              <li data-gen="3" style="--y:73.65%;--hw:14.56%"><span class="ladder__label">Great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">8&ndash;15</span></li>
+              <li data-gen="4" style="--y:79.59%;--hw:18.45%"><span class="ladder__label">2nd great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">16&ndash;31</span></li>
+              <li data-gen="5" style="--y:82.8%;--hw:20%"><span class="ladder__label">3rd great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">32&ndash;63</span></li>
+              <li data-gen="6" style="--y:86.4%;--hw:19%"><span class="ladder__label">4th great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">64&ndash;127</span></li>
+            </ul>
+          </div>
+          <figcaption class="visually-hidden">Point at any name in the chart above; the panel below names who it is and how they connect to Victoria.</figcaption>
+        </figure>
+
+        <div class="register" id="hero-register" aria-live="polite">
+          <p class="register__no nums" id="reg-no">No. 1</p>
+          <p class="register__name" id="reg-name">Victoria</p>
+          <p class="register__facts" id="reg-facts">b. 24 May 1819, Kensington Palace, United Kingdom &middot; d. 22 January 1901, Osborne House</p>
+          <p class="register__rel" id="reg-rel">Point at any name, or focus the chart above and use the arrow keys.</p>
+        </div>
+
+        <ul class="ladder ladder--list" role="list">
+          <li><span class="ladder__label">Parents</span><span class="ladder__dots"></span><span class="ladder__n nums">2&ndash;3</span></li>
+          <li><span class="ladder__label">Grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">4&ndash;7</span></li>
+          <li><span class="ladder__label">Great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">8&ndash;15</span></li>
+          <li><span class="ladder__label">2nd great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">16&ndash;31</span></li>
+          <li><span class="ladder__label">3rd great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">32&ndash;63</span></li>
+          <li><span class="ladder__label">4th great-grandparents</span><span class="ladder__dots"></span><span class="ladder__n nums">64&ndash;127</span></li>
+        </ul>
+
+        <div class="fan-key">
+          <h2>How to read a fan chart</h2>
+          <dl>
+            <div><dt>No. 1</dt><dd>The root, in the center medallion. Here, <strong>Victoria</strong> herself.</dd></div>
+            <div><dt>2n</dt><dd>Double a person&rsquo;s number for their <strong>father</strong>. Victoria&rsquo;s father is No. 2.</dd></div>
+            <div><dt>2n+1</dt><dd>Double it and add one for their <strong>mother</strong>. Victoria&rsquo;s mother is No. 3.</dd></div>
+            <div><dt>&#9679;</dt><dd>A filled dot marks <strong>pedigree collapse</strong>: one ancestor filling more than one slot, usually because cousins married. Eight people do that in this chart.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="running-head">
+      <span>How it works</span>
+      <span>About a minute, start to finish</span>
+    </div>
+    <div class="how">
+      <div class="how__step">
+        <span class="how__n nums" aria-hidden="true">1</span>
+        <h3>Drop the file</h3>
+        <p>However you got it &mdash; Ancestry, MyHeritage, FamilySearch by way of another program, or a desktop app like RootsMagic or Gramps &mdash; a GEDCOM file is just plain text. Gildroot reads every record on this computer.</p>
+        <div class="how__proof">
+          <div class="becomes">
+            <pre class="galley">0 @I1@ INDI
+1 NAME Victoria
+1 SEX F
+1 BIRT
+2 DATE 24 MAY 1819
+2 PLAC Kensington Palace, United Kingdom</pre>
+            <p class="becomes__arrow">Becomes</p>
+            <div class="entry">
+              <span class="entry__no nums" aria-hidden="true">1</span>
+              <span class="entry__name">Victoria</span>
+              <span class="entry__facts">b. 24 May 1819, Kensington Palace, United Kingdom</span>
+            </div>
+          </div>
+          <table class="paths">
+            <caption class="visually-hidden">Where to find the export option in Ancestry and MyHeritage</caption>
+            <tbody>
+              <tr><th scope="row">Ancestry</th><td><span class="menu-path"><span>Trees</span><span>your tree</span><span>Tree Settings</span><span>Export tree</span></span></td></tr>
+              <tr><th scope="row">MyHeritage</th><td><span class="menu-path"><span>Family tree</span><span>tree menu (&hellip;)</span><span>Export GEDCOM</span></span></td></tr>
+              <tr><th scope="row">FamilySearch</th><td>No direct export. A free program such as RootsMagic Essentials reads your tree and saves a GEDCOM.</td></tr>
+            </tbody>
+          </table>
+          <p class="caption">Menu names change occasionally; these three are current as of {{year}}.</p>
+        </div>
+      </div>
+      <div class="how__step">
+        <span class="how__n nums" aria-hidden="true">2</span>
+        <h3>Choose how it looks</h3>
+        <p>Three chart engines, six styles, and three ways to color it: by style, by family line, or by where people were born.</p>
+        <div class="how__proof">
+          <div class="pictos">
+            <figure>
+              <svg viewBox="0 0 84 72" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                <path d="M42 68V8M42 68 14 20M42 68 28 12M42 68 56 12M42 68 70 20"/>
+                <path d="M18 24A28 28 0 0 1 66 24" stroke-dasharray="1 6"/>
+              </svg>
+              <figcaption>Fan</figcaption>
+            </figure>
+            <figure>
+              <svg viewBox="0 0 84 72" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M42 36 8 12M42 36 8 36M42 36 8 60M42 36 76 12M42 36 76 36M42 36 76 60"/>
+                <circle cx="42" cy="36" r="4" fill="currentColor" stroke="none"/>
+              </svg>
+              <figcaption>Bowtie</figcaption>
+            </figure>
+            <figure>
+              <svg viewBox="0 0 84 72" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="28" width="24" height="16" rx="1"/>
+                <rect x="56" y="8" width="24" height="16" rx="1"/>
+                <rect x="56" y="48" width="24" height="16" rx="1"/>
+                <path d="M28 36H40V16H56M40 16V56H56"/>
+              </svg>
+              <figcaption>Pedigree</figcaption>
+            </figure>
+          </div>
+          <p class="caption" style="margin-top:var(--space-s)">Every style comes in three color modes and works on any of the three charts above.</p>
+        </div>
+      </div>
+      <div class="how__step">
+        <span class="how__n nums" aria-hidden="true">3</span>
+        <h3>Print it today</h3>
+        <p>Pick a size and see how many generations it holds. A free Letter PDF, or unlock every size up to 24&times;36 for $29.</p>
+        <div class="how__proof">
+          <dl class="facts">
+            <dt>Letter / A4</dt><dd>Fan charts hold 6 generations. Free, up to 5.</dd>
+            <dt>11&times;14</dt><dd>Fan charts hold 6 generations.</dd>
+            <dt>16&times;20 / 18&times;24</dt><dd>Fan charts hold 7 generations.</dd>
+            <dt>20&times;30 / 24&times;36</dt><dd>Fan charts hold 8 generations.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="running-head">
+      <span>Six styles, one file</span>
+      <span>Every print below is drawn from victoria.ged &mdash; not a placeholder</span>
+    </div>
+    <div class="intro">
+      <h2 class="h2">Good enough to frame.</h2>
+      <p class="lead">All six styles, three chart types, drawn from one 298-person GEDCOM file and hung the way they&rsquo;d look on your own wall.</p>
+    </div>
+    <div class="wall">
+      <div class="wall__row">
+        <figure class="wall__item" style="--w:18">
+          <div class="frame frame--oak"><div class="frame__mat"><img src="/assets/img/print-ivory.jpg" alt="Fan chart of Queen Victoria's ancestors in the Ivory style, six generations, sepia ink on bone."></div></div>
+          <div class="museum-label">
+            <p class="museum-label__title">Ivory</p>
+            <p class="museum-label__meta nums">Fan &middot; 6 generations &middot; 18&times;24</p>
+            <p>The free style. Bone ground, sepia ink, an engraved double rule.</p>
+          </div>
+        </figure>
+        <figure class="wall__item wall__item--wide" style="--w:24">
+          <div class="frame frame--black"><div class="frame__mat"><img src="/assets/img/print-midnight-bowtie.jpg" alt="Two-family bowtie chart of Edward, Duke of Kent, and Victoria of Saxe-Coburg, in the Midnight Gilt style, five generations each side."></div></div>
+          <div class="museum-label">
+            <p class="museum-label__title">Midnight Gilt</p>
+            <p class="museum-label__meta nums">Bowtie &middot; 5 generations each side &middot; 18&times;24</p>
+            <p>Two families meeting in one medallion. Best on photo or matte poster paper.</p>
+          </div>
+        </figure>
+        <figure class="wall__item" style="--w:14">
+          <div class="frame frame--ash"><div class="frame__mat"><img src="/assets/img/print-botanical.jpg" alt="Fan chart of Queen Victoria's ancestors in the Botanical style, five generations, father's line in olive and mother's in rose."></div></div>
+          <div class="museum-label">
+            <p class="museum-label__title">Botanical</p>
+            <p class="museum-label__meta nums">Fan &middot; 5 generations &middot; 11&times;14</p>
+            <p>Warm white, an olive and rose tint for each side, a laurel at the base.</p>
+          </div>
+        </figure>
+      </div>
+      <div class="wall__ledge"></div>
+      <div class="wall__row">
+        <figure class="wall__item" style="--w:15">
+          <div class="frame frame--walnut"><div class="frame__mat"><img src="/assets/img/print-letterpress.jpg" alt="Pedigree chart of Queen Victoria's ancestors in the Letterpress style, five generations, black and vermilion ink."></div></div>
+          <div class="museum-label">
+            <p class="museum-label__title">Letterpress</p>
+            <p class="museum-label__meta nums">Pedigree &middot; 5 generations &middot; Letter / A4</p>
+            <p>Cream stock, two inks, boxes and elbow connectors.</p>
+          </div>
+        </figure>
+        <figure class="wall__item" style="--w:20">
+          <div class="frame frame--thin"><div class="frame__mat"><img src="/assets/img/print-nordic.jpg" alt="Full-circle fan chart of Queen Victoria's ancestors in the Nordic style, six generations, set in a clean sans."></div></div>
+          <div class="museum-label">
+            <p class="museum-label__title">Nordic</p>
+            <p class="museum-label__meta nums">Fan, 360&deg; &middot; 6 generations &middot; 16&times;20</p>
+            <p>White, charcoal and pale blue-gray, set in a clean sans.</p>
+          </div>
+        </figure>
+        <figure class="wall__item" style="--w:20">
+          <div class="frame frame--oak"><div class="frame__mat"><img src="/assets/img/print-cartographer.jpg" alt="Fan chart of Queen Victoria's ancestors colored by birthplace in the Cartographer style, six generations, with a compass rose."></div></div>
+          <div class="museum-label">
+            <p class="museum-label__title">Cartographer</p>
+            <p class="museum-label__meta nums">Fan, Atlas colors &middot; 6 generations &middot; 18&times;24</p>
+            <p>A pale map ground, a graticule and a compass rose. Colored by birthplace.</p>
+          </div>
+        </figure>
+      </div>
+      <div class="wall__ledge"></div>
+    </div>
+  </div>
+</section>
+
+<section class="migrate" id="atlas">
+  <div class="container">
+    <div class="running-head">
+      <span>Where they were born</span>
+      <span>Computed from the same file, at build time</span>
+    </div>
+    <div class="migrate__grid">
+      <div>
+        <h2 class="h2">Color it by birthplace.</h2>
+        <p class="migrate__fact">The fan chart above holds 117 people across seven generations: Victoria and 116 ancestors around her. Of the 116, <strong class="nums">109</strong> have a known birthplace, and <strong class="nums">97</strong> were born in what is now Germany.</p>
+        <p class="caption migrate__source">Computed from <code>victoria.ged</code> (Wikidata, CC0) &mdash; the same file that draws the fan above. Color your own tree by birthplace the same way, privately, in the studio.</p>
+      </div>
+      <div>
+        <div class="migrate__bar" role="img" aria-label="Birthplaces of the 116 ancestors in this chart: 97 Germany, 12 elsewhere in Europe, 7 unknown.">
+          <span class="migrate__seg" style="width:83.6%;background:var(--atlas-1)">Germany</span>
+          <span class="migrate__seg" style="width:10.3%;background:var(--atlas-6)"></span>
+          <span class="migrate__seg migrate__seg--unknown" style="width:6.0%">?</span>
+        </div>
+        <ul class="migrate__legend" role="list">
+          <li><span class="migrate__swatch" style="background:var(--atlas-1)"></span> Germany <b class="nums">97 &middot; 84%</b></li>
+          <li><span class="migrate__swatch" style="background:var(--atlas-6)"></span> Elsewhere in Europe (9 countries) <b class="nums">12 &middot; 10%</b></li>
+          <li><span class="migrate__swatch migrate__swatch--unknown"></span> Unknown <b class="nums">7 &middot; 6%</b></li>
+        </ul>
+        <p class="caption migrate__caption">Ambiguous historical places &mdash; an empire that later split into several countries, for example &mdash; go to a short list for you to assign in two clicks. Atlas shows its coverage plainly: &ldquo;resolved 109 of 116 birthplaces.&rdquo;</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plate plate--midnight privacy" id="privacy">
+  <div class="container">
+    <div class="running-head">
+      <span>Privacy</span>
+      <span>Checked by an automated test before every release</span>
+    </div>
+    <div class="privacy__grid">
+      <div>
+        <h2>Nothing is uploaded.</h2>
+        <p class="lead">Your file is read on this computer. Your chart is drawn on this computer. Try it with wifi off.</p>
+        <ol class="steps">
+          <li>Turn off wifi, or unplug the cable.</li>
+          <li>Drop your file and build your chart, start to finish.</li>
+          <li>Turn wifi back on. Nothing changed, because nothing left this computer.</li>
+        </ol>
+        <div class="zero">
+          <span class="zero__n nums">0</span>
+          <span class="zero__label">bytes of your file uploaded<span>Ever. Not a preview, not a thumbnail, not a backup.</span></span>
+        </div>
+        <dl class="privacy__facts">
+          <div><strong>What leaves this computer:</strong> a license key check when you buy, and anonymous, bucketed counts like &ldquo;7 generations&rdquo; for our own analytics.</div>
+          <div><strong>What never does:</strong> names, dates, places, photos, or the file itself.</div>
+        </dl>
+      </div>
+      <figure class="boundary">
+        <svg viewBox="0 0 760 280" role="img" aria-label="Diagram: your file, your chart and your exports stay inside a boundary labeled This computer. Gildroot.com sends the page once, and never receives your tree.">
+          <rect x="16" y="16" width="560" height="248" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="2 8"/>
+          <text x="34" y="44" font-family="var(--font-sans)" font-weight="600" font-size="15" letter-spacing="2" fill="currentColor">THIS COMPUTER</text>
+          <g font-family="var(--font-sans)" font-size="15" fill="currentColor">
+            <rect x="44" y="120" width="150" height="60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="119" y="155" text-anchor="middle">Your .ged file</text>
+            <path d="M194 150H222" stroke="currentColor" stroke-width="1.5" marker-end="url(#gr-arrow)"/>
+            <rect x="228" y="120" width="150" height="60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="303" y="155" text-anchor="middle">Your chart</text>
+            <path d="M378 150H406" stroke="currentColor" stroke-width="1.5" marker-end="url(#gr-arrow)"/>
+            <rect x="412" y="120" width="150" height="60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <text x="487" y="155" text-anchor="middle">PDF / JPEG</text>
+          </g>
+          <rect x="628" y="118" width="116" height="64" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+          <text x="686" y="153" text-anchor="middle" font-family="var(--font-sans)" font-size="14" fill="currentColor" opacity=".85">gildroot.com</text>
+          <path d="M628 138H592" stroke="currentColor" stroke-width="1.5" marker-end="url(#gr-arrow)" opacity=".85"/>
+          <text x="608" y="120" text-anchor="middle" font-family="var(--font-sans)" font-size="12" fill="currentColor" opacity=".85">the page, once</text>
+          <path d="M592 168H628" stroke="currentColor" stroke-width="1.5" stroke-dasharray="1 5" opacity=".6"/>
+          <text x="610" y="196" text-anchor="middle" font-family="var(--font-sans)" font-size="12" fill="currentColor" opacity=".7">your tree &mdash; never</text>
+          <defs><marker id="gr-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="currentColor"/></marker></defs>
+        </svg>
+        <div class="boundary__stack" aria-hidden="true">
+          <p class="boundary__stack-title">This computer</p>
+          <div class="boundary__stack-flow">
+            <span class="boundary__stack-box">Your .ged file</span>
+            <span class="boundary__stack-arrow">&rarr;</span>
+            <span class="boundary__stack-box">Your chart</span>
+            <span class="boundary__stack-arrow">&rarr;</span>
+            <span class="boundary__stack-box">PDF / JPEG</span>
+          </div>
+          <div class="boundary__stack-io">
+            <p><strong>In:</strong> the page, once, from gildroot.com</p>
+            <p><strong>Out:</strong> your tree &mdash; never</p>
+          </div>
+        </div>
+        <figcaption>Your file, your chart and your exports stay inside this computer. Gildroot.com sends you this page once, and never receives your tree.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="plate plate--red gift" id="gift">
+  <div class="container">
+    <div class="running-head">
+      <span>A gift, not a chore</span>
+      <span>Three ways to give it</span>
+    </div>
+    <div class="gift__grid">
+      <div>
+        <h2>A gift finished tonight.</h2>
+        <p class="lead">Build it from what you know &mdash; names, birth years, and where each person was born. No file needed.</p>
+        <dl class="gift__paths">
+          <div><dt>Make it for them</dt><dd>Build the chart yourself, buy Heirloom, print it and frame it.</dd></div>
+          <div><dt>Give a key</dt><dd>Buy a Heirloom or Family Historian key. They build the chart, whenever they&rsquo;re ready.</dd></div>
+          <div><dt>Family Pack</dt><dd>One purchase, up to three households &mdash; for siblings sharing a family history project.</dd></div>
+        </dl>
+      </div>
+      <div class="keepsake">
+        <div class="card-spread">
+          <div class="card-spread__front"><img src="/assets/img/card-front.jpg" alt="Front of a printable gift card, a small fan chart of the fictional Almeida-Novak family."></div>
+          <div class="card-spread__inside">
+            <p class="card-spread__to">To Anna</p>
+            <p class="card-spread__msg">Six generations of the Almeidas and the Novaks, gathered in one place. Merry Christmas.</p>
+            <p class="card-spread__sign">&mdash; Mom</p>
+            <p class="card-spread__redeem">Redeem at gildroot.com/redeem</p>
+          </div>
+        </div>
+        <div class="builder-mock" aria-hidden="true">
+          <p class="builder-mock__head">Quick builder</p>
+          <p class="builder-mock__who">Patrick Byrne&rsquo;s parents</p>
+          <div class="builder-mock__row"><span class="builder-mock__box builder-mock__box--filled">Michael Byrne</span><span class="builder-mock__box builder-mock__box--filled">about 1870</span></div>
+          <div class="builder-mock__row"><span class="builder-mock__box builder-mock__box--filled" style="grid-column:1/-1">Castlebar, County Mayo, Ireland</span></div>
+          <span class="builder-mock__btn">Ask the family &rarr;</span>
+        </div>
+        <p class="keepsake__caption caption">The Quick Builder needs no file: type in what you know, then send a link so an aunt or cousin can fill in the rest from their phone. Nothing is ever emailed to us &mdash; the answers travel in the link itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="running-head">
+      <span>One-time prices</span>
+      <span>US dollars. Pay once, re-export forever.</span>
+    </div>
+    <div class="pricing-grid">
+      <div>
+        <h2 class="h2">One time. Ever after.</h2>
+        <p class="lead">Every chart, every style, on screen, for free. Pay once for the sizes and exports you want &mdash; there is no subscription to cancel.</p>
+        <ul class="assurances" role="list">
+          <li><strong>Free to start.</strong> Every chart, every style, at no cost.</li>
+          <li><strong>30 days to decide.</strong> A full refund, no questions, if it isn&rsquo;t right.</li>
+          <li><strong>No subscription.</strong> Pay once, re-export forever.</li>
+        </ul>
+      </div>
+      <div class="tariff">
+        <div class="tariff__row">
+          <div class="tariff__head"><span class="tariff__name">Heirloom</span><span class="tariff__leader"></span><span class="tariff__price nums"><sup>$</sup>29</span></div>
+          <p class="tariff__desc">One family: one root person, or one couple. All charts, styles and sizes, unlimited re-exports, forever.</p>
+        </div>
+        <div class="tariff__row">
+          <div class="tariff__head"><span class="tariff__name">Family Historian</span><span class="tariff__leader"></span><span class="tariff__price nums"><sup>$</sup>59</span></div>
+          <p class="tariff__desc">Unlimited trees and roots. Every current and future chart style.</p>
+        </div>
+        <div class="tariff__row">
+          <div class="tariff__head"><span class="tariff__name">Family Pack</span><span class="tariff__leader"></span><span class="tariff__price nums"><sup>$</sup>79</span></div>
+          <p class="tariff__desc">Family Historian rights for up to 3 households &mdash; for siblings sharing one project.</p>
+        </div>
+        <div class="tariff__row">
+          <div class="tariff__head"><span class="tariff__name">Professional</span><span class="tariff__leader"></span><span class="tariff__price nums"><sup>$</sup>149</span></div>
+          <p class="tariff__desc">A commercial license for genealogists, reunion organizers and societies, with a removable colophon.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap" style="margin-top:var(--space-2xl)">
+      <table class="compare">
+        <caption>What each license covers</caption>
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">Heirloom<br><span class="num nums">$29</span></th>
+            <th scope="col">Family Historian<br><span class="num nums">$59</span></th>
+            <th scope="col">Family Pack<br><span class="num nums">$79</span></th>
+            <th scope="col">Professional<br><span class="num nums">$149</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Families</th>
+            <td data-label="Heirloom">1 family</td>
+            <td data-label="Family Historian">Unlimited</td>
+            <td data-label="Family Pack">Unlimited</td>
+            <td data-label="Professional">Unlimited</td>
+          </tr>
+          <tr>
+            <th scope="row">Households</th>
+            <td data-label="Heirloom">1</td>
+            <td data-label="Family Historian">1</td>
+            <td data-label="Family Pack">Up to 3</td>
+            <td data-label="Professional">Unlimited, for clients</td>
+          </tr>
+          <tr>
+            <th scope="row">Devices</th>
+            <td data-label="Heirloom" class="nums">3</td>
+            <td data-label="Family Historian" class="nums">5</td>
+            <td data-label="Family Pack" class="nums">9 <span class="caption">(3 per household)</span></td>
+            <td data-label="Professional" class="nums">10</td>
+          </tr>
+          <tr>
+            <th scope="row">Charts</th>
+            <td data-label="Heirloom">All 3 chart types, 6 styles</td>
+            <td data-label="Family Historian">All 3 chart types, 6 styles, plus future styles</td>
+            <td data-label="Family Pack">Same as Family Historian</td>
+            <td data-label="Professional">Same, plus a &ldquo;Prepared by&rdquo; line</td>
+          </tr>
+          <tr>
+            <th scope="row">Re-exports</th>
+            <td data-label="Heirloom">Unlimited, forever</td>
+            <td data-label="Family Historian">Unlimited, forever</td>
+            <td data-label="Family Pack">Unlimited, forever</td>
+            <td data-label="Professional">Unlimited, forever</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cluster" style="margin-top:var(--space-l)">
+      <p class="caption" style="max-width:46ch">A free Letter/A4 PDF, up to 5 generations in Ivory, needs no license at all. 30 days to decide, a full refund, no questions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="running-head">
+      <span>Questions</span>
+      <span>Four we hear first</span>
+    </div>
+    <div class="faq-grid">
+      <div class="intro" style="margin-bottom:0">
+        <h2 class="h2">Before you drop a file.</h2>
+        <p class="lead">Anything else, write to <a class="link-arrow" href="mailto:support@gildroot.com">support@gildroot.com</a>.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>How do I get my family tree out of Ancestry, FamilySearch or MyHeritage?</summary>
+          <div class="faq__answer">
+            <p>Ancestry and MyHeritage both let you export a GEDCOM file from their desktop sites, usually from an &ldquo;Export tree&rdquo; option in your tree&rsquo;s settings. FamilySearch doesn&rsquo;t offer a direct export for a full pedigree; the usual route is a free program such as RootsMagic Essentials or Ancestral Quest Basics, which reads your FamilySearch tree and saves a GEDCOM.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is anything about my family uploaded?</summary>
+          <div class="faq__answer">
+            <p>No. Your file is read on this computer, and the chart is drawn on this computer. The only things that leave it are a license key check when you buy, and anonymous counts like &ldquo;7 generations&rdquo; for our own analytics &mdash; never names, places or dates. You can turn off wifi after the page loads and keep working.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What if my tree has gaps, or I only know a few names?</summary>
+          <div class="faq__answer">
+            <p>A sparse tree is treated as deliberate, not broken: empty branches show as faint, unlabeled wedges, and you can trim them. Without a file at all, the Quick Builder lets you type in up to 15 people, and an Ask-the-family link lets a relative fill in the rest from their own phone.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can it print names in Chinese, Hebrew, Arabic or other scripts?</summary>
+          <div class="faq__answer">
+            <p>Names in the Latin, Greek and Cyrillic alphabets print correctly, including accented letters like Se&aacute;n, Dvo&#345;&aacute;k and &#216;deg&aring;rd. Chinese, Japanese, Korean, Hebrew and Arabic script can&rsquo;t be printed yet. Before you pay, Gildroot shows you exactly which names those are and lets you enter a romanized form instead.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sign-off">
+  <div class="container">
+    <p>Your roots, <em>gilded.</em></p>
+  </div>
+</section>
+
+<script type="application/json" id="hero-data">[null,["Victoria","24 May 1819, Kensington Palace, United Kingdom","22 January 1901, Osborne House",0],["Prince Edward, Duke of Kent and Strathearn","2 November 1767, Buckingham Palace, United Kingdom","23 January 1820, Sidmouth",0],["Princess Victoria of Saxe-Coburg-Saalfeld","17 August 1786, Coburg, Germany","16 March 1861, Frogmore House",0],["George III of Great Britain","24 May 1738, Norfolk House, United Kingdom","29 January 1820, Windsor Castle",0],["Charlotte of Mecklenburg-Strelitz","19 May 1744, Mirow, Germany","17 November 1818, Kew",0],["Francis, Duke of Saxe-Coburg-Saalfeld","15 July 1750, Coburg, Germany","9 December 1806, Coburg",0],["Countess Augusta Reuss of Ebersdorf","19 January 1757, Saalburg-Ebersdorf, Germany","16 November 1831, Coburg",0],["Frederick, Prince of Wales","31 January 1707, Hanover, Germany","20 March 1751, Leicester House",0],["Princess Augusta of Saxe-Gotha","30 November 1719, Gotha, Germany","8 February 1772, London",0],["Duke Charles Louis Frederick of Mecklenburg","23 February 1708, Neustrelitz, Germany","4 June 1752, Mirow",0],["Princess Elizabeth Albertine of Saxe-Hildburghausen","4 August 1713, Hildburghausen, Germany","1761, Ahlden",0],["Ernest Frederick of Saxe-Coburg-Saalfeld","8 March 1724, Saalfeld, Germany","8 September 1800, Coburg",0],["Sophie Antoinette of Brunswick-Wolfenbüttel","13 January 1724, Wolfenbüttel, Germany","17 May 1802, Coburg",0],["Henry XXIV, Count of Reuss-Ebersdorf","22 January 1724, Saalburg-Ebersdorf, Germany","13 May 1779, Saalburg-Ebersdorf",0],["Countess Karoline Ernestine of Erbach-Schönberg","20 August 1727, Gedern, Germany","22 April 1796, Saalburg-Ebersdorf",0],["George II of Great Britain","30 October 1683, Hanover, Germany","25 October 1760, London",0],["Caroline of Ansbach","1 March 1683, Residenz Ansbach, Germany","20 November 1737, St James's Palace",0],["Frederick II, Duke of Saxe-Gotha-Altenburg","28 July 1676, Gotha, Germany","23 March 1732, Altenburg",0],["Princess Magdalena Augusta of Anhalt-Zerbst","13 October 1679, Zerbst, Germany","11 October 1740, Altenburg",0],["Duke Adolf Friedrich II, Duke of Mecklenburg-Strelitz","19 October 1658, Grabow, Germany","12 May 1708, Neustrelitz",0],["Christiane Emilie of Schwarzburg-Sondershausen","9 April 1681, Sondershausen, Germany","1 November 1751, Mirow",0],["Ernest Frederick I, Duke of Saxe-Hildburghausen","21 August 1681, Bad Arolsen, Germany","26 November 1740, Hildburghausen",0],["Countess Sophia Albertine of Erbach-Erbach","30 July 1683, Ahlden, Germany","4 September 1742, Dresden",0],["Francis Josias, Duke of Saxe-Coburg-Saalfeld","25 September 1697, Saalfeld, Germany","16 September 1764, Bad Rodach",0],["Princess Anna Sophie of Schwarzburg-Rudolstadt","9 September 1700, Rudolstadt, Germany","11 December 1780, Römhild",0],["Ferdinand Albert II, Duke of Brunswick-Wolfenbüttel","19 May 1680, Bevern, Germany","13 September 1735, Salzdahlum",0],["Princess Antoinette of Brunswick-Wolfenbüttel","14 April 1696, Wolfenbüttel, Germany","6 March 1762, Brunswick",0],["Heinrich XXIX, Count of Reuss-Ebersdorf","21 July 1699, Saalburg-Ebersdorf, Germany","22 May 1747, Herrnhaag",0],["Sofia Teodora of Castell-Remlingen","12 May 1703, Castell, Germany","8 January 1777, Herrnhut",0],["Georg August zu Erbach-Schönberg","17 June 1691, Waldenburg, Switzerland","29 March 1758, Bad König",0],["Countess Ferdinande Henriette of Stolberg-Gedern","2 October 1699, Gedern, Germany","31 January 1750, Bad König",0],["George I of Great Britain","7 June 1660, Hanover, Germany","22 June 1727, Osnabrück",0],["Sophia Dorothea of Celle","15 September 1666, Celle Castle, Germany","13 November 1726, Ahlden House",0],["John Frederick, Margrave of Brandenburg-Ansbach","18 October 1654, Ansbach, Germany","22 March 1686, Ansbach",0],["Princess Eleonore Erdmuthe of Saxe-Eisenach","13 April 1662, Friedewald, Germany","9 September 1696, Pretzsch castle",0],["Frederick I of Saxe-Gotha-Altenburg","15 June 1646, Gotha, Germany","2 August 1691, Friedrichswerth",2],["Magdalena Sibylle of Saxe-Weissenfels","2 September 1648, Halle (Saale), Germany","7 January 1681, Gotha",2],["Karl, Prince of Anhalt-Zerbst","16 October 1652, Zerbst, Germany","3 November 1718, Zerbst",0],["Sophia of Saxe-Weissenfels","23 June 1654, Halle (Saale), Germany","31 March 1724, Zerbst",0],["Duke Adolf Friedrich I, Duke of Mecklenburg-Schwerin","15 December 1588, Schwerin, Germany","27 February 1658, Schwerin",0],["Marie Katharina of Brunswick-Dannenberg","10 June 1616","1 July 1665, Grabow",0],["Christian William I, Prince of Schwarzburg-Sondershausen","6 January 1647, Sondershausen, Germany","10 May 1721, Sondershausen",0],["Antonie Sybille of Barby-Mühlingen","7 April 1641, Groß Rosenburg, Germany","2 May 1684, Sondershausen",0],["Ernest, Duke of Saxe-Hildburghausen","12 July 1655, Gotha, Germany","17 October 1715, Hildburghausen",0],["Sophie Henriette of Waldeck-Eisenberg","3 August 1662, Bad Arolsen, Germany","15 October 1702, Erbach",0],["Georg Ludwig I von Erbach-Erbach","8 May 1643, Michelstadt, Germany","5 April 1693, Bad Arolsen",0],["Amalia Catherine of Waldeck-Eistenburg","8 August 1640, Culemborg, Netherlands","4 January 1697, Culemborg",0],["John Ernest IV, Duke of Saxe-Coburg-Saalfeld","22 August 1658, Gotha, Germany","17 February 1729, Saalfeld",0],["Countess Charlotte Johanna of Waldeck-Wildungen","13 December 1664, Bad Arolsen, Germany","1 February 1699, Hildburghausen",0],["Louis Frederick I, Prince of Schwarzburg-Rudolstadt","15 October 1667, Rudolstadt, Germany","24 June 1718, Rudolstadt",0],["Anna Sophie of Saxe-Gotha-Altenburg","22 December 1670, Gotha, Germany","28 December 1728, Rudolstadt",0],["Ferdinand Albert I, Duke of Brunswick-Lüneburg","22 May 1636, Brunswick, Germany","25 April 1687, Bevern",0],["Christine of Hesse-Eschwege","30 October 1649, Kassel, Germany","18 March 1702, Bevern",0],["Louis Rudolph, Duke of Brunswick-Lüneburg","22 July 1671, Wolfenbüttel, Germany","1 March 1735, Brunswick",0],["Princess Christine Louise of Oettingen-Oettingen","20 March 1671, Oettingen in Bayern, Germany","3 September 1747, Blankenburg",0],["Heinrich X, Count of Reuss-Ebersdorf","29 November 1662, Bad Lobenstein, Germany","10 June 1711, Saalburg-Ebersdorf",0],["Erdmute Benigna Gräfin zu Solms-Laubach","13 April 1670, Wildenfels, Germany","14 September 1732, Ebersdorf",0],["Wolfgang Dietrich zu Castell-Remlingen","6 January 1641, Remlingen, Germany","8 April 1709, Castell",0],["Dorothea Renata, Gräfin von Zinzendorf und Pottendorf","23 September 1669, Sopron, Hungary","22 February 1743, Castell",0],["George Albert II of Erbach-Fürstenau","26 February 1648, Michelstadt, Germany","23 March 1717, Michelstadt",0],["Anna Dorotea de Hohenlohe-Waldenburg","22 February 1656, Waldenburg, Germany","28 October 1724, Bensheim",0],["Louis Christian, Count of Stolberg-Gedern","8 September 1652, Ilsenburg, Germany","27 August 1710, Gedern",0],["Christine of Mecklenburg-Güstrow","14 August 1663, Güstrow, Germany","3 August 1749, Gedern",0],["Ernest Augustus, Elector of Brunswick-Lüneburg","20 November 1629, Herzberg am Harz, Germany","23 January 1698, Hanover",0],["Sophia of Hanover","14 October 1630, The Hague, Netherlands","8 June 1714, Hanover",0],["George William of Brunswick-Lüneburg-Celle","26 January 1624, Herzberg am Harz, Germany","28 August 1705, Wienhausen",0],["Éléonore Desmier d'Olbreuse","3 February 1639, Niort, France","5 February 1722, Celle",0],["Albert II, Margrave of Brandenburg-Ansbach","18 September 1620, Ansbach, Germany","1 November 1667, Ansbach",0],["Sophie Margarete of Oettingen-Oettingen","9 December 1634, Ulm, Germany","26 July 1664, Ansbach",0],["John George I, Duke of Saxe-Eisenach","12 July 1634, Weimar, Germany","19 September 1686, Schloss Wilhelmsthal",0],["Johannetta of Sayn-Wittgenstein","27 August 1632, Bad Laasphe, Germany","28 September 1701, Jena",0],["Ernest I, Duke of Saxe-Gotha","25 December 1601, Altenburg, Germany","26 March 1675, Gotha",3],["Princess Elisabeth Sophie of Saxe-Altenburg","10 October 1619, Bavarian, Austria","20 December 1680, Gotha",3],["Augustus, Duke of Saxe-Weissenfels","13 August 1614, Dresden, Germany","4 June 1680, Halle (Saale)",2],["Anna Maria of Mecklenburg-Schwerin","1 July 1627, Schwerin, Germany","11 December 1669, Halle (Saale)",2],["John VI of Anhalt-Zerbst","24 March 1621, Zerbst, Germany","4 July 1667, Zerbst",0],["Sophie Augusta of Holstein-Gottorp","5 December 1630, Gottorf Castle, Germany","12 December 1680, Coswig",0],["Augustus, Duke of Saxe-Weissenfels","13 August 1614, Dresden, Germany","4 June 1680, Halle (Saale)",2],["Anna Maria of Mecklenburg-Schwerin","1 July 1627, Schwerin, Germany","11 December 1669, Halle (Saale)",2],["Johann VII, Duke of Mecklenburg","7 March 1558, Güstrow, Germany","22 March 1592, Burg Stargard",0],["Sophia of Holstein-Gottorp","1 June 1569, Gottorf Castle, Germany","14 November 1634, Schwerin",0],["Julius Ernst, Duke of Brunswick-Dannenberg","11 March 1571, Lüchow-Dannenberg District, Germany","26 October 1636",0],["Maria of Ostfriesland","1582, Hage, Germany","9 July 1616",0],["Anton Günther I, Count of Schwarzburg-Sondershausen","9 January 1620, Ebeleben, Germany","19 August 1666, Sondershausen",0],["Maria Magdalena de Birkenfeld","29 June 1622, Birkenfeld, Germany","28 October 1689, Heringen",0],["Albert Frederick, Count of Barby-Muhlingen","28 February 1597, Groß Rosenburg, Germany","7 December 1641, Groß Rosenburg",0],["Sophia Ursula of Oldenburg","10 December 1601","5 April 1642",0],["Ernest I, Duke of Saxe-Gotha","25 December 1601, Altenburg, Germany","26 March 1675, Gotha",3],["Princess Elisabeth Sophie of Saxe-Altenburg","10 October 1619, Bavarian, Austria","20 December 1680, Gotha",3],["George Frederick of Waldeck-Eisenberg","31 January 1620, Bad Arolsen, Germany","9 November 1692, Bad Arolsen",0],["Elizabeth Charlotte of Nassau-Siegen","11 March 1628, Emmerich am Rhein, Germany","16 November 1694, Culemborg",0],["George Albert I of Erbach-Erbach","16 December 1597, Erbach, Germany","25 November 1647, Erbach",2],["Elisabeth Dorothea von Hohenlohe-Waldenburg-Schillingsfürst","27 August 1617, Schillingsfürst, Germany","12 November 1655, Fürstenau",2],["Philip Dietrich, Count of Waldeck","2 November 1614, Bad Arolsen, Germany","7 December 1645, Korbach",0],["Mary Magdalene of Nassau-Siegen","21 October 1623, Oberes Schloss, Germany","30 August 1647, Spa",0],["Ernest I, Duke of Saxe-Gotha","25 December 1601, Altenburg, Germany","26 March 1675, Gotha",3],["Princess Elisabeth Sophie of Saxe-Altenburg","10 October 1619, Bavarian, Austria","20 December 1680, Gotha",3],["Josias II, Count of Waldeck-Wildungen","31 July 1636, Bad Wildungen, Germany","8 August 1669, Heraklion",0],["Wilhelmine Christine of Nassau-Siegen","1629","22 January 1700, Hildburghausen",0],["Albert Anton, Prince of Schwarzburg-Rudolstadt","14 November 1641, Rudolstadt, Germany","15 December 1710, Rudolstadt",0],["Countess Emilie Juliane of Barby-Mühlingen","19 August 1637, Heidecksburg, Germany","3 December 1706, Rudolstadt",0],["Frederick I of Saxe-Gotha-Altenburg","15 June 1646, Gotha, Germany","2 August 1691, Friedrichswerth",2],["Magdalena Sibylle of Saxe-Weissenfels","2 September 1648, Halle (Saale), Germany","7 January 1681, Gotha",2],["Augustus the Younger, Duke of Brunswick-Lüneburg","10 April 1579","17 September 1666, Wolfenbüttel",0],["Duchess Elisabeth Sophie of Mecklenburg","20 August 1613, Güstrow, Germany","12 July 1680, Lüneburg",0],["Frederick, Landgrave of Hesse-Eschwege","9 May 1617, Kassel, Germany","24 September 1655, Kościan",0],["Countess Palatine Eleonora Catherine of Zweibrücken","17 May 1626, Stegeborg Castle, Sweden","3 March 1692, Osterholz-Scharmbeck",0],["Anthony Ulrich, Duke of Brunswick-Wolfenbüttel","4 October 1633, Hitzacker, Germany","27 March 1714, Salzdahlum",0],["Elizabeth Juliana of Schleswig-Holstein-Sønderburg-Nordborg","24 May 1634, Nordborg, Denmark","4 February 1704, Wolfenbüttel",0],["Albert Ernest I of Oettingen-Oettingen","14 May 1642, Oettingen in Bayern, Germany","8 February 1701, Schrattenhofen",0],["Christine Friederike of Württemberg-Winnental","28 February 1644, Stuttgart, Germany","9 November 1724, Stuttgart",0],["Henry X, Count of Reuss-Lobenstein","1621, Gera, Germany","1671, Bad Lobenstein",0],["Maria Sibylla Reuss of Upper Greiz","4 August 1625, Greiz, Germany","17 May 1675, Bad Lobenstein",0],["Johann Friedrich zu Solms-Laubach","1 March 1625, Sonnewalde, Germany","10 December 1696, Laubach",0],["Benigna zu Solms-Laubach","1648, Żary, Poland","1702",0],["Wolfgang Georg I. zu Castell-Remlingen","27 January 1610, Remlingen, Germany","4 May 1668, Remlingen",0],["Sophie Juliane of Hohenlohe-Pfedelbach","5 October 1620","11 January 1682",0],["Maximilian Erasmus, Graf von Zinzendorf und Pottendorf","29 June 1633, Vienna, Austria","21 July 1672, Nuremberg",0],["Anna Amalie, Freiin von Dietrichstein-Hollenburg","29 October 1638","25 August 1696",0],["George Albert I of Erbach-Erbach","16 December 1597, Erbach, Germany","25 November 1647, Erbach",2],["Elisabeth Dorothea von Hohenlohe-Waldenburg-Schillingsfürst","27 August 1617, Schillingsfürst, Germany","12 November 1655, Fürstenau",2],["Philipp Gottfried von Hohenlohe-Waldenburg","6 June 1618, Waldenburg, Germany","14 December 1679, Waldenburg",0],["Anna Christine Gräfin zu Limpurg-Sontheim","15 December 1615","28 May 1685",0],["Henry Ernest, Count of Stolberg","20 July 1593, Schwarza, Germany","4 April 1672, Ilsenburg",0],["Anna Elisabeth of Stolberg-Ortenberg","6 August 1624, Ortenburg, Germany","17 October 1668, Ilsenburg",0],["Gustav Adolph, Duke of Mecklenburg-Güstrow","26 February 1633, Güstrow, Germany","26 October 1695, Güstrow",0],["Magdalene Sibylle of Holstein-Gottorp","14 November 1631, Gottorf Castle, Germany","22 September 1719, Güstrow",0]]</script>
+<script>
+(function () {
+  var chart = document.getElementById('victoria-fan');
+  if (!chart) return;
+  var trace = document.getElementById('victoria-trace');
+  var data = JSON.parse(document.getElementById('hero-data').textContent);
+  var radii = [0, 82, 152, 216, 278, 348, 426, 508];
+  var GENS = 7, SPAN = 270 * Math.PI / 180, START = -SPAN / 2;
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  var GEN_WORD = ['', 'parent', 'grandparent', 'great-grandparent', '2nd great-grandparent', '3rd great-grandparent', '4th great-grandparent'];
+
+  function P(r, a) { return [r * Math.sin(a), -r * Math.cos(a)]; }
+  function sectorPath(ra, rb, a1, a2) {
+    var large = (a2 - a1) > Math.PI ? 1 : 0;
+    var p1 = P(ra, a1), p2 = P(rb, a1), p3 = P(rb, a2), p4 = P(ra, a2);
+    return 'M' + p1[0] + ',' + p1[1] + 'L' + p2[0] + ',' + p2[1] +
+      'A' + rb + ',' + rb + ' 0 ' + large + ' 1 ' + p3[0] + ',' + p3[1] +
+      'L' + p4[0] + ',' + p4[1] + 'A' + ra + ',' + ra + ' 0 ' + large + ' 0 ' + p1[0] + ',' + p1[1] + 'Z';
+  }
+  function genOf(n) { var g = 0, x = n; while (x > 1) { x = x >> 1; g++; } return g; }
+  function sideOf(n) { var x = n; while (x > 3) x = Math.floor(x / 2); return x === 2 ? 'paternal' : x === 3 ? 'maternal' : ''; }
+  function lineage(n) { var line = [n]; while (n > 1) { n = Math.floor(n / 2); line.push(n); } return line; }
+
+  var paths = {};
+  for (var g = 1; g < GENS; g++) {
+    var count = Math.pow(2, g), w = SPAN / count, ra = radii[g], rb = radii[g + 1];
+    for (var i = 0; i < count; i++) {
+      var n = count + i;
+      if (!data[n]) continue;
+      var a1 = START + i * w, a2 = a1 + w;
+      var el = document.createElementNS(SVGNS, 'path');
+      el.setAttribute('d', sectorPath(ra, rb, a1, a2));
+      el.setAttribute('data-n', n);
+      trace.appendChild(el);
+      paths[n] = el;
+    }
+  }
+  var rootEl = document.createElementNS(SVGNS, 'circle');
+  rootEl.setAttribute('cx', 0); rootEl.setAttribute('cy', 0); rootEl.setAttribute('r', radii[1]);
+  rootEl.setAttribute('data-n', 1); rootEl.setAttribute('fill', 'transparent'); rootEl.setAttribute('stroke', 'none');
+  trace.insertBefore(rootEl, trace.firstChild);
+  paths[1] = rootEl;
+  for (var rn = 2; rn < data.length; rn++) {
+    if (!data[rn] || !data[rn][3]) continue;
+    var rg = genOf(rn), rcount = Math.pow(2, rg), ri = rn - rcount, rw = SPAN / rcount, rmid = START + ri * rw + rw / 2;
+    var rr = (radii[rg] + radii[rg + 1]) / 2, rp = P(rr, rmid);
+    var rc = document.createElementNS(SVGNS, 'circle');
+    rc.setAttribute('cx', rp[0]); rc.setAttribute('cy', rp[1]); rc.setAttribute('r', 3.2);
+    rc.setAttribute('pointer-events', 'none');
+    trace.appendChild(rc);
+  }
+
+  var regNo = document.getElementById('reg-no'), regName = document.getElementById('reg-name'),
+      regFacts = document.getElementById('reg-facts'), regRel = document.getElementById('reg-rel');
+  var ladderItems = chart.querySelectorAll('.ladder:not(.ladder--list) li');
+
+  function show(n) {
+    var rec = data[n];
+    if (!rec) return;
+    var g = genOf(n);
+    regNo.textContent = 'No. ' + n;
+    regName.textContent = rec[0];
+    regFacts.textContent = (rec[1] ? 'b. ' + rec[1] : 'Birth date unknown') + (rec[2] ? ' · d. ' + rec[2] : '');
+    var rel;
+    if (n === 1) { rel = 'The root of this chart.'; }
+    else {
+      rel = 'Victoria’s ' + sideOf(n) + ' ' + (GEN_WORD[g] || (g + 'th great-grandparent') + '.');
+      if (rec[3] > 0) rel += ' Appears ' + rec[3] + ' times in this chart, from cousins marrying.';
+      rel += ' ' + lineage(n).join(' → ');
+    }
+    regRel.textContent = rel;
+    for (var k in paths) paths[k].classList.remove('is-here');
+    lineage(n).forEach(function (k) { if (paths[k]) paths[k].classList.add('is-here'); });
+    ladderItems.forEach(function (li) { li.classList.toggle('is-on', +li.dataset.gen === g); });
+  }
+  function reset() {
+    show(1);
+    regRel.textContent = 'Point at any name, or focus the chart above and use the arrow keys.';
+  }
+  reset();
+
+  trace.addEventListener('pointerover', function (e) { var n = e.target.getAttribute('data-n'); if (n) show(+n); });
+  trace.addEventListener('pointerleave', reset);
+  trace.addEventListener('click', function (e) { var n = e.target.getAttribute('data-n'); if (n) show(+n); });
+
+  var current = 1;
+  chart.addEventListener('keydown', function (e) {
+    var g = genOf(current), count = Math.pow(2, g), base = current === 1 ? 1 : count;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      if (current === 1) return;
+      var i = (current - base + (e.key === 'ArrowRight' ? 1 : -1) + count) % count;
+      current = base + i;
+    } else if (e.key === 'ArrowDown') {
+      var child = current * 2;
+      if (data[child]) current = child; else if (data[child + 1]) current = child + 1; else return;
+    } else if (e.key === 'ArrowUp') {
+      if (current > 1) current = Math.floor(current / 2); else return;
+    } else return;
+    e.preventDefault();
+    show(current);
+  });
+  chart.addEventListener('focus', function () { show(current); });
+  chart.addEventListener('blur', reset);
+
+  var dz = document.getElementById('dropzone'), status = document.getElementById('dropzone-status'), fileInput = document.getElementById('dropzone-file');
+  function notReady(name) {
+    dz.classList.remove('is-dragging');
+    status.textContent = name
+      ? 'The studio isn’t live on this preview yet. ' + name + ' stayed on this computer; nothing was sent anywhere.'
+      : 'The studio isn’t live on this preview yet. Nothing was sent anywhere.';
+  }
+  ['dragenter', 'dragover'].forEach(function (evt) {
+    dz.addEventListener(evt, function (e) { e.preventDefault(); dz.classList.add('is-dragging'); status.textContent = 'Let go to drop it here.'; });
+  });
+  ['dragleave', 'dragend'].forEach(function (evt) {
+    dz.addEventListener(evt, function () { dz.classList.remove('is-dragging'); status.textContent = ''; });
+  });
+  dz.addEventListener('drop', function (e) {
+    e.preventDefault();
+    var f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    notReady(f && f.name);
+  });
+  document.getElementById('dropzone-choose').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+  });
+  fileInput.addEventListener('change', function () {
+    var f = fileInput.files && fileInput.files[0];
+    notReady(f && f.name);
+    fileInput.value = '';
+  });
+  ['link-quickbuilder', 'link-sample'].forEach(function (id) {
+    var btn = document.getElementById(id);
+    if (btn) btn.addEventListener('click', function () { dz.scrollIntoView({ behavior: 'smooth', block: 'center' }); notReady(); });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{site.url}}/#organization",
+      "name": "Gildroot",
+      "url": "{{site.url}}/",
+      "logo": "{{site.url}}/assets/img/logo.svg",
+      "description": "{{site.description}}"
+    },
+    {
+      "@type": "Product",
+      "name": "Gildroot heirloom family-tree chart",
+      "description": "A fan, bowtie or pedigree chart made from your own family tree file, typeset for printing at up to 24x36 inches.",
+      "brand": { "@type": "Brand", "name": "Gildroot" },
+      "url": "{{site.url}}/#pricing",
+      "offers": [
+        { "@type": "Offer", "name": "Heirloom", "price": "29", "priceCurrency": "USD", "url": "{{site.url}}/#pricing" },
+        { "@type": "Offer", "name": "Family Historian", "price": "59", "priceCurrency": "USD", "url": "{{site.url}}/#pricing" },
+        { "@type": "Offer", "name": "Family Pack", "price": "79", "priceCurrency": "USD", "url": "{{site.url}}/#pricing" },
+        { "@type": "Offer", "name": "Professional", "price": "149", "priceCurrency": "USD", "url": "{{site.url}}/#pricing" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I get my family tree out of Ancestry, FamilySearch or MyHeritage?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ancestry and MyHeritage both let you export a GEDCOM file from their desktop sites, usually from an Export tree option in your tree's settings. FamilySearch doesn't offer a direct export for a full pedigree; the usual route is a free program such as RootsMagic Essentials or Ancestral Quest Basics, which reads your FamilySearch tree and saves a GEDCOM." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is anything about my family uploaded?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Your file is read on this computer, and the chart is drawn on this computer. The only network calls the studio makes are a license key check when you buy, and anonymous, bucketed analytics that never include names, places or dates." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my tree has gaps, or I only know a few names?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A sparse tree is treated as deliberate, not broken: empty branches show as faint, unlabeled wedges, and you can trim them. Without a file at all, the Quick Builder lets you type in up to 15 people, and an Ask-the-family link lets a relative fill in the rest from their phone." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it print names in Chinese, Hebrew, Arabic or other scripts?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Names in the Latin, Greek and Cyrillic alphabets print correctly, including accented letters. Chinese, Japanese, Korean, Hebrew and Arabic script can't be printed yet; before you pay, Gildroot shows exactly which names those are and lets you enter a romanized form instead." }
+        }
+      ]
+    }
+  ]
+}
+</script>

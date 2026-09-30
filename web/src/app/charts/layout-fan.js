@@ -32,7 +32,7 @@ import { nameLadder, splitName } from '../engine/names.js';
 import { displayFor } from '../engine/living.js';
 import { formatYearRange } from '../engine/dates.js';
 import { cleanPlace } from '../engine/places.js';
-import { arcGlyphs, radialRotation, polar, textWidth, MIN_TEXT_PT, FLOOR_TEXT_PT, FIT_SLACK } from './text.js';
+import { arcGlyphs, radialRotation, polar, textWidth, safeFont, MIN_TEXT_PT, FLOOR_TEXT_PT, FIT_SLACK } from './text.js';
 import { sectorPath, circlePath, fmt } from './path.js';
 import { wedgeFill } from './styles.js';
 import { paint, medallionRing, laurelArc, fleuron } from './ornaments.js';
@@ -41,6 +41,20 @@ import { markerItems } from './layout.js';
 const DEG = Math.PI / 180;
 const r3 = v => Math.round(v * 1000) / 1000;
 const q25 = v => Math.floor(v * 4 + 1e-9) / 4;
+
+// Arc names (rings 1-3) place one glyph at a time, each on its own tiny slice of the
+// curve, so a single name's characters — let alone a whole ring's — almost never share
+// a rotation. Canvas text has to rasterise every (font, size, rotation) combination it
+// hasn't seen from scratch; past a few hundred distinct ones in one redraw, headless
+// Chromium's glyph cache thrashes and re-render time jumps from ~10 ms to 100+ ms (BRIEF
+// §4.6 budget: preview re-render < 150 ms — measured on the largest real tree at 8
+// generations, where this ring alone can place 500+ glyphs). Snapping each glyph's
+// rotation to the nearest 2° — under a pixel of drift for type this size — collapses
+// hundreds of one-off angles into a couple dozen reused ones and keeps the cache warm,
+// with no visible change to the curve (glyph position is untouched; only its own tilt
+// is rounded). See docs/DECISIONS.md.
+const GLYPH_ROT_STEP = 2;
+const quantizeRot = g => g.map(c => ({ ...c, rot: Math.round(c.rot / GLYPH_ROT_STEP) * GLYPH_ROT_STEP }));
 
 // Visual extents of a line around its cap-middle, as fractions of the size.
 const EXT_TOP = 0.54;
@@ -56,6 +70,40 @@ const MED_FRACTION = { 2: [0.34, 0.5], 3: [0.3, 0.44], 4: [0.24, 0.36], 5: [0.19
  * Lay out a fan chart. See layout.js for ctx and the return shape.
  * @param {object} ctx
  */
+
+// layout() (layout.js) tries more than one orientation for a 270°/360° fan, calling this
+// engine again with the same opts/style/generations and only the page geometry changed.
+// Ahnentafel resolution, every slot's abbreviation ladder, dates and places, the pedigree-
+// collapse markers, and unit-width measurements are all orientation-independent, so the
+// second try would otherwise redo all of it for nothing. `o` is the one object layout.js
+// builds per top-level layout() call (the same reference for every orientation candidate),
+// so identity on it is exactly "still the same call" — a size-1 cache is enough.
+let _slotCache = null;
+function buildSlotData(ctx, o, st, keepsake, G) {
+  const { tree, rootId, hasGlyphs } = ctx;
+  const c = _slotCache;
+  if (c && c.o === o && c.st === st && c.keepsake === keepsake && c.hasGlyphs === hasGlyphs && c.tree === tree && c.rootId === rootId && c.G === G) {
+    return c;
+  }
+  const warnings = [];
+  const ahnen = ancestors(tree, rootId, G, { adoptive: o.adoptive });
+  const slots = new Array(2 ** G).fill(null);
+  const shown = new Map();
+  for (const [a, id] of ahnen) {
+    const p = tree.people[id];
+    if (!p) continue;
+    slots[a] = makeSlot(a, p, o, st, keepsake, warnings, hasGlyphs);
+    shown.set(id, p);
+  }
+  const people = [...shown.values()];
+  const genById = new Map();
+  for (const [a, id] of ahnen) if (!genById.has(id)) genById.set(id, Math.floor(Math.log2(a)) + 1);
+  const { entries: collapseEntries } = collapseMarkers(ahnen, tree, slots);
+  const result = { o, st, keepsake, hasGlyphs, tree, rootId, G, ahnen, slots, people, genById, collapseEntries, warnings, W: unitWidths() };
+  _slotCache = result;
+  return result;
+}
+
 export function layoutFan(ctx) {
   const { opts: o, tree, rootId, page, style: st, kit, keepsake } = ctx;
   const G = ctx.generations;
@@ -63,26 +111,15 @@ export function layoutFan(ctx) {
   const K = G - 1;
   const aStart = -S / 2;
   const sizes = kit.textSizes;
-  const warnings = [];
-  const W = unitWidths();
 
   // ---- 1. slots and display text -----------------------------------------
-  const ahnen = ancestors(tree, rootId, G, { adoptive: o.adoptive });
-  const slots = new Array(2 ** G).fill(null);
-  const shown = new Map();
-  for (const [a, id] of ahnen) {
-    const p = tree.people[id];
-    if (!p) continue;
-    slots[a] = makeSlot(a, p, o, st, keepsake, warnings, ctx.hasGlyphs);
-    shown.set(id, p);
-  }
-  const people = [...shown.values()];
-  const genById = new Map();
-  for (const [a, id] of ahnen) if (!genById.has(id)) genById.set(id, Math.floor(Math.log2(a)) + 1);
+  const sd = buildSlotData(ctx, o, st, keepsake, G);
+  const { ahnen, slots, people, genById, collapseEntries, W } = sd;
+  const warnings = [...sd.warnings];
   const generationOf = id => genById.get(id) || 0;
 
   // ---- pedigree collapse -------------------------------------------------
-  const { entries: collapseEntries } = collapseMarkers(ahnen, tree, slots);
+  // (computed in buildSlotData above, alongside slots — cached the same way)
 
   // ---- furniture blocks --------------------------------------------------
   const live = page.live;
@@ -103,7 +140,7 @@ export function layoutFan(ctx) {
 
   // ---- 2. root medallion text (unit sizes) -------------------------------
   const root = slots[1];
-  const rootFont = st.fonts.root;
+  const rootFont = /^cg-/.test(st.fonts.root) ? safeFont(st.fonts.root, root ? root.ladder[0] : null, 'ebg-600') : st.fonts.root;
   const medText = medallionText(root, rootFont, st, keepsake, W, S === 180);
   const fr = MED_FRACTION[Math.min(8, Math.max(2, G))];
   const medScale = S === 180 ? 1.18 : 1;
@@ -384,7 +421,8 @@ export function layoutFan(ctx) {
 
 function unitWidths() {
   const caches = new Map();
-  return {
+  const splitCaches = new Map();
+  const self = {
     w(font, str) {
       if (!str) return 0;
       let c = caches.get(font);
@@ -393,7 +431,22 @@ function unitWidths() {
       if (v === undefined) { v = measureUnit(font, str); c.set(str, v); }
       return v;
     },
+    // splitTwo(str, widthOf) only depends on (font, str) — widthOf is unit widths in that
+    // font — yet solveRings calls it for every slot on every step of its λ bisection, and
+    // radialPlan's own s-search, yielding the same split for the same slot each time. That
+    // redundant word-splitting (and its .join() allocations) was measurably hot; cache it
+    // exactly like w() above so each (font, str) pair is split at most once per layoutFan().
+    split(font, str) {
+      if (!str) return null;
+      let c = splitCaches.get(font);
+      if (!c) { c = new Map(); splitCaches.set(font, c); }
+      if (c.has(str)) return c.get(str);
+      const v = splitTwo(str, x => self.w(font, x));
+      c.set(str, v);
+      return v;
+    },
   };
+  return self;
 }
 
 const measureUnit = (font, str) => textWidth(str, font, 1);
@@ -642,7 +695,20 @@ function solveRings({ R, rMed, Sroot, Sref, G, K, S, slots, st, o, W }) {
   const anyPlaces = k => ringSlots[k].some(s => s.places.length);
   const gutter = st.gutter || 0;
 
-  const nameFont = k => (k <= 2 ? st.fonts.nameInner : st.fonts.nameOuter);
+  // Of the registry's fonts, only Cormorant Garamond (cg-*, a style's occasional pick for
+  // the root/inner rings) has script gaps (docs/ARCHITECTURE.md "Fonts": no Greek); ebg-*
+  // and sans-* cover Latin Extended, Greek, Cyrillic and Vietnamese, so skip the scan below
+  // for the 5 of 6 styles that never assign cg-* to a name role — free for the common case.
+  // Where it does apply, check once per name's fullest ladder rung (a shortened rung only
+  // ever drops letters or adds '.', never a character index 0 lacks) and fall back to EB
+  // Garamond for the whole ring rather than per name, so a ring never mixes two type styles.
+  // Computed once here, not inside solve(), which bisects and would repeat this for nothing.
+  const CG_FONT = /^cg-/;
+  const namesFor = ks => ks.flatMap(k => (ringSlots[k] || []).map(s => s.ladder[0]));
+  const innerFont = CG_FONT.test(st.fonts.nameInner) ? safeFont(st.fonts.nameInner, namesFor([1, 2]), 'ebg-600') : st.fonts.nameInner;
+  const outerKs = []; for (let k = 3; k <= K; k++) outerKs.push(k);
+  const outerFont = CG_FONT.test(st.fonts.nameOuter) ? safeFont(st.fonts.nameOuter, namesFor(outerKs), 'ebg-400') : st.fonts.nameOuter;
+  const nameFont = k => (k <= 2 ? innerFont : outerFont);
   const solve = lam => {
     const rings = [null];
     let r = rMed;
@@ -711,7 +777,7 @@ function arcNeed(list, s, r0, span, plan, font, st, W) {
     const nw = W.w(font, slot.ladder[0]) * s;
     let lines = p;
     if (nw > L) {
-      const sp = splitTwo(slot.ladder[0], x => W.w(font, x));
+      const sp = W.split(font, slot.ladder[0]);
       if (sp) lines = ['n', ...p];
     }
     needs.push(planHeight(lines, s) + 2 * arcPad(s));
@@ -749,7 +815,7 @@ function radialPlan(list, cap, r0, span, font, st, W, hasDates, hasPlaces, gutte
   for (const slot of list) {
     let nw = W.w(font, slot.ladder[0]) * s;
     if (two) {
-      const sp = splitTwo(slot.ladder[0], x => W.w(font, x));
+      const sp = W.split(font, slot.ladder[0]);
       if (sp) nw = Math.min(nw, Math.max(W.w(font, sp[0]), W.w(font, sp[1])) * s);
     }
     let w = nw;
@@ -791,7 +857,7 @@ function fitArcSlot(slot, ring, centre, span, env) {
       const str = slot.ladder[rung];
       for (const nl of [1, 2]) {
         let nameLines = [str];
-        if (nl === 2) { const sp = splitTwo(str, x => W.w(font, x)); if (!sp) continue; nameLines = sp; }
+        if (nl === 2) { const sp = W.split(font, str); if (!sp) continue; nameLines = sp; }
         for (const f of tries) {
           const s = Math.max(MIN_TEXT_PT, q25(s0 * f));
           const res = tryArc(slot, nameLines, s, parts, ring, centre, span, flipped, hasMarker, env);
@@ -864,7 +930,7 @@ function tryArc(slot, nameLines, s, parts, ring, centre, span, flipped, hasMarke
       items.markerSpec = { n: slot.marker, x: r3(mx), y: r3(my), size: Math.max(MIN_TEXT_PT, s * 0.8) };
     }
     const g = arcGlyphs(l.str, l.font, l.size, cx, cy, rad, ang, { flip: flipped, valign: 'middle' });
-    items.push({ t: 'glyphs', font: l.font, size: l.size, color: colors[l.kind], g: [...g] });
+    items.push({ t: 'glyphs', font: l.font, size: l.size, color: colors[l.kind], g: quantizeRot(g) });
     if (l.kind === 'n') nameLines2.push(l.str);
   });
   void kinds;
@@ -906,7 +972,7 @@ function tryRadial(slot, rung, nl, s, plan, ring, centre, span, env, floor = fal
   const font = ring.font;
   const str = slot.ladder[rung];
   let nameLines = [str];
-  if (nl === 2) { const sp = splitTwo(str, x => W.w(font, x)); if (!sp) return null; nameLines = sp; }
+  if (nl === 2) { const sp = W.split(font, str); if (!sp) return null; nameLines = sp; }
   const sz = sizesFor(['n', 'd', 'p'], s);
   const lines = nameLines.map(t => ({ str: t, font, size: s, kind: 'n' }));
   const hasMarker = slot.marker != null;

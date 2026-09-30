@@ -34,7 +34,7 @@
 //   inside page.live; layout.js adds the ground, frame and colophon.
 
 import { PAPER, SIZE_LIMITS, pageSize, marginPt, MIN_GENERATIONS } from './sizes.js';
-import { setTextBackend, textWidth, smallCapsText, MIN_TEXT_PT } from './text.js';
+import { setTextBackend, textWidth, smallCapsText, safeFont, MIN_TEXT_PT, FLOOR_TEXT_PT, SMALL_CAPS_RATIO } from './text.js';
 import { getStyle, STYLE_KEYS, COLOR_MODES } from './styles.js';
 import { buildAtlas, pctLabel } from './atlas.js';
 import {
@@ -42,7 +42,7 @@ import {
 } from './ornaments.js';
 import { rectPath } from './path.js';
 import { layoutFan } from './layout-fan.js';
-import { applyOverrides, suggestRoot, autoGenerations } from '../engine/tree.js';
+import { applyOverrides, suggestRoot, autoGenerations, parentsOf } from '../engine/tree.js';
 
 export const CHARTS = Object.freeze(['fan', 'bowtie', 'pedigree']);
 export const SWEEPS = Object.freeze([180, 270, 360]);
@@ -102,6 +102,26 @@ export function defaultSweep(generations) {
   return generations <= 5 ? 180 : 270;
 }
 
+function normId(tree, id) {
+  if (!id) return null;
+  const s = String(id).replace(/^@(.+)@$/, '$1');
+  return tree.people[s] ? s : null;
+}
+
+/** The couple for a bowtie: rootId and their first partner, else rootId's two parents. */
+function coupleFor(tree, rootId) {
+  if (!rootId || !tree.people[rootId]) return null;
+  const p = tree.people[rootId];
+  for (const fid of p.fams || []) {
+    const fam = tree.families[fid];
+    const other = fam && fam.partners && fam.partners.find(x => x !== rootId && tree.people[x]);
+    if (other) return [rootId, other];
+  }
+  const { father, mother } = parentsOf(tree, rootId);
+  if (father && mother) return [father, mother];
+  return null;
+}
+
 /**
  * Normalise options: defaults, limits, overrides applied, root and depth chosen.
  * @returns {object} normalised opts (a new object)
@@ -124,9 +144,19 @@ export function normalizeOptions(opts) {
   o.dedication = typeof o.dedication === 'string' ? o.dedication.trim() : '';
   o.tree = applyOverrides(opts.tree, opts.overrides || {});
   const warnings = [];
-  if (o.chart !== 'bowtie') {
-    const rid = o.rootId && o.tree.people[String(o.rootId).replace(/^@(.+)@$/, '$1')] ? String(o.rootId).replace(/^@(.+)@$/, '$1') : suggestRoot(o.tree);
-    if (o.rootId && rid !== String(o.rootId).replace(/^@(.+)@$/, '$1')) warnings.push(`root ${o.rootId} not found; using ${rid}`);
+  if (o.chart === 'bowtie') {
+    const given = Array.isArray(o.coupleIds) ? o.coupleIds.map(id => normId(o.tree, id)) : [];
+    let ids = given.filter(Boolean);
+    if (ids.length < 2) {
+      const fallback = coupleFor(o.tree, ids[0] || normId(o.tree, o.rootId) || suggestRoot(o.tree));
+      if (fallback) { ids = fallback; warnings.push('coupleIds not given or not found; using the suggested couple'); }
+    }
+    if (ids.length < 2) throw new Error('bowtie needs two people (opts.coupleIds): a partner, or two parents, could not be found');
+    o.coupleIds = [ids[0], ids[1]];
+    o.rootId = ids[0];
+  } else {
+    const rid = o.rootId && o.tree.people[normId(o.tree, o.rootId)] ? normId(o.tree, o.rootId) : suggestRoot(o.tree);
+    if (o.rootId && rid !== normId(o.tree, o.rootId)) warnings.push(`root ${o.rootId} not found; using ${rid}`);
     o.rootId = rid;
     if (!o.rootId) throw new Error('the tree has no people');
   }
@@ -308,9 +338,20 @@ function makeKit(o, st, page, sizes, keepsake) {
   return kit;
 }
 
-/** Auto title (BRIEF §4.3): "The Ancestors of Margaret Rose Kowalski". */
+/** Auto title (BRIEF §4.3): "The Ancestors of Margaret Rose Kowalski"; for a bowtie,
+ * both partners' names ("Two Families" when neither can be shown). */
 export function titleText(o) {
   if (o.title) return o.title;
+  if (o.chart === 'bowtie') {
+    const nameOf = id => {
+      const p = id && o.tree.people[id];
+      if (!p) return '';
+      return p.living && o.privacy === 'living-only' ? '' : (p.name || '').trim();
+    };
+    const [a, b] = o.coupleIds || [];
+    const na = nameOf(a), nb = nameOf(b);
+    return na && nb ? `${na} & ${nb}` : 'Two Families';
+  }
   const p = o.tree.people[o.rootId];
   const living = p && p.living && o.privacy === 'living-only';
   const name = p && !living ? (p.name || '').trim() : '';
@@ -327,7 +368,7 @@ export function subtitleText(o, people) {
     if (y === null) continue;
     lo = Math.min(lo, y); hi = Math.max(hi, y);
   }
-  const gens = generationsLabel(o.generations);
+  const gens = o.chart === 'bowtie' ? `${generationsLabel(o.generations)} per side` : generationsLabel(o.generations);
   if (lo === Infinity) return gens;
   return lo === hi ? `${gens} · ${lo}` : `${gens} · ${lo}–${hi}`;
 }
@@ -357,11 +398,6 @@ function runWidth(items, font, tracking) {
 const r3 = v => Math.round(v * 1000) / 1000;
 
 let glyphProbe = null;
-/** The font itself, or `fallback` when it lacks a glyph in str (Cormorant has no Greek). */
-function safeFont(font, str, fallback) {
-  if (!glyphProbe || !str) return font;
-  try { return glyphProbe(font, str).ok ? font : fallback; } catch { return font; }
-}
 
 function splitTitle(title) {
   const m = title.match(/^((?:the\s+)?(?:ancestors|family|descendants|forebears)\s+of)\s+(.+)$/i);
@@ -383,6 +419,11 @@ function headBlock(o, st, sizes, keepsake, args, kit) {
   const tr = st.title.tracking;
   const bigFont = safeFont(st.fonts.title, big, 'ebg-400');
   const smallFont = safeFont(st.fonts.titleSmall, small, 'ebg-400');
+  // smallCapsText renders lower-case letters at size * SMALL_CAPS_RATIO, so a nominal
+  // size must be this much bigger than MIN_TEXT_PT for its *rendered* glyphs to actually
+  // clear the floor (BRIEF §4.7: never below 6pt / floor 5.5pt) — see SMALL_CAPS_RATIO.
+  const scMin = st.title.case === 'smallcaps' ? MIN_TEXT_PT / SMALL_CAPS_RATIO : MIN_TEXT_PT;
+  const scFloor = st.title.case === 'smallcaps' ? FLOOR_TEXT_PT / SMALL_CAPS_RATIO : FLOOR_TEXT_PT;
   // size the big line to fit, allowing two balanced lines for long titles
   let S = maxSize;
   const widthAt = (str, font, s) => titleRun(str, font, s, st, st.ink, tr * s).width;
@@ -399,9 +440,16 @@ function headBlock(o, st, sizes, keepsake, args, kit) {
     const one = widthAt(big, bigFont, S);
     if (bestSplit && S * fitW / one < S * 0.72) bigLines = bestSplit.lines;
     const wMax = Math.max(...bigLines.map(l => widthAt(l, bigFont, S)));
-    if (wMax > fitW) S = Math.max(MIN_TEXT_PT + 2, S * fitW / wMax);
+    if (wMax > fitW) S = Math.max(scMin + 2, S * fitW / wMax);
   }
-  const smallS = Math.max(MIN_TEXT_PT, S * (st.title.case === 'italic' ? 0.46 : 0.4));
+  let smallS = Math.max(scMin, S * (st.title.case === 'italic' ? 0.46 : 0.4));
+  // The lead-in ("The Ancestors of") is a fixed short phrase, so this floor essentially
+  // never overflows fitW — but if a future lead-in phrase ever did, shrink no further
+  // than scFloor (the ratio-aware hard floor) rather than silently running past the margin.
+  if (small) {
+    const w = widthAt(small, smallFont, smallS);
+    if (w > fitW) smallS = Math.max(scFloor, smallS * fitW / w);
+  }
   const subS = Math.max(MIN_TEXT_PT, Math.min(S * 0.42, sizes.legend * 1.35));
   const dedS = Math.max(MIN_TEXT_PT, subS * 0.96);
   const smallRun = small ? titleRun(st.title.case === 'italic' ? small : small, smallFont, smallS, st, st.inkSoft, tr * 1.25 * smallS + (st.title.case === 'italic' ? smallS * 0.12 : 0)) : null;
