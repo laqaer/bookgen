@@ -1,0 +1,168 @@
+---
+title: Help and troubleshooting
+description: Answers for getting your file out, strange characters in names, very large trees, iPad and iPhone, choosing a size, unplaced birthplaces and license keys.
+---
+
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Help</li>
+      </ol>
+    </nav>
+    <p class="eyebrow">Help</p>
+    <h1>Help and troubleshooting.</h1>
+    <p class="lead">The questions people ask most, with plain answers. If yours isn&rsquo;t here, write to <a href="mailto:{{site.email.support}}">{{site.email.support}}</a>. We aim to reply within a day, Monday to Friday.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="article">
+      <div>
+        <section class="help-topic" id="file" aria-labelledby="file-h">
+          <h2 id="file-h">Getting your family tree file</h2>
+          <div class="prose">
+            <p>Gildroot reads GEDCOM files, the standard file every family tree program can save. They end in <code>.ged</code>, and sometimes arrive inside a <code>.zip</code> file; Gildroot opens both, and GEDCOM 7 <code>.gdz</code> files too.</p>
+            <ul>
+              <li><strong>Ancestry:</strong> <span class="menu-path"><span>Trees</span><span>your tree</span><span>More</span><span>Tree Settings</span><span>Export tree</span></span>. Only the tree&rsquo;s owner can export it. <a href="/print-ancestry-tree/">Step by step</a>.</li>
+              <li><strong>MyHeritage:</strong> <span class="menu-path"><span>Family tree</span><span>Manage trees</span><span>Export to GEDCOM</span></span>, then <em>Begin the export</em>.</li>
+              <li><strong>FamilySearch:</strong> there is no direct export of a whole family tree. A free program such as RootsMagic Essentials or Ancestral Quest Basics can read your FamilySearch tree and save a GEDCOM file.</li>
+              <li><strong>A program on your computer</strong> (RootsMagic, Family Tree Maker, Gramps and others): look for <em>Export</em> or <em>GEDCOM</em> in the File menu.</li>
+            </ul>
+            <p>We checked the Ancestry and MyHeritage menus against their own help pages on 30 September 2026. No file at all? The <a href="/make/#builder">Quick Builder</a> lets you type in up to 15 people instead.</p>
+          </div>
+        </section>
+
+        <section class="help-topic" id="characters" aria-labelledby="characters-h">
+          <h2 id="characters-h">Strange characters in names</h2>
+          <div class="prose">
+            <p>If a name like <strong>Se&aacute;n</strong> shows up as <strong>Se&Atilde;&iexcl;n</strong> or <strong>Se?n</strong>, the file was saved in an older text format than the one it says it uses. Gildroot reads UTF-8, UTF-16, ANSEL (used by older genealogy programs), and the older Windows, DOS and Mac character sets, and usually works out which one from the file itself. When a file mislabels itself, try these in order:</p>
+            <ol>
+              <li>Check the name looks right in the program you exported from. If it is wrong there, fix it there.</li>
+              <li>Export again and choose <strong>UTF-8</strong> or <strong>Unicode</strong> if the program offers a choice.</li>
+              <li>Fix the name in the studio: click the person on the chart and change the name shown. Your original file is never changed.</li>
+            </ol>
+            <p>Names in Chinese, Japanese, Korean, Hebrew or Arabic script can&rsquo;t be printed yet. Before you pay, the studio lists exactly which names those are and lets you type a romanized form for each one.</p>
+          </div>
+        </section>
+
+        <section class="help-topic" id="big-files" aria-labelledby="big-h">
+          <h2 id="big-h">Very large family trees</h2>
+          <div class="prose">
+            <p>Large files are fine. A chart shows one person&rsquo;s ancestors, or one couple&rsquo;s, never the whole file: up to 6 generations on Letter paper and up to 8 on a 24&times;36 poster. Everyone else in the file is simply left off that chart.</p>
+            <p>A file with tens of thousands of people can take a few seconds to read, longer on an older computer or a phone. If it seems stuck, close other tabs and try again on a computer. If it still won&rsquo;t open, write to us and tell us roughly how many people the file has and which program made it. Please don&rsquo;t send the file itself unless we ask.</p>
+          </div>
+        </section>
+
+        <section class="help-topic" id="ipad" aria-labelledby="ipad-h">
+          <h2 id="ipad-h">iPad and iPhone</h2>
+          <div class="prose">
+            <p>Gildroot works in Safari and Chrome on iPad and iPhone. Tap <em>Choose a file</em> and pick the file from the Files app; if it came by email, save the attachment to Files first.</p>
+            <ul>
+              <li><strong>On a phone</strong> you can open a file, see and buy your chart, export it, and use the Quick Builder and Ask-the-family links. Detailed editing of a large tree is easier on a screen the size of an iPad or bigger.</li>
+              <li><strong>JPEGs are smaller on iPad and iPhone.</strong> Their browsers limit how large an image can be, so JPEGs made there stop at 16.7 megapixels. A 24&times;36 JPEG comes out at about 139 dots per inch, and the studio labels it that way. PDFs aren&rsquo;t affected, so choose the PDF for a big poster.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="help-topic" id="size" aria-labelledby="size-h">
+          <h2 id="size-h">Which size to choose</h2>
+          <div class="prose">
+            <p>Every size is limited to the generations it can hold with every name at least 6 points tall, so each one can still be read on the wall. Bowtie numbers are per side.</p>
+            <div class="table-wrap">{{> gen-table}}</div>
+            <p>Letter or A4 is free and prints at home. 11&times;14 fits a standard frame and suits 4 to 6 generations. 18&times;24 and 24&times;36 are poster sizes for 7 or 8 generations, and print well at a copy shop or photo counter.</p>
+          </div>
+        </section>
+
+        <section class="help-topic" id="birthplaces" aria-labelledby="birthplaces-h">
+          <h2 id="birthplaces-h">Birthplaces Gildroot couldn&rsquo;t place</h2>
+          <div class="prose">
+            <p>The Atlas color mode colors each ancestor by the country they were born in. Gildroot recognizes countries in English and in their own spellings, historical states, US states and their abbreviations, Canadian provinces, the four UK nations and Irish counties. It tells you how many it could place, for example &ldquo;resolved 212 of 240 birthplaces&rdquo;.</p>
+            <p>The rest are listed by how often they appear. Places that belonged to an empire later split into several countries, such as Austria-Hungary, the Russian Empire or Galicia, always go on this list, because only you know which of today&rsquo;s countries you mean. Pick a country for each in two clicks. Your choices are saved with the project; your file is not changed.</p>
+          </div>
+        </section>
+
+        <section class="help-topic" id="keys" aria-labelledby="keys-h">
+          <h2 id="keys-h">License keys</h2>
+          <div class="faq">
+            <details>
+              <summary>Where is my license key?</summary>
+              <div class="faq__answer"><p>On the receipt page straight after checkout, and in the receipt email from Lemon Squeezy, which runs our checkout. Check your spam folder if you can&rsquo;t find it. Paste the key into the studio when it asks, or on the <a href="/unlock/">unlock page</a>.</p></div>
+            </details>
+            <details>
+              <summary>I have a new computer or tablet.</summary>
+              <div class="faq__answer"><p>Paste the same key on the new device. Each device counts as one activation: 3 for Heirloom, 5 for Family Historian, 9 for Family Pack and 10 for Professional. If you have used them all because you replaced devices, write to us and we&rsquo;ll reset them.</p></div>
+            </details>
+            <details>
+              <summary>I lost my key.</summary>
+              <div class="faq__answer"><p>Write to <a href="mailto:{{site.email.support}}">{{site.email.support}}</a> from the email address you bought with, or tell us that address, and we&rsquo;ll send it again.</p></div>
+            </details>
+            <details>
+              <summary>Does the key work without an internet connection?</summary>
+              <div class="faq__answer"><p>Yes, for 30 days after it was last checked. The studio checks the key when you are online; after 30 days offline it asks to check again before a paid export.</p></div>
+            </details>
+            <details>
+              <summary>My key says it&rsquo;s for a different family.</summary>
+              <div class="faq__answer"><p>An Heirloom key is for one person, or one couple, at the center of the chart. To make charts centered on someone else, move up to Family Historian for ${{site.prices.upgrade}}; the studio shows the upgrade link once your Heirloom key is checked.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <section class="help-topic" id="more" aria-labelledby="more-h">
+          <h2 id="more-h">More answers</h2>
+          <div class="faq">
+            <details>
+              <summary>Why are some dates missing from my chart?</summary>
+              <div class="faq__answer"><p>People who may still be living have their dates hidden by default: anyone with no death record who was born less than 100 years ago. You can show &ldquo;Living&rdquo; in place of the name instead, or show everything, from the Privacy setting in the studio.</p></div>
+            </details>
+            <details>
+              <summary>My tree has gaps. Will the chart look broken?</summary>
+              <div class="faq__answer"><p>No. An empty place shows as a faint, unlabeled wedge, and you can trim empty branches away. At 4 generations or fewer the chart switches to a keepsake layout with larger type.</p></div>
+            </details>
+            <details>
+              <summary>Why does one ancestor appear twice?</summary>
+              <div class="faq__answer"><p>When cousins marry, their shared ancestors appear in more than one place on a chart. This is common in older trees and is called pedigree collapse. Gildroot marks each repeated person with a small number, and the legend says how many times they appear.</p></div>
+            </details>
+            <details>
+              <summary>Can I get a refund?</summary>
+              <div class="faq__answer"><p>Yes, within 30 days of buying, with no questions. Reply to your receipt email or write to <a href="mailto:{{site.email.support}}">{{site.email.support}}</a>. <a href="/legal/refunds/">The refund policy</a>.</p></div>
+            </details>
+          </div>
+        </section>
+      </div>
+
+      <aside class="article__aside">
+        <nav class="toc" aria-labelledby="toc-h">
+          <h2 id="toc-h" class="label-caps">On this page</h2>
+          <ol>
+            <li><a href="#file">Getting your file</a></li>
+            <li><a href="#characters">Strange characters in names</a></li>
+            <li><a href="#big-files">Very large trees</a></li>
+            <li><a href="#ipad">iPad and iPhone</a></li>
+            <li><a href="#size">Which size to choose</a></li>
+            <li><a href="#birthplaces">Unplaced birthplaces</a></li>
+            <li><a href="#keys">License keys</a></li>
+            <li><a href="#more">More answers</a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="next">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="next">Still stuck? Write to us.</h2>
+        <p class="cta-band__text">Tell us what you see on screen and which program made your file. Please don&rsquo;t attach the file itself unless we ask.</p>
+      </div>
+      <div class="cta-band__action">
+        <a class="btn btn--primary btn--block-phone" href="mailto:{{site.email.support}}">Email {{site.email.support}}</a>
+        <a class="link-arrow" href="/privacy/">What happens to your data</a>
+      </div>
+    </div>
+  </div>
+</section>

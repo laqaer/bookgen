@@ -1,0 +1,33 @@
+<!-- Buy links. Until the owner sets checkout.enabled and the variant URLs in
+     web/src/_data/site.json, every [data-buy] box shows its "Checkout opens in October"
+     note and no link at all (never a dead one). Once enabled, the link for that variant
+     is shown, opening Lemon Squeezy's hosted checkout in a new tab with the page it came
+     from as checkout[custom][src]. No Lemon Squeezy script is loaded. -->
+<script type="application/json" id="checkout-config">{"enabled": {{site.checkout.enabled}}, "links": {"heirloom": "{{site.checkout.heirloom}}", "historian": "{{site.checkout.historian}}", "familyPack": "{{site.checkout.familyPack}}", "professional": "{{site.checkout.professional}}", "giftHeirloom": "{{site.checkout.giftHeirloom}}", "giftHistorian": "{{site.checkout.giftHistorian}}"}}</script>
+<script>
+(function () {
+  var cfg;
+  try { cfg = JSON.parse(document.getElementById('checkout-config').textContent); } catch (e) { return; }
+  if (!cfg || cfg.enabled !== true) return;
+  var boxes = document.querySelectorAll('[data-buy]'), shown = false;
+  for (var i = 0; i < boxes.length; i++) {
+    var box = boxes[i], url = cfg.links[box.getAttribute('data-buy')] || '';
+    var link = box.querySelector('[data-buy-link]'), soon = box.querySelector('[data-buy-soon]');
+    if (!link || !/^https:\/\//.test(url)) continue;
+    try {
+      var u = new URL(url);
+      u.searchParams.set('checkout[custom][src]', location.pathname);
+      link.href = u.toString();
+    } catch (e) { continue; }
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.hidden = false;
+    if (soon) soon.hidden = true;
+    shown = true;
+  }
+  if (shown) {
+    var notes = document.querySelectorAll('[data-buy-soon-note]');
+    for (var j = 0; j < notes.length; j++) notes[j].hidden = true;
+  }
+})();
+</script>

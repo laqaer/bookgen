@@ -1,0 +1,180 @@
+---
+title: Print a family tree poster: sizes, paper, frames
+description: Pick a poster size to see how many generations fit, which paper and frame to use, and whether to print it the same day, order online, or print at home on Letter sheets.
+---
+
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Print planner</li>
+      </ol>
+    </nav>
+    <p class="eyebrow">Print planner</p>
+    <h1>Plan the print.</h1>
+    <p class="lead">Choose a size. See how many generations it holds, what paper and frame to buy, and the three ways to get it printed.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="planner-h">
+  <div class="container">
+    <h2 class="visually-hidden" id="planner-h">Size planner</h2>
+    <div class="planner" id="planner">
+      <fieldset class="size-picker">
+        <legend>Poster size</legend>
+        <label><input type="radio" name="size" value="letter" data-label="Letter" data-w="8.5" data-h="11" data-fan="6" data-bowtie="4" data-pedigree="5" data-letter="1" data-a4="1" data-frame="An 8.5&times;11 frame, or an 11&times;14 frame with a mat cut for Letter."> Letter <small>8.5&times;11 in</small></label>
+        <label><input type="radio" name="size" value="a4" data-label="A4" data-w="8.27" data-h="11.69" data-fan="6" data-bowtie="4" data-pedigree="5" data-letter="1" data-a4="1" data-frame="An A4 frame, or a larger frame with a mat cut for A4."> A4 <small>210&times;297 mm</small></label>
+        <label><input type="radio" name="size" value="11x14" data-label="11&times;14" data-w="11" data-h="14" data-fan="6" data-bowtie="5" data-pedigree="5" data-letter="4" data-a4="4" data-frame="A standard 11&times;14 frame, or a 16&times;20 frame with a mat cut for 11&times;14."> 11&times;14 <small>in</small></label>
+        <label><input type="radio" name="size" value="16x20" data-label="16&times;20" data-w="16" data-h="20" data-fan="7" data-bowtie="5" data-pedigree="6" data-letter="6" data-a4="6" data-frame="A standard 16&times;20 frame."> 16&times;20 <small>in</small></label>
+        <label><input type="radio" name="size" value="18x24" data-label="18&times;24" data-w="18" data-h="24" data-fan="7" data-bowtie="5" data-pedigree="6" data-letter="8" data-a4="8" data-frame="A standard 18&times;24 poster frame." checked> 18&times;24 <small>in</small></label>
+        <label><input type="radio" name="size" value="a2" data-label="A2" data-w="16.54" data-h="23.39" data-fan="7" data-bowtie="5" data-pedigree="6" data-letter="8" data-a4="8" data-frame="An A2 frame."> A2 <small>420&times;594 mm</small></label>
+        <label><input type="radio" name="size" value="20x30" data-label="20&times;30" data-w="20" data-h="30" data-fan="8" data-bowtie="6" data-pedigree="6" data-letter="12" data-a4="9" data-frame="A 20&times;30 poster frame."> 20&times;30 <small>in</small></label>
+        <label><input type="radio" name="size" value="24x36" data-label="24&times;36" data-w="24" data-h="36" data-fan="8" data-bowtie="6" data-pedigree="6" data-letter="15" data-a4="16" data-frame="A standard 24&times;36 poster frame."> 24&times;36 <small>in</small></label>
+        <label><input type="radio" name="size" value="a1" data-label="A1" data-w="23.39" data-h="33.11" data-fan="8" data-bowtie="6" data-pedigree="6" data-letter="15" data-a4="15" data-frame="An A1 frame."> A1 <small>594&times;841 mm</small></label>
+      </fieldset>
+
+      <div class="planner__out" aria-live="polite">
+        <div>
+          <p class="eyebrow" id="p-size-line">At 18&times;24</p>
+          <dl class="gens" style="margin-top:var(--space-xs)">
+            <div><dt>Fan chart</dt><dd id="p-fan">7<small>generations</small></dd></div>
+            <div><dt>Bowtie</dt><dd id="p-bowtie">5<small>each side</small></dd></div>
+            <div><dt>Pedigree</dt><dd id="p-pedigree">6<small>generations</small></dd></div>
+          </dl>
+        </div>
+        <div class="planner__scale" id="p-scale" aria-hidden="true">
+          <div class="planner__sheet" id="p-letter-sheet" style="width:51px;height:66px">Letter</div>
+          <div class="planner__sheet planner__sheet--on" id="p-sheet" style="width:108px;height:144px">18&times;24</div>
+        </div>
+        <p class="caption" id="p-scale-cap">To scale, beside a Letter sheet.</p>
+        <dl class="facts">
+          <dt>Frame</dt><dd id="p-frame">A standard 18&times;24 poster frame.</dd>
+          <dt>At home</dt><dd id="p-home">8 Letter sheets (or 8 A4), plus one page with the assembly map.</dd>
+          <dt>Free?</dt><dd id="p-free">No. Sizes above Letter and A4 are part of the $29 license.</dd>
+        </dl>
+      </div>
+    </div>
+    <p class="caption" style="margin-top:var(--space-m)">Generations per size are the limits the studio itself uses (<span class="nums">web/src/app/charts/sizes.js</span>), so no name prints smaller than 6 points. Sheet counts come from the same tiling code the studio uses, with a quarter-inch overlap.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="all-sizes">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2 class="content-h2" id="all-sizes">Every size at a glance</h2>
+        <p style="margin-top:var(--space-s)">Bowtie numbers are per side. Letter and A4 PDFs of up to 5 generations are free.</p>
+      </div>
+      <div class="table-wrap">
+        {{> gen-table}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="paper">
+  <div class="container">
+    <div class="split">
+      <div><h2 class="content-h2" id="paper">Paper: matte or photo</h2></div>
+      <div class="prose">
+        <p>Most charts are fine print on a light ground, and read best without glare.</p>
+        <dl class="gift__paths">
+          <div><dt>Matte poster paper</dt><dd>No shine, so names read under a lamp and behind glass. The first choice for Ivory, Botanical, Letterpress, Nordic and Cartographer.</dd></div>
+          <div><dt>Photo paper</dt><dd>Luster, satin or glossy. Deeper darks and richer color, with some reflection. The Midnight Gilt style prints best on photo paper or matte poster paper, never on plain paper.</dd></div>
+          <div><dt>Plain office paper</dt><dd>Fine for a desk copy or a test print. For home tiles, a heavier paper than everyday copy paper shows less through from the back, if your printer takes it.</dd></div>
+        </dl>
+        <p>Before a large order, print one Letter sheet at home at 100% to check spellings and colors. Screens are brighter than paper; dark grounds come out darker in print.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="where">
+  <div class="container">
+    <div class="split">
+      <div><h2 class="content-h2" id="where">Three ways to print it</h2></div>
+      <div class="prose">
+        <h3>The same day, at a store</h3>
+        <p>Many drugstore photo counters and office print shops print posters within hours. Photo counters usually take a JPEG and print on photo paper; print shops usually take a PDF. Sizes, papers and pickup times vary by store, so call or check their website first. Gildroot exports both: a vector PDF at the exact size, and a JPEG at 200 dpi up to 18&times;24 and 150 dpi above that.</p>
+        <h3>Online, delivered</h3>
+        <p>Online printers offer more papers and can frame the print for you. They usually need several business days, plus shipping, and holiday cut-off dates vary by company. Order early for a gift.</p>
+        <h3 id="tiles">At home, on Letter or A4 sheets</h3>
+        <p>A tiled print splits the poster across ordinary sheets you trim and tape together. See the steps below.</p>
+        <p class="caption">When you send a chart to a printer, that file goes to them. Gildroot never sees it, and never sees your family tree file.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="howto">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2 class="content-h2" id="howto">Printing a poster at home</h2>
+        <p style="margin-top:var(--space-s)">A 24&times;36 fan takes 15 Letter sheets plus the map page. Allow an hour, a ruler, a craft knife or sharp scissors, and clear tape.</p>
+        <div class="tile-map" aria-hidden="true" style="--cols:3;--rows:5">
+          <span>A1</span><span>A2</span><span>A3</span>
+          <span>B1</span><span>B2</span><span>B3</span>
+          <span>C1</span><span>C2</span><span>C3</span>
+          <span>D1</span><span>D2</span><span>D3</span>
+          <span>E1</span><span>E2</span><span>E3</span>
+        </div>
+        <p class="caption">Our drawing of the assembly map for a 24&times;36 poster on Letter sheets: 3 columns, 5 rows, each sheet labeled by row and column.</p>
+      </div>
+      <ol class="steps">
+        <li><div>In the studio, choose the poster size you want, then export <strong>Tiled home print</strong> on Letter or A4.</div></li>
+        <li><div>Print every page at <strong>100%</strong>, or &ldquo;Actual size.&rdquo; Turn off &ldquo;Fit to page,&rdquo; or the pieces will not line up.</div></li>
+        <li><div>Page 1 is the <strong>assembly map</strong>. Every other sheet is labeled, such as &ldquo;Row B &middot; Column 3.&rdquo; Lay them out in order on a table.</div></li>
+        <li><div>Trim the white margin from the <strong>left and top</strong> of each sheet, along the crop marks. Leave the first column&rsquo;s left edge and the first row&rsquo;s top edge untrimmed.</div></li>
+        <li><div>Neighboring sheets share a <strong>quarter inch</strong> of the picture. Lay each trimmed edge over its neighbor so the ticks line up, then tape along the back.</div></li>
+        <li><div>Trim the outer edge, then mount it on foam board or poster board before framing, so the joins stay flat.</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div><h2 class="content-h2" id="faq">Questions</h2></div>
+      <div class="faq">
+        <details>
+          <summary>Which size should I choose?</summary>
+          <div class="faq__answer"><p>Count the generations you want, then pick the smallest size that holds them. For a fan: 6 generations fit on 11&times;14, 7 on 16&times;20 or 18&times;24, and 8 on 20&times;30 or 24&times;36. For a gift of 4 generations or fewer, 11&times;14 is plenty, and the keepsake layout uses the extra room for larger type.</p></div>
+        </details>
+        <details>
+          <summary>I made my chart on an iPad. Is the picture sharp enough?</summary>
+          <div class="faq__answer"><p>The PDF is vector, so it is sharp at any size, on any device. The JPEG for photo counters is limited on iPhone and iPad to 16.7 megapixels, so a 24&times;36 JPEG comes out at about 139 dpi, not 150. We label it honestly. Most stores print that well; for the sharpest result, send the PDF.</p></div>
+        </details>
+        <details>
+          <summary>Does the printer need a bleed?</summary>
+          <div class="faq__answer"><p>Some print shops ask for one. The PDF export can add a 0.125 inch bleed and crop marks. Every chart also keeps a margin inside its own edge, at least 6% of the short side, so no name sits near the trim.</p></div>
+        </details>
+      </div>
+    </div>
+    <nav class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Related</h2>
+      <ul class="link-rows link-rows--grid" role="list">
+        <li><a href="/guides/print-a-large-family-tree/"><span class="link-rows__title">How to print a large family tree</span><span class="link-rows__desc">The full guide, from choosing a size to hanging it.</span></a></li>
+        <li><a href="/charts/"><span class="link-rows__title">The three charts</span><span class="link-rows__desc">Fan, bowtie and pedigree, with examples at each size.</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="next">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="next">Make yours at this size.</h2>
+        <p class="cta-band__text">Free to make and look at on screen. $29 once for every size up to 24&times;36. Your file is read on this computer. Nothing is uploaded.</p>
+      </div>
+      <div class="cta-band__action">
+        <a class="btn btn--primary btn--block-phone" href="/make/">Make yours at this size</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="/app/tools/print-planner.js"></script>

@@ -1,0 +1,105 @@
+0 HEAD
+1 SOUR GILDROOT
+2 NAME Gildroot studio test fixture
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 _HOME @P1@
+1 NOTE FICTIONAL TEST DATA for the studio's glyph preflight. None of these people are real.
+2 CONT Two names are in scripts the chart fonts cannot print and have no romanized form.
+0 @P1@ INDI
+1 NAME Mei /Carter/
+1 SEX F
+1 BIRT
+2 DATE 1958
+2 PLAC Seattle, Washington, USA
+1 FAMC @F1@
+0 @P2@ INDI
+1 NAME David /Carter/
+1 SEX M
+1 BIRT
+2 DATE 1930
+2 PLAC Portland, Oregon, USA
+1 DEAT
+2 DATE 2004
+1 FAMS @F1@
+1 FAMC @F2@
+0 @P3@ INDI
+1 NAME Lin /Chen/
+1 SEX F
+1 BIRT
+2 DATE 1933
+2 PLAC Taipei, Taiwan
+1 DEAT
+2 DATE 2011
+1 FAMS @F1@
+1 FAMC @F3@
+0 @P4@ INDI
+1 NAME Samuel /Carter/
+1 SEX M
+1 BIRT
+2 DATE 1901
+2 PLAC Boston, Massachusetts, USA
+1 DEAT
+2 DATE 1970
+1 FAMS @F2@
+0 @P5@ INDI
+1 NAME Hannah /Cohen/
+1 SEX F
+1 BIRT
+2 DATE 1905
+2 PLAC Vilna, Russian Empire
+1 DEAT
+2 DATE 1988
+1 FAMS @F2@
+1 FAMC @F4@
+0 @P6@ INDI
+1 NAME /陈/ 志明
+1 SEX M
+1 BIRT
+2 DATE 1904
+1 DEAT
+2 DATE 1979
+1 FAMS @F3@
+0 @P7@ INDI
+1 NAME /李/ 淑芬
+1 SEX F
+1 BIRT
+2 DATE 1908
+1 DEAT
+2 DATE 1990
+1 FAMS @F3@
+0 @P8@ INDI
+1 NAME אברהם /כהן/
+1 SEX M
+1 BIRT
+2 DATE 1875
+1 DEAT
+2 DATE 1940
+1 FAMS @F4@
+0 @P9@ INDI
+1 NAME Rivka /Levin/
+1 SEX F
+1 BIRT
+2 DATE 1879
+1 DEAT
+2 DATE 1951
+1 FAMS @F4@
+0 @F1@ FAM
+1 HUSB @P2@
+1 WIFE @P3@
+1 CHIL @P1@
+0 @F2@ FAM
+1 HUSB @P4@
+1 WIFE @P5@
+1 CHIL @P2@
+0 @F3@ FAM
+1 HUSB @P6@
+1 WIFE @P7@
+1 CHIL @P3@
+0 @F4@ FAM
+1 HUSB @P8@
+1 WIFE @P9@
+1 CHIL @P5@
+0 TRLR

@@ -1,0 +1,161 @@
+---
+title: Atlas: a family tree colored by birthplace
+description: Atlas colors every ancestor on your fan or bowtie chart by the country they were born in, with a legend and a one-line summary. Examples, sizes and how it works.
+---
+
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/charts/">Charts</a></li>
+        <li aria-current="page">Atlas birthplace colors</li>
+      </ol>
+    </nav>
+    <p class="eyebrow">Color mode</p>
+    <h1>Atlas: where they were born.</h1>
+    <p class="lead">Atlas colors each ancestor by the country they were born in. One look shows where the family came from, and when the lines crossed an ocean.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="examples">
+  <div class="container">
+    <div class="running-head">
+      <span id="examples">Three sizes, drawn to one scale</span>
+      <span>Drawn by Gildroot from real files</span>
+    </div>
+    <ul class="size-row" role="list" style="--wmax:36">
+      <li class="size-row__item" style="--w:11">
+        <img src="/assets/img/charts/atlas-letter.jpg" width="1400" height="1082" loading="lazy" alt="A half-circle fan chart of the fictional Almeida–Novak family on Letter paper in the Nordic style, each person colored by birth country, with a legend: Portugal, United States, Czechia, Ireland, Greece, Norway and Vietnam.">
+        <div class="museum-label">
+          <p class="museum-label__title">Letter</p>
+          <p class="museum-label__meta nums">Fan, Atlas &middot; 5 generations</p>
+          <p>Born in seven countries across five generations.</p>
+        </div>
+      </li>
+      <li class="size-row__item" style="--w:24">
+        <img src="/assets/img/charts/atlas-18x24.jpg" width="1400" height="1050" loading="lazy" alt="The same family as a six-generation fan at 18×24 in the Ivory style, colored by birthplace: Portugal on the mother's side, and Czechia, Norway, Vietnam, Ireland and Greece on the father's side.">
+        <div class="museum-label">
+          <p class="museum-label__title">18&times;24</p>
+          <p class="museum-label__meta nums">Fan, Atlas &middot; 6 generations</p>
+          <p>Ivory, with the legend top left.</p>
+        </div>
+      </li>
+      <li class="size-row__item" style="--w:36">
+        <img src="/assets/img/charts/atlas-24x36.jpg" width="1400" height="933" loading="lazy" alt="An eight-generation fan of Queen Victoria's ancestors at 24×36 in the Botanical style, colored by birthplace: almost all in one color for Germany, with small patches for the United Kingdom, Sweden, Austria, Denmark, France and the Netherlands.">
+        <div class="museum-label">
+          <p class="museum-label__title">24&times;36</p>
+          <p class="museum-label__meta nums">Fan, Atlas &middot; 8 generations</p>
+          <p>Queen Victoria: born in ten countries across eight generations.</p>
+        </div>
+      </li>
+    </ul>
+    <div class="size-row__rule" aria-hidden="true"></div>
+    <p class="caption" style="margin-top:var(--space-s)">Letter and 18&times;24: the fictional Almeida&ndash;Novak sample family. 24&times;36: Wikidata (CC0). Each summary line is written by the chart itself from the file.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="what">
+  <div class="container">
+    <div class="media-split">
+      <div class="prose">
+        <h2 class="content-h2" id="what">How Atlas works</h2>
+        <p>Atlas reads each person&rsquo;s birthplace from your file and works out which present-day country it is in. &ldquo;T&aacute;bor, Bohemia, Austrian Empire&rdquo; becomes Czechia. &ldquo;Castlebar, County Mayo&rdquo; becomes Ireland. &ldquo;NY&rdquo; becomes the United States. The engine knows more than 2,500 place names: countries in English and in their own languages, historical states, US states and their abbreviations, Canadian provinces, the four UK nations, and Irish counties.</p>
+        <p>The most common country gets the first of seven colors, the next the second, and so on. Everything after the seventh shares one gray, labeled &ldquo;Other.&rdquo; People with no birthplace keep the style&rsquo;s own tone.</p>
+        <p>Some old places no longer match one country. Galicia is now split between Poland and Ukraine, and there is also a Galicia in Spain. Places like that are never guessed. The studio lists them, most common first, and you choose the country for each in two clicks.</p>
+        <p>You can also show US states separately, for a family that moved within the United States.</p>
+      </div>
+      <div>
+        <h2 class="content-h2">In the 18&times;24 example</h2>
+        <p class="caption" style="margin-top:var(--space-xs)">52 people on the chart have a recorded birthplace. Atlas placed all 52.</p>
+        <div class="migrate__bar" role="img" aria-label="Birthplaces of the 52 people with a recorded birthplace: 27 Portugal, 7 Czechia, 6 Ireland, 5 United States, 4 Norway, 2 Greece, 1 Vietnam." style="margin-top:var(--space-m)">
+          <span class="migrate__seg" style="width:51.9%;background:#9bb6dd;color:var(--fg)">Portugal</span>
+          <span class="migrate__seg" style="width:13.5%;background:#c7b37b"></span>
+          <span class="migrate__seg" style="width:11.5%;background:#d6a5ab"></span>
+          <span class="migrate__seg" style="width:9.6%;background:#b1cbb1"></span>
+          <span class="migrate__seg" style="width:7.7%;background:#cfbfec"></span>
+          <span class="migrate__seg" style="width:3.8%;background:#9dd8d8"></span>
+          <span class="migrate__seg" style="width:1.9%;background:#eab793"></span>
+        </div>
+        <ul class="migrate__legend" role="list">
+          <li><span class="migrate__swatch" style="background:#9bb6dd"></span> Portugal <b class="nums">27 &middot; 52%</b></li>
+          <li><span class="migrate__swatch" style="background:#c7b37b"></span> Czechia <b class="nums">7 &middot; 13%</b></li>
+          <li><span class="migrate__swatch" style="background:#d6a5ab"></span> Ireland <b class="nums">6 &middot; 12%</b></li>
+          <li><span class="migrate__swatch" style="background:#b1cbb1"></span> United States <b class="nums">5 &middot; 10%</b></li>
+          <li><span class="migrate__swatch" style="background:#cfbfec"></span> Norway <b class="nums">4 &middot; 8%</b></li>
+          <li><span class="migrate__swatch" style="background:#9dd8d8"></span> Greece <b class="nums">2 &middot; 4%</b></li>
+          <li><span class="migrate__swatch" style="background:#eab793"></span> Vietnam <b class="nums">1 &middot; 2%</b></li>
+        </ul>
+        <p class="caption" style="margin-top:var(--space-m)">Colors and counts are the chart&rsquo;s own legend, exactly as printed on the 18&times;24 example above. Print colors are light, so black names stay readable on them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="who">
+  <div class="container">
+    <div class="split">
+      <div><h2 class="content-h2" id="who">Who it suits</h2></div>
+      <dl class="gift__paths" style="margin-top:0">
+        <div><dt>Families who came from several countries</dt><dd>The sample family&rsquo;s chart shows seven countries in five generations. Each branch is its own color.</dd></div>
+        <div><dt>Immigrant stories</dt><dd>The generation where the color changes is the generation that moved.</dd></div>
+        <div><dt>Anyone checking their places</dt><dd>The studio says how many birthplaces it could place, and lists the rest. The free <a href="/tools/gedcom-viewer/">GEDCOM viewer</a> shows the same for your whole file.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="gens">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2 class="content-h2" id="gens">Charts and sizes</h2>
+        <p style="margin-top:var(--space-s)">Atlas is a color mode, not a separate chart. It works on the fan, the bowtie and the pedigree, in all six styles, at every size.</p>
+        <p class="caption" style="margin-top:var(--space-s)">The free Letter PDF comes in Ivory&rsquo;s own tones. Atlas colors in a PDF are part of the $29 license; on screen they are free.</p>
+      </div>
+      <div class="table-wrap">
+        {{> gen-table}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="read">
+  <div class="container">
+    <div class="split">
+      <div><h2 class="content-h2" id="read">How to read it</h2></div>
+      <div class="fan-key fan-key--wide">
+        <h3 class="visually-hidden">Reading key</h3>
+        <dl>
+          <div><dt>Color</dt><dd>The country the person was born in, as it is today.</dd></div>
+          <div><dt>Legend</dt><dd>Each country with its share: &ldquo;Portugal 47%&rdquo; means 47 of every 100 placed birthplaces on the chart.</dd></div>
+          <div><dt>Gray</dt><dd>&ldquo;Other&rdquo;: countries beyond the seven most common.</dd></div>
+          <div><dt>Plain</dt><dd>No birthplace in the file, so no color.</dd></div>
+          <div><dt>Summary</dt><dd>One line under the legend, such as &ldquo;Born in seven countries across five generations.&rdquo;</dd></div>
+        </dl>
+      </div>
+    </div>
+    <nav class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Related</h2>
+      <ul class="link-rows link-rows--grid" role="list">
+        <li><a href="/charts/fan-chart/"><span class="link-rows__title">Fan chart</span><span class="link-rows__desc">The chart Atlas suits best: up to 8 generations.</span></a></li>
+        <li><a href="/tools/gedcom-viewer/"><span class="link-rows__title">GEDCOM viewer</span><span class="link-rows__desc">Birthplaces by country for your whole file, free and private.</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="next">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="next">See where your family was born.</h2>
+        <p class="cta-band__text">Open your file in the studio and choose Color: Atlas. Your file is read on this computer. Nothing is uploaded.</p>
+      </div>
+      <div class="cta-band__action">
+        <a class="btn btn--primary btn--block-phone" href="/make/">Color my tree by birthplace</a>
+        <a class="link-arrow" href="/make/#sample">Or try it with the sample family</a>
+      </div>
+    </div>
+  </div>
+</section>

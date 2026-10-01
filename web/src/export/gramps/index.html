@@ -1,0 +1,121 @@
+---
+title: How to export a GEDCOM file from Gramps
+description: Export a Gramps family tree as a GEDCOM file with the Export Assistant: Family Trees, Export, GEDCOM. Steps checked against the Gramps 6.0 manual on 30 September 2026.
+---
+<!--
+  Sources for the steps on this page (vendor help pages), checked 2026-09-30:
+     https://gramps-project.org/wiki/index.php/Gramps_6.0_Wiki_Manual_-_Manage_Family_Trees  (sections 13 "Exporting data" and 13.3 "GEDCOM export"; page last edited 12 June 2026)
+  Re-check these before every seasonal campaign; menu names change. Fact-checker sign-off required.
+-->
+
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/export/">Export guides</a></li>
+        <li aria-current="page">Gramps</li>
+      </ol>
+    </nav>
+    <p class="eyebrow">Export guide</p>
+    <h1>Export your tree from Gramps.</h1>
+    <p class="lead">Gramps is free, open-source genealogy software, and its Export Assistant saves any tree as a GEDCOM file in five short pages.</p>
+    <p class="page-head__meta">Steps checked against Gramps&rsquo;s own help pages on 30 September 2026. Gildroot is independent and not affiliated with Gramps.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="steps">
+  <div class="container">
+    <div class="media-split">
+      <div>
+        <h2 class="content-h2" id="steps">Steps, in Gramps 6.0</h2>
+        <p style="margin-top:var(--space-s)">From the Gramps 6.0 Wiki Manual, &ldquo;Manage Family Trees: Exporting data.&rdquo;</p>
+        <ol class="steps howto" style="margin-top:var(--space-m)">
+        <li><div>Open the family tree you want (<strong>Family Trees › Manage Family Trees&hellip;</strong>, select it, and click <strong>Load Family Tree</strong>).</div></li>
+        <li><div>Choose <strong>Family Trees › Export&hellip;</strong>, or press <kbd>Ctrl</kbd>+<kbd>E</kbd> (<kbd>&#8984;</kbd>+<kbd>E</kbd> on a Mac). The Export Assistant opens.</div></li>
+        <li><div>On the first page, &ldquo;Saving your data&rdquo;, click <strong>Next</strong>.</div></li>
+        <li><div>Choose <strong>GEDCOM</strong> as the output format and click <strong>Next</strong>.</div></li>
+        <li><div>Check the filters. The defaults export everyone. To keep living relatives&rsquo; names, leave the Living filter on <strong>Include all selected people</strong>. Click <strong>Next</strong>.</div></li>
+        <li><div>Choose a file name and folder, click <strong>Next</strong>, and confirm on the last page. Gramps writes the .ged file.</div></li>
+        </ol>
+        
+      </div>
+      <div>
+        <figure class="route">
+    <svg viewBox="0 0 360 482" role="img" aria-labelledby="route-t route-d">
+      <title id="route-t">How a tree gets from Gramps to Gildroot</title>
+      <desc id="route-d">Your Gramps tree, then Family Trees and Export which opens the Export Assistant, then GEDCOM as the format with filters set to include everyone, then a GEDCOM file in the folder you chose, then Gildroot, where it is read on your own computer.</desc>
+      <rect class="route__box" x="20" y="8" width="320" height="66"/>
+      <text class="route__label" x="180" y="36" text-anchor="middle" font-size="18">Your Gramps tree</text>
+      <text class="route__note" x="180" y="60" text-anchor="middle" font-size="17" font-weight="400">loaded in Gramps</text>
+      <path class="route__arrow" d="M180 78V103M172 95L180 103L188 95"/>
+      <rect class="route__box" x="20" y="108" width="320" height="66"/>
+      <text class="route__label" x="180" y="136" text-anchor="middle" font-size="18">Family Trees › Export…</text>
+      <text class="route__note" x="180" y="160" text-anchor="middle" font-size="17" font-weight="400">the Export Assistant</text>
+      <path class="route__arrow" d="M180 178V203M172 195L180 203L188 195"/>
+      <rect class="route__box" x="20" y="208" width="320" height="66"/>
+      <text class="route__label" x="180" y="236" text-anchor="middle" font-size="18">GEDCOM, then Next</text>
+      <text class="route__note" x="180" y="260" text-anchor="middle" font-size="17" font-weight="400">filters: include everyone</text>
+      <path class="route__arrow" d="M180 278V303M172 295L180 303L188 295"/>
+      <rect class="route__box" x="20" y="308" width="320" height="66"/>
+      <text class="route__label" x="180" y="336" text-anchor="middle" font-size="18">A .ged file</text>
+      <text class="route__note" x="180" y="360" text-anchor="middle" font-size="17" font-weight="400">in the folder you chose</text>
+      <path class="route__arrow" d="M180 378V403M172 395L180 403L188 395"/>
+      <rect class="route__box route__box--end" x="20" y="408" width="320" height="66"/>
+      <text class="route__label route__end-text" x="180" y="436" text-anchor="middle" font-size="18">Gildroot</text>
+      <text class="route__end-text" x="180" y="460" text-anchor="middle" font-size="17" font-weight="400">read on this computer</text>
+    </svg>
+    <figcaption>Our own drawing of the route, not a screenshot. Menu names are the vendor&rsquo;s, checked 30 September 2026.</figcaption>
+  </figure>
+        <div class="notice notice--info" style="margin-top:var(--space-l)">
+          <p class="notice__title">The short version</p>
+          <p class="menu-path"><span>Family Trees</span><span>Export&hellip;</span><span>GEDCOM</span><span>Next</span><span>Next</span><span>confirm</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="stuck">
+  <div class="container">
+    <div class="faq-grid">
+      <div>
+        <h2 class="content-h2" id="stuck">Stuck?</h2>
+        <p style="margin-top:var(--space-s)">Still stuck after these? Write to <a href="mailto:support@gildroot.com">support@gildroot.com</a> and say which step. Please don&rsquo;t attach your file; we never need it.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>I only want one person&rsquo;s ancestors.</summary>
+          <div class="faq__answer"><p>On the filters page, set the <strong>Person Filter</strong> to <strong>Ancestors of</strong> the active person. Make that person active in Gramps first.</p></div>
+        </details>
+        <details>
+          <summary>Living relatives came out as &ldquo;Living&rdquo;.</summary>
+          <div class="faq__answer"><p>The Living filter was set to replace names. Export again with <strong>Include all selected people</strong>.</p></div>
+        </details>
+        <details>
+          <summary>Some people are missing.</summary>
+          <div class="faq__answer"><p>The Privacy filter, on by default, leaves out records marked private. Untick <strong>Do not include records marked private</strong> if you want them.</p></div>
+        </details>
+        <details>
+          <summary>Is GEDCOM a good backup of Gramps?</summary>
+          <div class="faq__answer"><p>No. The Gramps manual recommends Gramps XML for backups, because GEDCOM cannot carry everything Gramps stores. For a chart, GEDCOM has all Gildroot needs.</p></div>
+        </details>
+        <details>
+          <summary>Names show odd characters, like &ldquo;Ã©&rdquo; for &ldquo;é&rdquo;.</summary>
+          <div class="faq__answer"><p>Gildroot reads the text encodings family tree programs use (UTF-8, UTF-16, ANSEL and the older Windows and Mac sets) and works out which one a file uses. If a name still looks wrong in the studio, you can correct it there; your original file is never changed.</p></div>
+        </details>
+      </div>
+    </div>
+    <nav class="related" aria-labelledby="related-h">
+      <h2 id="related-h">Other export guides</h2>
+      <ul class="link-rows link-rows--grid" role="list">
+        <li><a href="/export/ancestry/"><span class="link-rows__title">Ancestry</span><span class="link-rows__desc">The most common route. Owner only.</span></a></li>
+        <li><a href="/export/myheritage/"><span class="link-rows__title">MyHeritage</span><span class="link-rows__desc">From the Manage trees page.</span></a></li>
+        <li><a href="/export/familysearch/"><span class="link-rows__title">FamilySearch</span><span class="link-rows__desc">Through a free desktop program.</span></a></li>
+        <li><a href="/export/rootsmagic/"><span class="link-rows__title">RootsMagic</span><span class="link-rows__desc">File, Export Data, GEDCOM File.</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+{{> cta-drop}}

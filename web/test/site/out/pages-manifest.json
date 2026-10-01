@@ -1,0 +1,115 @@
+{
+  "ancestry-letter-ivory": {
+    "file": "/assets/img/pages/ancestry-letter-ivory.jpg",
+    "width": 1400,
+    "height": 1082,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "letter",
+      "generations": 5,
+      "style": "ivory",
+      "width": 1400
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 5,
+      "size": "letter",
+      "orientation": "landscape",
+      "sweep": 180,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Five generations · 1812–1926",
+      "counts": {
+        "slots": 31,
+        "placed": 31,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 11,
+      "hIn": 8.5,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  },
+  "ancestry-18x24-botanical": {
+    "file": "/assets/img/pages/ancestry-18x24-botanical.jpg",
+    "width": 1400,
+    "height": 1050,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "18x24",
+      "generations": 6,
+      "style": "botanical",
+      "colorMode": "lines",
+      "width": 1400
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "botanical",
+      "colorMode": "lines",
+      "generations": 6,
+      "size": "18x24",
+      "orientation": "landscape",
+      "sweep": 270,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Six generations · 1785–1926",
+      "counts": {
+        "slots": 63,
+        "placed": 56,
+        "abbreviated": 0,
+        "missing": 7
+      },
+      "wIn": 24,
+      "hIn": 18,
+      "legend": null,
+      "atlas": null,
+      "collapse": 1,
+      "warnings": []
+    }
+  },
+  "gift-keepsake-11x14": {
+    "file": "/assets/img/pages/gift-keepsake-11x14.jpg",
+    "width": 1400,
+    "height": 1100,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "11x14",
+      "generations": 4,
+      "style": "ivory",
+      "dedication": "For Mom, Christmas 2026",
+      "width": 1400
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 4,
+      "size": "11x14",
+      "orientation": "landscape",
+      "sweep": 180,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Four generations · 1840–1926",
+      "counts": {
+        "slots": 15,
+        "placed": 15,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 14,
+      "hIn": 11,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  }
+}

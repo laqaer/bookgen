@@ -1,0 +1,32 @@
+---
+title: Make your family tree chart
+description: Drop a GEDCOM file and make a fan, bowtie or pedigree chart of your ancestors. Read on this computer; nothing is uploaded. Free Letter PDF up to 5 generations.
+layout: none
+noindex: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+{{> head-meta}}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.lemonsqueezy.com https://api-cors-anywhere.lemonsqueezy.com https://plausible.io; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="modulepreload" href="/make/studio.js?v={{build}}">
+<link rel="stylesheet" href="/assets/css/studio.css?v={{build}}">
+</head>
+<body class="page-studio">
+<a class="skip-link" href="#studio">Skip to the studio</a>
+{{> header}}
+<main id="main" tabindex="-1">
+  <div id="studio" class="studio-root">
+    <noscript>
+      <div class="container section--tight">
+        <p class="notice notice--warn"><span>The studio needs JavaScript to read your file and draw the chart. Everything runs in this browser tab; nothing is uploaded. Turn JavaScript on for this page and reload it.</span></p>
+      </div>
+    </noscript>
+  </div>
+</main>
+{{> footer}}
+<script type="application/json" id="studio-config">{"prices":{"heirloom":{{site.prices.heirloom}},"historian":{{site.prices.historian}}},"checkout":{"enabled":{{site.checkout.enabled}},"store":"{{site.checkout.store}}","heirloom":"{{site.checkout.heirloom}}"},"analytics":{"plausibleDomain":"{{site.analytics.plausibleDomain}}"}}</script>
+<script type="module" src="/make/studio.js?v={{build}}"></script>
+</body>
+</html>

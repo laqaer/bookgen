@@ -1,0 +1,826 @@
+{
+  "fan-letter": {
+    "file": "/assets/img/charts/fan-letter.jpg",
+    "width": 1400,
+    "height": 1082,
+    "bytes": 151752,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "letter",
+      "generations": 5,
+      "style": "ivory"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 5,
+      "size": "letter",
+      "orientation": "landscape",
+      "sweep": 180,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Five generations · 1812–1926",
+      "counts": {
+        "slots": 31,
+        "placed": 31,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 11,
+      "hIn": 8.5,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  },
+  "fan-18x24": {
+    "file": "/assets/img/charts/fan-18x24.jpg",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 162180,
+    "job": {
+      "tree": "victoria",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "18x24",
+      "generations": 7,
+      "style": "ivory"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 7,
+      "size": "18x24",
+      "orientation": "landscape",
+      "sweep": 270,
+      "title": "The Ancestors of Victoria",
+      "subtitle": "Seven generations · 1558–1819",
+      "counts": {
+        "slots": 127,
+        "placed": 127,
+        "abbreviated": 4,
+        "missing": 0
+      },
+      "wIn": 24,
+      "hIn": 18,
+      "legend": null,
+      "atlas": null,
+      "collapse": 4,
+      "warnings": []
+    }
+  },
+  "fan-24x36": {
+    "file": "/assets/img/charts/fan-24x36.jpg",
+    "width": 1400,
+    "height": 933,
+    "bytes": 141081,
+    "job": {
+      "tree": "victoria",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "24x36",
+      "generations": 8,
+      "style": "midnight"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "midnight",
+      "colorMode": "tones",
+      "generations": 8,
+      "size": "24x36",
+      "orientation": "landscape",
+      "sweep": 270,
+      "title": "The Ancestors of Victoria",
+      "subtitle": "Eight generations · 1525–1819",
+      "counts": {
+        "slots": 255,
+        "placed": 255,
+        "abbreviated": 16,
+        "missing": 0
+      },
+      "wIn": 36,
+      "hIn": 24,
+      "legend": null,
+      "atlas": null,
+      "collapse": 14,
+      "warnings": [
+        "Best on photo or matte poster paper. Dark grounds use a lot of ink."
+      ]
+    }
+  },
+  "fan-detail": {
+    "file": "/assets/img/charts/fan-detail.jpg",
+    "width": 1400,
+    "height": 1244,
+    "bytes": 313713,
+    "job": {
+      "tree": "victoria",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "24x36",
+      "generations": 8,
+      "style": "ivory",
+      "crop": {
+        "x": 0.27,
+        "y": 0.12,
+        "w": 0.3,
+        "h": 0.4
+      }
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 8,
+      "size": "24x36",
+      "orientation": "landscape",
+      "sweep": 270,
+      "title": "The Ancestors of Victoria",
+      "subtitle": "Eight generations · 1525–1819",
+      "counts": {
+        "slots": 255,
+        "placed": 255,
+        "abbreviated": 15,
+        "missing": 0
+      },
+      "wIn": 36,
+      "hIn": 24,
+      "legend": null,
+      "atlas": null,
+      "collapse": 14,
+      "warnings": []
+    }
+  },
+  "bowtie-letter": {
+    "file": "/assets/img/charts/bowtie-letter.jpg",
+    "width": 1400,
+    "height": 1082,
+    "bytes": 126732,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "bowtie",
+      "coupleIds": [
+        "I2",
+        "I3"
+      ],
+      "size": "letter",
+      "generations": 4,
+      "style": "ivory"
+    },
+    "meta": {
+      "chart": "bowtie",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 4,
+      "size": "letter",
+      "orientation": "landscape",
+      "title": "Thomas Frank Novak & Rosa Maria Almeida",
+      "subtitle": "Four generations per side · 1812–1926",
+      "counts": {
+        "slots": 28,
+        "placed": 30,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 11,
+      "hIn": 8.5,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  },
+  "bowtie-11x14": {
+    "file": "/assets/img/charts/bowtie-11x14.jpg",
+    "width": 1400,
+    "height": 1100,
+    "bytes": 127989,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "bowtie",
+      "coupleIds": [
+        "I2",
+        "I3"
+      ],
+      "size": "11x14",
+      "generations": 5,
+      "style": "botanical"
+    },
+    "meta": {
+      "chart": "bowtie",
+      "style": "botanical",
+      "colorMode": "tones",
+      "generations": 5,
+      "size": "11x14",
+      "orientation": "landscape",
+      "title": "Thomas Frank Novak & Rosa Maria Almeida",
+      "subtitle": "Five generations per side · 1785–1926",
+      "counts": {
+        "slots": 60,
+        "placed": 55,
+        "abbreviated": 0,
+        "missing": 7
+      },
+      "wIn": 14,
+      "hIn": 11,
+      "legend": null,
+      "atlas": null,
+      "collapse": 1,
+      "warnings": []
+    }
+  },
+  "bowtie-24x36": {
+    "file": "/assets/img/charts/bowtie-24x36.jpg",
+    "width": 1400,
+    "height": 933,
+    "bytes": 135792,
+    "job": {
+      "tree": "victoria",
+      "chart": "bowtie",
+      "coupleIds": [
+        "I2",
+        "I3"
+      ],
+      "size": "24x36",
+      "generations": 6,
+      "style": "midnight"
+    },
+    "meta": {
+      "chart": "bowtie",
+      "style": "midnight",
+      "colorMode": "tones",
+      "generations": 6,
+      "size": "24x36",
+      "orientation": "landscape",
+      "title": "Prince Edward, Duke of Kent and Strathearn & Princess Victoria of Saxe-Coburg-Saalfeld",
+      "subtitle": "Six generations per side · 1558–1786",
+      "counts": {
+        "slots": 124,
+        "placed": 126,
+        "abbreviated": 10,
+        "missing": 0
+      },
+      "wIn": 36,
+      "hIn": 24,
+      "legend": null,
+      "atlas": null,
+      "collapse": 2,
+      "warnings": [
+        "Best on photo or matte poster paper. Dark grounds use a lot of ink."
+      ]
+    }
+  },
+  "pedigree-letter": {
+    "file": "/assets/img/charts/pedigree-letter.jpg",
+    "width": 1400,
+    "height": 1082,
+    "bytes": 137253,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "pedigree",
+      "rootId": "I1",
+      "size": "letter",
+      "generations": 5,
+      "style": "letterpress"
+    },
+    "meta": {
+      "chart": "pedigree",
+      "style": "letterpress",
+      "colorMode": "tones",
+      "generations": 5,
+      "size": "letter",
+      "orientation": "landscape",
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Five generations · 1812–1926",
+      "counts": {
+        "slots": 31,
+        "placed": 31,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 11,
+      "hIn": 8.5,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  },
+  "pedigree-18x24": {
+    "file": "/assets/img/charts/pedigree-18x24.jpg",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 123300,
+    "job": {
+      "tree": "victoria",
+      "chart": "pedigree",
+      "rootId": "I1",
+      "size": "18x24",
+      "generations": 6,
+      "style": "ivory"
+    },
+    "meta": {
+      "chart": "pedigree",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 6,
+      "size": "18x24",
+      "orientation": "landscape",
+      "title": "The Ancestors of Victoria",
+      "subtitle": "Six generations · 1588–1819",
+      "counts": {
+        "slots": 63,
+        "placed": 63,
+        "abbreviated": 6,
+        "missing": 0
+      },
+      "wIn": 24,
+      "hIn": 18,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  },
+  "pedigree-24x36": {
+    "file": "/assets/img/charts/pedigree-24x36.jpg",
+    "width": 1400,
+    "height": 933,
+    "bytes": 119430,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "pedigree",
+      "rootId": "I1",
+      "size": "24x36",
+      "generations": 6,
+      "style": "nordic"
+    },
+    "meta": {
+      "chart": "pedigree",
+      "style": "nordic",
+      "colorMode": "tones",
+      "generations": 6,
+      "size": "24x36",
+      "orientation": "landscape",
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Six generations · 1785–1926",
+      "counts": {
+        "slots": 63,
+        "placed": 56,
+        "abbreviated": 0,
+        "missing": 7
+      },
+      "wIn": 36,
+      "hIn": 24,
+      "legend": null,
+      "atlas": null,
+      "collapse": 1,
+      "warnings": []
+    }
+  },
+  "atlas-letter": {
+    "file": "/assets/img/charts/atlas-letter.jpg",
+    "width": 1400,
+    "height": 1082,
+    "bytes": 167676,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "letter",
+      "generations": 5,
+      "style": "nordic",
+      "colorMode": "atlas"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "nordic",
+      "colorMode": "atlas",
+      "generations": 5,
+      "size": "letter",
+      "orientation": "landscape",
+      "sweep": 180,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Five generations · 1812–1926",
+      "counts": {
+        "slots": 31,
+        "placed": 31,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 11,
+      "hIn": 8.5,
+      "legend": [
+        {
+          "label": "Portugal",
+          "color": "#91b2e0",
+          "count": 14
+        },
+        {
+          "label": "United States",
+          "color": "#c3ae72",
+          "count": 5
+        },
+        {
+          "label": "Czechia",
+          "color": "#d49fa9",
+          "count": 3
+        },
+        {
+          "label": "Ireland",
+          "color": "#abcaaf",
+          "count": 3
+        },
+        {
+          "label": "Greece",
+          "color": "#cdbcf0",
+          "count": 2
+        },
+        {
+          "label": "Norway",
+          "color": "#93d8db",
+          "count": 2
+        },
+        {
+          "label": "Vietnam",
+          "color": "#eab38e",
+          "count": 1
+        }
+      ],
+      "atlas": {
+        "coverage": {
+          "total": 30,
+          "resolved": 30,
+          "pct": 1
+        },
+        "summary": "Born in seven countries across five generations"
+      },
+      "collapse": 0,
+      "warnings": []
+    }
+  },
+  "atlas-18x24": {
+    "file": "/assets/img/charts/atlas-18x24.jpg",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 158376,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "18x24",
+      "generations": 6,
+      "style": "ivory",
+      "colorMode": "atlas"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "ivory",
+      "colorMode": "atlas",
+      "generations": 6,
+      "size": "18x24",
+      "orientation": "landscape",
+      "sweep": 270,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Six generations · 1785–1926",
+      "counts": {
+        "slots": 63,
+        "placed": 56,
+        "abbreviated": 0,
+        "missing": 7
+      },
+      "wIn": 24,
+      "hIn": 18,
+      "legend": [
+        {
+          "label": "Portugal",
+          "color": "#9bb6dd",
+          "count": 27
+        },
+        {
+          "label": "Czechia",
+          "color": "#c7b37b",
+          "count": 7
+        },
+        {
+          "label": "Ireland",
+          "color": "#d6a5ab",
+          "count": 6
+        },
+        {
+          "label": "United States",
+          "color": "#b1cbb1",
+          "count": 5
+        },
+        {
+          "label": "Norway",
+          "color": "#cfbfec",
+          "count": 4
+        },
+        {
+          "label": "Greece",
+          "color": "#9dd8d8",
+          "count": 2
+        },
+        {
+          "label": "Vietnam",
+          "color": "#eab793",
+          "count": 1
+        }
+      ],
+      "atlas": {
+        "coverage": {
+          "total": 52,
+          "resolved": 52,
+          "pct": 1
+        },
+        "summary": "Born in seven countries across six generations"
+      },
+      "collapse": 1,
+      "warnings": []
+    }
+  },
+  "atlas-24x36": {
+    "file": "/assets/img/charts/atlas-24x36.jpg",
+    "width": 1400,
+    "height": 933,
+    "bytes": 133767,
+    "job": {
+      "tree": "victoria",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "24x36",
+      "generations": 8,
+      "style": "botanical",
+      "colorMode": "atlas"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "botanical",
+      "colorMode": "atlas",
+      "generations": 8,
+      "size": "24x36",
+      "orientation": "landscape",
+      "sweep": 270,
+      "title": "The Ancestors of Victoria",
+      "subtitle": "Eight generations · 1525–1819",
+      "counts": {
+        "slots": 255,
+        "placed": 255,
+        "abbreviated": 15,
+        "missing": 0
+      },
+      "wIn": 36,
+      "hIn": 24,
+      "legend": [
+        {
+          "label": "Germany",
+          "color": "#9bb6e0",
+          "count": 161
+        },
+        {
+          "label": "United Kingdom",
+          "color": "#c7b47d",
+          "count": 4
+        },
+        {
+          "label": "Sweden",
+          "color": "#d7a6ad",
+          "count": 3
+        },
+        {
+          "label": "Austria",
+          "color": "#b1cdb3",
+          "count": 2
+        },
+        {
+          "label": "Denmark",
+          "color": "#d0c0ee",
+          "count": 2
+        },
+        {
+          "label": "France",
+          "color": "#9cd9db",
+          "count": 2
+        },
+        {
+          "label": "Netherlands",
+          "color": "#ebb895",
+          "count": 2
+        },
+        {
+          "label": "Other",
+          "color": "#dcd5c8",
+          "count": 4
+        }
+      ],
+      "atlas": {
+        "coverage": {
+          "total": 180,
+          "resolved": 180,
+          "pct": 1
+        },
+        "summary": "Born in ten countries across eight generations"
+      },
+      "collapse": 14,
+      "warnings": []
+    }
+  },
+  "occasion-wedding": {
+    "file": "/assets/img/charts/occasion-wedding.jpg",
+    "width": 1400,
+    "height": 1120,
+    "bytes": 173553,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "bowtie",
+      "coupleIds": [
+        "I2",
+        "I3"
+      ],
+      "size": "16x20",
+      "generations": 5,
+      "style": "letterpress"
+    },
+    "meta": {
+      "chart": "bowtie",
+      "style": "letterpress",
+      "colorMode": "tones",
+      "generations": 5,
+      "size": "16x20",
+      "orientation": "landscape",
+      "title": "Thomas Frank Novak & Rosa Maria Almeida",
+      "subtitle": "Five generations per side · 1785–1926",
+      "counts": {
+        "slots": 60,
+        "placed": 55,
+        "abbreviated": 0,
+        "missing": 7
+      },
+      "wIn": 20,
+      "hIn": 16,
+      "legend": null,
+      "atlas": null,
+      "collapse": 1,
+      "warnings": []
+    }
+  },
+  "occasion-anniversary": {
+    "file": "/assets/img/charts/occasion-anniversary.jpg",
+    "width": 1400,
+    "height": 1050,
+    "bytes": 136002,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "bowtie",
+      "coupleIds": [
+        "I2",
+        "I3"
+      ],
+      "size": "18x24",
+      "generations": 5,
+      "style": "midnight"
+    },
+    "meta": {
+      "chart": "bowtie",
+      "style": "midnight",
+      "colorMode": "tones",
+      "generations": 5,
+      "size": "18x24",
+      "orientation": "landscape",
+      "title": "Thomas Frank Novak & Rosa Maria Almeida",
+      "subtitle": "Five generations per side · 1785–1926",
+      "counts": {
+        "slots": 60,
+        "placed": 55,
+        "abbreviated": 0,
+        "missing": 7
+      },
+      "wIn": 24,
+      "hIn": 18,
+      "legend": null,
+      "atlas": null,
+      "collapse": 1,
+      "warnings": [
+        "Best on photo or matte poster paper. Dark grounds use a lot of ink."
+      ]
+    }
+  },
+  "occasion-reunion": {
+    "file": "/assets/img/charts/occasion-reunion.jpg",
+    "width": 1400,
+    "height": 933,
+    "bytes": 127197,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "20x30",
+      "generations": 6,
+      "style": "botanical",
+      "colorMode": "lines"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "botanical",
+      "colorMode": "lines",
+      "generations": 6,
+      "size": "20x30",
+      "orientation": "landscape",
+      "sweep": 270,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Six generations · 1785–1926",
+      "counts": {
+        "slots": 63,
+        "placed": 56,
+        "abbreviated": 0,
+        "missing": 7
+      },
+      "wIn": 30,
+      "hIn": 20,
+      "legend": null,
+      "atlas": null,
+      "collapse": 1,
+      "warnings": []
+    }
+  },
+  "occasion-christmas": {
+    "file": "/assets/img/charts/occasion-christmas.jpg",
+    "width": 1400,
+    "height": 1100,
+    "bytes": 147810,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "11x14",
+      "generations": 4,
+      "style": "botanical",
+      "dedication": "For Mom, Christmas 2026"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "botanical",
+      "colorMode": "tones",
+      "generations": 4,
+      "size": "11x14",
+      "orientation": "landscape",
+      "sweep": 180,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Four generations · 1840–1926",
+      "counts": {
+        "slots": 15,
+        "placed": 15,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 14,
+      "hIn": 11,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  },
+  "keepsake-letter": {
+    "file": "/assets/img/charts/keepsake-letter.jpg",
+    "width": 1400,
+    "height": 1082,
+    "bytes": 155136,
+    "job": {
+      "tree": "almeida-novak",
+      "chart": "fan",
+      "rootId": "I1",
+      "size": "letter",
+      "generations": 4,
+      "style": "ivory"
+    },
+    "meta": {
+      "chart": "fan",
+      "style": "ivory",
+      "colorMode": "tones",
+      "generations": 4,
+      "size": "letter",
+      "orientation": "landscape",
+      "sweep": 180,
+      "title": "The Ancestors of Margaret Rose Almeida-Novak",
+      "subtitle": "Four generations · 1840–1926",
+      "counts": {
+        "slots": 15,
+        "placed": 15,
+        "abbreviated": 0,
+        "missing": 0
+      },
+      "wIn": 11,
+      "hIn": 8.5,
+      "legend": null,
+      "atlas": null,
+      "collapse": 0,
+      "warnings": []
+    }
+  }
+}
